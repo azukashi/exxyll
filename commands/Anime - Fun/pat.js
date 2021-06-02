@@ -18,7 +18,7 @@ module.exports = {
     const uri = url;
 
     // const wibu!
-    const ke_target = message.author.tag;
+    const ke_target = message.mentions.members.first();
     const user = message.author.tag;
 
     if (!ke_target) return message.reply("You must tag someone to pat.");
