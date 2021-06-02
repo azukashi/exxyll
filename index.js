@@ -44,4 +44,14 @@ client.on("clickButton", async (button) => {
   }
   button.defer();
 });
+
+const distube = require("distube");
+const player = new distube(client);
+
+player.on("playSong", (message, queue, song) => {
+  message.channel.send(`**${song.name}** has started playing.`);
+});
+
+client.player = player;
+
 client.login(token);
