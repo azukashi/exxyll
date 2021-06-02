@@ -1,0 +1,4 @@
+node_modules
+json.sqlite
+info.json
+mongodbConfig.txt
