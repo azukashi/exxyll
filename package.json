@@ -28,6 +28,7 @@
     "ffmpeg-static": "^4.3.0",
     "glob": "^7.1.7",
     "global": "^4.4.0",
+    "lyrics-finder": "^21.7.0",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.12.12",
