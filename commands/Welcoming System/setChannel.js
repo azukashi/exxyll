@@ -2,14 +2,22 @@ const Schema = require("../../models/welcomeChannel");
 const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
-  name: "set-channel",
+  name: "set-welcome",
+  category: "Welcoming System",
+  aliases: ["setWelcome", "set-welcomer"],
+  usage: "#channel",
+  description:
+    "`Set Welcoming System Channel`. **Set it to e.g : #welcome channel, etc.**",
   /**
    * @param {Client} client
    * @param {Message} message
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (!message.member.permissions.has("ADMINISTRATOR")) return;
+    if (!message.member.permissions.has("ADMINISTRATOR"))
+      return message.reply(
+        "You need `ADMINISTRATOR` Perms to perform this action!"
+      );
 
     const channel = message.mentions.channels.first();
     if (!channel) return message.reply("Please mention a channel!");
