@@ -17,6 +17,7 @@ module.exports = {
     } = await axios.get(`https://nekos.life/api/v2/img/neko`);
     const uri = url;
     const embed = new MessageEmbed()
+      .setColor("#FFC0CB")
       .setTitle("There is a Neko Images!")
       .setImage(uri)
       .setFooter(
