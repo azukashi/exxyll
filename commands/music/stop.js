@@ -14,5 +14,7 @@ module.exports = {
       return message.reply(`Please Join a Voice Channel First!`);
 
     client.player.stop(message);
+
+    message.channel.send("The Player has been **Stopped**!");
   },
 };
