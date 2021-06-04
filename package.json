@@ -19,6 +19,7 @@
     "ascii-table": "^0.0.9",
     "aws4": "^1.11.0",
     "axios": "^0.21.1",
+    "child_process": "^1.0.2",
     "cpu-stat": "^2.0.1",
     "discord-buttons": "^3.0.1",
     "discord-canvas": "^1.4.1",

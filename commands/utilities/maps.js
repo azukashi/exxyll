@@ -3,9 +3,11 @@ const fetch = require("node-fetch");
 
 module.exports = {
   name: "maps",
-
-  async execute(client, message, args) {
-    const sit = args.join("_");
+  aliases: ["gmaps"],
+  usage: "location",
+  description: "Search Details about a Location",
+  run: async (client, message, args) => {
+    const sit = args.join(" ");
     if (!args.length) return message.reply("Provide a valid location");
     const site = `https://maps.google.com/?q=${args.join("+")}`;
     try {

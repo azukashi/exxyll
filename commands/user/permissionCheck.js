@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "checkperms",
   aliases: ["permcheck"],
-  description: "Command to Check User's Permissions",
+  description: "Command to Check User's Permissions.",
   run: async (client, message, [member = ""]) => {
     if (!member.match(/\d{17,19}/)) {
       member = message.author.id;
