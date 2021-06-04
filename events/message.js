@@ -31,7 +31,7 @@ client.on("message", async (message) => {
       !(await premiumSchema.findOne({ User: message.author.id }))
     )
       return message.reply(
-        "You need to upgrade to premium to use this command!"
+        "You need to upgrade to premium to use this command!\n\nUse `.premium` to know how to upgrade!"
       );
 
     command.run(client, message, args);
