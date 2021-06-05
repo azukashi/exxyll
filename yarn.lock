@@ -269,6 +269,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.0.1.tgz#d26729db850fa327b7cacc5522252194404226f5"
   integrity sha512-Qm9hBEBu18wt1PO2flE7LPb30BHMQt1eQgbV76YntdNk73XZGpn3izvGTYxbGgzXKgbCjiia0uxTd3aTNQrY/g==
 
+"@sourcebin/linguist@latest":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@sourcebin/linguist/-/linguist-0.0.3.tgz#f87ebb06eb4450c6f2825c5cb5347cd4fc057175"
+  integrity sha512-VVkb/34pISdK+1tyqmwBac6crn8UhviKCRV5w/wc8iZyTCOoTrOu0Cgbqfh0bfMGxNlQuhaRy6cMmEmHxa5R3g==
+
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.5.tgz#bfbd50211e9dfa51ba07da58a14cdfd333205152"
@@ -3239,6 +3244,14 @@ source-map@^0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+sourcebin@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/sourcebin/-/sourcebin-4.2.3.tgz#72780371e1b94f97dee55d17abda02c9f69a9a39"
+  integrity sha512-G5Dgscl4D6T98aJIidAH8gOGxP7sJ5O6I6x1a2JrkDwtQG7oQOCQ2NELQSoAoOVyf475ECsRXEvS4hBosdzB9A==
+  dependencies:
+    "@sourcebin/linguist" latest
+    got "^11.8.1"
 
 sparse-bitfield@^3.0.3:
   version "3.0.3"

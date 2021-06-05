@@ -4,7 +4,7 @@ module.exports = {
   name: "ban",
   aliases: [],
   usage: "@user reason",
-  description: "Ban mentioned user and reason",
+  description: "Ban mentioned user with reason",
   /**
    * @param {Client} client
    * @param {Message} message
@@ -35,7 +35,13 @@ module.exports = {
       .addField("Moderator", message.author)
       .addField("Reason", reason);
 
-    member.ban({ reason });
+    member
+      .ban({ reason })
+      .catch((err) =>
+        message.channel.send(
+          "An error has occured while trying to kick.\n\nYou can report this error with `.report` to Developers!"
+        )
+      );
     message.channel.send(embed);
   },
 };
