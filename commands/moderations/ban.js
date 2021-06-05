@@ -35,7 +35,7 @@ module.exports = {
       .addField("Moderator", message.author)
       .addField("Reason", reason);
 
-    member.kick({ reason });
+    member.ban({ reason });
     message.channel.send(embed);
   },
 };
