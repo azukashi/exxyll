@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@canvacord/assets@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@canvacord/assets/-/assets-1.0.2.tgz#1802be6a48ebaa2e0a8ec90ed76661d1a01766ae"
+  integrity sha512-76uLD27UDlfTxtgA7armbt6G9/X1NDqm/qjs9gxbWFVfcJxVdT3r3LlwaLp0NlRa5yMylCFf3WcOHufVjk60vw==
+
+"@canvacord/emoji-parser@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@canvacord/emoji-parser/-/emoji-parser-1.0.1.tgz#b33049320e01dc5290751df5b6279d99fe2f2437"
+  integrity sha512-Lb3xatdd91MR9tU4sicgrxxKg+/rVD1zKTOh55bmVF2Ri5X8vHTV+jNHTvRzkomGpyepGM+7qA4xMvG8ZqtO8g==
+  dependencies:
+    twemoji-parser "^13.0.0"
+
 "@derhuerst/http-basic@^8.2.0":
   version "8.2.1"
   resolved "https://registry.yarnpkg.com/@derhuerst/http-basic/-/http-basic-8.2.1.tgz#11e3964cf1f2fb40806f9a0fff0c451bb7526093"
@@ -690,7 +702,19 @@ cacheable-request@^7.0.1:
     normalize-url "^4.1.0"
     responselike "^2.0.0"
 
-canvas@^2.6.1:
+canvacord@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/canvacord/-/canvacord-5.2.1.tgz#dac979488735c98ddc6ffd60af52e4ed9bce74ce"
+  integrity sha512-vauEvj3QEDNyza6laa4C5cKiOSld/O+Uvjr8uzD+ANUxaWtprHE6372J7oXMqrjPEsOd4XAwKuy5zlVPe4a7OQ==
+  dependencies:
+    "@canvacord/assets" "^1.0.2"
+    "@canvacord/emoji-parser" "^1.0.1"
+    canvas "^2.7.0"
+    gifencoder "^2.0.1"
+    moment "^2.29.1"
+    moment-duration-format "^2.3.2"
+
+canvas@^2.2.0, canvas@^2.6.1, canvas@^2.7.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.8.0.tgz#f99ca7f25e6e26686661ffa4fec1239bbef74461"
   integrity sha512-gLTi17X8WY9Cf5GZ2Yns8T5lfBOcGgFehDFb+JQwDqdOoBOcECS9ZWMEAqMSVcMYwXD659J8NyzjRY/2aE+C2Q==
@@ -1603,6 +1627,13 @@ getpass@^0.1.1:
   integrity sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=
   dependencies:
     assert-plus "^1.0.0"
+
+gifencoder@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gifencoder/-/gifencoder-2.0.1.tgz#fd363402e506529494757856aa66196697ee6bd4"
+  integrity sha512-x19DcyWY10SkshBpokqFOo/HBht9GB75evRYvaLMbez9p+yB/o+kt0fK9AwW59nFiAMs2UUQsjv1lX/hvu9Ong==
+  dependencies:
+    canvas "^2.2.0"
 
 git-node-fs@^1.0.0:
   version "1.0.0"
@@ -3451,6 +3482,11 @@ tweetnacl@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
   integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
+
+twemoji-parser@^13.0.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/twemoji-parser/-/twemoji-parser-13.1.0.tgz#65e7e449c59258791b22ac0b37077349127e3ea4"
+  integrity sha512-AQOzLJpYlpWMy8n+0ATyKKZzWlZBJN+G0C+5lhX7Ftc2PeEVdUU/7ns2Pn2vVje26AIZ/OHwFoUbdv6YYD/wGg==
 
 type-check@~0.3.2:
   version "0.3.2"

@@ -2,53 +2,40 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "ban",
-  aliases: [""],
-  description: "Ban Mention User",
-  usage: "<mention|id> [reason]",
-  category: "moderation",
+  aliases: [],
+  usage: "@user reason",
+  description: "Ban mentioned user and reason",
   /**
-   *
    * @param {Client} client
    * @param {Message} message
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    let member =
-      message.mentions.users.first() ||
-      message.guild.members.cache.get(args[0]);
+    if (!message.member.permissions.has("BAN_MEMBERS")) return;
 
-    if (!member) return message.channel.send(`Please Mention A User`);
+    const member = message.mentions.members.first();
+    if (!member) return message.reply("Please mention a member to ban!");
 
-    let reason = args.join(" ").slice(22);
-    if (!reason) reason = "No Reason Specified";
+    if (message.member.roles.highest.position <= member.roles.highest.position)
+      return message.reply(
+        "You can punish because u either have the same role or your role is lower."
+      );
 
-    if (!message.member.hasPermission("BAN_MEMBERS"))
-      return message.channel.send("You don't have permission to Ban Member!");
-
-    let e = new MessageEmbed()
-      .setTitle(`${member} Banned`)
+    const reason = args.slice(1).join(" ") || "No Reason Provided";
+    const embed = new MessageEmbed()
+      .setTitle(`Successfully Banned!`)
+      .addField("Banned User", member)
+      .addField("Moderator", `<@${message.author.id}>`)
+      .addField("Reason", reason)
       .setColor("RED")
-      .setDescription(
-        `
-            Banned User: ${member}\n
-            Mods: ${message.author}\n
-            Reason: ${reason}
-        `
-      )
-      .setTimestamp(new Date());
+      .setTimestamp();
 
-    let userE = new MessageEmbed()
-      .setTitle(`You've Been Banned From **${message.guild.name}!**`)
-      .setDescription(
-        `
-            Mods: ${message.author}\n
-            Reason: ${reason}
-        `
-      )
-      .setTimestamp(new Date());
+    const memberEmbed = new MessageEmbed()
+      .setTitle(`You have been banned from ${message.guild.name}!`)
+      .addField("Moderator", message.author)
+      .addField("Reason", reason);
 
-    message.guild.member(member).ban({ reason });
-    message.channel.send({ e });
-    member.send({ userE });
+    member.kick({ reason });
+    message.channel.send(embed);
   },
 };
