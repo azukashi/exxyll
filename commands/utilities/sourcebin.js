@@ -26,8 +26,8 @@ module.exports = {
         },
       ],
       {
-        title: `Title`,
-        description: `Description`,
+        title: `Result Code`,
+        description: `Code uploaded by Exxyll Discord Bot`,
       }
     ).then((value) => {
       message.channel.send(`Your code has been posted : ${value.url}`);
