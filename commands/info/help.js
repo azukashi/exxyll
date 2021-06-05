@@ -6,6 +6,7 @@ module.exports = {
   name: "help",
   aliases: ["h"],
   description: "Shows all available bot commands.",
+  hidden: true,
   run: async (client, message, args) => {
     const roleColor =
       message.guild.me.displayHexColor === "#000000"
@@ -23,6 +24,7 @@ module.exports = {
         info: "📰",
         moderations: "🔨",
         music: "🎵",
+        premium: "🔮",
         "To Dev": "📩",
         user: "👤",
         utilities: "📀",
@@ -70,7 +72,7 @@ module.exports = {
       });
 
       const embed = new MessageEmbed()
-        .setTitle("📬 Need help? Here are all of my commands:")
+        .setTitle("📬 Need help? Here are all of my commands!")
         .addFields(categories)
         .setDescription(
           `Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix}help wiki\`.`

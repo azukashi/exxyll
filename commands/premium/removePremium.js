@@ -3,6 +3,10 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "del-premium",
+  aliases: ["rem-premium"],
+  usage: "<user>",
+  description: "**[Owner-only]** Remove mentioned user from Premium Database.",
+  hidden: true,
   /**
    * @param {Client} client
    * @param {Message} message

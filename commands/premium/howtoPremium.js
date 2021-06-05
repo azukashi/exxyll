@@ -2,7 +2,6 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "premium",
-  hidden: true,
   /**
    * @param {Client} client
    * @param {Message} message
@@ -26,7 +25,7 @@ module.exports = {
       )
       .addField(
         "How I Can DM The Owner?",
-        "Here is His Discord Tag!\n`! Falcxxdev >_#1113`"
+        "Here is His Discord Tag!\n`Falcxxdev#1113`"
       )
       .setFooter(message.author.tag)
       .setTimestamp();

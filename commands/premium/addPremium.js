@@ -3,6 +3,11 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "add-premium",
+  aliases: ["db-premium"],
+  usage: "<user>",
+  description:
+    "**[Owner-only]** Add mentioned user to Database for using Premium Features.",
+  hidden: true,
   /**
    * @param {Client} client
    * @param {Message} message
