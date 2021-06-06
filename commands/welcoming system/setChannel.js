@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_GUILD"))
       return message.reply(
-        "You need `MANAGE_GUILD` Perms to perform this action!"
+        "You need `MANAGE_GUILD` Perms to perform this action! \nIf you already have `MANAGE_GUILD` Permission, Make sure I Have `MANAGE_GUILD` Permission Too."
       );
 
     const channel = message.mentions.channels.first();

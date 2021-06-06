@@ -13,7 +13,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("KICK_MEMBERS"))
       return message.reply(
-        "You need `KICK_MEMBERS` Permissions in order to run this command."
+        "You need `KICK_MEMBERS` Permissions in order to run this command.\nIf you already have `KICK_MEMBERS` Permission, Make sure I Have `KICK_MEMBERS` Permission Too."
       );
 
     const member = message.mentions.members.first();

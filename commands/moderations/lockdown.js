@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_GUILD"))
       return message.reply(
-        "You need `MANAGE_GUILD` Permission to run this command."
+        "You need `MANAGE_GUILD` Permission to run this command.\nIf you already have `MANAGE_GUILD` Permission, Make sure I Have `MANAGE_GUILD` Permission Too."
       );
     const role = message.guild.roles.everyone;
     if (!args.length) return message.channel.send("Please specify a query!");

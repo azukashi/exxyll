@@ -10,7 +10,7 @@ module.exports = {
     const amount = parseInt(args[0]);
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.reply(
-        "You need `MANAGE_CHANNELS` Permission to run this command."
+        "You need `MANAGE_CHANNELS` Permission to run this command.\nIf you already have `MANAGE_CHANNELS` Permission, Make sure I Have `MANAGE_CHANNELS` Permission Too."
       );
     if (message.member.hasPermission("MANAGE_CHANNELS"))
       if (isNaN(amount))

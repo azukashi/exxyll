@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (message.member.permissions.has("BAN_MEMBERS"))
       return message.reply(
-        "You need `BAN_MEMBERS` Permisssion to run this command."
+        "You need `BAN_MEMBERS` Permisssion to run this command.\nIf you already have `BAN_MEMBERS` Permission, Make sure I Have `BAN_MEMBERS` Permission Too."
       );
 
     const id = args[0];
