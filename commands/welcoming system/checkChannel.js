@@ -13,9 +13,9 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (!message.member.permissions.has("ADMINISTRATOR"))
+    if (!message.member.permissions.has("MANAGE_GUILD"))
       return message.reply(
-        "You need `ADMINISTRATOR` Perms to perform this Action."
+        "You need `MANAGE_GUILD` Permission to run this command."
       );
 
     Schema.findOne({ Guild: message.guild.id }, async (err, data) => {

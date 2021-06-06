@@ -8,6 +8,8 @@ let m = require("moment-duration-format"),
 const version1 = require("discord.js").version;
 module.exports = {
   name: "stats",
+  aliases: ["botstatus"],
+  description: "Show Bot Status.",
   /**
    * @param {Client} client
    * @param {Message} message
@@ -30,7 +32,7 @@ module.exports = {
 
       const embed = new MessageEmbed()
         .addField(
-          "Aneo Stats:",
+          "Exxyll Stats",
           `**📂 Total Servers** ${guilds}\n\n**👥 Total Users**: ${users}\n\n**💬 Total Channels**: ${channels}\n\n**✅ Usage**: ${usage}\n\n**<:node:849596876596838400> Node Version**: ${node}\n\n**<:djs:849597018211876864> Discord.js Version**: v${version1}\n\n**<:intel:849596955968405546> Cpu Usage** ${CPU}\n\n**📑 Total Ram: ${totalMemMb} Mb**\n\n**📀 Ram used: ${usedMemMb}**\n\n**💻 Platform: ${process.platform}**\n\n**♐ Arch: ${process.arch}**`
         )
         .addField(

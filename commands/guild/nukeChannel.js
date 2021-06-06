@@ -10,7 +10,10 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
+    if (!message.member.hasPermission("MANAGE_CHANNELS"))
+      return message.reply(
+        "You need `MANAGE_CHANNELS` Permission to run this command."
+      );
     if (!message.guild.me.hasPermission("MANAGE_CHANNELS"))
       return message.reply("I'm Need `MANAGE_CHANNELS` Permission.");
 

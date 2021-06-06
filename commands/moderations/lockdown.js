@@ -13,9 +13,9 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (!message.member.permissions.has("ADMINISTRATOR"))
+    if (!message.member.permissions.has("MANAGE_GUILD"))
       return message.channel.send(
-        "You must have `ADMINISTRATOR` Permission in order to run this command."
+        "You need `MANAGE_GUILD` Permission to run this command."
       );
     const role = message.guild.roles.everyone;
     if (!args.length) return message.channel.send("Please specify a query!");

@@ -5,7 +5,7 @@ module.exports = {
   name: "sourcebin",
   aliases: ["bin"],
   usage: "code",
-  description: "Upload a code to Sourcebin",
+  description: "Upload a JavaScript code to Sourcebin",
   hidden: false,
   premium: false,
   /**

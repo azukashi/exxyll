@@ -1,3 +1,5 @@
+const { Client, Message, MessageEmbed } = require("discord.js");
+
 module.exports = {
   name: "slowmode",
   category: "moderation",
@@ -6,6 +8,10 @@ module.exports = {
   usage: "<time>",
   run: (client, message, args) => {
     const amount = parseInt(args[0]);
+    if (!message.member.hasPermission("MANAGE_CHANNEL"))
+      return message.reply(
+        "You need `MANAGE_CHANNEL` Permission to run this command."
+      );
     if (message.member.hasPermission("MANAGE_CHANNEL"))
       if (isNaN(amount))
         return message.channel.send("<:x:It doesn't seem to be valid value");

@@ -11,7 +11,10 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (!message.member.permissions.has("BAN_MEMBERS")) return;
+    if (!message.member.permissions.has("BAN_MEMBERS"))
+      return message.reply(
+        "You need `BAN_MEMBERS` Permission to run this command."
+      );
 
     const member = message.mentions.members.first();
     if (!member) return message.reply("Please mention a member to ban!");
