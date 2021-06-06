@@ -8,11 +8,11 @@ module.exports = {
   usage: "<time>",
   run: (client, message, args) => {
     const amount = parseInt(args[0]);
-    if (!message.member.hasPermission("MANAGE_CHANNEL"))
+    if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.reply(
-        "You need `MANAGE_CHANNEL` Permission to run this command."
+        "You need `MANAGE_CHANNELS` Permission to run this command."
       );
-    if (message.member.hasPermission("MANAGE_CHANNEL"))
+    if (message.member.hasPermission("MANAGE_CHANNELS"))
       if (isNaN(amount))
         return message.channel.send("<:x:It doesn't seem to be valid value");
     if (args[0] === amount + "s") {
