@@ -3,6 +3,11 @@ const translate = require("@iamtraction/google-translate");
 
 module.exports = {
   name: "translate",
+  aliases: [],
+  usage: "query",
+  description: "Translate text to English.",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message

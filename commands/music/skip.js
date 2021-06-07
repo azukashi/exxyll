@@ -2,6 +2,11 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "skip",
+  aliases: ["next"],
+  usage: "",
+  description: "Skip currently played song.",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message

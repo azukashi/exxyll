@@ -3,6 +3,11 @@ const axios = require("axios");
 
 module.exports = {
   name: "urban",
+  aliases: [],
+  usage: "query",
+  description: "Search meanings of text to Urban Dictionary.",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message

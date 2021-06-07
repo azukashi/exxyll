@@ -1,11 +1,12 @@
 const weather = require("weather-js");
-const config = require("../../config.json");
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "weather",
   aliases: ["wthr"],
+  usage: "location",
+  description: "See currently weather in your location.",
   run: async (client, message, args) => {
     weather.find(
       { search: args.join(" "), degreeType: "C" },
