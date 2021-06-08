@@ -18,6 +18,7 @@ module.exports = {
 
       // List Emoji You want to add to Help Menus
       const dirEmojis = {
+        configuration: "🔧",
         fun: "🎲",
         games: "🎮",
         guild: "👥",
