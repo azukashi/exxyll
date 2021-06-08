@@ -264,6 +264,11 @@
   dependencies:
     debug "^4.3.1"
 
+"@reconlx/discord.js@^1.1.101":
+  version "1.1.101"
+  resolved "https://registry.yarnpkg.com/@reconlx/discord.js/-/discord.js-1.1.101.tgz#b577194937857def67c6561932576eff0d211964"
+  integrity sha512-YKXJ74zra1tUwtx0p2U1nZWhnBTe2WhZioTMT5+W89QQrheyYus1MUWdJceAsN0eIs0p4zqhrNqWMWNY7B3xyQ==
+
 "@sindresorhus/is@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.0.1.tgz#d26729db850fa327b7cacc5522252194404226f5"

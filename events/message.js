@@ -3,6 +3,7 @@ const config = require("../config.json");
 const prefix = config.prefix;
 const premiumSchema = require("../models/premium");
 const blacklist = require("../models/blacklist");
+const prefixSchema = require("../models/prefix");
 
 client.on("message", async (message) => {
   if (message.author.bot) return;
@@ -17,14 +18,19 @@ client.on("message", async (message) => {
   //         message.channel.send(message.mentions.members.first().user.tag + ":" + db.get(`afk-${message.mentions.members.first().id}+${message.guild.id}`))
   //     }else return;
   // }else;
-  if (!message.content.startsWith(prefix)) return;
+  const p = await client.prefix(message);
+  if (message.mentions.users.first()) {
+    if (message.mentions.users.first().id === "848232775798226996")
+      return message.channel.send(`Prefix in ${message.guild.name} is ${p}`);
+  }
+  if (!message.content.startsWith(p)) return;
   blacklist.findOne({ id: message.author.id }, async (err, data) => {
     if (err) throw err;
     if (!data) {
       if (!message.guild) return;
       if (!message.member)
         message.member = await message.guild.fetchMember(message);
-      const args = message.content.slice(prefix.length).trim().split(/ +/g);
+      const args = message.content.slice(p.length).trim().split(/ +/g);
       const cmd = args.shift().toLowerCase();
       if (cmd.length == 0) return;
       let command = client.commands.get(cmd);

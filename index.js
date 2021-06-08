@@ -18,6 +18,7 @@ mongoose
   )
   .then(console.log("MongoDB : Connected to Google Cloud Server - Tokyo!"));
 
+const prefixSchema = require("./models/prefix");
 const config = require("./config.json");
 const prefix = config.prefix;
 const token = config.token;
@@ -29,6 +30,25 @@ client.categories = fs.readdirSync("./commands/");
 ["command"].forEach((handler) => {
   require(`./handlers/${handler}`)(client);
 });
+/**
+ * @param {Client} client
+ */
+
+client.prefix = async function (message) {
+  let custom;
+
+  const data = await prefixSchema
+    .findOne({ Guild: message.guild.id })
+    .catch((err) => console.log(err));
+
+  if (data) {
+    custom = data.Prefix;
+  } else {
+    custom = prefix;
+  }
+  return custom;
+};
+
 client.on("ready", () => {
   client.user.setActivity(`${prefix}help`);
   console.log(`${client.user.username} ✅`);
@@ -43,6 +63,17 @@ client.on("clickButton", async (button) => {
     button.channel.send("Okay, sir!");
   }
   button.defer();
+});
+
+client.on("guildDelete", async (guild) => {
+  prefixSchema.findOne({ Guild: guild.id }, async (err, data) => {
+    if (err) throw err;
+    if (data) {
+      prefixSchema
+        .findOneAndDelete({ Guild: guild.id })
+        .then(console.log(`Deleted data.`));
+    }
+  });
 });
 
 const distube = require("distube");
