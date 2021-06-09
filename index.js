@@ -1,5 +1,6 @@
 const { MessageEmbed, Collection, Client, Discord } = require("discord.js");
 const translate = require("@k3rn31p4nic/google-translate-api");
+const { DiscordTogether } = require("discord-together");
 const fs = require("fs");
 const client = new Client({
   disableEveryone: true,
@@ -124,5 +125,6 @@ player
   });
 
 client.player = player;
+client.discordTogether = new DiscordTogether(client);
 
 client.login(token);

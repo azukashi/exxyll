@@ -1257,6 +1257,13 @@ discord-canvas@^1.4.1:
     fortnite-9812 "^1.0.4"
     fs "^0.0.1-security"
 
+discord-together@^1.1.14:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.1.14.tgz#03f216baa50f2a4984b4216c557eabdf7e4e9bd4"
+  integrity sha512-zBCsQW9dn6pUmpqsrO9/wdrgMH87z/t/KccbOKu3wg9/phkru+tQwotKo08QuBFriJ5TN4LkFBa3HCc7ZhUVcQ==
+  dependencies:
+    node-fetch "^2.6.1"
+
 discord.js-akinator@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-2.0.4.tgz#58d64ae718f52152a765c43e980573356b1c8ca1"
