@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     const search = args.join(" ");
 
-    if (!search) return message.channel.send("Please provide search query");
+    if (!search) return message.reply("Please provide search query");
 
     PlayStore.search({
       term: args.join(" "),
@@ -27,7 +27,7 @@ module.exports = {
       try {
         App = JSON.parse(JSON.stringify(Data[0]));
       } catch (error) {
-        return message.channel.send("No Application Found!");
+        return message.reply("No Application Found!");
       }
 
       const Embed = new MessageEmbed()
