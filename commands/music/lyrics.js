@@ -28,9 +28,9 @@ module.exports = {
         .setDescription(lyrics, {
           split: true,
         });
-      message.channel.send({ embed: embed });
+      message.lineReplyNoMention({ embed: embed });
     } catch (error) {
-      message.reply(`An error had occured: ${error}`);
+      message.lineReplyNoMention(`An error had occured: ${error}`);
     }
   },
 };

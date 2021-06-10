@@ -27,6 +27,7 @@
     "css-what": "^5.0.1",
     "discord-buttons": "^3.0.1",
     "discord-canvas": "^1.4.1",
+    "discord-reply": "^0.1.2",
     "discord-together": "^1.1.14",
     "discord.js": "^12.5.3",
     "discord.js-akinator": "^2.0.4",

@@ -11,18 +11,18 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
-      return message.reply("Please Join a Voice Channel First!");
+      return message.lineReply("Please Join a Voice Channel First!");
     if (!client.player.getQueue(message))
-      return message.reply("No music currently playing!");
+      return message.lineReply("No music currently playing!");
 
     const repeatMode = client.player.getQueue(message).repeatMode;
 
     if (repeatMode) {
       client.player.setRepeatMode(message, false);
-      return message.channel.send("Repeat Mode : **Disabled**.");
+      return message.lineReplyNoMention("Repeat Mode : **Disabled**.");
     } else {
       client.player.setRepeatMode(message, true);
-      return message.channel.send("Repeat Mode : **Enabled**.");
+      return message.lineReplyNoMention("Repeat Mode : **Enabled**.");
     }
   },
 };

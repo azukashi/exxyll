@@ -16,11 +16,11 @@ module.exports = {
 
     const command = args.join(" ");
     if (!command)
-      return message.channel.send("Please specify a command to execute!");
+      return message.lineReplyNoMention("Please specify a command to execute!");
 
     child.exec(command, (err, res) => {
       if (err) return message.channel.send(err);
-      message.channel.send(res.slice(0, 2000), { code: "js" });
+      message.lineReplyNoMention(res.slice(0, 2000), { code: "js" });
     });
   },
 };

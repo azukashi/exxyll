@@ -1257,6 +1257,13 @@ discord-canvas@^1.4.1:
     fortnite-9812 "^1.0.4"
     fs "^0.0.1-security"
 
+discord-reply@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/discord-reply/-/discord-reply-0.1.2.tgz#4249de4cbc86743f8095172fe4c40597f48a3cc6"
+  integrity sha512-4XAFjJrhrmxsnDSPOQPqtjH534tx92KNFOW1uGZvxlKnPHcdCvbkrd8U/9vm/JQl5xDcbQQFUNoXs2k8kC8BKg==
+  dependencies:
+    discord.js "^12.5.1"
+
 discord-together@^1.1.14:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.1.14.tgz#03f216baa50f2a4984b4216c557eabdf7e4e9bd4"

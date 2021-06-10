@@ -11,10 +11,10 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
-      return message.reply(`Please Join a Voice Channel First!`);
+      return message.lineReply(`Please Join a Voice Channel First!`);
 
     client.player.stop(message);
 
-    message.channel.send("The Player has been **Stopped**!");
+    message.lineReplyNoMention("The Player has been **Stopped**!");
   },
 };

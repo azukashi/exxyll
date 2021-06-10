@@ -32,7 +32,7 @@ module.exports = {
       .setDescription(description())
       .setColor("BLUE");
 
-    message.channel.send(embed);
+    message.lineReplyNoMention(embed);
     message.channel.send(
       `Device Logged-In : ` + Object.entries(devices).length
     );

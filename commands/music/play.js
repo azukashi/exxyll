@@ -14,10 +14,10 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
-      return message.reply(`Please Join a Voice Channel First!`);
+      return message.lineReply(`Please Join a Voice Channel First!`);
 
     const query = args.join(" ");
-    if (!query) return message.reply(`Please enter a song name!`);
+    if (!query) return message.lineReplyNoMention(`Please enter a song name!`);
 
     await client.player.play(message, query);
   },

@@ -1,4 +1,5 @@
 const { MessageEmbed, Collection, Client, Discord } = require("discord.js");
+require("discord-reply");
 const translate = require("@k3rn31p4nic/google-translate-api");
 const { DiscordTogether } = require("discord-together");
 const fs = require("fs");
