@@ -25,6 +25,6 @@ module.exports = {
     const embed = new MessageEmbed()
       .setDescription("✅ | Deleted " + args[0] + " messages.")
       .setColor("BLUE");
-    message.lineReplyNoMention(embed).then((m) => m.delete({ timeout: 2000 }));
+    message.channel.send(embed).then((m) => m.delete({ timeout: 2000 }));
   },
 };
