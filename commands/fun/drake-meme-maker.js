@@ -24,8 +24,10 @@ module.exports = {
       `https://frenchnoodles.xyz/api/endpoints/drake/?text1=${user}&text2=${user2}`,
       {}
     );
+    message.channel.startTyping();
     let Image = await res.buffer();
     const drakememe = new Discord.MessageAttachment(Image);
     message.channel.send(drakememe);
+    message.channel.stopTyping();
   },
 };

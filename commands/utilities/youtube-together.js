@@ -10,10 +10,12 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const voicechannel = message.member.voice.channelID;
-    if (!voicechannel)
-      return message.reply(
-        `You need to be in a voice channel to run this command`
-      );
+    const notInVc = new MessageEmbed()
+      .setDescription(
+        ":x: | You need to be in a voice channel to run this command!"
+      )
+      .setColor("RED");
+    if (!voicechannel) return message.reply(notInVc);
     client.discordTogether
       .createTogetherCode(voicechannel, "youtube")
       .then(async (invite) => {

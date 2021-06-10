@@ -30,6 +30,8 @@ module.exports = {
       .setFooter(message.author.tag)
       .setTimestamp();
 
+    message.channel.startTyping();
     message.channel.send(embed);
+    message.channel.stopTyping();
   },
 };
