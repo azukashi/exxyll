@@ -17,6 +17,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const split = args.join(" ").split(",");
     const user = split[0];
     const user2 = split[1];
@@ -24,7 +25,6 @@ module.exports = {
       `https://frenchnoodles.xyz/api/endpoints/drake/?text1=${user}&text2=${user2}`,
       {}
     );
-    message.channel.startTyping();
     let Image = await res.buffer();
     const drakememe = new Discord.MessageAttachment(Image);
     message.channel.send(drakememe);

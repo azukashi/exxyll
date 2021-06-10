@@ -1,4 +1,7 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
+const discord = require("discord.js");
+const fetch = require("node-fetch");
+const atob = require("atob");
 
 module.exports = {
   name: "trivia",
@@ -13,9 +16,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const discord = require("discord.js");
-    const fetch = require("node-fetch");
-    const atob = require("atob");
+    message.channel.startTyping();
     class Game {
       constructor(message, args) {
         // Defining vars and running the game logic
@@ -257,5 +258,6 @@ module.exports = {
       }
     }
     var game = new Game(message, args);
+    message.channel.stopTyping();
   },
 };

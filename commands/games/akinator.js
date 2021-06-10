@@ -12,6 +12,8 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     akinator(message, client);
+    message.channel.stopTyping();
   },
 };
