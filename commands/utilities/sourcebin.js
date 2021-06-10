@@ -15,7 +15,7 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const content = args.join(" ");
-    if (!content) return message.reply("Please give a code to upload!");
+    if (!content) return message.lineReply("Please give a code to upload!");
 
     create(
       [
@@ -30,7 +30,7 @@ module.exports = {
         description: `Code uploaded by Exxyll Discord Bot`,
       }
     ).then((value) => {
-      message.channel.send(`Your code has been posted : ${value.url}`);
+      message.lineReplyNoMention(`Your code has been posted : ${value.url}`);
     });
   },
 };

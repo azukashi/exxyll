@@ -15,12 +15,12 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_GUILD"))
-      return message.reply(
+      return message.lineReply(
         "You need `MANAGE_GUILD` Perms to perform this action! \nIf you already have `MANAGE_GUILD` Permission, Make sure I Have `MANAGE_GUILD` Permission Too."
       );
 
     const channel = message.mentions.channels.first();
-    if (!channel) return message.reply("Please mention a channel!");
+    if (!channel) return message.lineReply("Please mention a channel!");
 
     Schema.findOne({ Guild: message.guild.id }, async (err, data) => {
       if (data) {
@@ -32,7 +32,7 @@ module.exports = {
           Channel: channel.id,
         }).save();
       }
-      message.reply(`${channel} has been set as the welcome channel!`);
+      message.lineReply(`${channel} has been set as the welcome channel!`);
     });
   },
 };

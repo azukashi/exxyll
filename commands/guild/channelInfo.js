@@ -15,7 +15,8 @@ module.exports = {
       return days + (days == 1 ? " day" : " days") + " ago";
     }
     let channel = message.mentions.channels.first();
-    if (!channel) return message.channel.send("Please mention a channel.");
+    if (!channel)
+      return message.lineReplyNoMention("Please mention a channel.");
     let inline = true;
     try {
       let e = new MessageEmbed()
@@ -30,9 +31,9 @@ module.exports = {
           message.author.displayAvatarURL({ dynamic: true })
         )
         .setColor("BLUE");
-      message.channel.send({ embed: e });
+      message.lineReplyNoMention({ embed: e });
     } catch (error) {
-      message.channel.send(error);
+      message.lineReplyNoMention(error);
     }
   },
 };

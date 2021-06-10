@@ -47,7 +47,7 @@ module.exports = {
     });
 
     // Send Confirmation to user that suggesting a suggestion
-    message.channel.send(confirmationEmbed);
+    message.lineReplyNoMention(confirmationEmbed);
   },
 };
 

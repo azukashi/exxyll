@@ -14,27 +14,29 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_GUILD"))
-      return message.reply(
+      return message.lineReply(
         "You need `MANAGE_GUILD` Permission to run this command.\nIf you already have `MANAGE_GUILD` Permission, Make sure I Have `MANAGE_GUILD` Permission Too."
       );
     const role = message.guild.roles.everyone;
-    if (!args.length) return message.channel.send("Please specify a query!");
+    if (!args.length) return message.lineReply("Please specify a query!");
     const query = args[0].toLowerCase();
     if (!["true", "false"].includes(query))
-      return message.channel.send("The option you have stated isn't valid.");
+      return message.lineReply("The option you have stated isn't valid.");
     const perms = role.permissions.toArray();
 
     if (query === "false") {
       perms.push("SEND_MESSAGES");
       console.log(perms);
       await role.edit({ permissions: perms });
-      message.channel.send("Server is unlocked now.");
+      message.lineReplyNoMention("Server is unlocked now.");
     } else {
       const newPerms = perms.filter((perm) => perm !== "SEND_MESSAGES");
       console.log(newPerms);
 
       await role.edit({ permissions: newPerms });
-      message.channel.send("Server is Now Locked Down for @everyone Role.");
+      message.lineReplyNoMention(
+        "Server is Now Locked Down for @everyone Role."
+      );
     }
   },
 };

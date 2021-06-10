@@ -21,9 +21,9 @@ module.exports = {
 
     const taggedUser = message.mentions.users.first();
     if (!taggedUser) {
-      return message.channel.send("Please mention somebody to hack!");
+      return message.lineReplyNoMention("Please mention somebody to hack!");
     }
-    message.channel.send(`Hacking  ${taggedUser}...`);
+    message.lineReplyNoMention(`Hacking  ${taggedUser}...`);
     message.channel.send("Status: ■□□□□□□□□□□ 0%").then((msg) => {
       wait(93);
       msg.edit("Status: ■■□□□□□□□□□ 7%");

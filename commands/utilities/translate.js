@@ -15,7 +15,7 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const query = args.join(" ");
-    if (!query) return message.reply("Please specify a text to translate!");
+    if (!query) return message.lineReply("Please specify a text to translate!");
 
     const translated = await translate(query, { to: "en" });
 
@@ -30,6 +30,6 @@ module.exports = {
       .setColor("BLUE")
       .setFooter(message.author.tag)
       .setTimestamp();
-    message.channel.send(embed);
+    message.lineReplyNoMention(embed);
   },
 };

@@ -14,16 +14,16 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_GUILD"))
-      return message.reply(
+      return message.lineReply(
         "You need `MANAGE_GUILD` Permission to run this command.\nIf you already have `MANAGE_GUILD` Permission, Make sure I Have `MANAGE_GUILD` Permission Too."
       );
 
     Schema.findOne({ Guild: message.guild.id }, async (err, data) => {
-      if (!data) return message.reply(`This guild has no data stored.`);
+      if (!data) return message.lineReply(`This guild has no data stored.`);
 
       const channel = client.channels.cache.get(data.Channel);
 
-      message.reply(
+      message.lineReply(
         `Welcoming Channel Has Been Set To => ${channel}. \n\nThis bot will automatically sends a Welcoming message to ${channel} when someone joins to this server!`
       );
     });

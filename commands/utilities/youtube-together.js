@@ -15,11 +15,11 @@ module.exports = {
         ":x: | You need to be in a voice channel to run this command!"
       )
       .setColor("RED");
-    if (!voicechannel) return message.reply(notInVc);
+    if (!voicechannel) return message.lineReply(notInVc);
     client.discordTogether
       .createTogetherCode(voicechannel, "youtube")
       .then(async (invite) => {
-        return message.reply(
+        return message.lineReply(
           `Hey here is your link! Click on the link to start! ${invite.code}`
         );
       });

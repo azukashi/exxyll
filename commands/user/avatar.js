@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     const member = message.mentions.members.first() || message.member;
 
-    message.channel.send(
+    message.lineReplyNoMention(
       new MessageEmbed()
         .setTitle(`${member.user.tag}'s avatar`)
         .setImage(member.user.displayAvatarURL({ dynamic: true, size: 512 }))

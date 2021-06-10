@@ -27,7 +27,7 @@ module.exports = {
     );
     let Image = await res.buffer();
     const drakememe = new Discord.MessageAttachment(Image);
-    message.channel.send(drakememe);
+    message.lineReplyNoMention(drakememe);
     message.channel.stopTyping();
   },
 };

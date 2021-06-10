@@ -13,14 +13,14 @@ module.exports = {
       function (error, result) {
         // 'C' can be changed to 'F' for farneheit results
         if (!args[0])
-          return message.reply(
+          return message.lineReply(
             new MessageEmbed()
               .setTitle("Error Usage")
               .setDescription(`Usage: ${client.prefix}weather <place>`)
           );
 
         if (result === undefined || result.length === 0)
-          return message.reply(
+          return message.lineReply(
             new MessageEmbed()
               .setTitle("Error 404")
               .setDescription(`Couldn't Find This Country`)
@@ -50,7 +50,7 @@ module.exports = {
             message.author.displayAvatarURL({ dynamic: true })
           );
 
-        message.channel.send(weatherinfo);
+        message.lineReplyNoMention(weatherinfo);
       }
     );
   },

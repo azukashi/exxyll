@@ -15,7 +15,8 @@ module.exports = {
    */
   run: async (client, message, args) => {
     let query = args.join(" ");
-    if (!query) return message.reply("Please specify a word to search for!");
+    if (!query)
+      return message.lineReply("Please specify a word to search for!");
 
     query = encodeURIComponent(query);
 
@@ -27,7 +28,7 @@ module.exports = {
 
     const [answer] = list;
 
-    message.channel.send(
+    message.lineReplyNoMention(
       new MessageEmbed()
         .setTitle(answer.word)
         .setURL(answer.permalink)

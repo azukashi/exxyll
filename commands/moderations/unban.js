@@ -9,18 +9,18 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (message.member.permissions.has("BAN_MEMBERS"))
-      return message.reply(
+      return message.lineReply(
         "You need `BAN_MEMBERS` Permisssion to run this command.\nIf you already have `BAN_MEMBERS` Permission, Make sure I Have `BAN_MEMBERS` Permission Too."
       );
 
     const id = args[0];
-    if (!id) return message.reply("Please send an ID!");
+    if (!id) return message.lineReply("Please send an ID!");
 
     const bannedMembers = await message.guild.fetchBans();
     if (!bannedMembers.find((user) => user.user.id === id))
-      return message.reply("User is not Banned!");
+      return message.lineReply("User is not Banned!");
 
     message.guild.members.unban(id);
-    message.reply("Unbanned User!");
+    message.lineReply("Unbanned User!");
   },
 };

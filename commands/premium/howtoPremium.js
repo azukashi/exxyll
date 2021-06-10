@@ -31,7 +31,7 @@ module.exports = {
       .setTimestamp();
 
     message.channel.startTyping();
-    message.channel.send(embed);
+    message.lineReplyNoMention(embed);
     message.channel.stopTyping();
   },
 };

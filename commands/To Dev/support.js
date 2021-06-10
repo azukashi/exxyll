@@ -26,6 +26,6 @@ module.exports = {
       .setColor("BLUE")
       .setTimestamp();
 
-    message.channel.send(embed);
+    message.lineReplyNoMention(embed);
   },
 };

@@ -11,11 +11,11 @@ module.exports = {
       .fetch(member.match(/\d{17,19}/)[0])
       .catch(() => null);
     if (!member) {
-      return message.channel.send(`\\❌ User not found.`);
+      return message.lineReply(`\\❌ User not found.`);
     }
     const sp = member.permissions.serialize();
     const cp = message.channel.permissionsFor(member).serialize();
-    return message.channel.send(
+    return message.lineReplyNoMention(
       new MessageEmbed()
         .setColor(member.displayColor || "GREY")
         .setTitle(`${member.displayName}'s Permissions`)

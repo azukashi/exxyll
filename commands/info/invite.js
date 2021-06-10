@@ -41,6 +41,6 @@ module.exports = {
     //     embed: embed
     // });
 
-    message.channel.send(embed);
+    message.lineReplyNoMention(embed);
   },
 };

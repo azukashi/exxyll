@@ -41,9 +41,9 @@ module.exports = {
           `Emoji Lists | Command Request by ${message.author.tag}`,
           message.author.displayAvatarURL({ dynamic: true })
         );
-      message.channel.send(emn);
+      message.lineReplyNoMention(emn);
     } catch (err) {
-      return message.channel.send(
+      return message.lineReplyNoMention(
         "Oops! Looks like something went wrong, Please try again Later."
       );
     }

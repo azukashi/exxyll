@@ -16,8 +16,8 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    message.channel
-      .send("Are you sure to Reset Custom Prefix to Default?")
+    message
+      .lineReplyNoMention("Are you sure to Reset Custom Prefix to Default?")
       .then(async (msg) => {
         const emoji = await confirmation(
           msg,
@@ -28,11 +28,15 @@ module.exports = {
         if (emoji === "✅") {
           msg.delete();
           await prefixSchema.findOneAndDelete({ Guild: message.guild.id });
-          message.channel.send(`The prefix has been reset to **${prefix}**`);
+          message.lineReplyNoMention(
+            `The prefix has been reset to **${prefix}**`
+          );
         }
         if (emoji === "❌") {
           msg.delete();
-          message.channel.send("Reset Prefix Operation has been cancelled.");
+          message.lineReplyNoMention(
+            "Reset Prefix Operation has been cancelled."
+          );
         }
       });
   },

@@ -18,6 +18,6 @@ module.exports = {
 
     afk.set(message.author.id, [Date.now(), reason]);
 
-    message.reply(`You are now afk. \nReason : \`${reason}\``);
+    message.lineReply(`You are now afk. \nReason : \`${reason}\``);
   },
 };

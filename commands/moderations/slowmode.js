@@ -9,29 +9,29 @@ module.exports = {
   run: (client, message, args) => {
     const amount = parseInt(args[0]);
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
-      return message.reply(
+      return message.lineReply(
         "You need `MANAGE_CHANNELS` Permission to run this command.\nIf you already have `MANAGE_CHANNELS` Permission, Make sure I Have `MANAGE_CHANNELS` Permission Too."
       );
     if (message.member.hasPermission("MANAGE_CHANNELS"))
       if (isNaN(amount))
-        return message.channel.send("<:x:It doesn't seem to be valid value");
+        return message.lineReply("<:x:It doesn't seem to be valid value");
     if (args[0] === amount + "s") {
       message.channel.setRateLimitPerUser(amount);
       if (amount > 1) {
-        message.channel.send("slowmode is now " + amount + " seconds");
+        message.lineReplyNoMention("Slowmode is now " + amount + " seconds");
         return;
       } else {
-        message.channel.send("slowmode is now " + amount + " second");
+        message.lineReplyNoMention("Slowmode is now " + amount + " second");
         return;
       }
     }
     if (args[0] === amount + "min") {
       message.channel.setRateLimitPerUser(amount * 60);
       if (amount > 1) {
-        message.channel.send("slowmode is now " + amount + " minutes");
+        message.lineReplyNoMention("Slowmode is now " + amount + " minutes");
         return;
       } else {
-        message.channel.send("slowmode is now " + amount + " minute");
+        message.lineReplyNoMention("Slowmode is now " + amount + " minute");
 
         return;
       }
@@ -39,14 +39,14 @@ module.exports = {
     if (args[0] === amount + "h") {
       message.channel.setRateLimitPerUser(amount * 60 * 60);
       if (amount > 1) {
-        message.channel.send("slowmode is now " + amount + " hours");
+        message.lineReplyNoMention("Slowmode is now " + amount + " hours");
         return;
       } else {
-        message.channel.send("slowmode is now " + amount + " hour");
+        message.lineReplyNoMention("Slowmode is now " + amount + " hour");
         return;
       }
     } else {
-      message.channel.send(
+      message.lineReplyNoMention(
         "You can only set seconds(s), minutes(min) and Hours(h)"
       );
     }

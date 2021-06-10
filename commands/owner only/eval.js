@@ -15,7 +15,8 @@ module.exports = {
     if (message.author.id !== "788260234409672754") return;
 
     const code = args.join(" ");
-    if (!code) return message.reply("Please provide some code to evaluate!");
+    if (!code)
+      return message.lineReply("Please provide some code to evaluate!");
 
     try {
       const result = await eval(code);
@@ -25,10 +26,10 @@ module.exports = {
         output = inspect(result);
       }
 
-      message.channel.send(output, { code: "js" });
+      message.lineReplyNoMention(output, { code: "js" });
     } catch (error) {
       console.log(error);
-      message.channel.send(
+      message.lineReplyNoMention(
         `Evaluated content is too long to display.\n\nError : ${error}`
       );
     }

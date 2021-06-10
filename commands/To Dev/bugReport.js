@@ -33,9 +33,9 @@ module.exports = {
       .setColor("BLUE")
       .setTimestamp();
 
-    if (!query) return message.channel.send("Please specify a query!");
+    if (!query) return message.lineReplyNoMention("Please specify a query!");
     owner.send(reportEmbed);
-    if (query) return message.channel.send(thanksFor);
+    if (query) return message.lineReplyNoMention(thanksFor);
     message.delete();
   },
 };

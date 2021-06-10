@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     const search = args.join(" ");
 
-    if (!search) return message.reply("Please provide search query");
+    if (!search) return message.lineReply("Please provide search query");
 
     PlayStore.search({
       term: args.join(" "),
@@ -27,7 +27,7 @@ module.exports = {
       try {
         App = JSON.parse(JSON.stringify(Data[0]));
       } catch (error) {
-        return message.reply("No Application Found!");
+        return message.lineReply("No Application Found!");
       }
 
       const Embed = new MessageEmbed()
@@ -42,7 +42,7 @@ module.exports = {
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
 
-      return message.channel.send(Embed);
+      return message.lineReplyNoMention(Embed);
     });
   },
 };

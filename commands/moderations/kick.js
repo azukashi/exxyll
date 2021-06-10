@@ -12,15 +12,15 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.permissions.has("KICK_MEMBERS"))
-      return message.reply(
+      return message.lineReply(
         "You need `KICK_MEMBERS` Permissions in order to run this command.\nIf you already have `KICK_MEMBERS` Permission, Make sure I Have `KICK_MEMBERS` Permission Too."
       );
 
     const member = message.mentions.members.first();
-    if (!member) return message.reply("Please mention a member to kick!");
+    if (!member) return message.lineReply("Please mention a member to kick!");
 
     if (message.member.roles.highest.position <= member.roles.highest.position)
-      return message.reply(
+      return message.lineReply(
         "You can punish because u either have the same role or your role is lower."
       );
 
@@ -41,10 +41,10 @@ module.exports = {
     member
       .kick({ reason })
       .catch((err) =>
-        message.channel.send(
+        message.lineReplyNoMention(
           "An error has occured while trying to kick.\n\nYou can report this error with `.report` to Developers!"
         )
       );
-    message.channel.send(embed);
+    message.lineReplyNoMention(embed);
   },
 };

@@ -11,11 +11,11 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
-      return message.reply(
+      return message.lineReply(
         "You need `MANAGE_CHANNELS` Permission to run this command."
       );
     if (!message.guild.me.hasPermission("MANAGE_CHANNELS"))
-      return message.reply("I'm Need `MANAGE_CHANNELS` Permission.");
+      return message.lineReply("I'm Need `MANAGE_CHANNELS` Permission.");
 
     message.channel.clone().then((ch) => {
       ch.setParent(message.channel.parent.id);
