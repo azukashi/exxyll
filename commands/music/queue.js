@@ -35,6 +35,8 @@ module.exports = {
       .setColor("BLUE")
       .setTimestamp();
 
-    message.lineReplyNoMention(embed);
+    message
+      .lineReplyNoMention(embed)
+      .catch((err) => message.lineReplyNoMention(err));
   },
 };
