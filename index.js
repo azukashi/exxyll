@@ -85,7 +85,7 @@ const player = new distube(client);
 
 player
   .on("playSong", (message, queue, song) => {
-    message.channel.send(`**${song.name}** has started playing.`);
+    message.lineReplyNoMention(`**${song.name}** has started playing.`);
   })
   .on("addList", (message, queue, playlist) => {
     message.channel.send(
