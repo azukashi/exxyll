@@ -19,7 +19,7 @@ module.exports = {
     if (!client.player.getQueue(message))
       return message.lineReply("No music currently playing!");
 
-    let queue = distube.getQueue(message);
+    let queue = client.player.getQueue(message);
     message.lineReply(
       "Current queue :\n" +
         queue.songs
