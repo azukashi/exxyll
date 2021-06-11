@@ -20,16 +20,21 @@ module.exports = {
       return message.lineReply("No music currently playing!");
 
     let queue = client.player.getQueue(message);
-    message.lineReply(
-      "Current queue :\n" +
+    const embed = new MessageEmbed()
+      .setTitle("Queue List")
+      .addField(
         queue.songs
           .map(
             (song, id) =>
-              `**${id + 1}**. [${song.name}](${song.url}) - \`${
-                song.formattedDuration
-              }\``
+              `**${id + 1}**. ${song.name} - \`${song.formattedDuration}\`\n${
+                song.url
+              }`
           )
           .join("\n")
-    );
+      )
+      .setColor("BLUE")
+      .setTimestamp();
+
+    message.lineReplyNoMention(embed);
   },
 };
