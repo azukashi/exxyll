@@ -52,7 +52,10 @@ client.prefix = async function (message) {
 };
 
 client.on("ready", () => {
-  client.user.setActivity(`${prefix}help`);
+  client.user.setActivity(`.help`, {
+    type: "STREAMING",
+    url: "https://www.twitch.tv/falcxxr",
+  });
   console.log(`${client.user.username} ✅`);
 });
 
