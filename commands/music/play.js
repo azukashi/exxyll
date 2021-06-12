@@ -20,5 +20,23 @@ module.exports = {
     if (!query) return message.lineReplyNoMention(`Please enter a song name!`);
 
     await client.player.play(message, query);
+
+    let queue = client.player.getQueue(message);
+    const addedSong = new MessageEmbed()
+      .setTitle(`<:youtube:853158600096350209> Added Music`)
+      .setDescription(
+        queue.songs.map(
+          (song) =>
+            `Song Name : ${song.name}nDuration : ${song.formattedDuration}\nAdded by : ${song.user}`
+        )
+      )
+      .setThumbnail(queue.songs.map((song) => `${song.thumbnail}`))
+      .setColor("RED")
+      .setFooter(
+        message.author.tag,
+        message.author.displayAvatarURL({ dynamic: true })
+      );
+
+    message.channel.send(addedSong);
   },
 };

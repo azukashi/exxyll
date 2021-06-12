@@ -33,6 +33,10 @@ module.exports = {
           .join("\n")
       )
       .setColor("BLUE")
+      .setFooter(
+        `Request by ${message.author.tag}`,
+        message.author.displayAvatarURL({ dynamic: true })
+      )
       .setTimestamp();
 
     message
