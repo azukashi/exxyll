@@ -37,7 +37,7 @@ module.exports = {
         message.author.displayAvatarURL({ dynamic: true })
       );
 
-    message.channel.send(addedSong);
-    console.log(queue.songs.map((song) => song.thumbnail[0].url));
+    message.channel.send(addedSong).catch((err) => message.channel.send(err));
+    console.log(queue.songs.map((song) => song.thumbnail[0]));
   },
 };
