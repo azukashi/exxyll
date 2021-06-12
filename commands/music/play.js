@@ -30,7 +30,7 @@ module.exports = {
             `Song Name : ${song.name}nDuration : ${song.formattedDuration}\nAdded by : ${song.user}`
         )
       )
-      .setThumbnail(queue.songs.map((song) => song.thumbnail))
+      .setThumbnail(queue.songs.map((song) => song.thumbnail[0].url))
       .setColor("RED")
       .setFooter(
         message.author.tag,
@@ -38,5 +38,6 @@ module.exports = {
       );
 
     message.channel.send(addedSong);
+    console.log(queue.songs.map((song) => song.thumbnail[0].url));
   },
 };
