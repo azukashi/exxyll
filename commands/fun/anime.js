@@ -15,7 +15,7 @@ module.exports = {
      */
     run: async(client, message, args) => {
         // Define Query & Checking
-        let query = args.join(" ");
+        const query = args.join(" ");
         if(!query) return message.lineReply('Please specify a query to search!');
 
         // Getting Data from APIs with Axios
