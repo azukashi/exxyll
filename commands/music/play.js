@@ -30,7 +30,6 @@ module.exports = {
             `Song Name : ${song.name}\nDuration : ${song.formattedDuration}\nAdded by : ${song.user}`
         )
       )
-      .setThumbnail(queue.song.thumbnail)
       .setColor("RED")
       .setFooter(
         message.author.tag,
@@ -38,6 +37,5 @@ module.exports = {
       );
 
     message.channel.send(addedSong).catch((err) => message.channel.send(err));
-    console.log(queue.song.thumbnail);
   },
 };
