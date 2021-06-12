@@ -51,14 +51,6 @@ client.prefix = async function (message) {
   return custom;
 };
 
-client.on("ready", () => {
-  client.user.setActivity(`.help`, {
-    type: "STREAMING",
-    url: "https://www.twitch.tv/falcxxr",
-  });
-  console.log(`${client.user.username} ✅`);
-});
-
 client.on("clickButton", async (button) => {
   if (button.id == "button1") {
     button.channel.send(
