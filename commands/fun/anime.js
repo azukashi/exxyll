@@ -26,9 +26,9 @@ module.exports = {
         const ratings = data[0].attributes.averageRating;
         const episodes = data[0].attributes.episodeCount;
         const status = data[0].attributes.status;
-        const image = data[0].attributes.coverImage.original;
+        const image = data[0].attributes.coverImage.large;
 
-        if(image === 'null' || 'undefined') return console.log('Anime Image Not Found.')
+        if(image === 'null' || 'undefined') console.log('Anime Image Not Found.')
 
         const resultEmbed = new MessageEmbed()
             .setTitle(title)
