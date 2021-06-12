@@ -21,13 +21,14 @@ module.exports = {
 
     await client.player.play(message, query);
 
+    const songConst = client.player(song);
     let queue = client.player.getQueue(message);
     const addedSong = new MessageEmbed()
       .setTitle(`<:youtube:853158600096350209> Added Music`)
       .setDescription(
         queue.songs.map(
           (song) =>
-            `Song Name : ${song.name}\nDuration : ${song.formattedDuration}\nAdded by : ${song.user}`
+            `Song Name : **${song.name}**\nDuration : \`${song.formattedDuration}\`\nAdded by : ${song.user}\n**---------------**`
         )
       )
       .setColor("RED")
@@ -37,5 +38,6 @@ module.exports = {
       );
 
     message.channel.send(addedSong).catch((err) => message.channel.send(err));
+    console.log(songConst);
   },
 };
