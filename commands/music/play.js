@@ -30,7 +30,7 @@ module.exports = {
             `Song Name : ${song.name}nDuration : ${song.formattedDuration}\nAdded by : ${song.user}`
         )
       )
-      .setThumbnail(queue.songs.map((song) => `${song.thumbnail}`))
+      .setThumbnail(queue.songs.map((song) => song.thumbnail))
       .setColor("RED")
       .setFooter(
         message.author.tag,
