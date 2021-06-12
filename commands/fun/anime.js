@@ -28,7 +28,6 @@ module.exports = {
         const status = data[0].attributes.status;
         const image = data[0].attributes.coverImage.original;
 
-        if(title === 'null' || 'undefined') return message.channel.send('No Anime found.')
         if(image === 'null' || 'undefined') return console.log('Anime Image Not Found.')
 
         const resultEmbed = new MessageEmbed()
