@@ -21,7 +21,9 @@ client.on("message", async (message) => {
   const p = await client.prefix(message);
   if (message.mentions.users.first()) {
     if (message.mentions.users.first().id === "848232775798226996")
-      return message.channel.send(`Prefix in ${message.guild.name} is ${p}`);
+      return message.lineReplyNoMention(
+        `Prefix in ${message.guild.name} is ${p}`
+      );
   }
   if (!message.content.startsWith(p)) return;
   blacklist.findOne({ id: message.author.id }, async (err, data) => {
@@ -40,14 +42,14 @@ client.on("message", async (message) => {
           command.premium &&
           !(await premiumSchema.findOne({ User: message.author.id }))
         )
-          return message.reply(
+          return message.lineReply(
             "You need to upgrade to premium to use this command!\n\nUse `.premium` to know how to upgrade!"
           );
 
         command.run(client, message, args);
       }
     } else {
-      message.channel.send("You are blacklisted!");
+      message.lineReplyNoMention("You are blacklisted!");
     }
   });
 });

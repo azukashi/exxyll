@@ -1,3 +1,4 @@
+const { MessageEmbed } = require("discord.js");
 const { afk } = require("../Collection");
 const client = require("../index");
 const moment = require("moment");
@@ -13,17 +14,31 @@ client.on("message", async (message) => {
       const [timestamp, reason] = data;
       const timeAgo = moment(timestamp).fromNow();
 
-      message.lineReply(
-        `${mentionedMember} is currently afk (${timeAgo})\nReason : \`${reason}\``
-      );
+      const taggedEmbed = new MessageEmbed()
+        .setTitle(`${mentionedMember} is currently AFK!`)
+        .setDescription(`Time : \`${timeAgo}\`\nReason : \`${reason}\``)
+        .setFooter(
+          `${message.author.tag} Tagged ${mentionedMember}`,
+          message.author.displayAvatarURL({ dynamic: true })
+        )
+        .setColor("RED");
+
+      message.lineReplyNoMention(taggedEmbed);
     }
   }
 
   const getData = afk.get(message.author.id);
   if (getData) {
     afk.delete(message.author.id);
-    message.lineReplyNoMention(
-      `**Welcome back, ${message.member}**. Your AFK has been Removed.`
-    );
+
+    const welcomeBack = new MessageEmbed()
+      .setTitle(`Your AFK Has Been Removed!`)
+      .setDescription(
+        `**Welcome back, ${message.member}. Your AFK Has been Removed**`
+      )
+      .setFooter(`Removed ${message.author.tag} AFK`)
+      .setColor("BLUE");
+
+    message.lineReplyNoMention(welcomeBack);
   }
 });

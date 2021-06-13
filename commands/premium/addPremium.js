@@ -20,7 +20,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!member) return message.reply("Please specify a valid member!");
+    if (!member) return message.lineReply("Please specify a valid member!");
 
     premiumSchema.findOne(
       {
@@ -28,14 +28,14 @@ module.exports = {
       },
       async (err, data) => {
         if (data)
-          return message.reply(
+          return message.lineReply(
             "This user has already gained premium features!"
           );
 
         new premiumSchema({
           User: member.id,
         }).save();
-        return message.reply(`Added ${member} to the database!`);
+        return message.lineReply(`Added ${member} to the database!`);
       }
     );
   },

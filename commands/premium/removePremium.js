@@ -19,7 +19,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!member) return message.reply("Please specify a valid member!");
+    if (!member) return message.lineReply("Please specify a valid member!");
 
     premiumSchema.findOne(
       {
@@ -27,9 +27,11 @@ module.exports = {
       },
       async (err, data) => {
         if (!data)
-          return message.reply("User was previously not added to database!");
+          return message.lineReply(
+            "User was previously not added to database!"
+          );
         data.delete();
-        message.channel.send("Removed user from database!");
+        message.lineReplyNoMention("Removed user from database!");
       }
     );
   },

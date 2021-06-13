@@ -18,6 +18,12 @@ module.exports = {
 
     afk.set(message.author.id, [Date.now(), reason]);
 
-    message.lineReply(`You are now afk. \nReason : \`${reason}\``);
+    const embed = new MessageEmbed()
+      .setTitle(`You are now AFK!`)
+      .setDescription(`Reason : \`${reason}\``)
+      .setFooter(`${message.author.tag} is now AFK!`)
+      .setColor("GREEN");
+
+    message.lineReply(embed);
   },
 };

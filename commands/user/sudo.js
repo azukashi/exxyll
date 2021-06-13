@@ -5,6 +5,8 @@ module.exports = {
   aliases: ["sud"],
   description: "Sudo as someone",
   usage: "[message]",
+  hidden: false,
+  premium: true,
   /**
    * @param {Client} client
    * @param {Message} message

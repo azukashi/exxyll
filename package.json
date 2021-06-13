@@ -54,6 +54,7 @@
     "reconlx": "^1.2.41",
     "request-promise-native": "^1.0.9",
     "sourcebin": "^4.2.3",
+    "superagent": "^6.1.0",
     "weather-js": "^2.0.0",
     "weky": "^1.7.7",
     "ws": "^7.4.6"

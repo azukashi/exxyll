@@ -33,7 +33,7 @@ module.exports = {
       const embed = new MessageEmbed()
         .addField(
           "Exxyll Stats",
-          `**📂 Total Servers** ${guilds}\n\n**👥 Total Users**: ${users}\n\n**💬 Total Channels**: ${channels}\n\n**✅ Usage**: ${usage}\n\n**<:node:849590827964956683> Node Version**: ${node}\n\n**<:djs:849590909943414806> Discord.js Version**: v${version1}\n\n**<:intel:849590998774579210> Cpu Usage** ${CPU}\n\n**📑 Total Ram: ${totalMemMb} Mb**\n\n**📀 Ram used: ${usedMemMb}**\n\n**💻 Platform: ${process.platform}**\n\n**♐ Arch: ${process.arch}**`
+          `**📂 Total Servers** ${guilds}\n\n**👥 Total Users**: ${users}\n\n**💬 Total Channels**: ${channels}\n\n**✅ Usage**: ${usage}\n\n**<:node:849590827964956683> Node Version**: ${node}\n\n**<:djs:849590909943414806> Discord.js Version**: v${version1}\n\n**<:intel:849590998774579210> Cpu Usage** ${CPU}\n\n**📑 Total Ram: ${totalMemMb} Mb**\n\n**📀 Ram used: ${usedMemMb}**\n\n**<:arch:853158532584308736> Platform: ${process.platform}**\n\n**♐ Arch: ${process.arch}**`
         )
         .addField(
           "**Cpu Stats**",
