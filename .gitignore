@@ -4,3 +4,5 @@ info.json
 mongodbConfig.txt
 Refferency.md
 docs.md
+presenceEmojis.ts
+.npmrc

@@ -3,8 +3,8 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "avatar",
   aliases: ["myavatar"],
-  usage: "",
-  description: "See your account avatar!",
+  usage: "<user>",
+  description: "Show user avatar.",
   hidden: false,
   premium: false,
   /**
@@ -13,15 +13,28 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const member = message.mentions.members.first() || message.member;
-
-    message.lineReplyNoMention(
+    const user =
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]) ||
+      message.guild.members.cache.find((u) =>
+        u.user.username
+          .toLowerCase()
+          .includes(
+            args.join(" ") || u.user.tag.toLowerCase() === args.join(" ")
+          )
+      ) ||
+      message.member;
+    const pngFormat = user.user.displayAvatarURL({ format: "png" });
+    const jpgFormat = user.user.displayAvatarURL({ format: "jpg" });
+    const webpFormat = user.user.displayAvatarURL();
+    const avatar = user.user.displayAvatarURL({ dynamic: true });
+    message.channel.send(
       new MessageEmbed()
-        .setTitle(`${member.user.tag}'s avatar`)
-        .setImage(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
-        .setColor("RANDOM")
-        .setFooter(`Requested by ${member.user.tag}`)
-        .setTimestamp()
+        .setTitle(`${user.user.username}'s avatar`)
+        .setDescription(
+          `[png](${pngFormat}) | [jpg](${jpgFormat}) | [webp](${webpFormat})`
+        )
+        .setImage(avatar)
     );
   },
 };
