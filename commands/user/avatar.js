@@ -27,14 +27,15 @@ module.exports = {
     const pngFormat = user.user.displayAvatarURL({ format: "png" });
     const jpgFormat = user.user.displayAvatarURL({ format: "jpg" });
     const webpFormat = user.user.displayAvatarURL();
-    const avatar = user.user.displayAvatarURL({ dynamic: true });
+    const avatar = user.user.displayAvatarURL({ dynamic: true, size: 512 });
     message.channel.send(
       new MessageEmbed()
         .setTitle(`${user.user.username}'s avatar`)
         .setDescription(
-          `[png](${pngFormat}) | [jpg](${jpgFormat}) | [webp](${webpFormat})`
+          `[PNG](${pngFormat}) | [JPG](${jpgFormat}) | [WEBP](${webpFormat})`
         )
         .setImage(avatar)
+        .setColor("BLUE")
     );
   },
 };
