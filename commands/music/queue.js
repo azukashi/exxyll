@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "queue",
-  aliases: ["playlist", "plist"],
+  aliases: ["q", "plist"],
   usage: "",
   description: "Show Playing Queue.",
   hidden: false,

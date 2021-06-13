@@ -16,7 +16,7 @@ module.exports = {
       .setTitle("Invite me to your server!")
       .addField(
         "Invite and Authorize",
-        "https://discord.com/api/oauth2/authorize?client_id=848232775798226996&permissions=3757567094&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=848232775798226996&permissions=3222646&scope=bot"
       )
       .addField("Visit Exxyll Website", "https://exxyll.github.io")
       .addField("Join Support Server", "https://discord.gg/j2MfuWySfD")
