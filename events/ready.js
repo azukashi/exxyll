@@ -27,5 +27,3 @@ rpc.on("ready", () => {
 rpc.login({
   clientId: "818884394416603161",
 });
-
-console.log(`${client.user.username} has logged on!`);
