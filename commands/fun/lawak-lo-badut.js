@@ -20,7 +20,7 @@ module.exports = {
   run: async (client, message, args) => {
     const user = message.mentions.members.first() || message.member;
     let msg = await message.channel.send("loading...");
-    let att = MessageAttachment(
+    let att = new MessageAttachment(
       `https://api.popcatdev.repl.co/clown?image=${user.user.displayAvatarURL({
         dynamic: false,
         format: "png",
