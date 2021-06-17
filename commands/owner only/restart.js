@@ -1,5 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const config = require("config.json");
+const config = require("../../config.json");
 const owner = config.owner_id;
 const color = "GREEN";
 
