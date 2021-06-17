@@ -16,8 +16,8 @@ module.exports = {
     let user = message.mentions.users.first() || message.author;
     let member = message.mentions.members.first() || message.member;
     let embed = new MessageEmbed()
-      .setTitle(`${user.name}'s User Information`)
-      .setTimestamp(user.displayAvatarURL({ dynamic: true }))
+      .setTitle(`${user.tag}'s User Information`)
+      .setThumbnail(user.displayAvatarURL({ dynamic: true }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
       .addField("Created At", user.createdAt)
