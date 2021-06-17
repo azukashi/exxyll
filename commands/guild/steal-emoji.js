@@ -32,8 +32,9 @@ module.exports = {
           message.channel.send(
             new MessageEmbed()
               .setTitle("Added Emojis!")
+              .setThumbnail(emoji.url)
               .setDescription(
-                `Added ${parsedEmoji} to This Server!\nUrl : ${emoji.url}`
+                `Added ${rawEmoji} to This Server!\nUrl : ${emoji.url}`
               )
               .setFooter(
                 message.author.tag,
