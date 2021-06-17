@@ -28,9 +28,21 @@ module.exports = {
         const url = `https://cdn.discordapp.com/emojis/${
           parsedEmoji.id + extension
         }`;
-        message.guild.emojis
-          .create(url, parsedEmoji.name)
-          .then((emoji) => message.channel.send(`Added: \`${emoji.url}\``));
+        message.guild.emojis.create(url, parsedEmoji.name).then((emoji) =>
+          message.channel.send(
+            new MessageEmbed()
+              .setTitle("Added Emojis!")
+              .setDescription(
+                `Added ${parsedEmoji} to This Server!\nUrl : ${emoji.url}`
+              )
+              .setFooter(
+                message.author.tag,
+                message.author.displayAvatarURL({ dynamic: true })
+              )
+              .setTimestamp()
+              .setColor("GREEN")
+          )
+        );
       }
     }
   },
