@@ -1,4 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
+const util = require("util");
 
 module.exports = {
   name: "steal-emoji",
@@ -21,7 +22,7 @@ module.exports = {
       );
 
     for (const rawEmoji of args) {
-      const parsedEmoji = Util.parseEmoji(rawEmoji);
+      const parsedEmoji = util.parseEmoji(rawEmoji);
 
       if (parsedEmoji.id) {
         const extension = parsedEmoji.animated ? ".gif" : ".png";
