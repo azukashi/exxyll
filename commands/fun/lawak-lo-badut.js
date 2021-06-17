@@ -18,6 +18,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const user = message.mentions.members.first() || message.member;
     let msg = await message.channel.send("loading...");
     let att = new MessageAttachment(
@@ -30,5 +31,6 @@ module.exports = {
 
     message.channel.send(att);
     msg.delete();
+    message.channel.stopTyping();
   },
 };
