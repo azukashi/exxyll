@@ -22,7 +22,7 @@ module.exports = {
       .setURL(meme.url)
       .setColor("RANDOM")
       .setImage(meme.image)
-      .setFooter(`👍 ${meme.upvotes} 💬 ${meme.comments}`);
+      .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 
     message.lineReplyNoMention(embed);
   },
