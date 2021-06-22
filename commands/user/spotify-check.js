@@ -62,7 +62,7 @@ module.exports = {
             user.displayName,
             user.user.displayAvatarURL({ dynamic: true })
           );
-        message.channel.send(embed);
+        message.lineReplyNoMention(embed);
       }
     });
   },
