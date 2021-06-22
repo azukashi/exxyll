@@ -16,14 +16,14 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const argument = args.join(" ");
-    if (argument)
+    if (!argument)
       return message.lineReply("Please specify a package name to search!");
     try {
       await fetch(`https://pypi.org/pypi/${argument}/json`)
         .then((res) => res.json())
         .then(async (data) => {
-          if (!data) return msg.reply(message, `Invalid pip.`);
-          const msg = await msg.reply(message, `Fetching...`);
+          if (!data) return message.lineReply(message, `Invalid pip.`);
+          const msg = await message.lineReply(message, `Fetching...`);
           create(
             [
               {
@@ -37,8 +37,8 @@ module.exports = {
               description: "Pip requested by " + message.author.tag,
             }
           ).then((bin) => {
-            return msg
-              .reply(
+            return message
+              .lineReply(
                 message,
                 new MessageEmbed()
                   .setAuthor(
@@ -69,7 +69,7 @@ module.exports = {
                   )
                   .addField(`Description`, `[Click Here](${bin.url})`)
               )
-              .then(() => msg.delete());
+              .then(() => message.delete());
           });
         });
     } catch (e) {
