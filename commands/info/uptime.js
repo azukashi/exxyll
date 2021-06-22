@@ -15,8 +15,7 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const embed = new MessageEmbed()
-      .setTitle("Uptime is:")
-      .setDescription(`${pretty(client.uptime)}`)
+      .setDescription(`Bot's Uptime : **${pretty(client.uptime)}**`)
       .setColor(`#00FC8F`);
     message.lineReplyNoMention(embed);
   },
