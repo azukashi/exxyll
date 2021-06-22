@@ -14,16 +14,22 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const url = args[0];
+    const url = args.join(" ");
     if (!url) return message.lineReply("Please define a URL to Check!");
     try {
       await fetch(url).then((res) => {
         if (!res)
-          return msg.reply(message, `:x: | Looks like this website is down...`);
-        return msg.reply(message, `✅ | This website is up and running!`);
+          return message.lineReplyNoMention(
+            `:x: | Looks like this website is down...`
+          );
+        return message.lineReplyNoMention(
+          `✅ | This website is up and running!`
+        );
       });
     } catch (e) {
-      return msg.reply(message, `:x: | Looks like this website is down...`);
+      return message.lineReplyNoMention(
+        `:x: | Looks like this website is down...`
+      );
     }
   },
 };
