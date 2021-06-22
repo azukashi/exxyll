@@ -22,8 +22,8 @@ module.exports = {
       await fetch(`https://pypi.org/pypi/${argument}/json`)
         .then((res) => res.json())
         .then(async (data) => {
-          if (!data) return message.lineReply(message, `Invalid pip.`);
-          const msg = await message.lineReply(message, `Fetching...`);
+          if (!data) return message.lineReply(`Invalid pip.`);
+          const msg = await message.lineReply(`Fetching...`);
           create(
             [
               {
@@ -38,8 +38,7 @@ module.exports = {
             }
           ).then((bin) => {
             return message
-              .lineReply(
-                message,
+              .lineReplyNoMention(
                 new MessageEmbed()
                   .setAuthor(
                     data.info.name,
@@ -73,7 +72,7 @@ module.exports = {
           });
         });
     } catch (e) {
-      return message.lineReply(message, `Invalid pip.`);
+      return message.lineReply(`Invalid pip.`);
     }
   },
 };
