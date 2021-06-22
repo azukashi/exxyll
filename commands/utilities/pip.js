@@ -15,10 +15,11 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (!args[0]) return;
-    message.lineReply("Please specify a package name to search!");
+    const argument = args.join(" ");
+    if (argument)
+      return message.lineReply("Please specify a package name to search!");
     try {
-      await fetch(`https://pypi.org/pypi/${args[0]}/json`)
+      await fetch(`https://pypi.org/pypi/${argument}/json`)
         .then((res) => res.json())
         .then(async (data) => {
           if (!data) return msg.reply(message, `Invalid pip.`);
