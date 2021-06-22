@@ -30,10 +30,10 @@ module.exports = {
         moderations: "🔨",
         music: "🎵",
         premium: "🔮",
-        "To Dev": "📩",
+        developers: "📩",
         user: "👤",
         utilities: "📀",
-        "welcoming system": "👋",
+        welcoming: "👋",
       };
 
       readdirSync("./commands/").forEach((dir) => {
@@ -96,6 +96,7 @@ module.exports = {
             des,
           };
 
+          return !file.hidden;
           return obj;
         });
 
