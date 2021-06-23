@@ -1,7 +1,12 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const { MessageButton } = require("discord-buttons");
+
 module.exports = {
   name: "invite",
+  aliases: ["invite-bot"],
+  usage: "",
+  description: "Returns Links to Invite the Bot",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message

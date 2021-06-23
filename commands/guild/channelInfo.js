@@ -2,6 +2,11 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "channelinfo",
+  aliases: ["channel", "ch-info"],
+  usage: "<#mention-channel>",
+  description: "Returns Mentioned Channel Information",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message

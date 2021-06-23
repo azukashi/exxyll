@@ -2,6 +2,11 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "premium",
+  aliases: ["pro-plan"],
+  usage: "",
+  description: "Be a Premium User. See How To Be a Premium Here.",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message
