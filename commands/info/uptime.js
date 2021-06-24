@@ -17,7 +17,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle(`Bot's Uptime`)
       .setDescription(
-        `Status : \`Online\`\nBot's Uptime : **\`${pretty(client.uptime)}**\``
+        `Status : \`Online\`\nBot's Uptime : **\`${pretty(client.uptime)}\`**`
       )
       .setColor(`#00FC8F`);
     message.lineReplyNoMention(embed);
