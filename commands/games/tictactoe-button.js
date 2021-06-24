@@ -1,7 +1,7 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
-  name: "tictactoe-argvs",
+  name: "tictactoe-btn",
   aliases: [],
   usage: "@player2",
   description: "Play TicTacToe Games with your Friends!",

@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 const { MessageButton } = require("discord-buttons");
 
 module.exports = {
-  name: "fight-argvs",
+  name: "fight",
   aliases: [],
   usage: "@player2",
   description: "Fight with your friend! But with Buttons!",

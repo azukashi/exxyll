@@ -2,7 +2,11 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "youtube-together",
-  aliases: ["ytt"],
+  aliases: ["ytt", "ytogether"],
+  usage: "",
+  description: "Play a YouTube Video in a Voice Channel with your friends!",
+  hidden: false,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message
