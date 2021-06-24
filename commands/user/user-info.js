@@ -13,6 +13,12 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    function checkDays(date) {
+      let now = new Date();
+      let diff = now.getTime() - date.getTime();
+      let days = Math.floor(diff / 86400000);
+      return days + (days == 1 ? " day" : " days") + " ago";
+    }
     let user = message.mentions.users.first() || message.author;
     let member = message.mentions.members.first() || message.member;
     let embed = new MessageEmbed()
@@ -20,8 +26,8 @@ module.exports = {
       .setThumbnail(user.displayAvatarURL({ dynamic: true }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
-      .addField("Created At", user.createdAt)
-      .addField("Joined At", member.joinedAt)
+      .addField("Created At", `${checkDays(user.createdAt)}`)
+      .addField("Joined At", checkDays(member.joinedAt))
       .addField("User ID", user.id)
       .setFooter(message.author.tag)
       .setTimestamp();
