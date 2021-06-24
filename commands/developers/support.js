@@ -14,14 +14,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle("Support the Developers!")
       .setDescription("You can support me with many ways!")
-      .addField(
-        "EN Platforms",
-        "Buy me a Coffee : https://ko-fi.com/gifaldyazkaa"
-      )
-      .addField(
-        "ID Platforms",
-        "Saweria : https://saweria.co/gifaldyazkaa\nTrakteer : https://trakteer.id/gifaldyazka"
-      )
+      .addField(`[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)`)
       .setFooter(message.author.tag)
       .setColor("BLUE")
       .setTimestamp();
