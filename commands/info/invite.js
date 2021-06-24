@@ -19,12 +19,9 @@ module.exports = {
         "https://cdn.discordapp.com/avatars/848232775798226996/a1663c970cb38f341a53a0be608fbb56.png?size=128"
       )
       .setTitle("Invite me to your server!")
-      .addField(
-        "Invite and Authorize",
-        "https://discord.com/api/oauth2/authorize?client_id=848232775798226996&permissions=3222646&scope=bot"
+      .setDescription(
+        `[Invite and Authorize](https://discord.com/api/oauth2/authorize?client_id=848232775798226996&permissions=3222646&scope=bot)\n\n[Visit Website](https://exxyll.github.io)\n\n[Join Support Server](https://discord.gg/j2MfuWySfD)`
       )
-      .addField("Visit Exxyll Website", "https://exxyll.github.io")
-      .addField("Join Support Server", "https://discord.gg/j2MfuWySfD")
       .setFooter(
         `Requested by ${message.author.tag}`,
         message.author.displayAvatarURL({ dynamic: true })
