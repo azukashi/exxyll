@@ -5,6 +5,15 @@ Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 
 This repository is Include All Original Source Code from Exxyll Discrord Bot! You lucky if you can see and accessing this Repository!
 
+## Tech Stack
+
+- JavaScript (As Main Language)
+- Node JS v14.17.0 (As Runtime)
+- Discord JS v12.5.3 (As Library)
+- MongoDB (As Database)
+- Yarn (As Package Manager)
+- Many API Services (As Data Collector)
+
 ## Hosting Service
 
 - Bot
@@ -13,10 +22,6 @@ This repository is Include All Original Source Code from Exxyll Discrord Bot! Yo
 - Website
   - GitHub Pages
   - Vercel (Still plan)
-
-## Package Manager
-
-- Yarn
 
 ## Folder Structure
 
@@ -42,6 +47,10 @@ This repository is Include All Original Source Code from Exxyll Discrord Bot! Yo
   - `Procfile` = Heroku File Declaration.
   - `README.md` = Yes. Now you reading this file.
   - `yarn.lock` = This is Generated File from Package Manager. Called Lockfile.
+
+## Package Manager
+
+- Yarn
 
 ## Author
 
