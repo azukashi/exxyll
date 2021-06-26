@@ -8,14 +8,12 @@ const client = new Client({
 });
 require("discord-buttons")(client);
 const mongoose = require("mongoose");
+const mongouri = require("./config.json").mongoURI;
 mongoose
-  .connect(
-    "mongodb+srv://exxylldb:exxyll-discord@exxylldb.apsj6.mongodb.net/Data",
-    {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    }
-  )
+  .connect(mongouri, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
   .then(console.log("MongoDB : Connected to Google Cloud Server - Tokyo!"));
 
 const prefixSchema = require("./models/prefix");

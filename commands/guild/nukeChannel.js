@@ -22,9 +22,15 @@ module.exports = {
       ch.setPosition(message.channel.position);
       message.channel.delete();
 
-      ch.send("BOOM! This Channel has been nuked!").then((m) =>
-        m.delete({ timeout: 7000 })
-      );
+      ch.send(
+        new MessageEmbed()
+          .setTitle("This channel has been nuked!")
+          .setImage(
+            "https://tenor.com/view/explosion-boom-explode-gif-17383346"
+          )
+          .setColor("RED")
+          .setFooter(`Action performed by ${message.author.tag}`)
+      ).then((m) => m.delete({ timeout: 7000 }));
     });
   },
 };
