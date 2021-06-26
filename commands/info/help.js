@@ -7,6 +7,7 @@ module.exports = {
   name: "help",
   aliases: ["h"],
   description: "Shows all available bot commands.",
+  hidden: true,
   /**
    *
    * @param {Client} client
