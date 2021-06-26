@@ -1,8 +1,15 @@
+# Ignore node_modules
 node_modules
+
+# Ignore Generated Database File (If using quick.db)
 json.sqlite
+
+# Misc File
 info.json
 mongodbConfig.txt
 Refferency.md
 docs.md
 presenceEmojis.ts
+
+# Ignore npm config
 .npmrc
