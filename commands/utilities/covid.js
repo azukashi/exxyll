@@ -53,6 +53,10 @@ module.exports = {
 
           const embed = new Discord.MessageEmbed()
             .setTitle(`COVID-19 Stats for **${countries}**`)
+            .setThumbnail(
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/478px-SARS-CoV-2_without_background.png"
+            )
+            .setColor("RED")
             .addField("Confirmed Cases", confirmed)
             .addField("Recovered", recovered)
             .addField("Deaths", deaths);
