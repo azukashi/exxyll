@@ -97,7 +97,7 @@ module.exports = {
             des,
           };
 
-          return obj, !file.hidden;
+          return !file.hidden, obj;
         });
 
         let dota = new Object();
