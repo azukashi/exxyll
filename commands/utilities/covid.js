@@ -39,7 +39,11 @@ module.exports = {
             .setTitle(`Worldwide COVID-19 Stats 🌎`)
             .addField("Confirmed Cases", confirmed)
             .addField("Recovered", recovered)
-            .addField("Deaths", deaths);
+            .addField("Deaths", deaths)
+            .setThumbnail(
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/478px-SARS-CoV-2_without_background.png"
+            )
+            .setColor("RED");
 
           message.channel.send(embed);
         });
