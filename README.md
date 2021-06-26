@@ -1,45 +1,52 @@
-# Exxyll
+<h1 align="center">Exxyll</h1>
+Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 
-Exxyll - A Multipurpose Discord Bot
+# Exxyll Original
 
-## Invite Link
+This repository is Include All Original Source Code from Exxyll Discrord Bot! You lucky if you can see and accessing this Repository!
 
-You can Invite me to Your Server! [Here is The Link!](https://discord.com/api/oauth2/authorize?client_id=848232775798226996&permissions=4294962679&scope=bot)
+## Hosting Service
 
-## Setup
+- Bot
+  - Heroku
+  - Replit (Backup Hosting. Will be used if emergency).
+- Website
+  - GitHub Pages
+  - Vercel (Still plan)
 
-- First, Create `config.json` file in root folder of /exxyll
-- Copy this value
+## Package Manager
 
-```json
-{
-  "token": "your bot token",
-  "prefix": "your bot prefix"
-}
-```
+- Yarn
 
-- Install Required Packages
+## Folder Structure
 
-```bash
-> npm install
-```
+- `/` = Root Folder
+  - `.github` = GitHub Repo Configuration
+  - `Collection` = Like a Database. This place is Located for Saving Local Data.
+  - `commands` = Commands Source. All commands is loaded and sourced from Here.
+  - `events` = Where I placed Event Handlers for the Bot.
+  - `handlers` = Command Handler File. This folder will help terminal load all commands & event.
+  - `models` = MongoDB Database Model.
+  - `node_modules` = Where all dependecy file is saved by package manager.
 
-- Note
-  - You can get `Bot Token` from [Discord Developer Portal](https://discord.com/developers/applications)
-  - If you not yet create a application, Create it first and copy your Bot Token value to `config.json`.
+## File Structure in Root Folder
 
-## Start your Bot
+- `/` = Root Folder
+  - `.eslintrc.json` = ESLint Configuration.
+  - `.gitignore` = Ignore File.
+  - `.replit` = Replit Configuration.
+  - `config.json` = Where all Needed Informations is Loaded. This is tricky and Very Secret File.
+  - `index.js` = Index file. This will load Command Handler File and Connect to MongoDB.
+  - `LICENSE` = License of the Repository.
+  - `package.json` = All information about installed dependecy.
+  - `Procfile` = Heroku File Declaration.
+  - `README.md` = Yes. Now you reading this file.
+  - `yarn.lock` = This is Generated File from Package Manager. Called Lockfile.
 
-Start your Bot by typing this on your Terminal
+## Author
 
-- npm
+- Gifaldy Azka
 
-```bash
-> npm start
-```
+## Environments & Deployments
 
-- yarn
-
-```bash
-> yarn start
-```
+- See [Deployments Log](https://github.com/gifaldyazkaa/exxyll-origin/deployments)
