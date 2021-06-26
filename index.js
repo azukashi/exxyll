@@ -8,8 +8,6 @@ const client = new Client({
 });
 require("discord-buttons")(client);
 const mongoose = require("mongoose");
-
-// PLEASE USE YOUR MONGODB CLUSTER! DONT USE MINE! YOU CAN CREATE IT IN MONGODB WEBSITE! PLEASE DONT USE MINE!!!
 mongoose
   .connect(
     "mongodb+srv://exxylldb:exxyll-discord@exxylldb.apsj6.mongodb.net/Data",
