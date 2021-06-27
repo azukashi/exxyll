@@ -18,7 +18,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (message.author.id !== owner) return;
     await message.channel.send(
-      ` **Bot restarted...**\n• Loaded \`${client.commands.size}\` commands`
+      ` **Bot restarted...**\n• Loaded \`${client.commands.size}\` commands.\nNow i'm crashing. Just wait the server to Restarting me!`
     );
 
     const masterLogger = client.channels.cache.get("855151075287498792");
