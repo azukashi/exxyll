@@ -16,6 +16,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     cpuStat.usagePercent(async function (error, percent, seconds) {
       if (error) {
         return console.error(error);
@@ -53,5 +54,6 @@ module.exports = {
 
       return parseFloat((a / Math.pow(c, f)).toFixed(d)) + "" + e[f];
     }
+    message.channel.stopTyping();
   },
 };

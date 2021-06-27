@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     const res = await args.join(" ");
     if (!res) return message.lineReply("Please specify a prefix to change to.");
-
+    message.channel.startTyping();
     prefixSchema.findOne({ Guild: message.guild.id }, async (err, data) => {
       if (err) throw err;
       if (data) {
@@ -38,5 +38,6 @@ module.exports = {
         );
       }
     });
+    message.channel.stopTyping();
   },
 };

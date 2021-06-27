@@ -5,7 +5,7 @@ module.exports = {
   name: "djs",
   aliases: ["docs"],
   usage: "<query>",
-  description: "Command to see Discord.js Documentations",
+  description: "See Discord.js Stable Documentations",
   hidden: true,
   /**
    * @param {Client} client
@@ -13,6 +13,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const query = args.join(" ");
     if (!query) return message.reply("Please specify a query!");
     const url = `https://djsdocs.sorta.moe/v2/embed?src=stable&q=${encodeURIComponent(
@@ -24,5 +25,6 @@ module.exports = {
         message.lineReplyNoMention({ embed: data });
       }
     });
+    message.channel.stopTyping();
   },
 };

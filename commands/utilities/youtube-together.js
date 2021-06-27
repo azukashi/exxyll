@@ -13,13 +13,16 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const voicechannel = message.member.voice.channelID;
     const notInVc = new MessageEmbed()
       .setDescription(
         ":x: | You need to be in a voice channel to run this command!"
       )
       .setColor("RED");
+    message.channel.stopTyping();
     if (!voicechannel) return message.lineReply(notInVc);
+    message.channel.startTyping();
     client.discordTogether
       .createTogetherCode(voicechannel, "youtube")
       .then(async (invite) => {
@@ -27,5 +30,6 @@ module.exports = {
           `Hey here is your link! Click on the link to start! ${invite.code}`
         );
       });
+    message.channel.stopTyping();
   },
 };

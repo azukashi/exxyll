@@ -13,6 +13,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const embed = new MessageEmbed()
       .setColor("BLUE")
       .setThumbnail(
@@ -44,5 +45,6 @@ module.exports = {
     // });
 
     message.lineReplyNoMention(embed);
+    message.channel.stopTyping();
   },
 };

@@ -16,6 +16,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     message
       .lineReplyNoMention("Are you sure to Reset Custom Prefix to Default?")
       .then(async (msg) => {
@@ -39,5 +40,6 @@ module.exports = {
           );
         }
       });
+    message.channel.stopTyping();
   },
 };

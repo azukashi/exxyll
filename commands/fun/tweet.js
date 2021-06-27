@@ -14,6 +14,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const query = args.join(" ");
     if (!query) return message.lineReply(`Please specify a query!`);
 
@@ -29,5 +30,6 @@ module.exports = {
           .setTimestamp();
         message.channel.send(embed);
       });
+    message.channel.stopTyping();
   },
 };
