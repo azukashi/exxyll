@@ -16,16 +16,21 @@ module.exports = {
     if (message.author.id !== "788260234409672754") return;
     const text = args.join(" ");
     if (!text) return message.lineReply("Please define a text bro, noob");
-    if (text === "streaming") {
+    if (text === "default") {
       client.user.setActivity(`${prefix}help`, {
         type: "STREAMING",
         url: "https://www.twitch.tv/falcxxr",
       });
-      return;
+      message.lineReplyNoMention(
+        `Successfully Set Presence to Default.\nWith Presence Type : **Streaming**\nStreaming URL : \`https://twitch.tv/falcxxr\``
+      );
     } else {
       client.user.setActivity(`${text}`, {
         type: "PLAYING",
       });
+      message.lineReplyNoMention(
+        `Successfully Set Presence to => \`${text}\`.\nWith Presence Type : **Playing**`
+      );
     }
   },
 };
