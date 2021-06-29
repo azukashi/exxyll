@@ -16,7 +16,7 @@ module.exports = {
     if (message.author.id !== "788260234409672754") return;
     const text = args.join(" ");
     if (!text) return message.lineReply("Please define a text bro, noob");
-    if (text === "default") {
+    if (text === "streaming") {
       client.user.setActivity(`${prefix}help`, {
         type: "STREAMING",
         url: "https://www.twitch.tv/falcxxr",
