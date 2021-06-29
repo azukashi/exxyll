@@ -15,7 +15,6 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    message.channel.startTyping();
     const split = args.join(" ").split(",");
     const user = split[0];
     const user2 = split[1];
@@ -30,6 +29,5 @@ module.exports = {
     let Image = await res.buffer();
     const poohmeme = new Discord.MessageAttachment(Image);
     message.lineReply(poohmeme);
-    message.channel.stopTyping();
   },
 };
