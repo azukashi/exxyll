@@ -55,7 +55,7 @@ module.exports = {
       const embed = new MessageEmbed()
         .setTitle("Help Menu:")
         .setDescription(
-          `\`\`\`yml\nPrefix: ${prefix}\nParameters: <> = required, [] = optional\`\`\`\n[Invite me](https://exxyll.github.io)\n\nTo check out a category, use command \`${prefix}help [category]\`\n\n__**Categories**__`
+          `\`\`\`yml\nPrefix: ${prefix}\nParameters: <> = required, [] = optional\`\`\`\n[Invite me](https://exxyll.github.io) | [Join Support Server](https://discord.gg/j2MfuWySfD)\n\nTo check out a category, use command \`${prefix}help [category]\`\n\n__**Categories**__`
         )
         .addFields(categories)
         .setFooter(
