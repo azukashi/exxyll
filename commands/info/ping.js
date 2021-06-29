@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ping",
   category: "info",
@@ -12,16 +12,25 @@ module.exports = {
 
   run: async (client, message, args) => {
     const msg = await message.lineReplyNoMention(`🏓 Pinging...`);
+    const messageping = msg.createdTimestamp - message.createdTimestamp;
     const embed = new MessageEmbed()
       .setTitle("🏓 Pong!")
+      .setAuthor(
+        `${message.author.username}`,
+        message.author.displayAvatarURL()
+      )
       .setDescription(
         `Websocket ping is ${
           client.ws.ping
-        } ms\nMessage edit ping is ${Math.floor(
-          msg.createdAt - message.createdAt
-        )} ms!`
+        } ms\nMessage edit ping is ${Math.floor(messageping)} ms!`
       )
-      .setColor("BLUE");
+      .setColor(
+        messageping < 350
+          ? "GREEN"
+          : messageping < 500 && messageping > 350
+          ? "YELLOW"
+          : "RED"
+      );
     await message.lineReplyNoMention(embed);
     msg.delete();
   },
