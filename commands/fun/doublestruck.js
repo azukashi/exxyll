@@ -17,11 +17,11 @@ module.exports = {
     if (!text)
       return message.lineReply("Please specify a text to be converted!");
     const {
-      data: { url },
+      data: { text },
     } = await axios.get(
       `https://api.popcatdev.repl.co/doublestruck?text=${text}`
     );
-    const uri = url;
+    const uri = text;
     message.lineReplyNoMention(uri);
   },
 };
