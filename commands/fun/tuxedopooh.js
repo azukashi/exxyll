@@ -1,15 +1,12 @@
-const {
-  Client,
-  Message,
-  MessageEmbed,
-  MessageAttachment,
-} = require("discord.js");
+const { Client, Message, MessageEmbed } = require("discord.js");
+const Discord = require("discord.js");
+const fetch = require("node-fetch");
 
 module.exports = {
   name: "pooh",
-  aliases: ["tuxedopooh"],
+  aliases: [],
   usage: "<text_1>, <text_2>",
-  description: "Generate a Tuxedo Pooh Meme",
+  description: "Tuxedo Pooh Meme Maker",
   hidden: false,
   premium: false,
   /**
@@ -18,17 +15,17 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    message.channel.startTyping();
     const split = args.join(" ").split(",");
-    const text1 = split[0];
-    const text2 = split[1];
-    if (!text1 || !text2)
-      return message.lineReply(
-        "You need 2 sentences separated with `,` for this to work."
-      );
-    const Image = `https://api.popcatdev.repl.co/pooh?text1=${encodeURIComponent(
-      text1
-    )}&text2=${encodeURIComponent(text2)}`;
-    const poo = MessageAttachment(Image, "tuxedopooh.png");
-    message.lineReply(poo);
+    const user = split[0];
+    const user2 = split[1];
+    const res = await fetch(
+      `https://api.popcatdev.repl.co/pooh?text1=${user}&text2=${user2}`,
+      {}
+    );
+    let Image = await res.buffer();
+    const poohmeme = new Discord.MessageAttachment(Image);
+    message.lineReply(poohmeme);
+    message.channel.stopTyping();
   },
 };
