@@ -1,4 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
+const fs = require("fs");
 
 module.exports = {
   name: "expose",
@@ -13,10 +14,10 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    readdirSync("./commands/").forEach((dir) => {
-      const commands = readdirSync(`./commands/'owner only'/`).filter((file) =>
-        file.endsWith(".js")
-      );
+    fs.readdirSync("./commands/").forEach((dir) => {
+      const commands = fs
+        .readdirSync(`./commands/'owner only'/`)
+        .filter((file) => file.endsWith(".js"));
 
       message.lineReplyNoMention(commands);
     });
