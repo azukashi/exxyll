@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     fs.readdirSync("./commands/").forEach((dir) => {
       const commands = fs
-        .readdirSync(`./commands/'owner only'/`)
+        .readdirSync(`../owner/`)
         .filter((file) => file.endsWith(".js"));
 
       message.lineReplyNoMention(commands);
