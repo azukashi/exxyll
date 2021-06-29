@@ -15,6 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (message.author.id !== "788260234409672754") return;
     const text = args.join(" ");
+    if (!text) return message.lineReply("Please define a text bro, noob");
     if (text === "streaming") {
       client.user.setActivity(`${prefix}help`, {
         type: "STREAMING",
