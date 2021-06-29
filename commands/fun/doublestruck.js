@@ -1,4 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
+const axios = require("axios");
 
 module.exports = {
   name: "doublestruck",
