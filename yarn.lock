@@ -5155,6 +5155,13 @@ ytdl-core@^4.8.3:
     miniget "^4.0.0"
     sax "^1.1.3"
 
+ytsr@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/ytsr/-/ytsr-3.5.0.tgz#116406e39e06211a19b1efddcdf56668442d26b2"
+  integrity sha512-e92xxZI8OxUCsbLtn0NfkuKuSDN4YZtG+ow64G3N4b+bkEWCjR0hEPye+iCBA07/02OXPmWHD88FPy1hq0izMQ==
+  dependencies:
+    miniget "^4.2.0"
+
 zero-fill@^2.2.3:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/zero-fill/-/zero-fill-2.2.4.tgz#b041320973dbcb03cd90193270ac8d4a3da05fc1"
