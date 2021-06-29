@@ -14,13 +14,13 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const text = args.join(" ");
-    if (!text)
+    const textd = args.join(" ");
+    if (!textd)
       return message.lineReply("Please specify a text to be converted!");
     const {
       data: { text },
     } = await axios.get(
-      `https://api.popcatdev.repl.co/doublestruck?text=${text}`
+      `https://api.popcatdev.repl.co/doublestruck?text=${textd}`
     );
     const uri = text;
     message.lineReplyNoMention(uri);
