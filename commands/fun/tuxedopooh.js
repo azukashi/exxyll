@@ -19,7 +19,7 @@ module.exports = {
     const split = args.join(" ").split(",");
     const user = split[0];
     const user2 = split[1];
-    if (!user || user2)
+    if (!user || !user2)
       return message.lineReply(
         "You need two sentences separatted with comma `,`"
       );
