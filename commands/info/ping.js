@@ -25,9 +25,9 @@ module.exports = {
         } ms\nMessage edit ping is ${Math.floor(messageping)} ms!`
       )
       .setColor(
-        messageping < 350
+        client.ws.ping < 350
           ? "GREEN"
-          : messageping < 500 && messageping > 350
+          : client.ws.ping < 500 && client.ws.ping > 350
           ? "YELLOW"
           : "RED"
       );
