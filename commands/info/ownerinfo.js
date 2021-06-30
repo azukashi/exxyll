@@ -14,7 +14,7 @@ module.exports = {
    * @param {Message} message
    * @param {String[]} args
    */
-  run: async (client, message, msg, args) => {
+  run: async (client, message, args) => {
     const embed1 = new MessageEmbed()
       .setTitle(`Owner Info`)
       .setThumbnail("https://avatars.githubusercontent.com/u/68645946?v=4")
@@ -101,6 +101,6 @@ module.exports = {
     const textPageChange = true;
     const emojis = ["⏪", "⏩"];
     const time = 60000;
-    ReactionPages(msg, pages, textPageChange, emojis, time);
+    ReactionPages(message, pages, textPageChange, emojis, time);
   },
 };
