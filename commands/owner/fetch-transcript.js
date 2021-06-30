@@ -1,4 +1,4 @@
-const { Client, Message, MessageEmbed } = require("discord.js");
+const { Client, Message, MessageAttachment } = require("discord.js");
 const { fetchTranscript } = require("reconlx");
 
 module.exports = {
