@@ -22,32 +22,26 @@ module.exports = {
         {
           name: `Name`,
           value: `Gifaldy Azka`,
-          inline: true,
         },
         {
           name: `Discord Tag`,
           value: `Falcxxdev#0001`,
-          inline: true,
         },
         {
           name: `Working on`,
           value: `Bot development, Website Development, Feature Development`,
-          inline: true,
         },
         {
           name: `Location`,
           value: `Bandung, Indonesia`,
-          inline: true,
         },
         {
           name: `Social Media`,
           value: `[Website](https://gifaldyazkaa.github.io) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxr)`,
-          inline: true,
         },
         {
           name: `Buy me a Coffee`,
           value: `[Buy me a Coffee Here](https://buymeacoffee.com/gifaldyzkaa)`,
-          inline: true,
         }
       )
       .setColor("PURPLE")
