@@ -15,7 +15,7 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (message.author.id !== "788260234409672754") return;
-    const amount = args.join(" ");
+    const amount = args[0];
     if (!amount)
       return message.lineReply("Please specify a number to transcripted!");
     fetchTranscript(message, amount).then((data) => {
