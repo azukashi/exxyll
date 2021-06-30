@@ -27,7 +27,10 @@ module.exports = {
       )
       .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
       .addField(`Name`, `Exxyll`)
-      .addField(`Description`, `Exxyll is A Multipurpose Discord Bot!`)
+      .addField(
+        `Description`,
+        `Exxyll is A Multipurpose Discord Bot with Commands for Fun, Utility, Moderation, Music, Welcoming messages, and many more!`
+      )
       .addField(`Developer`, `Gifaldy Azka || \`Falcxxdev#0001\``)
       .addField(
         `Developed Since`,
