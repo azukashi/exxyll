@@ -14,7 +14,7 @@ module.exports = {
    * @param {Message} message
    * @param {String[]} args
    */
-  run: async (client, message, args) => {
+  run: async (client, message, msg, args) => {
     const embed1 = new MessageEmbed()
       .setTitle(`Owner Info`)
       .setThumbnail("https://avatars.githubusercontent.com/u/68645946?v=4")
