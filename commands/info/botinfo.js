@@ -32,7 +32,7 @@ module.exports = {
       .addField(
         `Developed Since`,
         `${moment(client.user.createdTimestamp).format("llll")} (${
-          client.user.createdAt
+          client.user.createdTimestamp
         })`
       )
       .addField(
