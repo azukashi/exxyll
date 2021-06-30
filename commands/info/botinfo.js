@@ -31,9 +31,9 @@ module.exports = {
       .addField(`Developer`, `Gifaldy Azka || \`Falcxxdev#0001\``)
       .addField(
         `Developed Since`,
-        `${moment(client.user.createdTimestamp).format("llll")} (${
-          client.user.createdTimestamp
-        })`
+        `${moment(client.user.createdTimestamp).format("llll")} (${checkDays(
+          client.user.createdAt
+        )})`
       )
       .addField(
         `Default Prefix`,
