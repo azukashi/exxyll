@@ -57,32 +57,26 @@ module.exports = {
         {
           name: `Name`,
           value: `Natsune Ayane || なつねあやね`,
-          inline: true,
         },
         {
           name: `Discord Tag`,
           value: `She isn't using discord rn`,
-          inline: true,
         },
         {
           name: `Working on`,
           value: `Web Development Assist`,
-          inline: true,
         },
         {
           name: `Location`,
           value: `Hokkaido, Japan`,
-          inline: true,
         },
         {
           name: `Social Media`,
           value: `[GitHub](https://github.com/NatsuneAyane)`,
-          inline: true,
         },
         {
           name: `Buy me a Coffee`,
           value: `-`,
-          inline: true,
         }
       )
       .setColor("GREEN")
