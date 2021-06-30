@@ -14,10 +14,10 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    if (message.author.id !== "788260234409672754") return;
     const amount = args.join(" ");
-    if (message.author.id !== "788260234409672754")
-      if (!amount)
-        return message.lineReply("Please specify a number to transcripted!");
+    if (!amount)
+      return message.lineReply("Please specify a number to transcripted!");
     fetchTranscript(message, amount).then((data) => {
       const file = new MessageAttachment(data, "index.html");
       message.channel.send(file);
