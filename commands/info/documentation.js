@@ -7,14 +7,13 @@ module.exports = {
   usage: "<query>",
   description: "See Discord.js Stable Documentations",
   hidden: true,
-  premium: true,
+  premium: false,
   /**
    * @param {Client} client
    * @param {Message} message
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    message.channel.startTyping();
     const query = args.join(" ");
     if (!query) return message.reply("Please specify a query!");
     const url = `https://djsdocs.sorta.moe/v2/embed?src=stable&q=${encodeURIComponent(
@@ -26,6 +25,5 @@ module.exports = {
         message.lineReplyNoMention({ embed: data });
       }
     });
-    message.channel.stopTyping();
   },
 };
