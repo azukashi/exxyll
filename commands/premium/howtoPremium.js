@@ -20,17 +20,14 @@ module.exports = {
         "https://cdn.discordapp.com/avatars/848232775798226996/a1663c970cb38f341a53a0be608fbb56.png?size=128"
       )
       .setColor("BLUE")
-      .addField(
-        "How I Can Upgrading to Premium?",
-        "You can Contact / DM Me at Discord.\nor\nDonate to me by doing `.support`"
-      )
+      .addField("You can dming the owner, or donating by `.support`!")
       .addField(
         "How much it costs?",
-        "You can upgrade for only $1 or whatever you want to pay. Just do `.support` and Start to DM me."
+        "You can upgrade for only $1 or whatever you want to pay. Just do `.support` and Confirm by dming onwer."
       )
       .addField(
         "How I Can DM The Owner?",
-        "Here is His Discord Tag!\n`Falcxxdev#1113`"
+        "Here is His Discord Tag!\n`Falcxxdev#0001`"
       )
       .setFooter(message.author.tag)
       .setTimestamp();

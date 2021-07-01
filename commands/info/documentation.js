@@ -7,6 +7,7 @@ module.exports = {
   usage: "<query>",
   description: "See Discord.js Stable Documentations",
   hidden: true,
+  premium: true,
   /**
    * @param {Client} client
    * @param {Message} message
