@@ -33,7 +33,7 @@ module.exports = {
         premium: "🔮",
         developers: "📩",
         user: "👤",
-        utilities: "📀",
+        utility: "📀",
         welcoming: "👋",
       };
 
