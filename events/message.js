@@ -1,3 +1,4 @@
+const { MessageEmbed } = require("discord.js");
 const client = require("../index");
 const config = require("../config.json");
 const prefix = config.prefix;
@@ -22,7 +23,15 @@ client.on("message", async (message) => {
   if (message.mentions.users.first()) {
     if (message.mentions.users.first().id === "848232775798226996")
       return message.lineReplyNoMention(
-        `Prefix in ${message.guild.name} is ${p}`
+        new MessageEmbed()
+          .setTitle(`Prefix Info`)
+          .setThumbnail(message.guild.iconURL({ dynamic: true }))
+          .setDescription(`Prefix in **${message.guild.name}** is **\`${p}\`**`)
+          .setFooter(
+            message.author.tag,
+            message.author.displayAvatarURL({ dynamic: true })
+          )
+          .setColor(`BLUE`)
       );
   }
   if (!message.content.startsWith(p)) return;

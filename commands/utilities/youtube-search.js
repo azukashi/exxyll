@@ -26,7 +26,7 @@ module.exports = {
       .setTitle(video.title)
       .setURL(video.url)
       .setImage(video.bestThumbnail.url)
-      .setDescription(video.description ? video.description : "No Description")
+      .setDescription(video.description ? !video.description : "No Description")
       .addField(
         `Song Information`,
         `**Creator**: [${video.author.name}](${video.author.url}) ${
