@@ -9,6 +9,7 @@ info.json
 mongodbConfig.txt
 Refferency.md
 docs.md
+Info.md
 presenceEmojis.ts
 
 # Ignore npm config
