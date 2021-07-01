@@ -27,6 +27,7 @@ module.exports = {
       .setThumbnail(user.displayAvatarURL({ dynamic: true }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
+      .addField("Status", user.presence.status)
       .addField(
         "Created At",
         `${moment(user.createdAt).format("LLLL")} (${checkDays(
