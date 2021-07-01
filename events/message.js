@@ -26,7 +26,9 @@ client.on("message", async (message) => {
         new MessageEmbed()
           .setTitle(`Prefix Info`)
           .setThumbnail(message.guild.iconURL({ dynamic: true }))
-          .setDescription(`Prefix in **${message.guild.name}** is **\`${p}\`**`)
+          .setDescription(
+            `Prefix in **${message.guild.name}** is **\`${p}\`**\nFor Help Commands, you can type **\`${p}help\`**`
+          )
           .setFooter(
             message.author.tag,
             message.author.displayAvatarURL({ dynamic: true })
