@@ -32,7 +32,7 @@
     "discord-reply": "^0.1.2",
     "discord-rpc": "^4.0.1",
     "discord-together": "^1.1.14",
-    "discord.js": "^13.0.0-dev.fe6cc0c.1625227356",
+    "discord.js": "^12.5.3",
     "discord.js-akinator": "^2.0.4",
     "distube": "^2.8.14",
     "ejs": "^3.1.6",
