@@ -22,9 +22,12 @@ module.exports = {
     await message.channel
       .bulkDelete(parseInt(args[0]) + 1)
       .catch((err) => message.channel.send(err));
-    const embed = new MessageEmbed()
-      .setDescription("✅ | Deleted " + args[0] + " messages.")
-      .setColor("#00FF00");
-    message.channel.send(embed).then((m) => m.delete({ timeout: 2000 }));
+    message.channel
+      .send(
+        new MessageEmbed()
+          .setDescription("✅ | Deleted " + args[0] + " messages.")
+          .setColor("#00FF00")
+      )
+      .then((m) => m.delete({ timeout: 2000 }));
   },
 };
