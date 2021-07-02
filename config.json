@@ -4,5 +4,6 @@
   "prefix": ".",
   "owner": "Falcxxdev#0001",
   "owner_id": "788260234409672754",
-  "mongoURI": "mongodb+srv://exxylldb:exxyll-discord@exxylldb.apsj6.mongodb.net/Data"
+  "mongoURI": "mongodb+srv://exxylldb:exxyll-discord@exxylldb.apsj6.mongodb.net/Data",
+  "published": true
 }
