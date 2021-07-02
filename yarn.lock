@@ -1357,9 +1357,9 @@ dir-glob@^3.0.1:
     path-type "^4.0.0"
 
 discord-buttons@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/discord-buttons/-/discord-buttons-3.0.1.tgz#ace59e21ff2dc41bad4f3463227482c65bd23783"
-  integrity sha512-SQeX27tgdMetfB5RkSUdz3PnpHp6OGAa/U+NatdGCCijWHQMMlxdgP1xrHz2+e1qWEMa9mQH9YfDGjN2LFraWw==
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/discord-buttons/-/discord-buttons-3.2.1.tgz#568eebc322d36b010ea67e891b01208c897d8e66"
+  integrity sha512-UN5xOLG0TwTX6Qr/hjdSyP63HxOYxs5saxfdJ/vijSqjfa/yVPgxO2InKF0l8rpsDOVMsLWGDFLI3+Ax97/LOg==
 
 discord-canvas@^1.4.1:
   version "1.4.1"
