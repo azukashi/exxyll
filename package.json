@@ -24,6 +24,7 @@
     "aws4": "^1.11.0",
     "axios": "^0.21.1",
     "canvacord": "^5.2.1",
+    "canvas": "^2.8.0",
     "child_process": "^1.0.2",
     "cpu-stat": "^2.0.1",
     "css-what": "^5.0.1",

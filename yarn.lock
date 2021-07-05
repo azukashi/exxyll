@@ -883,7 +883,7 @@ canvacord@^5.2.1:
     moment "^2.29.1"
     moment-duration-format "^2.3.2"
 
-canvas@^2.2.0, canvas@^2.6.1, canvas@^2.7.0:
+canvas@^2.2.0, canvas@^2.6.1, canvas@^2.7.0, canvas@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.8.0.tgz#f99ca7f25e6e26686661ffa4fec1239bbef74461"
   integrity sha512-gLTi17X8WY9Cf5GZ2Yns8T5lfBOcGgFehDFb+JQwDqdOoBOcECS9ZWMEAqMSVcMYwXD659J8NyzjRY/2aE+C2Q==
@@ -4647,6 +4647,11 @@ snakecord@^1.0.7:
   dependencies:
     discord.js "^12.4.1"
     eslint "^7.25.0"
+
+snekfetch@3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/snekfetch/-/snekfetch-3.4.5.tgz#c28deb5e5d04988ea6915ca6f67c6e3429c0e52f"
+  integrity sha512-SHvh5vkr6b0TUMYR0xZouk+49wG5LlMNvkKnG86smh/Vy54C/mv+IbmA7DIkP2DEtpruDymQxBCHVFwGuuCr/g==
 
 socks-proxy-agent@5, socks-proxy-agent@^5.0.0:
   version "5.0.0"
