@@ -44,11 +44,7 @@ module.exports = {
           value: `[Buy me a Coffee Here](https://buymeacoffee.com/gifaldyzkaa)`,
         }
       )
-      .setColor("PURPLE")
-      .setFooter(
-        "Page 1 / 2",
-        message.author.displayAvatarURL({ dynamic: true })
-      );
+      .setColor("PURPLE");
 
     let embed2 = new MessageEmbed()
       .setTitle(`Owner Info`)
@@ -79,11 +75,7 @@ module.exports = {
           value: `-`,
         }
       )
-      .setColor("GREEN")
-      .setFooter(
-        "Page 2 / 2",
-        message.author.displayAvatarURL({ dynamic: true })
-      );
+      .setColor("GREEN");
 
     const pages = [embed1, embed2];
     const textPageChange = true;

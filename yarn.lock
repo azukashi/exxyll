@@ -1415,6 +1415,11 @@ discord.js-akinator@^2.0.4:
     aki-api "^5.2.1"
     discord.js "^12.5.3"
 
+discord.js-pagination@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/discord.js-pagination/-/discord.js-pagination-1.0.3.tgz#b637d9b547f6de0187c58b22ad07dc9e532583f2"
+  integrity sha512-n6wuNo3CclZdwRfc5LMInjcrN23iKnKQTtlpX3VXGRtNofawBeQroYhl7xotSmpkIlL2Uqwo13T11+hHdNJ/bQ==
+
 discord.js@^12.4.1, discord.js@^12.5.1, discord.js@^12.5.3:
   version "12.5.3"
   resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-12.5.3.tgz#56820d473c24320871df9ea0bbc6b462f21cf85c"
