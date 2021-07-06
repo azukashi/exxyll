@@ -47,32 +47,12 @@ module.exports = {
     let embed2 = new MessageEmbed()
       .setTitle(`Owner Info`)
       .setThumbnail("https://avatars.githubusercontent.com/u/81457810?v=4")
-      .addFields(
-        {
-          name: `Name`,
-          value: `Natsune Ayane || なつねあやね`,
-        },
-        {
-          name: `Discord Tag`,
-          value: `She isn't using discord rn`,
-        },
-        {
-          name: `Working on`,
-          value: `Web Development Assist`,
-        },
-        {
-          name: `Location`,
-          value: `Hokkaido, Japan`,
-        },
-        {
-          name: `Social Media`,
-          value: `[GitHub](https://github.com/NatsuneAyane)`,
-        },
-        {
-          name: `Buy me a Coffee`,
-          value: `-`,
-        }
-      )
+      .addField(`Name`, `Natsune Ayane || なつねあやね`)
+      .addField(`Discord Tag`, `She isn't using discord rn`)
+      .addField(`Working on`, `Web Development Assist`)
+      .addField(`Location`, `Hokkaido, Japan`)
+      .addField(`Social Media`, `[GitHub](https://github.com/NatsuneAyane)`)
+      .addField(`Buy me a Coffee`, `-`)
       .setColor("GREEN");
 
       pages = [
