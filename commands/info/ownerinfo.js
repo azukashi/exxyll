@@ -35,21 +35,11 @@ module.exports = {
       )
       .setColor("PURPLE");
 
-    let embed2 = new MessageEmbed()
-      .setTitle(`Owner Info`)
-      .setThumbnail("https://avatars.githubusercontent.com/u/81457810?v=4")
-      .addField(`Name`, `Natsune Ayane || なつねあやね`)
-      .addField(`Discord Tag`, `She isn't using discord rn`)
-      .addField(`Working on`, `Web Development Assist`)
-      .addField(`Location`, `Hokkaido, Japan`)
-      .addField(`Social Media`, `[GitHub](https://github.com/NatsuneAyane)`)
-      .addField(`Buy me a Coffee`, `-`)
-      .setColor("GREEN");
-
-    const pages = [embed1, embed2];
-    const textPageChange = true;
-    const emojis = ["⏪", "⏩"];
-    const time = 60000;
-    ReactionPages(message, pages, textPageChange, emojis, time);
+    // const pages = [embed1, embed2];
+    // const textPageChange = true;
+    // const emojis = ["⏪", "⏩"];
+    // const time = 60000;
+    // ReactionPages(message, pages, textPageChange, emojis, time);
+    message.lineReplyNoMention(embed1);
   },
 };
