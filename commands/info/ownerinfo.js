@@ -50,7 +50,7 @@ module.exports = {
         message.author.displayAvatarURL({ dynamic: true })
       );
 
-    const embed2 = new MessageEmbed()
+    let embed2 = new MessageEmbed()
       .setTitle(`Owner Info`)
       .setThumbnail("https://avatars.githubusercontent.com/u/81457810?v=4")
       .addFields(
