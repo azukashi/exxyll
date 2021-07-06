@@ -1,7 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const recon = require("reconlx");
-const ReactionPages = recon.ReactionPages;
-
+const paginationEmbed = require('discord.js-pagination');
 module.exports = {
   name: "owner",
   aliases: ["ownerinfo"],
@@ -77,10 +75,13 @@ module.exports = {
       )
       .setColor("GREEN");
 
-    const pages = [embed1, embed2];
+      pages = [
+        embed1,
+        embed2,
+    ];
     const textPageChange = true;
     const emojis = ["⏪", "⏩"];
     const time = 60000;
-    ReactionPages(message, pages, textPageChange, emojis, time);
+    paginationEmbed(message, pages, emojis, time);
   },
 };
