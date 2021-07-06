@@ -1,5 +1,7 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const paginationEmbed = require('discord.js-pagination');
+const recon = require("reconlx");
+const ReactionPages = recon.ReactionPages;
+
 module.exports = {
   name: "owner",
   aliases: ["ownerinfo"],
@@ -16,31 +18,20 @@ module.exports = {
     const embed1 = new MessageEmbed()
       .setTitle(`Owner Info`)
       .setThumbnail("https://avatars.githubusercontent.com/u/68645946?v=4")
-      .addFields(
-        {
-          name: `Name`,
-          value: `Gifaldy Azka`,
-        },
-        {
-          name: `Discord Tag`,
-          value: `Falcxxdev#0001`,
-        },
-        {
-          name: `Working on`,
-          value: `Bot development, Website Development, Feature Development`,
-        },
-        {
-          name: `Location`,
-          value: `Bandung, Indonesia`,
-        },
-        {
-          name: `Social Media`,
-          value: `[Website](https://gifaldyazkaa.github.io) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxr)`,
-        },
-        {
-          name: `Buy me a Coffee`,
-          value: `[Buy me a Coffee Here](https://buymeacoffee.com/gifaldyzkaa)`,
-        }
+      .addField(`Name`, `Gifaldy Azka`)
+      .addField(`Discord Tag`, `Falcxxdev#0001`)
+      .addField(
+        `Working on`,
+        `Bot Development, Website Development, Feature Development`
+      )
+      .addField(`Location`, `Bandung, Indonesia`)
+      .addField(
+        `Social Media`,
+        `[Website](https://gifaldyazka.is-a.dev) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxr)`
+      )
+      .addField(
+        `Buy me a Coffee`,
+        `[Buy me a Coffee Here](https://buymeacoffee.com/gifaldyazkaa)`
       )
       .setColor("PURPLE");
 
@@ -55,13 +46,10 @@ module.exports = {
       .addField(`Buy me a Coffee`, `-`)
       .setColor("GREEN");
 
-      pages = [
-        embed1,
-        embed2,
-    ];
+    const pages = [embed1, embed2];
     const textPageChange = true;
     const emojis = ["⏪", "⏩"];
     const time = 60000;
-    paginationEmbed(message, pages, emojis, time);
+    ReactionPages(message, pages, textPageChange, emojis, time);
   },
 };
