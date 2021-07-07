@@ -35,9 +35,7 @@ client.categories = fs.readdirSync("./commands/");
 client.prefix = async function (message) {
   let custom;
 
-  const data = await prefixSchema
-    .findOne({ Guild: message.guild.id })
-    .catch((err) => console.log(err));
+  const data = await prefixSchema.findOne({ Guild: message.guild.id }).catch((err) => console.log(err));
 
   if (data) {
     custom = data.Prefix;
@@ -49,9 +47,7 @@ client.prefix = async function (message) {
 
 client.on("clickButton", async (button) => {
   if (button.id == "button1") {
-    button.channel.send(
-      "Here is the Link!\n\nhttps://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=3757567094&scope=bot"
-    );
+    button.channel.send("Here is the Link!\n\nhttps://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=3757567094&scope=bot");
   } else if (button.id == "button2") {
     button.channel.send("Here is the Link!\n\nhttps://exxyll.github.io");
   } else if (button.id == "understand_button") {
@@ -64,9 +60,7 @@ client.on("guildDelete", async (guild) => {
   prefixSchema.findOne({ Guild: guild.id }, async (err, data) => {
     if (err) throw err;
     if (data) {
-      prefixSchema
-        .findOneAndDelete({ Guild: guild.id })
-        .then(console.log(`Deleted data.`));
+      prefixSchema.findOneAndDelete({ Guild: guild.id }).then(console.log(`Deleted data.`));
     }
   });
 });
@@ -79,9 +73,7 @@ player
     message.lineReplyNoMention(`**${song.name}** has started playing.`);
   })
   .on("addList", (message, queue, playlist) => {
-    message.channel.send(
-      `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
-    );
+    message.channel.send(`Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`);
   })
   .on("empty", (message) => {
     message.channel.send("Channel is empty. Leaving the channel");
@@ -93,29 +85,15 @@ player
     message.channel.send("No more song in queue");
   })
   .on("noRelated", (message) => {
-    message.channel.send(
-      `Can't find related video to play. Stop playing music.`
-    );
+    message.channel.send(`Can't find related video to play. Stop playing music.`);
   })
   .on("playList", (message, queue, playlist, song) =>
-    message.channel.send(
-      `Play \`${playlist.name}\` playlist (${
-        playlist.songs.length
-      } songs).\nRequested by: ${song.user}\nNow playing \`${song.name}\` - \`${
-        song.formattedDuration
-      }\`\n${status(queue)}`
-    )
+    message.channel.send(`Play \`${playlist.name}\` playlist (${playlist.songs.length} songs).\nRequested by: ${song.user}\nNow playing \`${song.name}\` - \`${song.formattedDuration}\`\n${status(queue)}`)
   )
   .on("searchCancel", (message) => message.channel.send(`Searching canceled.`))
   .on("searchResult", (message, result) => {
     let i = 0;
-    message.channel.send(
-      `**Choose an option from below**\n${result
-        .map(
-          (song) => `**${++i}**. ${song.name} - \`${song.formattedDuration}\``
-        )
-        .join("\n")}\n*Enter anything else or wait 60 seconds to cancel*`
-    );
+    message.channel.send(`**Choose an option from below**\n${result.map((song) => `**${++i}**. ${song.name} - \`${song.formattedDuration}\``).join("\n")}\n*Enter anything else or wait 60 seconds to cancel*`);
   });
 
 client.player = player;

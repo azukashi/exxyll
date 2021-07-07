@@ -22,16 +22,14 @@ module.exports = {
     // Getting Data from APIs with Axios
     const {
       data: { data },
-    } = await axios.get(
-      `https://kitsu.io/api/edge/anime?filter[text]=${query}`
-    );
+    } = await axios.get(`https://kitsu.io/api/edge/anime?filter[text]=${query}`);
     const title = data[0].attributes.titles.en_jp;
     const synopsis = data[0].attributes.synopsis;
-    const thumbnail = data[0].attributes.posterImage.original;
+    const thumbnail = data[0].attributes.posterImage.original || `https://source.unsplash.com/1920x1080/?Okushiri`;
     const ratings = data[0].attributes.averageRating;
     const episodes = data[0].attributes.episodeCount;
     const status = data[0].attributes.status;
-    const image = data[0].attributes.coverImage.large;
+    const image = data[0].attributes.coverImage.large || `https://source.unsplash.com/1920x1080/?Okushiri`;
 
     if (image === "null" || "undefined") console.log("Anime Image Not Found.");
 
@@ -44,10 +42,7 @@ module.exports = {
       .addField("Status", status)
       .setImage(image)
       .setColor("BLUE")
-      .setFooter(
-        `Requested by : ${message.author.tag}`,
-        message.author.displayAvatarURL({ dynamic: true })
-      );
+      .setFooter(`Requested by : ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 
     message.channel.send(resultEmbed);
     message.channel.stopTyping();
