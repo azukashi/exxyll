@@ -4,10 +4,22 @@ const client = require("../index");
 const prefix = require("../config.json").prefix;
 
 client.on("ready", () => {
-  client.user.setActivity(`${prefix}help`, {
-    type: "STREAMING",
-    url: "https://www.twitch.tv/falcxxr",
-  });
+  const arrayOfStatus = [
+    `.help or @Exxyll`,
+    `${client.guilds.cache.size} Servers`,
+    `${client.channels.cache.size} Channels`,
+    `${client.users.cache.size} Users`,
+  ];
+  let indexnum = 0;
+  setInterval(() => {
+    if (indexnum === arrayOfStatus.length) index = 0;
+    const status = arrayOfStatus[indexnum];
+    client.user.setActivity(status, {
+      type: "STREAMING",
+      url: "https://www.twitch.tv/falcxxr",
+    });
+    indexnum++;
+  }, 15000);
   console.log(`${client.user.username} has logged on!`);
 
   const clientDetails = {
