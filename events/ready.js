@@ -7,7 +7,7 @@ client.on("ready", () => {
   client.user.setActivity(`.help or @Exxyll | Live on ${client.guilds.cache.size}`, {
       type: "STREAMING",
       url: "https://www.twitch.tv/falcxxr",
-  }
+  })
   console.log(`${client.user.username} has logged on!`);
 
   const clientDetails = {
