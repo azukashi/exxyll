@@ -5303,11 +5303,12 @@ webidl-conversions@^6.1.0:
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
 weky@^1.7.7:
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/weky/-/weky-1.7.7.tgz#9a37f9ca65ebbbf8b15538c9faad36620e32149a"
-  integrity sha512-A2+Ji3dg50ZagSLu+Ayvtn+b9mom5ouaWvE/Z6aDDMiSl4vkyqLJP72KWS2f1+bnIpTPvw7HkF0+8qqHHcxGJg==
+  version "1.9.9"
+  resolved "https://registry.yarnpkg.com/weky/-/weky-1.9.9.tgz#8667e57e5f650221cfd7e0910a059588905e1abb"
+  integrity sha512-ldaCKoTC1NRv296B7trgDfocifs+hi8YvXeaitjZnTg7LxxIjZZX66NLNala6HtjEeH/dc2b0h9nrDB2DpY+/A==
   dependencies:
     discord-buttons "^3.0.1"
+    mathjs "^9.4.2"
     ms "^2.1.3"
     node-fetch "^2.6.1"
 
