@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+    "eslint.validate": ["javascript"]
+}
