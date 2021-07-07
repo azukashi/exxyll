@@ -20,7 +20,7 @@ module.exports = {
       let categories = [];
 
       //categories to ignore
-      let ignored = ["owner"];
+      let ignored = ["owner", "presence"];
 
       const emo = {
         configuration: "🔧",
