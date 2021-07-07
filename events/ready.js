@@ -14,6 +14,7 @@ client.on("ready", () => {
   setInterval(() => {
     if (indexnum === arrayOfStatus.length) index = 0;
     const presenceStatus = arrayOfStatus[indexnum];
+    console.log(presenceStatus);
     client.user.setActivity(presenceStatus, {
       type: "STREAMING",
       url: "https://www.twitch.tv/falcxxr",
