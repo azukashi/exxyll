@@ -22,7 +22,7 @@ client.on("message", async (message) => {
   const p = await client.prefix(message);
   if (message.mentions.users.first()) {
     if (message.mentions.users.first().id === "848232775798226996")
-      return message.lineReplyNoMention(
+      message.lineReplyNoMention(
         new MessageEmbed()
           .setTitle(`Prefix Info`)
           .setThumbnail(message.guild.iconURL({ dynamic: true }))
