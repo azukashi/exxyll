@@ -4,7 +4,7 @@ module.exports = {
   name: "spotify",
   aliases: ["spotify-check"],
   usage: "",
-  description: "Returns Inforamtion about music you play",
+  description: "Returns Inforamtion about music you play on spotify",
   hidden: false,
   premium: false,
   /**
@@ -64,7 +64,7 @@ module.exports = {
           );
         message.lineReplyNoMention(embed);
       } else {
-        message.lineReply('You\'re not listening to spotify right now.')
+        message.lineReply('You\'re not listening to spotify right now!')
       }
     });
   },

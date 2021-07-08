@@ -4,7 +4,7 @@ module.exports = {
   name: "sudo",
   aliases: ["sud"],
   description: "Sudo as someone",
-  usage: "[message]",
+  usage: "<user-mention> <message>",
   hidden: false,
   premium: true,
   /**
