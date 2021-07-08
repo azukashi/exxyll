@@ -20,7 +20,7 @@ module.exports = {
     const user2 = split[1];
     if (!user || !user2)
       return message.lineReply(
-        "You need two sentences separatted with comma `,`"
+        "You need to specify two sentences separatted with comma `,`"
       );
     const res = await fetch(
       `https://api.popcatdev.repl.co/pooh?text1=${user}&text2=${user2}`,
