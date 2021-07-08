@@ -54,7 +54,7 @@ module.exports = {
       .catch((err) =>
         message.lineReplyNoMention(
           new MessageEmbed()
-            .setDescription(`:x: | An Error Occured while trying to search specified anime!`)
+            .setDescription(`:x: | That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``)
             .setColor('RED')
         )
       );
