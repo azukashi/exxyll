@@ -1,5 +1,8 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const axios = require("axios");
+const fetch = require("node-fetch");
+
+// Endpoints : https://kitsu.io/api/edge/anime?filter[text]=${query}
+// Unsplash Image not Found : https://source.unsplash.com/1920x1080/?Okushiri
 
 module.exports = {
   name: "anime",
@@ -17,34 +20,43 @@ module.exports = {
     // Define Query & Checking
     const query = args.join(" ");
     if (!query) return message.lineReply("Please specify a query to search!");
+    fetch(`https://kitsu.io/api/edge/anime?filter[text]=${query}`)
+      .then((res) => res.json())
+      .then((body) => {
+        const title = body.data[0].attributes.titles.en_jp;
+        const synopsis = body.data[0].attributes.synopsis;
+        const thumbnail =
+          body.data[0].attributes.posterImage.original ||
+          `https://source.unsplash.com/1920x1080/?Okushiri`;
+        const ratings = body.data[0].attributes.averageRating;
+        const episodes = body.data[0].attributes.episodeCount;
+        const status = body.data[0].attributes.status;
+        const image =
+          body.data[0].attributes.coverImage.large ||
+          `https://source.unsplash.com/1920x1080/?Okushiri`;
 
-    message.channel.startTyping();
-    // Getting Data from APIs with Axios
-    const {
-      data: { data },
-    } = await axios.get(`https://kitsu.io/api/edge/anime?filter[text]=${query}`);
-    const title = data[0].attributes.titles.en_jp;
-    const synopsis = data[0].attributes.synopsis;
-    const thumbnail = data[0].attributes.posterImage.original || `https://source.unsplash.com/1920x1080/?Okushiri`;
-    const ratings = data[0].attributes.averageRating;
-    const episodes = data[0].attributes.episodeCount;
-    const status = data[0].attributes.status;
-    const image = data[0].attributes.coverImage.large || `https://source.unsplash.com/1920x1080/?Okushiri`;
+        const resultEmbed = new MessageEmbed()
+          .setTitle(title)
+          .setDescription(synopsis)
+          .setThumbnail(thumbnail)
+          .addField("Ratings", ratings)
+          .addField("Total Episodes", episodes)
+          .addField("Status", status)
+          .setImage(image)
+          .setColor("BLUE")
+          .setFooter(
+            `Requested by : ${message.author.tag}`,
+            message.author.displayAvatarURL({ dynamic: true })
+          );
 
-    if (image === "null" || "undefined") console.log("Anime Image Not Found.");
-
-    const resultEmbed = new MessageEmbed()
-      .setTitle(title)
-      .setDescription(synopsis)
-      .setThumbnail(thumbnail)
-      .addField("Ratings", ratings)
-      .addField("Total Episodes", episodes)
-      .addField("Status", status)
-      .setImage(image)
-      .setColor("BLUE")
-      .setFooter(`Requested by : ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
-
-    message.channel.send(resultEmbed);
-    message.channel.stopTyping();
+        message.channel.send(resultEmbed);
+      })
+      .catch((err) =>
+        message.lineReplyNoMention(
+          new MessageEmbed()
+            .setDescription(`:x: | An Error Occured while trying to search specified anime!`)
+            .setColor('RED')
+        )
+      );
   },
 };
