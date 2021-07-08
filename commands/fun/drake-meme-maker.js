@@ -21,7 +21,7 @@ module.exports = {
     const split = args.join(" ").split(",");
     const user = split[0];
     const user2 = split[1];
-    if(!user || !user2) return message.lineReply(`You need to specify two sentences separatted with comma `,``)
+    if(!user || !user2) return message.lineReply(`You need to specify two sentences separated with comma \`,\``)
     const res = await fetch(
       `https://frenchnoodles.xyz/api/endpoints/drake/?text1=${user}&text2=${user2}`,
       {}

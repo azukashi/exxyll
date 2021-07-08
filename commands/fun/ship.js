@@ -15,7 +15,6 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    message.channel.startTyping();
     const user = message.mentions.users.first();
     if (!user)
       return message.channel.send(`Please specify a user to ship with!`);
@@ -55,7 +54,6 @@ module.exports = {
         .addField(`**Ship Meter**`, ship());
       message.channel.send(luv);
     }
-    message.channel.stopTyping();
   },
 };
 
