@@ -13,8 +13,9 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("BAN_MEMBERS"))
       return message.lineReply(
-        "You need `BAN_MEMBERS` Permission to run this command.\nIf you already have `BAN_MEMBERS` Permission, Make sure I Have `BAN_MEMBERS` Permission Too."
+        "You need `BAN_MEMBERS` Permission in order to run this command!"
       );
+    if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.lineReply(`I Need \`BAN_MEMBERS\` Permission in order to run this command!`)
 
     const member = message.mentions.members.first();
     if (!member) return message.lineReply("Please mention a member to ban!");

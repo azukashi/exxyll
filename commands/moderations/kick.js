@@ -13,8 +13,9 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("KICK_MEMBERS"))
       return message.lineReply(
-        "You need `KICK_MEMBERS` Permissions in order to run this command.\nIf you already have `KICK_MEMBERS` Permission, Make sure I Have `KICK_MEMBERS` Permission Too."
+        "You need `KICK_MEMBERS` Permission in order to run this command."
       );
+    if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.lineReply(`I Need \`KICK_MEMBERS\` Permission in order to run this command!`)
 
     const member = message.mentions.members.first();
     if (!member) return message.lineReply("Please mention a member to kick!");

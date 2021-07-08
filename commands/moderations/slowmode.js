@@ -6,12 +6,18 @@ module.exports = {
   description: "Lets you set slowmode on the channel.",
   args: true,
   usage: "<time>",
+  /**
+   * @param {Client} client
+   * @param {Message} message
+   * @param {String[]} args
+   */
   run: (client, message, args) => {
     const amount = parseInt(args[0]);
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.lineReply(
-        "You need `MANAGE_CHANNELS` Permission to run this command.\nIf you already have `MANAGE_CHANNELS` Permission, Make sure I Have `MANAGE_CHANNELS` Permission Too."
+        "You need `MANAGE_CHANNELS` Permission in order to run this command!"
       );
+    if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.lineReply(`I Need \`MANAGE_CHANNELS\` Permission in order to run this command!`)
     if (message.member.hasPermission("MANAGE_CHANNELS"))
       if (isNaN(amount))
         return message.lineReply("<:x:It doesn't seem to be valid value");
