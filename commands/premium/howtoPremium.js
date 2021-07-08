@@ -15,12 +15,12 @@ module.exports = {
   run: async (client, message, args) => {
     const embed = new MessageEmbed()
       .setTitle("Upgrading to Premium Plan")
-      .setDescription("Upgrade to Premium to Unlock Premium Commands!")
+      .setDescription("Be a Premium User to Enjoy & Unlock Premium Perks and Commands!")
       .setThumbnail(
-        "https://cdn.discordapp.com/avatars/848232775798226996/a1663c970cb38f341a53a0be608fbb56.png?size=128"
+        "https://cdn.discordapp.com/emojis/862677231696347146.png"
       )
-      .setColor("BLUE")
-      .addField("You can dming the owner, or donating by `.support`!")
+      .setColor("#800080")
+      .addField("How i can upgrading to premium?", "You can dming the owner, or donating by `.support`!")
       .addField(
         "How much it costs?",
         "You can upgrade for only $1 or whatever you want to pay. Just do `.support` and Confirm by dming onwer."
