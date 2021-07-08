@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     const embed = new MessageEmbed()
       .setDescription(
-        `\`\`\`js\nStatus : Online\nUptime : ${pretty(client.uptime)}\n\`\`\``
+        `\`\`\`yml\nStatus : Online\nUptime : ${pretty(client.uptime)}\n\`\`\``
       )
     message.lineReplyNoMention(embed);
   },
