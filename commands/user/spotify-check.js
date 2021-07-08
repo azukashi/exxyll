@@ -63,6 +63,8 @@ module.exports = {
             user.user.displayAvatarURL({ dynamic: true })
           );
         message.lineReplyNoMention(embed);
+      } else {
+        message.lineReply('You\'re not listening to spotify right now.')
       }
     });
   },
