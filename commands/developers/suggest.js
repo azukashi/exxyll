@@ -17,7 +17,7 @@ module.exports = {
     );
     const suggestionQuery = args.join(" ");
 
-    if (!suggestionQuery) return message.reply("Please specify a suggestion!");
+    if (!suggestionQuery) return message.lineReply("Please specify a suggestion!");
 
     const suggestionEmbed = new MessageEmbed()
       .setAuthor(

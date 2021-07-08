@@ -14,7 +14,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle("Support the Developers!")
       .setDescription(
-        "Support or Dotate to Support the Developers and Get Premium Perks!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)"
+        "Support or Donate to Support the Developers and Get Premium Perks!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)"
       )
       .setFooter(message.author.tag)
       .setColor("BLUE")

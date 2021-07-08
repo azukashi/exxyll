@@ -11,10 +11,9 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const owner = client.users.cache.get("788260234409672754");
-
     const query = args.join(" ");
 
-    if (!query) return message.reply("Please specify a query to report!");
+    if (!query) return message.lineReply("Please specify a query!");
 
     const thanksFor = new MessageEmbed()
       .setTitle("Thanks for reporting!")
@@ -33,7 +32,6 @@ module.exports = {
       .setColor("BLUE")
       .setTimestamp();
 
-    if (!query) return message.lineReplyNoMention("Please specify a query!");
     owner.send(reportEmbed);
     if (query) return message.lineReplyNoMention(thanksFor);
     message.delete();
