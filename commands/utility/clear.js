@@ -8,7 +8,11 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("MANAGE_MESSAGES"))
       return message.reply(
-        "You need `MANAGE_MESSAGES` Perms to perform this action! \nIf you already have `MANAGE_MESSAGES` Permission, Make sure I Have `MANAGE_MESSAGES` Permission Too."
+        "You need `MANAGE_MESSAGES` Permission in order to run this command!"
+      );
+    if (!message.guild.me.hasPermission("MANAGE_MESSAGES"))
+      return message.lineReply(
+        `I Need \`MANAGE_MESSAGES\` Permission in order to run this command!`
       );
     if (!args[0])
       return message.channel.send(
