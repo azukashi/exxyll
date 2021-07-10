@@ -54,7 +54,7 @@ module.exports = {
       .catch((err) =>
         message.lineReplyNoMention(
           new MessageEmbed()
-            .setDescription(`:x: | That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``)
+            .setDescription(`<:tickNo:863367014092898314> | That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``)
             .setColor('RED')
         )
       );
