@@ -29,7 +29,7 @@ module.exports = {
     message.channel
       .send(
         new MessageEmbed()
-          .setDescription("✅ | Deleted " + args[0] + " messages.")
+          .setDescription("<a:verified_green:863233286690832404> | Deleted " + args[0] + " messages.")
           .setColor("#00FF00")
       )
       .then((m) => m.delete({ timeout: 2000 }));
