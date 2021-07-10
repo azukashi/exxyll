@@ -21,15 +21,15 @@ module.exports = {
       return days + (days == 1 ? " day" : " days") + " ago";
     }
     let user =
-    message.mentions.users.first() ||
-      message.guild.members.cache.get(args[0]) ||
-      message.guild.members.cache.find((u) =>
+      message.mentions.users.first() ||
+      message.mentions.users.find((u) =>
         u.user.username
           .toLowerCase()
           .includes(
             args.join(" ") || u.user.tag.toLowerCase() === args.join(" ")
           )
-      )
+      ) ||
+      message.author;
     let member = message.mentions.members.first() || message.member;
     let embed = new MessageEmbed()
       .setTitle(`${user.tag}'s User Information`)
