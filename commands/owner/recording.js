@@ -11,7 +11,55 @@ module.exports = {
     if (message.author.id !== "788260234409672754") return;
 
     message.channel.send(
-      "Recording mode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n."
+      `
+      ‎
+        ‎
+        ‎‎
+        ‎
+        ‎‎‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎‎
+        ‎
+        ‎‎
+        ‎
+        ‎‎‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        ‎
+        
+      `
     );
   },
 };
