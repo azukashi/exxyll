@@ -32,7 +32,7 @@ module.exports = {
       message.lineReplyNoMention(
         new MessageEmbed()
           .setTitle(`Showing Guild List`)
-          .setDescription(messageObj[0])
+          .setDescription(`Guild ID | Guild Name | Total Members\n${messageObj[0]}`)
           .setColor("#800080")
       );
     } else {
@@ -40,7 +40,7 @@ module.exports = {
         message.lineReplyNoMention(
           new MessageEmbed()
             .setTitle(`Showing Guild List`)
-            .setDescription(messageObj[i])
+            .setDescription(`Guild ID | Guild Name | Total Members\n${messageObj[i]}`)
             .setColor("#800080")
         );
       }
