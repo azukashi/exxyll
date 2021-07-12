@@ -29,12 +29,12 @@ module.exports = {
         guild: "<:partnernew:863214932585873438>",
         info: "📰",
         moderations: "<:moderation:863780799006507018>",
-        music: "🎵",
+        music: "<:youtube:853158600096350209>",
         premium: "<:boost:862677231696347146>",
         developers: "<:developer:855302873785040897>",
         user: "<:members:863214932883800138>",
         utility: "📀",
-        welcoming: "👋",
+        welcoming: "<:joined:863780800406355968>",
       };
 
       readdirSync("./commands/").forEach((dir) => {
