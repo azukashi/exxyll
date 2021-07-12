@@ -1,4 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
+const { MessageButton } = require('discord-buttons')
 const moment = require("moment");
 
 module.exports = {
@@ -23,7 +24,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle("Bot Info")
       .setDescription(
-        `[Invite Me](https://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=3222646&scope=bot) | [Visit Website](https://exxyll.github.io)`
+        `[Invite Me](https://discord.bots.gg/bots/848232775798226996) | [Visit Website](https://exxyll.github.io)`
       )
       .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
       .addField(`Name`, `Exxyll`)
@@ -31,7 +32,8 @@ module.exports = {
         `Description`,
         `Exxyll is A Multipurpose Discord Bot with Commands for Fun, Utility, Moderation, Music, Welcoming messages, and many more!`
       )
-      .addField(`Developer`, `Gifaldy Azka || \`Falcxxdev#0001\``)
+      .addField(`Developer`, `Falcxxdev#0001`)
+      .addField(`With Special Help from`, `\`BayuDC#0690\``)
       .addField(
         `Developed Since`,
         `${moment(client.user.createdTimestamp).format("llll")} (${checkDays(
@@ -51,6 +53,18 @@ module.exports = {
         message.author.tag,
         message.author.displayAvatarURL({ dynamic: true })
       );
+
+      const invite = new MessageButton()
+        .setLabel('Invite Me')
+        .setStyle('url')
+        .setURL('https://discord.bots.gg/bots/848232775798226996')
+        .setEmoji('<:invite:863999093164736562>')
+
+      const support = new MessageButton()
+        .setLabel('Join Support Server')
+        .setStyle('url')
+        .setURL('https://discord.gg/j2MfuWySfD')
+        .setEmoji('<:partnernew:863214932585873438>')
 
     message.lineReplyNoMention(embed);
   },
