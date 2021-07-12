@@ -23,7 +23,7 @@ module.exports = {
       let ignored = ["owner", "presence"];
 
       const emo = {
-        configuration: "🔧",
+        config: "🔧",
         fun: "🎲",
         games: "🎮",
         guild: "👥",
