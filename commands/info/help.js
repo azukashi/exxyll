@@ -23,16 +23,16 @@ module.exports = {
       let ignored = ["owner", "presence"];
 
       const emo = {
-        config: "🔧",
+        config: "<:settings:863951175875559425>",
         fun: "🎲",
         games: "🎮",
-        guild: "👥",
+        guild: "<:partnernew:863214932585873438>",
         info: "📰",
-        moderations: "🔨",
+        moderations: "<:moderation:863780799006507018>",
         music: "🎵",
-        premium: "🔮",
-        developers: "📩",
-        user: "👤",
+        premium: "<:boost:862677231696347146>",
+        developers: "<:developer:855302873785040897>",
+        user: "<:members:863214932883800138>",
         utility: "📀",
         welcoming: "👋",
       };
