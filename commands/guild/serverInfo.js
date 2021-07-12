@@ -11,7 +11,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const guild = message.guild;
+    const guild = message.guild || client.guilds.cache.get(args[0]);
     const embed = new MessageEmbed()
       .setTitle(guild.name)
       .setThumbnail(guild.iconURL())
