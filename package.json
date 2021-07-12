@@ -39,7 +39,6 @@
     "discord.js-pagination": "^1.0.3",
     "distube": "^2.8.14",
     "ejs": "^3.1.6",
-    "erlpack": "discord/erlpack",
     "express": "^4.17.1",
     "ffmpeg-static": "^4.3.0",
     "glob": "^7.1.7",
@@ -69,8 +68,7 @@
     "weky": "^1.7.7",
     "ws": "^7.4.6",
     "ytdl-core": "^4.8.3",
-    "ytsr": "^3.5.0",
-    "zlib-sync": "^0.1.7"
+    "ytsr": "^3.5.0"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
