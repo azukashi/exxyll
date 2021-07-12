@@ -2,7 +2,8 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "report",
-  usage: "query",
+  aliases: ["bug-report"],
+  usage: "<query>",
   description: "Command to Report an Bot Issues to Developer",
   /**
    * @param {Client} client
