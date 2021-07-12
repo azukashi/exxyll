@@ -20,9 +20,9 @@ module.exports = {
         message.author.displayAvatarURL()
       )
       .setDescription(
-        `<:stagechannel:863214920548089866> Websocket ping is ${
+        `<:stagechannel:863214920548089866>  Websocket : ${
           client.ws.ping
-        } ms\n<:discrodjs:863216966813351937> Discord API ping is ${Math.floor(messageping)} ms!`
+        } ms\n<:discrodjs:863216966813351937> Discord API : ${Math.floor(messageping)} ms!`
       )
       .setColor(
         client.ws.ping < 350
