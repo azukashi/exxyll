@@ -1,11 +1,12 @@
-const { Client, Message, MessageEmbed } = require("discord.js");
+const { Client, Message, MessageEmbed, version: djsversion, } = require("discord.js");
 const { mem, cpu } = require("node-os-utils");
-let m = require("moment-duration-format"),
-  os = require("os"),
-  cpuStat = require("cpu-stat"),
-  ms = require("ms"),
-  moment = require("moment");
-const version1 = require("discord.js").version;
+const { utc } = require("moment");
+const { totalMemMb } = mem.info()
+const version = require("../../package.json").version;
+const os = require("os");
+const ms = require("ms");
+const pretty = require("pretty-ms");
+
 module.exports = {
   name: "stats",
   aliases: ["botstatus"],
@@ -16,44 +17,46 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    message.channel.startTyping();
-    cpuStat.usagePercent(async function (error, percent, seconds) {
-      if (error) {
-        return console.error(error);
-      }
-      const cores = os.cpus().length;
-      const cpuModel = os.cpus()[0].model;
-      const guilds = client.guilds.cache.size.toLocaleString();
-      const users = client.users.cache.size.toLocaleString();
-      const channels = client.channels.cache.size.toLocaleString();
-      const usage = formatBytes(process.memoryUsage().heapUsed);
-      const node = process.version;
-      const CPU = percent.toFixed(2);
-      const { totalMemMb, usedMemMb } = await mem.info();
-
-      const embed = new MessageEmbed()
-        .addField(
-          "Exxyll Stats",
-          `**📂 Total Servers** ${guilds}\n\n**👥 Total Users**: ${users}\n\n**💬 Total Channels**: ${channels}\n\n**✅ Usage**: ${usage}\n\n**<:node:849590827964956683> Node Version**: ${node}\n\n**<:djs:849590909943414806> Discord.js Version**: v${version1}\n\n**<:intel:849590998774579210> Cpu Usage** ${CPU}\n\n**📑 Total Ram: ${totalMemMb} Mb**\n\n**📀 Ram used: ${usedMemMb}**\n\n**<:arch:853158532584308736> Platform: ${process.platform}**\n\n**♐ Arch: ${process.arch}**`
-        )
-        .addField(
-          "**Cpu Stats**",
-          `**CPU**: ${cpuModel}\n\n **Cores**: ${cores}`
-        )
-        .setColor("BLUE")
-        .setTimestamp();
-
-      message.lineReplyNoMention(embed);
-    });
-
-    function formatBytes(a, b) {
-      let c = 1024;
-      d = b || 2;
-      (e = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]),
-        (f = Math.floor(Math.log(a) / Math.log(c)));
-
-      return parseFloat((a / Math.pow(c, f)).toFixed(d)) + "" + e[f];
+    // Capitalize Func
+    function capitalizeFirst(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    message.channel.stopTyping();
+    const core = os.cpus()[0];
+    const embed = new MessageEmbed()
+      .setTitle(`Exxyll Stats`)
+      .setURL(client.web)
+      .setThumbnail(client.user.displayAvatarURL())
+      .setColor(message.guild.me.displayHexColor || client.color)
+      .addField("<a:bot:863216970554933269> General", [
+        `**❯ Client :** ${client.user.tag} (${client.user.id})`,
+        `**❯ Commands Total :** ${client.commands.size}`,
+        `**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers`,
+        `**❯ Users :** ${client.guilds.cache
+          .reduce((a, b) => a + b.memberCount, 0)
+          .toLocaleString()} Users`,
+        `**❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels`,
+        `**❯ Creation Date :** ${utc(client.user.createdTimestamp).format(
+          "Do MMMM YYYY HH:mm:ss"
+        )}`,
+        `**❯ Node.js :** ${process.version}`,
+        `**❯ Version :** v${version}`,
+        `**❯ Discord.js :** v${djsversion}`,
+        `**❯ Bot Uptime :** ${pretty(client.uptime)}`,
+        "\u200b",
+      ])
+      .addField("<:ubuntu:853158810654343208> System", [
+        `**❯ OS Platform :** ${capitalizeFirst(process.platform)}`,
+        `**❯ OS Uptime :** ${ms(os.uptime() * 1000, { long: true })}`,
+        `**❯ CPU :**`,
+        `\u3000 Cores : ${os.cpus().length}`,
+        `\u3000 Model : ${core.model}`,
+        `\u3000 Speed : ${core.speed} MHz`,
+      ])
+      .addField("<:stagechannel:863214920548089866> Network", [
+        `**❯ Latency :** ${client.ws.ping} ms`
+      ])
+      .setTimestamp()
+
+    message.lineReplyNoMention(embed)
   },
 };
