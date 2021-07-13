@@ -20,7 +20,13 @@ module.exports = {
 
     child.exec(command, (err, res) => {
       if (err) return message.channel.send(err);
-      message.lineReplyNoMention(res.slice(0, 2000), { code: "js" });
+      message.lineReplyNoMention(
+        new MessageEmbed()
+          .setTitle('<:terminal:864415792320610324> Terminal - GNU Bash')
+          .setDescription(`\`\`\`js\n${res.slice(0, 2000)}\`\`\``)
+          .setFooter(`GNU Bash - Actioned by ${message.author.tag}`)
+          .setColor('#800080')
+      );
     });
   },
 };

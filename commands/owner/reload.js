@@ -32,7 +32,13 @@ module.exports = {
           });
         }
       });
-      message.lineReplyNoMention("Reloaded Commands.");
+      message.lineReplyNoMention(
+        new MessageEmbed()
+          .setTitle('<:tickYes:863367013464408084> | Successfully Reloaded!')
+          .setDescription(`\n\`\`\`yml\nReloaded ${client.commands.size} Commands!\n\`\`\`\n`)
+          .setFooter(`Commands Reloaded and Actioned by ${message.author.tag}`)
+          .setColor('#00FF00')
+      );
     });
   },
 };
