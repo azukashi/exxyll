@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (message.author.id !== "788260234409672754") return;
     message.channel.startTyping();
-    const user = message.mentions.users.last() || message.author;
+    const user = message.mentions.users.last() || client.users.cache.get(args[0]) || message.author;
     const devices = user.presence?.clientStatus || {};
     const description = () => {
       const entries = Object.entries(devices)

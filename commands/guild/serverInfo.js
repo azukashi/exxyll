@@ -17,13 +17,13 @@ module.exports = {
       .setThumbnail(guild.iconURL())
       .setColor("RANDOM")
       .addField("General Info", [
-        `ID : ${guild.id}`,
-        `Name : ${guild.name}`,
-        `Owner : ${guild.owner}`,
+        `🆔 ID : ${guild.id}`,
+        `<:partnernew:863214932585873438> Name : ${guild.name}`,
+        `<:owner:864432628928217098> Owner : ${guild.owner}`,
       ])
       .addField("Counts", [
-        `Role : ${guild.roles.cache.size} Roles`,
-        `Channels : ${
+        `<:role:863214921574907915> Role : ${guild.roles.cache.size} Roles`,
+        `<:channel:863363700463632414> Channels : ${
           guild.channels.cache.filter(
             (ch) => ch.type === "text" || ch.type === "voice"
           ).size
@@ -32,19 +32,19 @@ module.exports = {
         }, Voice : ${
           guild.channels.cache.filter((ch) => ch.type === "voice").size
         })`,
-        `Emojis : ${guild.emojis.cache.size} (Regular : ${
+        `<:add_reaction:863214931599818783> Emojis : ${guild.emojis.cache.size} (Regular : ${
           guild.emojis.cache.filter((e) => !e.animated).size
         }, Animated : ${guild.emojis.cache.filter((e) => e.animated).size})`,
       ])
       .addField("Additional Information", [
-        `Created : ${moment(guild.createdTimestamp).format("LT")} ${moment(
+        `🕘 Created : ${moment(guild.createdTimestamp).format("LT")} ${moment(
           guild.createdTimestamp
         ).format("LL")} ${moment(guild.createdTimestamp).fromNow()}`,
-        `Region : ${guild.region}`,
-        `Boost Tier : ${
+        `<:maps_logo:864435720507359232> Region : ${guild.region}`,
+        `<a:boostr:864431598567817216> Boost Tier : ${
           guild.premiumTier ? `Tier ${guild.premiumTier}` : "None"
         }`,
-        `Boost Count : ${guild.premiumSubscriptionCount || "0"}`,
+        `<:boost:862677231696347146> Boost Count : ${guild.premiumSubscriptionCount || "0"}`,
       ]);
 
     message.lineReplyNoMention(embed);

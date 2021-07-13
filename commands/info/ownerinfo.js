@@ -3,8 +3,8 @@ const recon = require("reconlx");
 const ReactionPages = recon.ReactionPages;
 
 module.exports = {
-  name: "owner",
-  aliases: ["ownerinfo"],
+  name: "ownerinfo",
+  aliases: ["whois-owner"],
   usage: "",
   description: "Returns about owner information",
   hidden: false,
