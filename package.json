@@ -29,7 +29,6 @@
     "child_process": "^1.0.2",
     "cpu-stat": "^2.0.1",
     "css-what": "^5.0.1",
-    "discord-buttons": "^3.0.1",
     "discord-canvas": "^1.4.1",
     "discord-reply": "^0.1.2",
     "discord-rpc": "^4.0.1",

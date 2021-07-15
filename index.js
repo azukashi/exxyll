@@ -6,7 +6,6 @@ const fs = require("fs");
 const client = new Client({
   disableEveryone: true,
 });
-require("discord-buttons")(client);
 const mongoose = require("mongoose");
 const mongouri = require("./config.json").mongoURI;
 mongoose
@@ -35,7 +34,9 @@ client.categories = fs.readdirSync("./commands/");
 client.prefix = async function (message) {
   let custom;
 
-  const data = await prefixSchema.findOne({ Guild: message.guild.id }).catch((err) => console.log(err));
+  const data = await prefixSchema
+    .findOne({ Guild: message.guild.id })
+    .catch((err) => console.log(err));
 
   if (data) {
     custom = data.Prefix;
@@ -53,7 +54,9 @@ player
     message.lineReplyNoMention(`**${song.name}** has started playing.`);
   })
   .on("addList", (message, queue, playlist) => {
-    message.channel.send(`Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`);
+    message.channel.send(
+      `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
+    );
   })
   .on("empty", (message) => {
     message.channel.send("Channel is empty. Leaving the channel");
@@ -65,15 +68,29 @@ player
     message.channel.send("No more song in queue");
   })
   .on("noRelated", (message) => {
-    message.channel.send(`Can't find related video to play. Stop playing music.`);
+    message.channel.send(
+      `Can't find related video to play. Stop playing music.`
+    );
   })
   .on("playList", (message, queue, playlist, song) =>
-    message.channel.send(`Play \`${playlist.name}\` playlist (${playlist.songs.length} songs).\nRequested by: ${song.user}\nNow playing \`${song.name}\` - \`${song.formattedDuration}\`\n${status(queue)}`)
+    message.channel.send(
+      `Play \`${playlist.name}\` playlist (${
+        playlist.songs.length
+      } songs).\nRequested by: ${song.user}\nNow playing \`${song.name}\` - \`${
+        song.formattedDuration
+      }\`\n${status(queue)}`
+    )
   )
   .on("searchCancel", (message) => message.channel.send(`Searching canceled.`))
   .on("searchResult", (message, result) => {
     let i = 0;
-    message.channel.send(`**Choose an option from below**\n${result.map((song) => `**${++i}**. ${song.name} - \`${song.formattedDuration}\``).join("\n")}\n*Enter anything else or wait 60 seconds to cancel*`);
+    message.channel.send(
+      `**Choose an option from below**\n${result
+        .map(
+          (song) => `**${++i}**. ${song.name} - \`${song.formattedDuration}\``
+        )
+        .join("\n")}\n*Enter anything else or wait 60 seconds to cancel*`
+    );
   });
 
 client.player = player;
