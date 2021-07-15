@@ -27,7 +27,6 @@ module.exports = {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
     const core = os.cpus()[0];
-    const messageping = message.createdTimestamp;
     const embed = new MessageEmbed()
       .setTitle(`Exxyll Stats`)
       .setURL(client.web)
@@ -60,7 +59,6 @@ module.exports = {
       ])
       .addField("<:stagechannel:863214920548089866> Network", [
         `**❯ Latency :** ${client.ws.ping} ms`,
-        `**❯ Discord API :** ${Math.floor(messageping)} ms`,
       ])
       .setTimestamp();
 
