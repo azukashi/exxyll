@@ -27,7 +27,7 @@ module.exports = {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
     const core = os.cpus()[0];
-    const messageping = msg.createdTimestamp - message.createdTimestamp;
+    const messageping = message.createdTimestamp;
     const embed = new MessageEmbed()
       .setTitle(`Exxyll Stats`)
       .setURL(client.web)
