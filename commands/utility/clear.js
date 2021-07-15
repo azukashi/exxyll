@@ -1,4 +1,4 @@
-const { Message, MessageEmbed } = require('discord.js')
+const { Message, MessageEmbed } = require("discord.js");
 const client = require("../../index.js");
 
 module.exports = {
@@ -12,6 +12,14 @@ module.exports = {
    */
   run: async (client, message, args) => {
     let prefix = ".";
+    if (!message.member.permissions.has("MANAGE_MESSAGES"))
+      return message.lineReply(
+        `You need \`MANAGE_MESSAGES\` Permission in order to run this command.`
+      );
+    if (!message.guild.me.hasPermission("MANAGE_MESSAGES"))
+      return message.lineReply(
+        `I Need \`MANAGE_MESSAGES\` Permission in order to run this command!`
+      );
     try {
       const commands = [
         `bots\` - Delete messages sent by bots. (Ignore humans)`,
@@ -40,7 +48,8 @@ module.exports = {
           )}`
         )
         .setFooter(
-          `Clear Message Options | ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true })
+          `Clear Message Options | ${message.author.tag}`,
+          message.author.displayAvatarURL({ dynamic: true })
         );
 
       if (!args[0] || !args.length) return message.channel.send(embd);
@@ -159,7 +168,6 @@ module.exports = {
                     .setDescription(
                       `<a:verified_green:863233286690832404>  Cleared **${m.size}**/**${amount}** messages!`
                     );
-                    await client.modlogs(message, `Purged ${m.size} messages\nModerator: **${message.author.tag} | ${message.author.id}**`);
                   message.channel
                     .send(embed)
                     .then((msg) => msg.delete({ timeout: 50000 }));

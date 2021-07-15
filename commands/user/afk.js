@@ -24,6 +24,6 @@ module.exports = {
       .setFooter(`${message.author.tag} is now AFK!`)
       .setColor("GREEN");
 
-    message.lineReply(embed);
+    message.lineReplyNoMention(embed);
   },
 };
