@@ -60,7 +60,7 @@ module.exports = {
       ])
       .addField("<:stagechannel:863214920548089866> Network", [
         `**❯ Latency :** ${client.ws.ping} ms`,
-        `**❯ Discord API :** ${Math.floor(messageping)}`,
+        `**❯ Discord API :** ${Math.floor(messageping)} ms`,
       ])
       .setTimestamp();
 
