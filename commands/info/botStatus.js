@@ -1,7 +1,12 @@
-const { Client, Message, MessageEmbed, version: djsversion, } = require("discord.js");
+const {
+  Client,
+  Message,
+  MessageEmbed,
+  version: djsversion,
+} = require("discord.js");
 const { mem, cpu } = require("node-os-utils");
 const { utc } = require("moment");
-const { totalMemMb } = mem.info()
+const { totalMemMb } = mem.info();
 const version = require("../../package.json").version;
 const os = require("os");
 const ms = require("ms");
@@ -22,6 +27,7 @@ module.exports = {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
     const core = os.cpus()[0];
+    const messageping = msg.createdTimestamp - message.createdTimestamp;
     const embed = new MessageEmbed()
       .setTitle(`Exxyll Stats`)
       .setURL(client.web)
@@ -53,10 +59,11 @@ module.exports = {
         `\u3000 Speed : ${core.speed} MHz`,
       ])
       .addField("<:stagechannel:863214920548089866> Network", [
-        `**❯ Latency :** ${client.ws.ping} ms`
+        `**❯ Latency :** ${client.ws.ping} ms`,
+        `**❯ Discord API :** ${Math.floor(messageping)}`,
       ])
-      .setTimestamp()
+      .setTimestamp();
 
-    message.lineReplyNoMention(embed)
+    message.lineReplyNoMention(embed);
   },
 };
