@@ -13,11 +13,14 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (message.member.permissions.has("BAN_MEMBERS"))
+    if (!message.member.permissions.has("BAN_MEMBERS"))
       return message.lineReply(
         "You need `BAN_MEMBERS` Permission in order to run this command!"
       );
-    if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.lineReply(`I Need \`BAN_MEMBERS\` Permission in order to run this command!`)
+    if (!message.guild.me.hasPermission("BAN_MEMBERS"))
+      return message.lineReply(
+        `I Need \`BAN_MEMBERS\` Permission in order to run this command!`
+      );
 
     const id = args[0];
     if (!id) return message.lineReply("Please send an ID!");
