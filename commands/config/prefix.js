@@ -14,6 +14,10 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    if (!message.member.permissions.has("MANAGE_GUILD"))
+      return message.lineReply(
+        "You need `MANAGE_GUILD` Permission in order to run this command!"
+      );
     const res = await args.join(" ");
     if (!res) return message.lineReply("Please specify a prefix to change to.");
     message.channel.startTyping();

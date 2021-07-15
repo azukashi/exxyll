@@ -16,7 +16,10 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    message.channel.startTyping();
+    if (!message.member.permissions.has("MANAGE_GUILD"))
+      return message.lineReply(
+        "You need `MANAGE_GUILD` Permission in order to run this command!"
+      );
     message
       .lineReplyNoMention("Are you sure to Reset Custom Prefix to Default?")
       .then(async (msg) => {
@@ -40,6 +43,5 @@ module.exports = {
           );
         }
       });
-    message.channel.stopTyping();
   },
 };
