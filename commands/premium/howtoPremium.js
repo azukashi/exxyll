@@ -34,7 +34,7 @@ module.exports = {
       )
       .addField(
         "Note",
-        `Just a note, I'm not yet creating any commands for premium user excepting sudo commands. So, dont be a premium command at this time :)`
+        `Just a note, I'm not yet creating any commands for premium user excepting sudo command. So, dont be a premium user at this time :)`
       )
       .setFooter(message.author.tag)
       .setTimestamp();
