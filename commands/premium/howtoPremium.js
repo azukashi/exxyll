@@ -15,19 +15,26 @@ module.exports = {
   run: async (client, message, args) => {
     const embed = new MessageEmbed()
       .setTitle("Upgrading to Premium Plan")
-      .setDescription("Be a Premium User to Enjoy & Unlock Premium Perks and Commands!")
-      .setThumbnail(
-        "https://cdn.discordapp.com/emojis/862677231696347146.png"
+      .setDescription(
+        "Be a Premium User to Enjoy & Unlock Premium Perks and Commands!"
       )
+      .setThumbnail("https://cdn.discordapp.com/emojis/862677231696347146.png")
       .setColor("#800080")
-      .addField("How i can upgrading to premium?", "You can dming the owner, or donating by `.support`!")
+      .addField(
+        "How i can upgrading to premium?",
+        "You can dming the owner, or donating by `.support`!"
+      )
       .addField(
         "How much it costs?",
-        "You can upgrade for only $1 or whatever you want to pay. Just do `.support` and Confirm by dming onwer."
+        "You can upgrade for only $1 or whatever you want to pay. Just do `.support` and Confirm by dming owner."
       )
       .addField(
         "How I Can DM The Owner?",
         "Here is His Discord Tag!\n`Falcxxdev#0001`"
+      )
+      .addField(
+        "Note",
+        `Just a note, I'm not yet creating any commands for premium user excepting sudo commands. So, dont be a premium command at this time :)`
       )
       .setFooter(message.author.tag)
       .setTimestamp();
