@@ -7,9 +7,11 @@ module.exports = {
   usage: "query",
   description: "Search something to Wikipedia",
   run: async (client, message, args) => {
+    const query = args.join(" ");
+    if (!query) return message.lineReply("Please specify a query to search!");
     const body = await fetch(
       `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(
-        args.join(" ")
+        query
       )}`
     ).then((res) => res.json().catch(() => {}));
     if (!body) return message.lineReplyNoMention("Page not found :x:");

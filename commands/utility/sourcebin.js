@@ -3,8 +3,8 @@ const { create } = require("sourcebin");
 
 module.exports = {
   name: "sourcebin",
-  aliases: ["bin"],
-  usage: "code",
+  aliases: ["bin", "srcbin"],
+  usage: "<js code to upload>",
   description: "Upload a JavaScript code to Sourcebin",
   hidden: false,
   premium: false,

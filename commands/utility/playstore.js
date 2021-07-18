@@ -4,7 +4,7 @@ const PlayStore = require("google-play-scraper");
 module.exports = {
   name: "playstore",
   aliases: ["gplaystore", "gplay"],
-  usage: "apk-name",
+  usage: "<app-name>",
   description: "Search Details about an application.",
   hidden: false,
   premium: false,

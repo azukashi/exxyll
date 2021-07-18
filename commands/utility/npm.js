@@ -10,7 +10,7 @@ const moment = require("moment");
 module.exports = {
   name: "npm",
   aliases: ["npx"],
-  usage: "package-name",
+  usage: "<package-name>",
   description: "Search npm Package by This Command.",
   hidden: false,
   premium: false,

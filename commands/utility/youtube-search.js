@@ -4,7 +4,7 @@ const ytsr = require("ytsr");
 module.exports = {
   name: "youtube-search",
   aliases: ["yts", "ys"],
-  usage: "<query or smthn>",
+  usage: "<query or title of video to search>",
   description: "Search YouTube Video in Discord!",
   hidden: false,
   premium: false,

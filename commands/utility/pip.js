@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 module.exports = {
   name: "pip",
   aliases: ["python-pip"],
-  usage: "package-name",
+  usage: "<package-name>",
   description: "Search PIP Packages",
   hidden: false,
   premium: false,

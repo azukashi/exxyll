@@ -3,8 +3,8 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "say",
   aliases: ["echo"],
-  usage: "text to say",
-  description: "Echo a Text",
+  usage: "<text to say>",
+  description: "Say / Echo a Text",
   hidden: false,
   premium: false,
   /**
@@ -16,6 +16,14 @@ module.exports = {
     const argumen = args.join(" ");
     if (!argumen) return message.reply("I can't say nothing!");
 
-    message.channel.send(`${message.author} says:\n\n${argumen}`);
+    message.lineReplyNoMention(
+      new MessageEmbed()
+        .setAuthor(
+          message.author.tag,
+          message.author.displayAvatarURL({ dynamic: true })
+        )
+        .setDescription(query)
+        .setColor("#000000")
+    );
   },
 };

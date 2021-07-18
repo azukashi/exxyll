@@ -5,7 +5,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "weather",
   aliases: ["wthr"],
-  usage: "location",
+  usage: "<location or location>",
   description: "See currently weather in your location.",
   run: async (client, message, args) => {
     weather.find(

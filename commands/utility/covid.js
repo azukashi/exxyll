@@ -4,8 +4,8 @@ const fetch = require("node-fetch");
 
 module.exports = {
   name: "covid",
-  aliases: ["corona"],
-  usage: "country",
+  aliases: ["corona", "covid19"],
+  usage: "<country>",
   description: "See Covid Stats in Specified Country",
   hidden: false,
   premium: false,

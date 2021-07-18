@@ -4,7 +4,7 @@ module.exports = {
   name: "youtube-together",
   aliases: ["ytt", "ytogether"],
   usage: "",
-  description: "Play a YouTube Video in a Voice Channel with your friends!",
+  description: "Start YouTube Together Activity in a Voice Channel!",
   hidden: false,
   premium: false,
   /**
