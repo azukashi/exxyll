@@ -5,4 +5,4 @@ mongoose
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
-  .then(console.log("MongoDB : Connected to Google Cloud Server - Tokyo!"));
+  .then(console.log("MongoDB : Connected to Google Cloud Platform Service!"));
