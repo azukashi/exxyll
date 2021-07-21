@@ -4,7 +4,7 @@ const client = require("../index");
 const prefix = require("../config.json").prefix;
 
 client.on("ready", () => {
-  client.user.setActivity(`.help or @Exxyll | Live on ${client.guilds.cache.size} Servers`, {
+  client.user.setActivity(`${prefix}help or @Exxyll | Live on ${client.guilds.cache.size} Servers`, {
       type: "STREAMING",
       url: "https://www.twitch.tv/falcxxr",
   })
