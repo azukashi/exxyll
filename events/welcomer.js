@@ -7,12 +7,11 @@ client.on("guildMemberAdd", async (member) => {
     if (!data) return;
 
     const channel = member.guild.channels.cache.get(data.Channel);
-    const guildAvatar = client.guilds.cache.get(message.guild.id).iconURL({ dynamic: true });
+    // const guildAvatar = client.guilds.cache.get(message.guild.id).iconURL({ dynamic: true });
 
     channel.send(
       new MessageEmbed()
         .setTitle("New Member!")
-        .setThumbnail(guildAvatar)
         .setDescription(
           `Hey <@${member.user.id}>, Welcome to **${member.guild.name}**`
         )
