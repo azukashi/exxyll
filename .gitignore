@@ -14,3 +14,6 @@ presenceEmojis.ts
 
 # Ignore npm config
 .npmrc
+
+# Ignore prettier config
+.prettierrc.json
