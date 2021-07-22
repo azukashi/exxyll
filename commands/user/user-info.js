@@ -20,11 +20,17 @@ module.exports = {
       let days = Math.floor(diff / 86400000);
       return days + (days == 1 ? " day" : " days") + " ago";
     }
-    let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
-    let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+    let user =
+      message.mentions.users.first() ||
+      client.users.cache.get(args[0]) ||
+      message.author;
+    let member =
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]) ||
+      message.member;
     let embed = new MessageEmbed()
       .setTitle(`${user.tag}'s User Information`)
-      .setThumbnail(user.displayAvatarURL({ dynamic: true }))
+      .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
       .addField("Status", user.presence.status)

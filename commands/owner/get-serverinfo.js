@@ -17,7 +17,7 @@ module.exports = {
       return message.lineReply("Wrong Guild ID or Guild ID isn't Defined!");
     const embed = new MessageEmbed()
       .setTitle(guild.name)
-      .setThumbnail(guild.iconURL())
+      .setThumbnail(guild.iconURL({ dynamic: true, size: 512 }))
       .setColor("RANDOM")
       .addField("General Info", [
         `🆔 ID : ${guild.id}`,

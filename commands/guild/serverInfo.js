@@ -14,7 +14,7 @@ module.exports = {
     const guild = message.guild || client.guilds.cache.get(args[0]);
     const embed = new MessageEmbed()
       .setTitle(guild.name)
-      .setThumbnail(guild.iconURL())
+      .setThumbnail(guild.iconURL({ dynamic: true, size: 512 }))
       .setColor("RANDOM")
       .addField("General Info", [
         `🆔 ID : ${guild.id}`,
@@ -32,7 +32,9 @@ module.exports = {
         }, Voice : ${
           guild.channels.cache.filter((ch) => ch.type === "voice").size
         })`,
-        `<:add_reaction:863214931599818783> Emojis : ${guild.emojis.cache.size} (Regular : ${
+        `<:add_reaction:863214931599818783> Emojis : ${
+          guild.emojis.cache.size
+        } (Regular : ${
           guild.emojis.cache.filter((e) => !e.animated).size
         }, Animated : ${guild.emojis.cache.filter((e) => e.animated).size})`,
       ])
@@ -44,7 +46,9 @@ module.exports = {
         `<a:boostr:864431598567817216> Boost Tier : ${
           guild.premiumTier ? `Tier ${guild.premiumTier}` : "None"
         }`,
-        `<:boost:862677231696347146> Boost Count : ${guild.premiumSubscriptionCount || "0"}`,
+        `<:boost:862677231696347146> Boost Count : ${
+          guild.premiumSubscriptionCount || "0"
+        }`,
       ]);
 
     message.lineReplyNoMention(embed);
