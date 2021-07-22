@@ -15,8 +15,8 @@ client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 client.discordTogether = new DiscordTogether(client);
 
-["command", "player"].forEach((handler) => {
-  require(`./handlers/${handler}`)(client); // load music player and command handler
+["command", "event", "player"].forEach((handler) => {
+  require(`./handlers/${handler}`)(client); // load command, event, and music-player
 });
 
 /**
