@@ -1,37 +1,33 @@
-const {readdirSync} = require('fs');
-const ascii = require('ascii-table')
-let table = new ascii("Commands");
-table.setHeading('Command', ' Load status');
-module.exports= (client) => {
-    readdirSync('./commands/').forEach(dir => {
-        const commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith('.js'));
-        for(let file of commands){
-            let pull = require(`../commands/${dir}/${file}`);
-            if(pull.name){
-                client.commands.set(pull.name, pull);
-                table.addRow(file,'✅')
-            } else {
-                table.addRow(file, '❌ -> Missing a help.name, or help.name is not a string.')
-                continue;
-            }if(pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => client.aliases.set(alias, pull.name))
-        }
-    });
-    
-    console.log(table.toString());
+const { readdirSync } = require("fs");
+const ascii = require("ascii-table");
 
-    readdirSync("./events/").forEach((file) => {
-      const events = readdirSync("./events/").filter((file) =>
-        file.endsWith(".js")
-      );
-  
-      for (let file of events) {
-        let pull = require(`../events/${file}`);
-  
-        if (pull.name) {
-          client.events.set(pull.name, pull);
-        } else {
-          continue;
-        }
-      }
+const table = new ascii("Commands").setHeading("Command", "Load status"); // create the table
+
+module.exports = (client) => {
+  readdirSync("./commands/").forEach((dir) => {
+    readdirSync(`./commands/${dir}/`).forEach((file) => {
+      if (!file.endsWith(".js")) return; // filter the file
+
+      const command = require(`../commands/${dir}/${file}`); // load command from file
+
+      // filter invalid command
+      if (!command.name)
+        return table.addRow(
+          file,
+          "FAIL -> Missing a command.name, or command.name is not a string."
+        );
+
+      // set command to bot
+      client.commands.set(command.name, command);
+
+      // set command aliases
+      if (command.aliases && Array.isArray(command.aliases))
+        command.aliases.forEach((alias) =>
+          client.aliases.set(alias, command.name)
+        );
+
+      table.addRow(file, "OK");
     });
-}
+  });
+  console.log(table.toString()); // write the table to console, idk why i comment this thing lol
+};
