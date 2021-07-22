@@ -4,8 +4,8 @@ const { MessageButton } = require("discord-buttons");
 module.exports = {
   name: "fight",
   aliases: [],
-  usage: "@player2",
-  description: "Fight with your friend! But with Buttons!",
+  usage: "<@player2>",
+  description: "Fight with your friend, But with Buttons!",
   hidden: true,
   premium: false,
   /**

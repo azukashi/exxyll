@@ -15,9 +15,11 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const embed = new MessageEmbed()
+      .setTitle(`🕘 Exxyll's Uptime`)
       .setDescription(
         `\`\`\`yml\nStatus : Online\nUptime : ${pretty(client.uptime)}\n\`\`\``
       )
+      .setColor(message.guild.me.displayHexColor);
     message.lineReplyNoMention(embed);
   },
 };

@@ -25,7 +25,7 @@ module.exports = {
     let inline = true;
     try {
       let e = new MessageEmbed()
-        .setTitle(`Channel Information`)
+        .setTitle(`<:channel:863363700463632414> Channel Information`)
         .setThumbnail(message.guild.iconURL({ dynamic: false }))
         .setDescription(`Information About ${channel}`)
         .addField("Created At:", `${checkDays(channel.createdAt)}`, inline)

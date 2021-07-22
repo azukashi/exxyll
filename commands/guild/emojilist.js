@@ -28,7 +28,9 @@ module.exports = {
         }
       });
       let emn = new MessageEmbed();
-      emn.setTitle(`Showing Emojis of ${message.guild.name}`);
+      emn.setTitle(
+        `<:add_reaction:863214931599818783> Showing Emojis of ${message.guild.name}`
+      );
       emn.setThumbnail(
         message.guild.iconURL({ dynamic: true, format: "png", size: 512 })
       );

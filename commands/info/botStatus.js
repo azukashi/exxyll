@@ -4,9 +4,7 @@ const {
   MessageEmbed,
   version: djsversion,
 } = require("discord.js");
-const { mem, cpu } = require("node-os-utils");
 const { utc } = require("moment");
-const { totalMemMb } = mem.info();
 const version = require("../../package.json").version;
 const os = require("os");
 const ms = require("ms");

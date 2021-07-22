@@ -1,5 +1,4 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const { MessageButton } = require('discord-buttons')
 const moment = require("moment");
 
 module.exports = {
@@ -46,7 +45,9 @@ module.exports = {
       )
       .addField(
         `Serving on`,
-        `${client.guilds.cache.size} Server, ${client.channels.cache.size} Channels, ${client.users.cache.size} Users`
+        `${client.guilds.cache.size.toLocaleString()} Server, ${client.channels.cache.size.toLocaleString()} Channels, ${client.guilds.cache
+          .reduce((a, b) => a + b.memberCount, 0)
+          .toLocaleString()} Users`
       )
       .setColor("BLUE")
       .setFooter(
@@ -54,17 +55,17 @@ module.exports = {
         message.author.displayAvatarURL({ dynamic: true })
       );
 
-      const invite = new MessageButton()
-        .setLabel('Invite Me')
-        .setStyle('url')
-        .setURL('https://discord.bots.gg/bots/848232775798226996')
-        .setEmoji('<:invite:863999093164736562>')
+    // const invite = new MessageButton()
+    //   .setLabel("Invite Me")
+    //   .setStyle("url")
+    //   .setURL("https://discord.bots.gg/bots/848232775798226996")
+    //   .setEmoji("<:invite:863999093164736562>");
 
-      const support = new MessageButton()
-        .setLabel('Join Support Server')
-        .setStyle('url')
-        .setURL('https://discord.gg/j2MfuWySfD')
-        .setEmoji('<:partnernew:863214932585873438>')
+    // const support = new MessageButton()
+    //   .setLabel("Join Support Server")
+    //   .setStyle("url")
+    //   .setURL("https://discord.gg/j2MfuWySfD")
+    //   .setEmoji("<:partnernew:863214932585873438>");
 
     message.lineReplyNoMention(embed);
   },
