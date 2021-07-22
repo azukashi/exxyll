@@ -22,7 +22,7 @@ module.exports = {
           message.author.tag,
           message.author.displayAvatarURL({ dynamic: true })
         )
-        .setDescription(query)
+        .setDescription(argumen)
         .setColor("#000000")
     );
   },
