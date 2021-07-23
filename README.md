@@ -1,6 +1,7 @@
 <h1 align="center">Exxyll</h1>
 Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 
+<hr>
 <div align="center">
   <img src="https://wakatime.com/badge/github/gifaldyazkaa/exxyll-origin.svg" alt="Wakatime stats">
 </div>
