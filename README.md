@@ -1,6 +1,10 @@
 <h1 align="center">Exxyll</h1>
 Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 
+<div align="center">
+  <img src="https://wakatime.com/badge/github/gifaldyazkaa/exxyll-origin.svg" alt="Wakatime stats">
+</div>
+
 # Exxyll Original
 
 This repository is Include All Original Source Code from Exxyll Discrord Bot! You lucky if you can see and accessing this Repository!
