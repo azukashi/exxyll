@@ -14,7 +14,7 @@ module.exports = {
   run: async (client, message, args) => {
     const question = args.join(" ");
     if (!question) return message.lineReply("Please sepcify a question!");
-    const responses = [
+    let responses = [
       "It is certain",
       "It is decidedly so",
       "Without a doubt",
@@ -43,7 +43,7 @@ module.exports = {
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setTitle("🎱 8ball")
       .addField(`**${message.author.username}'s Question**`, question)
-      .addField(`**8ball says**`, response)
+      .addField(`**8ball says**`, responses[response])
       .setTimestamp();
     message.lineReplyNoMention(embed);
   },
