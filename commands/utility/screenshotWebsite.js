@@ -16,7 +16,7 @@ module.exports = {
     if (!query) return message.lineReply("Please provide a Website URL!");
     const site = `https://shot.screenshotapi.net/screenshot?&url=${encodeURIComponent(
       query
-    )}&full_page=true&output=json&file_type=png&wait_for_event=load`;
+    )}&fresh=true&output=json&file_type=png&wait_for_event=load`;
     try {
       const msg = await message.lineReplyNoMention(
         "**Please wait...** This may take up to 30 seconds."
@@ -29,10 +29,10 @@ module.exports = {
           const url = body.url;
 
           const embed = new MessageEmbed()
-            .setTitle(`Successfully Snapshoted!`)
+            .setTitle(url)
+            .setURL(url)
             .setImage(result)
             .setColor("RANDOM")
-            .setFooter(url)
             .setTimestamp();
 
           message.lineReplyNoMention(embed);
