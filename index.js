@@ -12,6 +12,7 @@ module.exports = client;
 
 client.commands = new Collection();
 client.aliases = new Collection();
+client.snipes = new Collection();
 client.categories = fs.readdirSync("./commands/");
 client.discordTogether = new DiscordTogether(client);
 
