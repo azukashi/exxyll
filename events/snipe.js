@@ -6,7 +6,6 @@ module.exports = (client) => {
       image: message.attachments.first()?.proxyURL || null,
       time: Date.now(),
     });
+    client.snipes.set(message.channel.id, snipes);
   });
-
-  client.snipes.set(message.channel.id, snipes);
 };
