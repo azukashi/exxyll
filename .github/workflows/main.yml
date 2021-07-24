@@ -16,3 +16,6 @@ jobs:
           heroku_app_name: "exyl"
           heroku_email: "falcxxdevjsx@gmail.com"
           buildpack: https://github.com/heroku/heroku-buildpack-nodejs.git
+        env:
+          HD_TOKEN: ${{secrets.TOKEN}}
+          HD_MONGO: ${{secrets.MONGO_URI}}

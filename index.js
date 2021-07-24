@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { Collection, Client } = require("discord.js");
 const { DiscordTogether } = require("discord-together");
-const { prefix, token } = require("./config.json");
+const { prefix } = require("./config.json");
 const prefixSchema = require("./models/prefix");
 
 require("discord-reply");
@@ -37,4 +37,4 @@ client.prefix = async function (message) {
   return custom;
 };
 
-client.login(token);
+client.login(process.env.TOKEN);
