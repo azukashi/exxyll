@@ -3,7 +3,8 @@ Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 
 <hr>
 <div align="center">
-  <img src="https://wakatime.com/badge/github/gifaldyazkaa/exxyll-origin.svg" alt="Wakatime stats">
+  <img src="https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/main.yml/badge.svg" alt="Build status" />
+  <img src="https://wakatime.com/badge/github/gifaldyazkaa/exxyll-origin.svg" alt="Wakatime stats" />
 </div>
 
 # Exxyll Original
@@ -60,7 +61,9 @@ This repository is Include All Original Source Code from Exxyll Discrord Bot! Yo
 ## Author
 
 - Gifaldy Azka
+  orang yang submit bot ke top
 
 ## Environments & Deployments
 
 - See [Deployments Log](https://github.com/gifaldyazkaa/exxyll-origin/deployments)
+  orang yang submit bot ke top
