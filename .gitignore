@@ -20,3 +20,6 @@ presenceEmojis.ts
 
 # Ignore my local env
 .env
+
+# Ignore vscode stuff
+.vscode
