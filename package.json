@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "start dev": "nodemon index.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "shard": "node bot.js"
   },
   "repository": {
     "type": "git",

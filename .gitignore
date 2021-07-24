@@ -17,3 +17,6 @@ presenceEmojis.ts
 
 # Ignore prettier config
 .prettierrc.json
+
+# Ignore my local env
+.env
