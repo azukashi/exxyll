@@ -28,6 +28,6 @@ module.exports = {
     );
     let Image = await res.buffer();
     const poohmeme = new Discord.MessageAttachment(Image);
-    message.lineReply(poohmeme);
+    message.lineReplyNoMention(poohmeme);
   },
 };

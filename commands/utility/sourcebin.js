@@ -30,7 +30,7 @@ module.exports = {
         description: `Code uploaded by Exxyll Discord Bot`,
       }
     ).then((value) => {
-      message.lineReplyNoMention(`Your code has been posted : ${value.url}`);
+      message.lineReplyNoMention(`Your code has been posted!\n${value.url}`);
     });
   },
 };

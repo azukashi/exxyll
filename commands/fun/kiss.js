@@ -14,7 +14,7 @@ module.exports = {
    */
   run: async (bot, message, args) => {
     let ment = message.mentions.users.first();
-    let dev = [788260234409672754];
+    let dev = ["788260234409672754"];
     if (!ment)
       return message.lineReplyNoMention(
         "You Need To Mention Someone you love. Pog :O"
@@ -29,9 +29,7 @@ module.exports = {
       return message.lineReplyNoMention(
         "B-BAKA, Its not i like you or something"
       );
-    const { body } = await request.get("https://nekos.life/api/kiss");
-
-    let botico = bot.user.displayAvatarURL({ format: "png" });
+    const { body } = await request.get("https://api.waifu.pics/sfw/kiss");
 
     const e = new MessageEmbed()
       .setColor("#FFC0CB")

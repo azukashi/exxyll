@@ -1,11 +1,10 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
 const request = require("superagent");
-const { owner } = require("../../config.json");
 
 module.exports = {
   name: "pat",
   aliases: [],
-  usage: "@mentionedUser",
+  usage: "<@mentionedUser>",
   description: "Pat someone!",
   /**
    * @param {Client} client
@@ -23,9 +22,7 @@ module.exports = {
       return message.lineReplyNoMention("How Is That Possible?");
     if (ment.id == bot.user.id && message.author.id == "788260234409672754")
       return message.lineReplyNoMention("B-BAKA");
-    const { body } = await request.get("https://nekos.life/api/pat");
-
-    let botico = bot.user.displayAvatarURL({ format: "png" });
+    const { body } = await request.get("https://api.waifu.pics/sfw/pat");
 
     const e = new MessageEmbed()
       .setColor("#FFC0CB")

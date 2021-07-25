@@ -17,7 +17,8 @@ module.exports = {
     );
     const suggestionQuery = args.join(" ");
 
-    if (!suggestionQuery) return message.lineReply("Please specify a suggestion!");
+    if (!suggestionQuery)
+      return message.lineReply("Please specify a suggestion!");
 
     const suggestionEmbed = new MessageEmbed()
       .setAuthor(
@@ -36,7 +37,7 @@ module.exports = {
       )
       .addField(
         "📨 Sent to",
-        `Discord Server : **Exxyll Development** at **#suggestions** Channel.`
+        `Discord Server : **Exxyll Development** at **<#849139267471933502>** Channel.`
       )
       .setColor("GREEN");
 

@@ -20,9 +20,7 @@ module.exports = {
       return message.lineReplyNoMention("How Is That Possible?");
     if (ment.id == bot.user.id && message.author.id == "788260234409672754")
       return message.channel.send("B-BAKA!");
-    const { body } = await request.get("https://nekos.life/api/hug");
-
-    let botico = bot.user.displayAvatarURL({ format: "png" });
+    const { body } = await request.get("https://api.waifu.pics/sfw/hug");
 
     let e = new MessageEmbed()
       .setColor("#FFC0CB")

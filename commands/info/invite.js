@@ -16,12 +16,10 @@ module.exports = {
     message.channel.startTyping();
     const embed = new MessageEmbed()
       .setColor("BLUE")
-      .setThumbnail(
-        "https://cdn.discordapp.com/avatars/848232775798226996/a1663c970cb38f341a53a0be608fbb56.png?size=128"
-      )
+      .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 256 }))
       .setTitle("Invite me to your server!")
       .setDescription(
-        `[Invite and Authorize](https://discord.com/api/oauth2/authorize?client_id=848232775798226996&permissions=3222646&scope=bot)\n\n[Visit Website](https://exxyll.github.io)\n\n[Join Support Server](https://discord.gg/j2MfuWySfD)`
+        `[Invite and Authorize](https://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=1077226614&scope=bot)\n\n[Visit Website](https://exxyll.github.io)\n\n[Join Support Server](https://discord.gg/j2MfuWySfD)`
       )
       .setFooter(
         `Requested by ${message.author.tag}`,

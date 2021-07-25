@@ -5,7 +5,7 @@ module.exports = {
   name: "akinator",
   aliases: ["aki"],
   description: "Akinator game but on discord",
-  usage: "akinator <option>",
+  usage: "",
   /**
    * @param {Client} client
    * @param {Message} message

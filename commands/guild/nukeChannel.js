@@ -26,7 +26,7 @@ module.exports = {
         new MessageEmbed()
           .setTitle("This channel has been nuked!")
           .setImage(
-            "https://tenor.com/view/explosion-boom-explode-gif-17383346"
+            "https://tenor.com/view/explosion-mushroom-cloud-atomic-bomb-bomb-boom-gif-4464831"
           )
           .setColor("RED")
           .setFooter(`Action performed by ${message.author.tag}`)

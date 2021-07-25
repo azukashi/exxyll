@@ -28,6 +28,12 @@ module.exports = {
       message.member;
     user.presence.activities.forEach((activity) => {
       if (
+        activity.type !== "LISTENING" &&
+        activity.name !== "Spotify" &&
+        activity.assets === null
+      )
+        return message.lineReply(`You're not listening to spotify right now!`);
+      if (
         activity.type === "LISTENING" &&
         activity.name === "Spotify" &&
         activity.assets !== null
@@ -63,8 +69,6 @@ module.exports = {
             user.user.displayAvatarURL({ dynamic: true })
           );
         message.lineReplyNoMention(embed);
-      } else {
-        message.lineReply('You\'re not listening to spotify right now!')
       }
     });
   },

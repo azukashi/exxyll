@@ -10,7 +10,7 @@ const chalk = require("chalk");
 const manager = new ShardingManager("./index.js", {
   totalShards: "auto",
   shardList: "auto",
-  token: config.token,
+  token: process.env.TOKEN,
 });
 
 manager.on("shardCreate", async (shard) => {

@@ -28,12 +28,18 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]) ||
       message.member;
+    let activity =
+      user.presence.activities[0].name ||
+      user.presence.activities[0].state ||
+      null;
+    let activityType = user.presence.activities[0].type || null;
     let embed = new MessageEmbed()
       .setTitle(`${user.tag}'s User Information`)
       .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
       .addField("Status", user.presence.status)
+      .addField("Custom Status", activityType + " " + activity)
       .addField(
         "Created At",
         `${moment(user.createdAt).format("LLLL")} (${checkDays(

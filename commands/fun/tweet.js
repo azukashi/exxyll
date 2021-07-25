@@ -27,7 +27,7 @@ module.exports = {
           .setImage(data.message)
           .setColor("BLUE")
           .setTimestamp();
-        message.channel.send(embed);
+        message.lineReplyNoMention(embed);
       });
   },
 };

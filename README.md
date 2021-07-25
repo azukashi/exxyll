@@ -5,6 +5,8 @@ Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 <div align="center">
   <img src="https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/main.yml/badge.svg" alt="Build status" />
   <img src="https://wakatime.com/badge/github/gifaldyazkaa/exxyll-origin.svg" alt="Wakatime stats" />
+  <img src="https://img.shields.io/discord/849130218975526922?logo=discord" alt="Discord Chat" />
+  <img src="https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?logo=github" alt="Repo size" />
 </div>
 
 # Exxyll Original

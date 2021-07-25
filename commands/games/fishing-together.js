@@ -17,7 +17,7 @@ module.exports = {
     const voicechannel = message.member.voice.channelID;
     const notInVc = new MessageEmbed()
       .setDescription(
-        ":x: | You need to be in a voice channel to run this command!"
+        "<:tickNo:863367014092898314> | You need to be in a voice channel to run this command!"
       )
       .setColor("RED");
     message.channel.stopTyping();

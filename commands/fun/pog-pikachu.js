@@ -19,6 +19,6 @@ module.exports = {
       text
     )}`;
     let imgae = new MessageAttachment(image, "pika.png");
-    message.lineReply(imgae);
+    message.lineReplyNoMention(imgae);
   },
 };

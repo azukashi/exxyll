@@ -8,7 +8,7 @@ const {
 module.exports = {
   name: "clown",
   aliases: ["clowns"],
-  usage: "@user",
+  usage: "<@user>",
   description: "Clown a user",
   hidden: false,
   premium: false,
@@ -20,7 +20,7 @@ module.exports = {
   run: async (client, message, args) => {
     message.channel.startTyping();
     const user = message.mentions.members.first() || message.member;
-    let msg = await message.channel.send("loading...");
+    let msg = await message.channel.send("Please wait...");
     let att = new MessageAttachment(
       `https://api.popcatdev.repl.co/clown?image=${user.user.displayAvatarURL({
         dynamic: false,
