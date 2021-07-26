@@ -33,7 +33,7 @@ module.exports = {
       .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
-
+      .addField("User ID", user.id)
       .addField("Status", user.presence.status)
       .addField(
         "Created At",
@@ -47,11 +47,7 @@ module.exports = {
           member.joinedAt
         )})`
       )
-      .addField("User ID", user.id)
-      .addField(
-        "Roles",
-        member.roles.cache.map((r) => `<@&${r.id}>`).join(", ")
-      )
+      .addField("Roles", member.roles.cache.map((r) => `<@&${r.id}>`).join(" "))
       .setFooter(message.author.tag)
       .setTimestamp();
     message.lineReplyNoMention(embed);
