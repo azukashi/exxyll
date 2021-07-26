@@ -47,6 +47,7 @@ module.exports = {
           member.joinedAt
         )})`
       )
+      .addField("Highest Role", `<@&${member.roles.highest.id}>`)
       .addField("Roles", member.roles.cache.map((r) => `<@&${r.id}>`).join(" "))
       .setFooter(message.author.tag)
       .setTimestamp();
