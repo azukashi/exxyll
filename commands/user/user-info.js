@@ -28,18 +28,13 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]) ||
       message.member;
-    let activity =
-      user.presence.activities[0].name ||
-      user.presence.activities[0].state ||
-      null;
-    let activityType = user.presence.activities[0].type || null;
     let embed = new MessageEmbed()
-      .setTitle(`${user.tag}'s User Information`)
+      .setTitle(`${user.username}'s User Information`)
       .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
       .setColor("BLUE")
       .addField("User Tag", user.tag)
+
       .addField("Status", user.presence.status)
-      .addField("Custom Status", activityType + " " + activity)
       .addField(
         "Created At",
         `${moment(user.createdAt).format("LLLL")} (${checkDays(
@@ -53,6 +48,10 @@ module.exports = {
         )})`
       )
       .addField("User ID", user.id)
+      .addField(
+        "Roles",
+        member.roles.cache.map((r) => `<@&${r.id}>`).join(", ")
+      )
       .setFooter(message.author.tag)
       .setTimestamp();
     message.lineReplyNoMention(embed);
