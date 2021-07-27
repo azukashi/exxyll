@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     const user =
       message.mentions.members.first() ||
-      message.guild.members.cache.get(args[0]) ||
+      client.users.cache.get(args[0]) ||
       message.guild.members.cache.find((u) =>
         u.user.username
           .toLowerCase()
