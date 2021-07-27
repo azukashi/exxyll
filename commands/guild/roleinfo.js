@@ -29,11 +29,13 @@ module.exports = {
     if (!mentionedRole)
       return message.lineReply("Please mention or paste role id!");
     const embed = new MessageEmbed()
-      .setTitle(`Role Information for ${mentionedRole.name}`)
-      .setColor("BLUE")
+      .setTitle(
+        `<:role:863214921574907915> Role Information for ${mentionedRole.name}`
+      )
+      .setColor("#800080")
       .setThumbnail(guildIcon)
       .addField("Role ID", mentionedRole.id)
-      .addField("Role Position", mentionedRole.position)
+      .addField("Role Position", mentionedRole.rawPosition)
       .addField("Role Color", mentionedRole.hexColor)
       .addField("Users", mentionedRole.members.size)
       .addField("Mentionable", mentionedRole.mentionable ? "Yes" : "No")
