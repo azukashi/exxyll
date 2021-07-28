@@ -1,5 +1,5 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const { chatBot } = require("reconlx");
+const fetch = require("node-fetch");
 
 module.exports = {
   name: "chat",
@@ -14,11 +14,15 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const chat = args.join(" ");
-    if (!chat)
-      return message.lineReply(
-        "Want to chatting with me? Try including hi after `.chat` to getting started!"
-      );
-    chatBot(message, chat);
+    const input = args.join(" ");
+    fetch(
+      `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(input)}&uid=${
+        message.author.id
+      }`
+    )
+      .then((res) => res.json())
+      .then((body) => {
+        message.lineReply(body.response);
+      });
   },
 };
