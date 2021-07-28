@@ -45,7 +45,7 @@ module.exports = {
         .addField("⌛ Reminder ⌛", `\`${reminder}\``)
         .setTimestamp();
 
-      message.lineReplyNoMention(alertembed);
+      message.channel.send(alertembed);
     }, ms(time));
   },
 };
