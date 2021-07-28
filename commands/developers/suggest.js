@@ -46,9 +46,6 @@ module.exports = {
       avatarURL: message.author.displayAvatarURL({ dynamic: true }),
       embeds: [suggestionEmbed],
     });
-    message.react("👍");
-    message.react("👎");
-    message.react("🤷");
 
     // Send Confirmation to user that suggesting a suggestion
     message.lineReplyNoMention(confirmationEmbed);
