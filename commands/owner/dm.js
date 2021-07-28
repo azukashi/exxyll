@@ -17,8 +17,8 @@ module.exports = {
       message.mentions.users.first() ||
       client.users.cache.get(args.join(" ")) ||
       message.author;
-    const message = args.join(" ").split(1);
-    if (!message) return message.lineReply("Please specify a message to sent!");
+    const msgs = args.join(" ").split(1);
+    if (!msgs) return message.lineReply("Please specify a message to sent!");
     user.send(
       new MessageEmbed()
         .setColor("#0000FF")
@@ -26,7 +26,7 @@ module.exports = {
           message.author.username,
           message.author.displayAvatarURL({ dynamic: true, size: 128 })
         )
-        .setDescription(message)
+        .setDescription(msgs)
         .setTimestamp()
     );
     message.lineReplyNoMention(
