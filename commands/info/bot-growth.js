@@ -1,4 +1,4 @@
-const { Permissions, MessageAttachment } = require("discord.js");
+const { Client, Permissions, MessageAttachment } = require("discord.js");
 const Chart = require("@clashperk/quickchart"); // npm i @clashperk/quickchart
 const { botGrowth } = require("../../models/bot-growth");
 const months = [
@@ -37,7 +37,7 @@ module.exports = {
       })
       .sort({ timestamp: 1 });
 
-    const buffer = await this.graph(
+    const buffer = this.graph(
       collection
         .slice(-limit)
         .map((growth) => ({ date: new Date(growth.timestamp), value: growth }))
