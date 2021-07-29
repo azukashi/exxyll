@@ -1,5 +1,6 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
 const moment = require("moment");
+const fetch = require("node-fetch");
 
 module.exports = {
   name: "userinfo",
@@ -28,29 +29,55 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]) ||
       message.member;
-    let embed = new MessageEmbed()
-      .setTitle(`${user.username}'s User Information`)
-      .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
-      .setColor("BLUE")
-      .addField("User Tag", user.tag)
-      .addField("User ID", user.id)
-      .addField("Status", user.presence.status)
-      .addField(
-        "Created At",
-        `${moment(user.createdAt).format("LLLL")} (${checkDays(
-          user.createdAt
-        )})`
-      )
-      .addField(
-        "Joined At",
-        `${moment(member.joinedAt).format("LLLL")} (${checkDays(
-          member.joinedAt
-        )})`
-      )
-      .addField("Highest Role", `<@&${member.roles.highest.id}>`)
-      .addField("Roles", member.roles.cache.map((r) => `<@&${r.id}>`).join(" "))
-      .setFooter(message.author.tag)
-      .setTimestamp();
-    message.lineReplyNoMention(embed);
+
+    // Fetch & get user banner
+    fetch(`https://discord.com/api/users/${user.id}`, {
+      headers: {
+        Authorization: `Bot ${client.token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((body) => {
+        if (body.banner) {
+          const extension = body.banner.startsWith("a_") ? ".gif" : ".png";
+          const bannerUrl =
+            `https://cdn.discordapp.com/banners/${user.id}/${body.banner}${extension}?size=1024` ||
+            "User doesn't have a banner!";
+          let embed = new MessageEmbed()
+            .setTitle(`${user.username}'s User Information`)
+            .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+            .setColor("BLUE")
+            .addField("User Tag", user.tag)
+            .addField("User ID", user.id)
+            .addField("Status", user.presence.status)
+            .addField(
+              "Created At",
+              `${moment(user.createdAt).format("LLLL")} (${checkDays(
+                user.createdAt
+              )})`
+            )
+            .addField(
+              "Joined At",
+              `${moment(member.joinedAt).format("LLLL")} (${checkDays(
+                member.joinedAt
+              )})`
+            )
+            .addField("Highest Role", `<@&${member.roles.highest.id}>`)
+            .addField(
+              "Roles",
+              member.roles.cache.map((r) => `<@&${r.id}>`).join(" ")
+            )
+            .setImage(bannerUrl)
+            .setFooter(message.author.tag)
+            .setTimestamp();
+          message.lineReplyNoMention(embed);
+        } else {
+          if (body.accent_color) {
+            const bannerColor = body.accent_color;
+          } else {
+            const notFound = `${user.username} is not have a banner and accent color!`;
+          }
+        }
+      });
   },
 };

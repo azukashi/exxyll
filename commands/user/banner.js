@@ -1,5 +1,4 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const { response } = require("express");
 const fetch = require("node-fetch");
 
 module.exports = {

@@ -14,9 +14,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.author.id === "788260234409672754") return;
     const user =
-      message.mentions.users.first() ||
-      client.users.cache.get(args.join(" ")) ||
-      message.author;
+      message.mentions.users.first() || client.users.cache.get(args.join(" "));
     const msgs = args.join(" ").split(1);
     if (!msgs) return message.lineReply("Please specify a message to sent!");
     user.send(
