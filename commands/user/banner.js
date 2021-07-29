@@ -26,7 +26,7 @@ module.exports = {
       .then((body) => {
         if (body.banner) {
           const extension = body.banner.startsWith("a_") ? ".gif" : ".png";
-          const url = `https://cdn.discordapp.com/banners/${user.id}${body.banner}${extension}?size=1024`;
+          const url = `https://cdn.discordapp.com/banners/${user.id}/${body.banner}${extension}?size=1024`;
 
           const embed = new MessageEmbed()
             .setTitle(`${user.username}'s Banner Image`)
