@@ -74,8 +74,61 @@ module.exports = {
         } else {
           if (body.accent_color) {
             const bannerColor = body.accent_color;
+            let embed = new MessageEmbed()
+              .setTitle(`${user.username}'s User Information`)
+              .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+              .setColor(bannerColor)
+              .addField("User Tag", user.tag)
+              .addField("User ID", user.id)
+              .addField("Status", user.presence.status)
+              .addField(
+                "Created At",
+                `${moment(user.createdAt).format("LLLL")} (${checkDays(
+                  user.createdAt
+                )})`
+              )
+              .addField(
+                "Joined At",
+                `${moment(member.joinedAt).format("LLLL")} (${checkDays(
+                  member.joinedAt
+                )})`
+              )
+              .addField("Highest Role", `<@&${member.roles.highest.id}>`)
+              .addField(
+                "Roles",
+                member.roles.cache.map((r) => `<@&${r.id}>`).join(" ")
+              )
+              .setFooter(message.author.tag)
+              .setTimestamp();
+            message.lineReplyNoMention(embed);
           } else {
-            const notFound = `${user.username} is not have a banner and accent color!`;
+            let embed = new MessageEmbed()
+              .setTitle(`${user.username}'s User Information`)
+              .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+              .setColor("BLUE")
+              .addField("User Tag", user.tag)
+              .addField("User ID", user.id)
+              .addField("Status", user.presence.status)
+              .addField(
+                "Created At",
+                `${moment(user.createdAt).format("LLLL")} (${checkDays(
+                  user.createdAt
+                )})`
+              )
+              .addField(
+                "Joined At",
+                `${moment(member.joinedAt).format("LLLL")} (${checkDays(
+                  member.joinedAt
+                )})`
+              )
+              .addField("Highest Role", `<@&${member.roles.highest.id}>`)
+              .addField(
+                "Roles",
+                member.roles.cache.map((r) => `<@&${r.id}>`).join(" ")
+              )
+              .setFooter(message.author.tag)
+              .setTimestamp();
+            message.lineReplyNoMention(embed);
           }
         }
       });
