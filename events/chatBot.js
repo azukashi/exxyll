@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 
 module.exports = (client) => {
   client.on("message", async (message) => {
-    if (message.channel.id === "869763459561173033") {
+    if (message.channel.id === "869763459561173032") {
       if (message.author.bot) return;
       if (!message.author.bot) {
         fetch(

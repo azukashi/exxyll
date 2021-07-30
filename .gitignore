@@ -23,3 +23,6 @@ presenceEmojis.ts
 
 # Ignore vscode stuff
 .vscode
+
+# Ignore launch.json
+launch.json
