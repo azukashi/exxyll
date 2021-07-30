@@ -1,5 +1,6 @@
 const client = require("../index");
 const prefix = require("../config.json").prefix;
+const chalk = require("chalk");
 
 client.on("ready", async () => {
   client.user.setActivity(
@@ -10,5 +11,9 @@ client.on("ready", async () => {
     }
   );
 
-  console.log(`${client.user.username} is up and ready to go!`);
+  console.log(
+    `${chalk.blueBright.bold(client.user.username)}${chalk.white.bold(
+      " is up and ready to go!"
+    )}`
+  );
 });
