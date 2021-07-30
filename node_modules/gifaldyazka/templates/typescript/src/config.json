@@ -1,5 +1,0 @@
-{
-  "token": "your discord bot's token",
-  "prefix": "your discord bot's prefix",
-  "mongoURI": "your mongodb connection string"
-}
