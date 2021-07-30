@@ -12,7 +12,16 @@ In progress (accumulated 4% of 100%)
 
 # Todo
 
-To-do schedule for this project
+To-do schedule for this project. Check if you're done with the tasks.
+
+Note :
+
+- [ ] It's Unchecked. The tasks not done yet.
+- [x] It's Checked. The tasks is done.
+
+## Very Important
+
+- [ ] Help Commands
 
 ## Normal Commands
 
@@ -22,7 +31,7 @@ To-do schedule for this project
 - [ ] Moderation Categories
 - [ ] Owner Categories
 - [ ] Presence Categories
-- [ ] Developer Categories
+- [x] Developer Categories
 - [ ] Games Categories
 - [ ] Music Categories
 - [ ] Premium Categories
@@ -38,7 +47,7 @@ To-do schedule for this project
 - [ ] Moderation Categories
 - [ ] Owner Categories (looks like it'll not included at slash version).
 - [ ] Presence Categories (Looks like it's impossible to be included at slash too).
-- [ ] Developer Categories
+- [x] Developer Categories
 - [ ] Games Categories
 - [ ] Music Categories
 - [ ] Premium Categories
