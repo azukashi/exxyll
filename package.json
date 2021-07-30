@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start dev": "nodemon index.js",
+    "dev": "nodemon index.js",
     "lint": "eslint",
     "shard": "node bot.js"
   },
