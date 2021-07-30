@@ -15,7 +15,9 @@ module.exports = {
     if (!message.author.id === "788260234409672754") return;
     const user =
       message.mentions.users.first() || client.users.cache.get(args.join(" "));
-    const msgs = args.join(" ").split(1);
+    if (!user)
+      return message.lineReply("Please mention a user / paste their id!");
+    const msgs = user.split(1);
     if (!msgs) return message.lineReply("Please specify a message to sent!");
     user.send(
       new MessageEmbed()
