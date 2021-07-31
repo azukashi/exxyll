@@ -1,6 +1,6 @@
 const { glob } = require("glob");
 const { promisify } = require("util");
-const client = require('../index')
+const client = require("../index");
 
 const globPromise = promisify(glob);
 
@@ -36,7 +36,7 @@ module.exports = async (client) => {
     arrayOfSlashCommands.push(file);
   });
 
-  client.on("ready", async() => {
+  client.on("ready", async () => {
     await client.guilds.cache
       .get("849130218975526922")
       .commands.set(arrayOfSlashCommands);

@@ -21,7 +21,8 @@ Note :
 
 ## Very Important
 
-- [ ] Help Commands
+- [x] Help Commands
+- [ ] Aliases support
 
 ## Normal Commands
 
@@ -35,6 +36,7 @@ Note :
 - [ ] Games Categories
 - [ ] Music Categories
 - [ ] Premium Categories
+- [x] Levelling Categories
 - [ ] User Categories
 - [ ] Utility Categories
 - [ ] Welcoming Categories
@@ -51,6 +53,7 @@ Note :
 - [ ] Games Categories
 - [ ] Music Categories
 - [ ] Premium Categories
+- [x] Levelling Categories
 - [ ] User Categories
 - [ ] Utility Categories
 - [ ] Welcoming Categories

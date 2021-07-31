@@ -1,20 +1,34 @@
 const client = require("../index");
+const Levels = require("discord-xp");
 
 client.on("messageCreate", async (message) => {
-    if (
-        message.author.bot ||
-        !message.guild ||
-        !message.content.toLowerCase().startsWith(client.config.prefix)
-    )
-        return;
+  if (
+    message.author.bot ||
+    !message.guild ||
+    !message.content.toLowerCase().startsWith(client.config.prefix)
+  )
+    return;
 
-    const [cmd, ...args] = message.content
-        .slice(client.config.prefix.length)
-        .trim()
-        .split(" ");
+  const random = Math.floor(Math.random() * 34) + 1;
+  const hasLevelledUp = await Levels.appendXp(
+    message.author.id,
+    message.guild.id,
+    random
+  );
+  if (hasLevelledUp) {
+    const user = await Levels.fetch(message.author.id, message.guild.id);
+    message.channel.send(
+      `Congratulation ${message.author}! You've been levelled up to level ${user.level}.`
+    );
+  }
 
-    const command = client.commands.get(cmd.toLowerCase());
+  const [cmd, ...args] = message.content
+    .slice(client.config.prefix.length)
+    .trim()
+    .split(" ");
 
-    if (!command) return;
-    await command.run(client, message, args);
+  const command = client.commands.get(cmd.toLowerCase());
+
+  if (!command) return;
+  await command.run(client, message, args);
 });

@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "canvacord": "^5.2.3",
     "chalk": "^4.1.2",
+    "discord-together": "^1.1.53",
+    "discord-xp": "^1.1.16",
     "discord.js": "^13.0.0-dev.5ca97c9.1626480265",
     "gifaldyazka": "^1.0.2",
     "glob": "^7.1.7",
