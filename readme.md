@@ -27,7 +27,7 @@ Note :
 ## Normal Commands
 
 - [ ] Info Categories
-- [ ] Fun Categories
+- [x] Fun Categories
 - [ ] Guild Categories
 - [ ] Moderation Categories
 - [ ] Owner Categories
