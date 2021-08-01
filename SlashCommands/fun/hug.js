@@ -19,11 +19,12 @@ module.exports = {
    */
   run: async (client, interaction, args) => {
     const [user] = args;
+    const userUsername = client.users.cache.get(user).username;
     fetch("https://api.waifu.pics/sfw/hug")
       .then((res) => res.json())
       .then((body) => {
         const embed = new MessageEmbed()
-          .setDescription(`**${interaction.user.username} Hugged <@${user}>**`)
+          .setTitle(`${interaction.user.username} Hugged ${userUsername}`)
           .setImage(body.url)
           .setColor("#FFC0CB")
           .setFooter(
