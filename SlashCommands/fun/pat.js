@@ -19,11 +19,12 @@ module.exports = {
    */
   run: async (client, interaction, args) => {
     const [user] = args;
+    const userUsername = client.users.cache.get(user).username; // <== Dapetin username dari user di args
     fetch("https://api.waifu.pics/sfw/pat")
       .then((res) => res.json())
       .then((body) => {
         const embed = new MessageEmbed()
-          .setDescription(`**${interaction.user.username} Patting <@${user}>**`)
+          .setTitle(`${interaction.user.username} Patting ${userUsername}`)
           .setImage(body.url)
           .setColor("#FFC0CB")
           .setFooter(
