@@ -9,8 +9,8 @@ module.exports = {
       type: 6,
       name: "user",
       description:
-        "Who is the user? Fill it with your username if you want to look yourself.",
-      required: true,
+        "Who is the user to show banner? However, This is optional. You can leave it blank.",
+      required: false,
     },
   ],
   /**
@@ -19,8 +19,8 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, interaction, args) => {
-    const [user] = args;
-    console.log(user);
+    let [user] = args;
+    if (!user) user = interaction.user.id;
     const userFixed = client.users.cache.get(user);
     fetch(`https://discord.com/api/users/${user}`, {
       headers: {
