@@ -1,2 +1,5 @@
 # Sialan, node modules kebawa >:(
 node_modules
+
+# Ignore launch jason
+launch.json
