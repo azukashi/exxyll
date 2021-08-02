@@ -7,7 +7,6 @@ const client = new Client({
     "GUILDS",
     "GUILD_MEMBERS",
     "GUILD_BANS",
-    "GUILD_EMOJIS",
     "GUILD_MESSAGE_REACTIONS",
     "GUILD_MESSAGES",
   ],
