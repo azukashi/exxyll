@@ -27,7 +27,7 @@ Note :
 ## Normal Commands
 
 - [ ] Info Categories
-- [x] Fun Categories
+- [ ] Fun Categories
 - [ ] Guild Categories
 - [ ] Moderation Categories
 - [ ] Owner Categories
@@ -44,7 +44,7 @@ Note :
 ## Slash Commands
 
 - [ ] Info Categories
-- [ ] Fun Categories
+- [x] Fun Categories
 - [ ] Guild Categories
 - [ ] Moderation Categories
 - [ ] Owner Categories (looks like it'll not included at slash version).
