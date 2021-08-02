@@ -1,6 +1,10 @@
 const client = require("../index");
 
 client.on("interactionCreate", async (interaction) => {
+  /**
+   * @param { Client } client
+   * @param { CommandInteraction } interaction
+   */
   if (interaction.isCommand()) {
     await interaction.defer().catch(() => {});
 
@@ -8,7 +12,7 @@ client.on("interactionCreate", async (interaction) => {
     if (!cmd) return interaction.followUp({ content: "An error has occured!" });
 
     const args = [];
-    interaction.options.array().map((x) => {
+    interaction.options.data.map((x) => {
       args.push(x.value);
     });
 
