@@ -3,3 +3,11 @@ node_modules
 
 # Ignore launch jason
 launch.json
+
+# Now i'm on MacOSX. DS_Store is annoying file at OS X.
+.DS_Store
+
+# Ignore all generated lockfile
+package-lock.json
+yarn.lock
+*.lock
