@@ -2,7 +2,7 @@ const Schema = require("../models/welcomeChannel.js");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 
 module.exports = (client) => {
-  client.on("guildMemberAdd", async (user, guild, member) => {
+  client.on("guildMemberAdd", async (user, member) => {
     Schema.findOne({ Guild: member.guild.id }, async (err, data) => {
       if (!data) return;
 
