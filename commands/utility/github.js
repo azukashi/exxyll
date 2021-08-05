@@ -33,6 +33,10 @@ module.exports = {
           .setTimestamp();
 
         message.lineReplyNoMention(embed);
+      })
+      .catch((err) => {
+        message.lineReply(`User is not found!\nError Message : \n\`\`\`yml\n${err}\n\`\`\``);
+        console.log(err);
       });
   },
 };

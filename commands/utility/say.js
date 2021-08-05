@@ -16,14 +16,6 @@ module.exports = {
     const argumen = args.join(" ");
     if (!argumen) return message.reply("I can't say nothing!");
 
-    message.lineReplyNoMention(
-      new MessageEmbed()
-        .setAuthor(
-          message.author.tag,
-          message.author.displayAvatarURL({ dynamic: true })
-        )
-        .setDescription(argumen)
-        .setColor("#000000")
-    );
+    message.lineReplyNoMention(argumen);
   },
 };
