@@ -13,12 +13,6 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    function checkDays(date) {
-      let now = new Date();
-      let diff = now.getTime() - date.getTime();
-      let days = Math.floor(diff / 86400000);
-      return days + (days == 1 ? " day" : " days") + " ago";
-    }
     const user = args.join(" ");
     if (!user) return message.lineReply("Please specify GitHub Username!");
     fetch(`https://luminabot.xyz/api/json/github?username=${user}`)
@@ -32,12 +26,7 @@ module.exports = {
           .addField(`Location`, `${body.location || "No Location"}`)
           .addField(`Email`, `${body.email || "None"}`)
           .addField(`Website`, `${body.blog || "No Website"}`)
-          .addField(
-            `Created at`,
-            `${moment(body.created_at).format("LLLL")} (${checkDays(
-              body.created_at
-            )})`
-          )
+          .addField(`Created at`, `${moment(body.created_at).format("LLLL")}`)
           .addField(`Followers`, `${body.followers}`)
           .addField(`Following`, `${body.following}`)
           .setColor("BLUE")
