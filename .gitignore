@@ -11,3 +11,6 @@ launch.json
 package-lock.json
 yarn.lock
 *.lock
+
+# Ignore vscode settings
+.vscode
