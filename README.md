@@ -1,5 +1,5 @@
 <h1 align="center">Exxyll</h1>
-Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
+Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library at v12.5.3
 
 <hr>
 <div align="center">
@@ -11,7 +11,22 @@ Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library v12
 
 # Exxyll Original
 
-This repository is Include All Original Source Code from Exxyll Discrord Bot! You lucky if you can see and accessing this Repository!
+Original Repositories from Exxyll Discord Bot.
+
+# Setup & Install
+
+- Just run `setup.sh` or `setup.bash` to install all required dependecies. Make sure `Node v14+`, `yarn` is installed at your computer. And get ready for **Installing Blackhole**!
+- And make `.env` file which contains `TOKEN` and `MONGO` field and value. `MONGO` is your MongoDB Connection String
+- Edit `config.json` to your bot prefix, and your Owner ID.
+- You're done.
+
+# Spageti Code?
+
+Thxxx. I can't write better code! Thanks bai!
+
+# Now Exxyll is Improved More
+
+Now, I as Developer of Exxyll, In process to Migrating Exxyll to Discord.js v13! This repository version uses Discord.js v12! In v13, Exxyll will be Supporting Slash Commands, and Other New Interactions!
 
 # Run the Bot
 
@@ -22,10 +37,18 @@ You can start the bot with some commands. Here is it!
 - `yarn lint` to lint using ESLint.
 - `yarn shard` to sharding the bot. Only run this if your bot at 2000+ Servers.
 
-# Owners
+# Facing an Errors
 
-- Gifaldy Azka ([Falcxxdev#0001](https://discord.com/users/788260234409672754))
+If you have some Question, or Facing an Errors. Feel free to [Join Our Support Server!](https://discord.gg/j2MfuWySfD).
+
+# Owner
+
+Gifaldy Azka ([Falcxxdev#0001](https://discord.com/users/788260234409672754))
 
 # Code Refactor by
 
-- BayuDC ([BayuDC#0690](https://discord.com/users/704845945325748354))
+Thanks to BayuDC ([BayuDC#0690](https://discord.com/users/704845945325748354)) to efactoring Exxyll Code more better!
+
+# License
+
+This Project is Under [MIT License](https://github.com/gifaldyazkaa/exxyll-origin/blob/master/LICENSE) &copy; Gifaldy Azka
