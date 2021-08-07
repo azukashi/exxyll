@@ -47,7 +47,7 @@ Gifaldy Azka ([Falcxxdev#0001](https://discord.com/users/788260234409672754))
 
 # Code Refactor by
 
-Thanks to BayuDC ([BayuDC#0690](https://discord.com/users/704845945325748354)) to efactoring Exxyll Code more better!
+Thanks to BayuDC ([BayuDC#0690](https://discord.com/users/704845945325748354)) to refactoring Exxyll Code more better!
 
 # License
 
