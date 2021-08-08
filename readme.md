@@ -45,7 +45,7 @@ Note :
 
 - [ ] Info Categories
 - [x] Fun Categories
-- [ ] Guild Categories
+- [x] Guild Categories
 - [ ] Moderation Categories
 - [ ] Owner Categories (looks like it'll not included at slash version).
 - [ ] Presence Categories (Looks like it's impossible to be included at slash too).
@@ -54,6 +54,6 @@ Note :
 - [ ] Music Categories
 - [ ] Premium Categories
 - [x] Levelling Categories
-- [ ] User Categories
+- [x] User Categories
 - [ ] Utility Categories
 - [ ] Welcoming Categories
