@@ -37,6 +37,7 @@ Note :
 - [ ] Music Categories
 - [ ] Premium Categories
 - [x] Levelling Categories
+- [x] Ticket Categories
 - [ ] User Categories
 - [ ] Utility Categories
 - [ ] Welcoming Categories
@@ -54,6 +55,7 @@ Note :
 - [ ] Music Categories
 - [ ] Premium Categories
 - [x] Levelling Categories
+- [x] Ticket Categories
 - [x] User Categories
 - [ ] Utility Categories
 - [ ] Welcoming Categories
