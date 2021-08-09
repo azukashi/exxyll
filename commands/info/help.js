@@ -19,6 +19,7 @@ module.exports = {
   run: async (client, message, args) => {
     const emojis = {
       developer: "<:developer:855302873785040897>",
+      guild: "<:partnernew:863214932585873438>",
       info: "ℹ",
       levelling: "⏫",
       music: "🎵",
