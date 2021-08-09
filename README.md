@@ -1,18 +1,14 @@
-# Exxyll with discord.js@dev
+# Exxyll v2
 
-This repo is contains all source code of exxyll at discord.js v13 / discord.js master branch.
-
-# Note
-
-- Buat normal commands, belum ku-tambahin apa apa. Baru slash commands nya aja :v
+This repository contains all Source Code of Exxyll at Discord.js v13.0.0
 
 # Status
 
-In progress (accumulated 4% of 100%)
+In Development (accumulated 12% of 100%)
 
 # Todo
 
-To-do schedule for this project. Check if you're done with the tasks.
+To-do schedule for this project. Check with `[x]` if you're done with the tasks.
 
 Note :
 
