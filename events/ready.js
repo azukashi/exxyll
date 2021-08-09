@@ -16,4 +16,5 @@ client.on("ready", async () => {
       " is up and ready to go!"
     )}`
   );
+  console.log(`Client Websocket Ping is : ${client.ws.ping} ms!`);
 });
