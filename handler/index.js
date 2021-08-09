@@ -7,6 +7,8 @@ const globPromise = promisify(glob);
 module.exports = async (client) => {
   // Commands
   const commandFiles = await globPromise(`${process.cwd()}/commands/**/*.js`);
+  const formatString = (str) =>
+    `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
   commandFiles.map((value) => {
     const file = require(value);
     const splitted = value.split("/");
@@ -16,6 +18,10 @@ module.exports = async (client) => {
       const properties = { directory, ...file };
       client.commands.set(file.name, properties);
     }
+    if (file.aliases && Array.isArray(file.aliases)) {
+      file.aliases.forEach((alias) => client.aliases.set(alias, file.name))
+    }
+    console.log(formatString(file.name), `Loaded`)
   });
 
   // Events
