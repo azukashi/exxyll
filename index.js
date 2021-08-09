@@ -28,7 +28,4 @@ require("./handler")(client);
 // ==> Load levelling init
 require("./utils/levelling");
 
-// ==> Show websocket ping to console
-console.log(`Client Websocket Ping is : ${client.ws.ping}`)
-
 client.login(client.config.token);
