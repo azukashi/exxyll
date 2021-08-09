@@ -19,9 +19,9 @@ module.exports = async (client) => {
       client.commands.set(file.name, properties);
     }
     if (file.aliases && Array.isArray(file.aliases)) {
-      file.aliases.forEach((alias) => client.aliases.set(alias, file.name))
+      file.aliases.forEach((alias) => client.aliases.set(alias, file.name));
     }
-    console.log(formatString(file.name), `Loaded`)
+    console.log(formatString(file.name), `Loaded`);
   });
 
   // Events
@@ -43,8 +43,6 @@ module.exports = async (client) => {
   });
 
   client.on("ready", async () => {
-    await client.guilds.cache
-      .get("849130218975526922")
-      .commands.set(arrayOfSlashCommands);
+    await client.commands.set(arrayOfSlashCommands);
   });
 };
