@@ -1,6 +1,6 @@
 const {
+  CommandInteraction,
   Client,
-  Message,
   MessageEmbed,
   MessageActionRow,
   MessageSelectMenu,
@@ -8,15 +8,14 @@ const {
 
 module.exports = {
   name: "help",
-  description: "Help Commands",
-  aliases: ["h"],
-  emoji: "ℹ",
+  description: "Show Help List Commands",
+  options: [],
   /**
    * @param {Client} client
-   * @param {Message} message
+   * @param {CommandInteraction} interaction
    * @param {String[]} args
    */
-  run: async (client, message, args) => {
+  run: async (client, interaction, args) => {
     const emojis = {
       developer: "<:developer:855302873785040897>",
       info: "ℹ",
@@ -75,14 +74,14 @@ module.exports = {
       ),
     ];
 
-    const initialMessage = await message.channel.send({
+    const initialMessage = await interaction.followUp({
       embeds: [embed],
       components: components(false),
     });
 
-    const filter = (interaction) => interaction.user.id === message.author.id;
+    const filter = (interaction) => interaction.user.id === interaction.user.id;
 
-    const collector = message.channel.createMessageComponentCollector({
+    const collector = interaction.channel.createMessageComponentCollector({
       filter,
       componentType: "SELECT_MENU",
     });
