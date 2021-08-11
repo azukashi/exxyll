@@ -18,6 +18,10 @@ Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library at v1
 
 Original Repositories from Exxyll Discord Bot.
 
+# Links
+
+[Invite Exxyll](https://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=1077226614&scope=bot) | [Visit Website](https://exxyll.github.io) | [Exxyll's Top.gg](https://top.gg/bot/848232775798226996) | [Join the Support Server](https://discord.gg/j2MfuWySfD)
+
 # Setup & Install
 
 - Just run `setup.sh` or `setup.bash` to install all required dependecies. Make sure `Node v14+`, `yarn` is installed at your computer. And get ready for **Installing Blackhole**!
@@ -31,7 +35,7 @@ Thxxx. I can't write better code! Thanks bai!
 
 # Now Exxyll is Improved More
 
-Now, I as Developer of Exxyll, In process to Migrating Exxyll to Discord.js v13! This repository version uses Discord.js v12! In v13, Exxyll will be Supporting Slash Commands, and Other New Interactions!
+Now, I'm working and actively developing at [gifaldyazkaa/exxyll-rewrite-v13](https://github.com/gifaldyazka/exxyll-rewrite-v13). We're working and trying to upgrading to Exxyll v2 that Uses Discord.js v13. So, This Repository may be archived and read only soon.
 
 # Run the Bot
 
