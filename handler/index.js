@@ -43,6 +43,10 @@ module.exports = async (client) => {
   });
 
   client.on("ready", async () => {
+    // For testing purposes, Set the Slash Commands to Exxyll Development Server only.
+    // await client.guilds.cache.get("849130218975526922").commands.set(arrayOfSlashCommands);
+
+    // To set the slash to each single guild, Use this.
     await client.application.commands.set(arrayOfSlashCommands);
   });
 };
