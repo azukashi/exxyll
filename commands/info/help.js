@@ -10,7 +10,7 @@ module.exports = {
   name: "help",
   description: "Help Commands",
   aliases: ["h"],
-  emoji: "ℹ",
+  emoji: "❓",
   /**
    * @param {Client} client
    * @param {Message} message
@@ -21,7 +21,7 @@ module.exports = {
       config: "<:settings:863951175875559425>",
       developer: "<:developer:855302873785040897>",
       guild: "<:partnernew:863214932585873438>",
-      info: "ℹ",
+      info: "<:wininfo:875298951362932736>",
       levelling: "⏫",
       music: "🎵",
       ticket: "🎫",
@@ -101,6 +101,7 @@ module.exports = {
             directory
           )} Commands`
         )
+        .setThumbnail(client.user.displayAvatarURL({ dynamic: 512 }))
         .setDescription(`Here are the list of commands!`)
         .setColor("BLUE")
         .addFields(

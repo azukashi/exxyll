@@ -9,6 +9,8 @@ const canvacord = require("canvacord");
 
 module.exports = {
   name: "rank",
+  description: "See your current level",
+  emoji: "📈",
   /**
    * @param {Client} client
    * @param {Message} message

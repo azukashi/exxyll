@@ -5,6 +5,7 @@ const prefix = require("../../config.json").prefix;
 module.exports = {
   name: "reset-prefix",
   description: "Reset Customized Prefix to Default.",
+  emoji: "🗑️",
   /**
    * @param {Client} client
    * @param {Message} message

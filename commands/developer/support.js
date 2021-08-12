@@ -2,8 +2,8 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "support",
-  description: "Support & Donate to the Chef at the back-screen of Exxyll!",
-  aliases: ["donate"],
+  description: "Support & Donate to the Developers!",
+  emoji: "<:supporter:863214921320103987>",
   premium: false,
   /**
    * @param {Client} client

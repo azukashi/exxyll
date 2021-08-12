@@ -3,9 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "report",
   description: "Report a bugs or something to the developers!",
-  aliases: [],
-  usage: "<query>",
-  premium: false,
+  emoji: "❗",
   /**
    * @param {Client} client
    * @param {Message} message

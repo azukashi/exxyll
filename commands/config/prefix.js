@@ -3,8 +3,8 @@ const prefixSchema = require("../../models/prefix");
 
 module.exports = {
   name: "set-prefix",
-  usage: "<new-prefix>",
   description: "Set Custom Prefixes",
+  emoji: "➕",
   /**
    * @param {Client} client
    * @param {Message} message

@@ -4,8 +4,7 @@ const moment = require("moment");
 module.exports = {
   name: "serverinfo",
   description: "Returns Information about Server",
-  aliases: ["serverinfo"],
-  emoji: "",
+  emoji: "🗂",
   /**
    * @param {Client} client
    * @param {Message} message

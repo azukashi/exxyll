@@ -2,6 +2,8 @@ const { Message, Client, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "ping",
+  description: "Returns Websocket Ping Latency",
+  emoji: "📶",
   /**
    *
    * @param {Client} client
