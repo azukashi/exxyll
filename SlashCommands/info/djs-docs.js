@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 module.exports = {
   name: "djs",
-  description: "Search for a Class, Properties at Discord.js v13",
+  description: "Search for a Class, Properties at Discord.js Docs",
   options: [
     {
       type: 3,
@@ -19,13 +19,12 @@ module.exports = {
    */
   run: async (client, interaction, args) => {
     const [query] = args;
-    const url = `https://djsdocs.sorta.moe/v2/embed?src=master&q=${encodeURIComponent(
+    const url = `https://djsdocs.sorta.moe/v2/embed?src=stable&q=${encodeURIComponent(
       query
     )}`;
     fetch(url)
       .then((res) => res.json())
       .then((body) => {
-        console.log(body);
         interaction.followUp({ embeds: [body] });
       });
   },

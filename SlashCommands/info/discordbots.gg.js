@@ -39,11 +39,11 @@ module.exports = {
           .setTitle(name)
           .setThumbnail(avatar)
           .setDescription(details)
-          .addField("Client ID", clientid)
-          .addField("Prefix", prefix)
-          .addField("Library", library)
-          .addField("Owner", owner)
-          .addField("Website", website)
+          .addField("Client ID", clientid, true)
+          .addField("Prefix", prefix, true)
+          .addField("Library", library, true)
+          .addField("Owner", owner, true)
+          .addField("Website", website, true)
           .setColor("ORANGE");
         interaction.followUp({ embeds: [e] });
       })

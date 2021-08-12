@@ -11,7 +11,7 @@ module.exports = {
   run: async (client, interaction, args) => {
     const owner = client.users.cache.get("788260234409672754");
     const embed1 = new MessageEmbed()
-      .setTitle(`<a:bot:863216970554933269> Owner Info`)
+      .setTitle(`<:owner:864432628928217098> Owner Info`)
       .setThumbnail(owner.displayAvatarURL({ dynamic: true }))
       .addField(`Name`, `Gifaldy Azka`)
       .addField(`Discord Tag`, `Falcxxdev#0001`)
