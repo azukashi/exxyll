@@ -65,7 +65,7 @@
     "weather-js": "^2.0.0",
     "weky": "^1.7.7",
     "ws": "^7.4.6",
-    "ytdl-core": "^4.9.0",
+    "ytdl-core": "^4.9.1",
     "ytsr": "^3.5.0"
   },
   "devDependencies": {
