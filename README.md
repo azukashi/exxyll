@@ -1,10 +1,17 @@
 # Exxyll v2
 
-This repository contains all Source Code of Exxyll at Discord.js v13.0.0
+This repository contains all Source Code of Exxyll at Discord.js v13.1.0
 
 # Status
 
-In Development (accumulated 12% of 100%)
+In Development (accumulated 12% of Full 100%)
+
+# Run Script
+
+- `yarn start` Start the bot.
+- `yarn run dev` Start Development with `nodemon`.
+- `yarn run shard` Start the bot with Sharding Client Process.
+- `yarn lint` Start Linting using ESLint (WIP)
 
 # Todo
 
@@ -55,3 +62,7 @@ Note :
 - [x] User Categories
 - [ ] Utility Categories
 - [ ] Welcoming Categories
+
+# License
+
+This Project is Under [MIT License](https://github.com/gifaldyazkaa/exxyll-rewrite-v13/blob/master/LICENSE) &copy; Gifaldy Azka
