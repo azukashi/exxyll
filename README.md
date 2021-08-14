@@ -4,9 +4,7 @@ Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library at v1
 <hr>
 <div align="center">
   <img src="https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/main.yml/badge.svg" alt="Build status" />
-  <img src="https://wakatime.com/badge/github/gifaldyazkaa/exxyll-origin.svg" alt="Wakatime stats" />
   <img src="https://img.shields.io/discord/849130218975526922?logo=discord" alt="Discord Chat" />
-  <img src="https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?logo=github" alt="Repo size" />
   <img src="https://top.gg/api/widget/status/848232775798226996.svg" alt="Exxyll Status" />
   <br />
   <a href="https://top.gg/bot/848232775798226996">
@@ -24,14 +22,14 @@ Original Repositories from Exxyll Discord Bot.
 
 # Setup & Install
 
-- Just run `setup.sh` or `setup.bash` to install all required dependecies. Make sure `Node v14+`, `yarn` is installed at your computer. And get ready for **Installing Blackhole**!
+- Just run `setup.sh` to install all required dependecies. Make sure `Node v14+`, `yarn` is installed at your computer. And get ready for **Installing Blackhole**!
 - And make `.env` file which contains `TOKEN` and `MONGO` field and value. `MONGO` is your MongoDB Connection String
 - Edit `config.json` to your bot prefix, and your Owner ID.
 - You're done.
 
 # Spageti Code?
 
-Thxxx. I can't write better code! Thanks bai!
+Sorry, I can't write better code! Thanks bai!
 
 # Now Exxyll is Improved More
 
