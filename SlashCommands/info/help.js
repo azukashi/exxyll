@@ -1,10 +1,4 @@
-const {
-  CommandInteraction,
-  Client,
-  MessageEmbed,
-  MessageActionRow,
-  MessageSelectMenu,
-} = require("discord.js");
+const { CommandInteraction, Client, MessageEmbed, MessageActionRow, MessageSelectMenu } = require("discord.js");
 
 module.exports = {
   name: "help",
@@ -17,19 +11,17 @@ module.exports = {
    */
   run: async (client, interaction, args) => {
     const emojis = {
+      config: "<:settings:863951175875559425>",
       developer: "<:developer:855302873785040897>",
       guild: "<:partnernew:863214932585873438>",
-      info: "ℹ",
+      info: "<:wininfo:875298951362932736>",
       levelling: "⏫",
       music: "🎵",
       ticket: "🎟",
     };
-    const directories = [
-      ...new Set(client.commands.map((cmd) => cmd.directory)),
-    ];
+    const directories = [...new Set(client.commands.map((cmd) => cmd.directory))];
 
-    const formatString = (str) =>
-      `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
+    const formatString = (str) => `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
 
     const categories = directories.map((dir) => {
       const getCommands = client.commands
@@ -51,9 +43,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle("Exxyll Help Desk")
       .setThumbnail(client.user.displayAvatarURL({ size: 512 }))
-      .setDescription(
-        "Please choose a category in the dropdown menu!\n\nFor information about usage, or something about commands, You can [Read the Docs](https://google.com) for more info!"
-      )
+      .setDescription("Please choose a category in the dropdown menu!\n\nFor information about usage, or something about commands, You can [Read the Docs](https://google.com) for more info!")
       .setColor("BLUE");
 
     const components = (state) => [
@@ -89,16 +79,10 @@ module.exports = {
 
     collector.on("collect", (interaction) => {
       const [directory] = interaction.values;
-      const category = categories.find(
-        (x) => x.directory.toLowerCase() === directory
-      );
+      const category = categories.find((x) => x.directory.toLowerCase() === directory);
 
       const categoryEmbed = new MessageEmbed()
-        .setTitle(
-          `${emojis[directory.toLowerCase()]} ${formatString(
-            directory
-          )} Commands`
-        )
+        .setTitle(`${emojis[directory.toLowerCase()]} ${formatString(directory)} Commands`)
         .setDescription(`Here are the list of commands!`)
         .setColor("BLUE")
         .addFields(
