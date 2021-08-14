@@ -4,12 +4,6 @@
 # Clear the screen first.
 clear
 
-# Checking directory
-echo Checking directory list...
-ls -lR
-echo ""
-clear
-
 # Checking for Installed Node.js Version
 echo Checking node version...
 node --version
@@ -30,7 +24,7 @@ clear
 
 # Process done. Join support server if you had an error lmao :v
 # Yeah bro, run yarn start. don't do npm start. npm is bad
-echo Process is done. Now, create .env and run
+echo Process is done. Now, create .env, customize config.json, and run
 echo yarn start
 echo ""
 echo ""

@@ -41,6 +41,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "ffmpeg-static": "^4.3.0",
+    "gifaldyazka": "^1.0.2",
     "glob": "^7.1.7",
     "global": "^4.4.0",
     "google-play-scraper": "^8.0.2",
@@ -81,7 +82,7 @@
     "javascript"
   ],
   "author": "gifaldyazkaa",
-  "license": "CC-BY-SA-4.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gifaldyazkaa/exxyll-origin/issues"
   },
