@@ -77,6 +77,17 @@
     "@discordjs/node-pre-gyp" "^0.4.0"
     "node-addon-api" "^3.2.1"
 
+"@discordjs/voice@^0.6.0":
+  "integrity" "sha512-DF2fZAnB8gX3Qz5BEWPOUl565ptpda1uVmXJije4iK5aQrECfkqc6XcI+wzbGaNvzsH1Wb76NPzxngsEw8bblw=="
+  "resolved" "https://registry.npmjs.org/@discordjs/voice/-/voice-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "@types/ws" "^7.4.4"
+    "discord-api-types" "^0.22.0"
+    "prism-media" "^1.3.1"
+    "tiny-typed-emitter" "^2.0.3"
+    "ws" "^7.4.4"
+
 "@mapbox/node-pre-gyp@^1.0.0":
   "integrity" "sha512-4srsKPXWlIxp5Vbqz5uLfBN+du2fJChBoYn/f2h991WLdk7jUvcSk/McVLSv/X+xQIPI8eGD5GjrnygdyHnhPA=="
   "resolved" "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.5.tgz"
@@ -146,7 +157,7 @@
   "resolved" "https://registry.npmjs.org/@types/node/-/node-11.15.54.tgz"
   "version" "11.15.54"
 
-"@types/ws@^7.4.7":
+"@types/ws@^7.4.4", "@types/ws@^7.4.7":
   "integrity" "sha512-JQbbmxZTZehdc2iszGKs5oC3NFnjeay7mtAWrdt7qNtAVK0g19muApzAy4bm9byz79xa2ZnO/BOBC2R8RC5Lww=="
   "resolved" "https://registry.npmjs.org/@types/ws/-/ws-7.4.7.tgz"
   "version" "7.4.7"
@@ -1369,7 +1380,7 @@
   dependencies:
     "parse-ms" "^2.1.0"
 
-"prism-media@^1.2.9":
+"prism-media@^1.2.9", "prism-media@^1.3.1":
   "integrity" "sha512-nyYAa3KB4qteJIqdguKmwxTJgy55xxUtkJ3uRnOvO5jO+frci+9zpRXw6QZVcfDeva3S654fU9+26P2OSTzjHw=="
   "resolved" "https://registry.npmjs.org/prism-media/-/prism-media-1.3.1.tgz"
   "version" "1.3.1"
@@ -1697,6 +1708,11 @@
   "integrity" "sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU="
   "resolved" "https://registry.npmjs.org/through/-/through-2.3.8.tgz"
   "version" "2.3.8"
+
+"tiny-typed-emitter@^2.0.3":
+  "integrity" "sha512-qVtvMxeXbVej0cQWKqVSSAHmKZEHAvxdF8HEUBFWts8h+xEo5m/lEiPakuyZ3BnCBjOD8i24kzNOiOLLgsSxhA=="
+  "resolved" "https://registry.npmjs.org/tiny-typed-emitter/-/tiny-typed-emitter-2.1.0.tgz"
+  "version" "2.1.0"
 
 "tmp@^0.0.33":
   "integrity" "sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw=="
