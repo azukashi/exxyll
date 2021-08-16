@@ -13,6 +13,7 @@ module.exports = {
     const emojis = {
       config: "<:settings:863951175875559425>",
       developer: "<:developer:855302873785040897>",
+      fun: "<:teri_funny:876637356986343440>",
       guild: "<:partnernew:863214932585873438>",
       info: "<:wininfo:875298951362932736>",
       levelling: "⏫",
