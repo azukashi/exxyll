@@ -1,23 +1,17 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
+const { Client, Message, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "8ball",
   description: "Ask a question and let 8ball decide the answer",
-  options: [
-    {
-      type: 3,
-      name: "question",
-      description: "Your question",
-      required: true,
-    },
-  ],
+  emoji: "🎱",
   /**
    * @param {Client} client
-   * @param {CommandInteraction} interaction
+   * @param {Message} message
    * @param {String[]} args
    */
-  run: async (client, interaction, args) => {
-    const [question] = args;
+  run: async (client, message, args) => {
+    const question = args.join(" ");
+    if (!question) return message.reply("Please specify a question!");
     let responses = [
       "It is certain",
       "It is decidedly so",
@@ -44,12 +38,12 @@ module.exports = {
     const response = Math.floor(Math.random() * responses.length);
     const embed = new MessageEmbed()
       .setColor("BLUE")
-      .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
+      .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setTitle("🎱 8ball")
-      .addField(`${interaction.user.username}'s Question`, question)
+      .addField(`${message.author.username}'s Question`, question)
       .addField(`8ball says`, responses[response])
       .setTimestamp();
 
-    interaction.followUp({ embeds: [embed] });
+    message.channel.send({ embeds: [embed] });
   },
 };
