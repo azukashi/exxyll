@@ -4160,10 +4160,10 @@ sliced@1.0.1:
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
   integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
 
-snakecord@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/snakecord/-/snakecord-1.0.7.tgz#608c2cce487a94b3e192f387557cc1a649da4f72"
-  integrity sha512-8brDQFCmgMVgqbqbsH8U7+l/82p/clS+AU6XswsiQK2Xj/x20D2nV5hMVnO7HevKmTDF45se+w0qlaIL8apmzA==
+snakecord@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/snakecord/-/snakecord-1.0.8.tgz#fa0435be6df1a091e7e73dc877e18d5c242a6e51"
+  integrity sha512-KwD4Ni2o5F/isDlAVw2dSfy00scwzSScNgZmQ8tnsw/KJp26wrQazidg89n5RmvHxs+7qnVOl7TDgbYf5TWNzQ==
   dependencies:
     discord.js "^12.4.1"
     eslint "^7.25.0"
