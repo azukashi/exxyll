@@ -21,9 +21,17 @@ client.on("interactionCreate", async (interaction) => {
 
     const userperm = interaction.member.permissions.has(cmd.userperm);
     const botperm = interaction.guild.me.permissions.has(cmd.botperm);
-    if (!userperm) return interaction.followUp({ content: `You need \`${cmd.userperm || []}\` Permissions` });
-    if (!botperm) return interaction.followUp({ content: `I need \`${cmd.botperm || []}\` Permissions` });
-    interaction.member = interaction.guild.members.cache.get(interaction.user.id);
+    if (!userperm)
+      return interaction.followUp({
+        content: `You need \`${cmd.userperm || []}\` Permissions`,
+      });
+    if (!botperm)
+      return interaction.followUp({
+        content: `I need \`${cmd.botperm || []}\` Permissions`,
+      });
+    interaction.member = interaction.guild.members.cache.get(
+      interaction.user.id
+    );
   }
   if (interaction.customId === "tic") {
     try {
@@ -35,7 +43,11 @@ client.on("interactionCreate", async (interaction) => {
           reason: "New Ticket has been created!",
         })
         .catch((err) => {
-          const errormsg = new MessageEmbed().setTitle("Something went wrong!").setDescription(`Given error message : \n\`\`\`yml\n${err}\n\`\`\``).setColor("RED").setTimestamp();
+          const errormsg = new MessageEmbed()
+            .setTitle("Something went wrong!")
+            .setDescription(`Given error message : \n\`\`\`yml\n${err}\n\`\`\``)
+            .setColor("RED")
+            .setTimestamp();
           return interaction.followUp({ embeds: [errormsg], ephemeral: true });
         });
       await thread.setLocked(true).catch((err) => {
@@ -43,7 +55,9 @@ client.on("interactionCreate", async (interaction) => {
       });
       const embed = new MessageEmbed()
         .setTitle("Ticket")
-        .setDescription("Hello there, \nThe staff will be here as soon as possible mean while tell us about your issue!\nThank You!")
+        .setDescription(
+          "Hello there, \nThe staff will be here as soon as possible mean while tell us about your issue!\nThank You!"
+        )
         .setColor("GREEN")
         .setTimestamp()
         .setAuthor(
@@ -53,7 +67,12 @@ client.on("interactionCreate", async (interaction) => {
           })
         );
 
-      const del = new MessageActionRow().addComponents(new MessageButton().setCustomId("del").setLabel("🗑️ Delete Ticket!").setStyle("DANGER"));
+      const del = new MessageActionRow().addComponents(
+        new MessageButton()
+          .setCustomId("del")
+          .setLabel("🗑️ Delete Ticket!")
+          .setStyle("DANGER")
+      );
       interaction.user.send("Your ticket has been opened!");
       thread.send({
         content: `Welcome <@${interaction.user.id}>`,
@@ -70,5 +89,12 @@ client.on("interactionCreate", async (interaction) => {
   } else if (interaction.customId === "del") {
     const thread = interaction.channel;
     thread.delete();
+  }
+
+  // Context Menu Handling
+  if (interaction.isContextMenu()) {
+    await interaction.deferReply({ ephemeral: false });
+    const command = client.slashCommands.get(interaction.commandName);
+    if (command) command.run(client, interaction);
   }
 });
