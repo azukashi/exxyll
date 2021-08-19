@@ -1233,10 +1233,10 @@ discord-rpc@^4.0.1:
   optionalDependencies:
     register-scheme "github:devsnek/node-register-scheme"
 
-discord-together@^1.1.14:
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.1.14.tgz#03f216baa50f2a4984b4216c557eabdf7e4e9bd4"
-  integrity sha512-zBCsQW9dn6pUmpqsrO9/wdrgMH87z/t/KccbOKu3wg9/phkru+tQwotKo08QuBFriJ5TN4LkFBa3HCc7ZhUVcQ==
+discord-together@^1.1.62:
+  version "1.1.62"
+  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.1.62.tgz#b7c3f3b51da299f5c9e37d24e32e960108b15f66"
+  integrity sha512-l84sy0b1NjzAJexTAjUHkkm9pfdzAqg+ZRg0+4cy4cj7vlepsdfdCiHJoUYcT0tsnT/AfklYk7BEnC9jdT31tw==
   dependencies:
     node-fetch "^2.6.1"
 
