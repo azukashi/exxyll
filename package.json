@@ -35,7 +35,7 @@
     "discord-rpc": "^4.0.1",
     "discord-together": "^1.1.14",
     "discord.js": "^12.5.3",
-    "discord.js-akinator": "^2.0.4",
+    "discord.js-akinator": "^3.0.2",
     "discord.js-pagination": "^1.0.3",
     "distube": "^2.8.14",
     "ejs": "^3.1.6",
