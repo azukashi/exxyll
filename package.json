@@ -1,16 +1,22 @@
 {
-  "name": "djs",
+  "name": "exxyll-v2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exxyll v2 is Rewrite version from Exxyll. Uses discord.js v13.1.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "shard": "node bot.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "discord-js",
+    "djs",
+    "djs-v13",
+    "exxyll",
+    "discord-bot"
+  ],
+  "author": "Gifaldy Azka",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/opus": "^0.6.0",
     "@discordjs/voice": "^0.6.0",
