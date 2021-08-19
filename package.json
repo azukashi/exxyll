@@ -70,7 +70,7 @@
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
+    "eslint-plugin-import": "^2.24.0"
   },
   "resolutions": {
     "discord.js/snekfetch": "3.4.5"
