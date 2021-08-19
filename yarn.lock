@@ -145,19 +145,19 @@
   dependencies:
     prism-media "^1.2.9"
 
-"@distube/ytpl@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@distube/ytpl/-/ytpl-1.0.11.tgz#7b612bf8bd35d6fcb28ef52a436bf8d7a92dec8a"
-  integrity sha512-PdrrIwnqFLCijMtz10YLE8GXIwf/FmajzkKgJgkYBQNUyk9mD3uwmNzgyU9lB2S2dG8oFcrgoAKqgwW/AenlFw==
+"@distube/ytpl@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@distube/ytpl/-/ytpl-1.0.12.tgz#b5e7b226e3b42e2d299c9393854a8cec9e236579"
+  integrity sha512-Iv6qZpUkyL+R2KQhfuvmYnqlMX+n8ts44aZ3hZUJI2dAV7lCZdsRs5MAf7oOSfZrTLL4GMNex8RGmBarm7iHtg==
   dependencies:
-    miniget "^4.1.0"
+    miniget "^4.2.1"
 
-"@distube/ytsr@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@distube/ytsr/-/ytsr-1.1.0.tgz#8201fb359ef14668b6e7864e39986a0b10b37d69"
-  integrity sha512-yGiyCL5IA0eL1nhSyOK8T48LjeuAxlcuxJidcmTuFLP3lEdRJiiBNhOFespxmN6tLJXzX3Ndp339U0VOqMKTVw==
+"@distube/ytsr@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@distube/ytsr/-/ytsr-1.1.5.tgz#7e16d2dce8fc6df1cec61b348dc21cdc3fe53da0"
+  integrity sha512-nSYsB+UYw0FXSivJ49MGkES41Gfg5rgavil9nOHra0yCsGiY4qsDzpoFVjCmbpKQ6GDUq4Z/8LOwZakgpH3N1A==
   dependencies:
-    miniget "^4.2.0"
+    miniget "^4.2.1"
 
 "@eslint/eslintrc@^0.4.2":
   version "0.4.2"
@@ -1282,16 +1282,16 @@ discord.js@^13.0.1, discord.js@^13.1.0:
     node-fetch "^2.6.1"
     ws "^7.5.1"
 
-distube@^2.8.14:
-  version "2.8.14"
-  resolved "https://registry.yarnpkg.com/distube/-/distube-2.8.14.tgz#d93ef46af58aebd16ac9fcb668af8cf9fcbb8c81"
-  integrity sha512-yEYV8THqUvm0LK22ID8XemU7lWZvyg+ZOyeCuksbNXUMwzsONC0PKgFenjHHdRhP0koHTBrwRLAA9CchKO1Z/w==
+distube@^2.8.18:
+  version "2.8.18"
+  resolved "https://registry.yarnpkg.com/distube/-/distube-2.8.18.tgz#7d1c84bde2af3c290d565a9fb6b357dca89b0e98"
+  integrity sha512-3TXDyxk+XyAx24ip2uT5tnsyZNasaxHKn09pCDBuBf8LgZw+5sJtzJpoPpDpbbQbcCc4rSVkuGHblchiC3QRNg==
   dependencies:
     "@distube/youtube-dl" "^1.0.4"
     "@distube/ytdl" "^2.0.6"
-    "@distube/ytpl" "^1.0.11"
-    "@distube/ytsr" "^1.1.0"
-    ytdl-core "^4.8.2"
+    "@distube/ytpl" "^1.0.12"
+    "@distube/ytsr" "^1.1.5"
+    ytdl-core "^4.9.1"
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -3133,7 +3133,7 @@ min-document@^2.19.0:
   dependencies:
     dom-walk "^0.1.0"
 
-miniget@^4.0.0, miniget@^4.1.0, miniget@^4.2.0:
+miniget@^4.0.0, miniget@^4.2.0, miniget@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/miniget/-/miniget-4.2.1.tgz#11a1c24817a059e292378eb9cff4328d9240c665"
   integrity sha512-O/DduzDR6f+oDtVype9S/Qu5hhnx73EDYGyZKwU/qN82lehFZdfhoa4DT51SpsO+8epYrB3gcRmws56ROfTIoQ==
@@ -4926,15 +4926,6 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
-
-ytdl-core@^4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/ytdl-core/-/ytdl-core-4.8.2.tgz#f034ad942c5d958f5987fc8ff0b0639664ae2fb7"
-  integrity sha512-O3n++YcgZawaXJwbPmnRDgfN6b4kU0DpNdkI9Na5yM3JAdfJmoq5UHc8v9Xjgjr1RilQUUh7mhDnRRPDtKr0Kg==
-  dependencies:
-    m3u8stream "^0.8.3"
-    miniget "^4.0.0"
-    sax "^1.1.3"
 
 ytdl-core@^4.9.1:
   version "4.9.1"
