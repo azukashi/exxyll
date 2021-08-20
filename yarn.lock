@@ -51,10 +51,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@canvacord/assets@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@canvacord/assets/-/assets-1.0.2.tgz#1802be6a48ebaa2e0a8ec90ed76661d1a01766ae"
-  integrity sha512-76uLD27UDlfTxtgA7armbt6G9/X1NDqm/qjs9gxbWFVfcJxVdT3r3LlwaLp0NlRa5yMylCFf3WcOHufVjk60vw==
+"@canvacord/assets@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@canvacord/assets/-/assets-2.0.5.tgz#2f23f69aa16bca49029a5a32df2bdfed4c9fa03b"
+  integrity sha512-MceWZe5TzOymfvgf8ZU5m1oxWg6rGyH5anCgANARa47+CjVcppe6+Bd1+36pXiDTOyE4uRJk6T5RgOEJOgciug==
 
 "@canvacord/emoji-parser@^1.0.1":
   version "1.0.1"
@@ -769,19 +769,19 @@ callsites@^3.0.0, callsites@^3.1.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-canvacord@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/canvacord/-/canvacord-5.2.1.tgz#dac979488735c98ddc6ffd60af52e4ed9bce74ce"
-  integrity sha512-vauEvj3QEDNyza6laa4C5cKiOSld/O+Uvjr8uzD+ANUxaWtprHE6372J7oXMqrjPEsOd4XAwKuy5zlVPe4a7OQ==
+canvacord@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/canvacord/-/canvacord-5.2.3.tgz#efad0375022f05097b81bfee863bbbaa82ee0b5b"
+  integrity sha512-aYxGA7tVQi3NCa7Qxg2b9u+wAeek2xE5q+nJjiReZofeUx0d1Xq731UerKf+iVIPBrCAcjbv/yflJL0qVwPuMQ==
   dependencies:
-    "@canvacord/assets" "^1.0.2"
+    "@canvacord/assets" "^2.0.5"
     "@canvacord/emoji-parser" "^1.0.1"
-    canvas "^2.7.0"
+    canvas "^2.8.0"
     gifencoder "^2.0.1"
     moment "^2.29.1"
     moment-duration-format "^2.3.2"
 
-canvas@^2.2.0, canvas@^2.6.1, canvas@^2.7.0, canvas@^2.8.0:
+canvas@^2.2.0, canvas@^2.6.1, canvas@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.8.0.tgz#f99ca7f25e6e26686661ffa4fec1239bbef74461"
   integrity sha512-gLTi17X8WY9Cf5GZ2Yns8T5lfBOcGgFehDFb+JQwDqdOoBOcECS9ZWMEAqMSVcMYwXD659J8NyzjRY/2aE+C2Q==
