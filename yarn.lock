@@ -4206,10 +4206,10 @@ source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-sourcebin@^4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/sourcebin/-/sourcebin-4.2.3.tgz#72780371e1b94f97dee55d17abda02c9f69a9a39"
-  integrity sha512-G5Dgscl4D6T98aJIidAH8gOGxP7sJ5O6I6x1a2JrkDwtQG7oQOCQ2NELQSoAoOVyf475ECsRXEvS4hBosdzB9A==
+sourcebin@^4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/sourcebin/-/sourcebin-4.2.5.tgz#755375ed26add6ace04f3863a6a13151a011fc53"
+  integrity sha512-YLfvrooTQhTgOSIKN35Zwlll2dlTaZ5zibKn/lADi8IzbF7AQKz2WKnzILCFIkOMpjDSFMVCzwzJVXVYg0bBEg==
   dependencies:
     "@sourcebin/linguist" latest
     got "^11.8.1"

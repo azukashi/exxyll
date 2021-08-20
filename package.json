@@ -58,7 +58,7 @@
     "reconlx": "^2.2.0",
     "request-promise-native": "^1.0.9",
     "snakecord": "^1.0.8",
-    "sourcebin": "^4.2.3",
+    "sourcebin": "^4.2.5",
     "superagent": "^6.1.0",
     "tar": "^6.1.6",
     "utf-8-validate": "^5.0.5",
