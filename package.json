@@ -55,7 +55,7 @@
     "os": "^0.1.2",
     "path": "^0.12.7",
     "pretty-ms": "^7.0.1",
-    "reconlx": "^2.2.0",
+    "reconlx": "^2.3.2",
     "request-promise-native": "^1.0.9",
     "snakecord": "^1.0.8",
     "sourcebin": "^4.2.3",
