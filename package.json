@@ -60,7 +60,7 @@
     "snakecord": "^1.0.8",
     "sourcebin": "^4.2.3",
     "superagent": "^6.1.0",
-    "tar": "^6.1.6",
+    "tar": "^6.1.10",
     "utf-8-validate": "^5.0.5",
     "weather-js": "^2.0.0",
     "weky": "^1.7.7",
