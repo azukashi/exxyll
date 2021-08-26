@@ -20,6 +20,12 @@ module.exports = {
   run: async (client, interaction, args) => {
     const [user] = args;
     const userUsername = client.users.cache.get(user).username;
+    if (user == interaction.user.id)
+      return interaction.followUp(`No, U can't hug yourself.`);
+    if (user == client.user.id)
+      return interaction.followUp(`No, U can't hug me.`);
+    if (user == interaction.user.bot)
+      return interaction.followUp(`No, U can't hug bots.`);
     fetch("https://api.waifu.pics/sfw/hug")
       .then((res) => res.json())
       .then((body) => {
