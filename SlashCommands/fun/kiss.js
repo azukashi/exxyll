@@ -20,6 +20,11 @@ module.exports = {
   run: async (client, interaction, args) => {
     const [user] = args;
     const userUsername = client.users.cache.get(user).username;
+    if (user == message.author.id)
+      return message.reply(`No, U can't kiss yourself.`);
+    if (user == client.user.id) return message.reply(`No, U can't kiss me.`);
+    if (user == message.author.bot)
+      return message.reply(`No, U can't kiss bots.`);
     fetch("https://api.waifu.pics/sfw/kiss")
       .then((res) => res.json())
       .then((body) => {
