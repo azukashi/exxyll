@@ -15,10 +15,10 @@ module.exports = {
     const user = message.mentions.users.first();
     if (!user) return message.reply("Please mention a user!");
     if (user == message.author.id)
-      return message.reply(`No, U can't hug yourself.`);
-    if (user == client.user.id) return message.reply(`No, U can't hug me.`);
+      return message.reply(`No, U can't kiss yourself.`);
+    if (user == client.user.id) return message.reply(`No, U can't kiss me.`);
     if (user == message.author.bot)
-      return message.reply(`No, U can't hug bots.`);
+      return message.reply(`No, U can't kiss bots.`);
     fetch("https://api.waifu.pics/sfw/kiss")
       .then((res) => res.json())
       .then((body) => {
