@@ -17,6 +17,8 @@ module.exports = {
   aliases: ["anime-search", "search-anime"],
   description: "Search details of anime",
   emoji: "<a:Peepo_WatchAnime:879957966797828187>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

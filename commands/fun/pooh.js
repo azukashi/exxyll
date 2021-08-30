@@ -6,6 +6,8 @@ module.exports = {
   description: "Generate Pooh Memes",
   aliases: [],
   emoji: "<:Peepo_Happy:880273539985469450>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message
@@ -19,12 +21,16 @@ module.exports = {
       return message.reply(
         `You need to specify two sentences separated with comma \`,\``
       );
-    const res = await fetch(
-      `https://api.popcatdev.repl.co/pooh?text1=${user}&text2=${user2}`,
-      {}
-    );
-    let Image = await res.buffer();
-    const poohmeme = new MessageAttachment(Image);
-    message.channel.send({ files: [poohmeme] });
+    try {
+      const res = await fetch(
+        `https://api.popcatdev.repl.co/pooh?text1=${user}&text2=${user2}`,
+        {}
+      );
+      let Image = await res.buffer();
+      const poohmeme = new MessageAttachment(Image);
+      message.channel.send({ files: [poohmeme] });
+    } catch (err) {
+      console.log(err);
+    }
   },
 };

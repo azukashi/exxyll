@@ -7,6 +7,8 @@ module.exports = {
   description: "Search details of manga",
   aliases: [],
   emoji: ":book:",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

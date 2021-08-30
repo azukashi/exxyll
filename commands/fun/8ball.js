@@ -4,6 +4,8 @@ module.exports = {
   name: "8ball",
   description: "Ask a question and let 8ball decide the answer",
   emoji: "🎱",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

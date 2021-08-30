@@ -5,6 +5,8 @@ module.exports = {
   description: "Generate Pikachu Pog Memes",
   aliases: [],
   emoji: "<:pika_pog:880280585061404822>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

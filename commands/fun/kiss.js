@@ -6,6 +6,8 @@ module.exports = {
   description: "Kiss someone!",
   aliases: [],
   emoji: "<:KizunaKiss2:880267449138831441>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

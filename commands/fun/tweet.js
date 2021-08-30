@@ -6,6 +6,8 @@ module.exports = {
   description: "Tweet something!",
   aliases: ["twitter"],
   emoji: "<:twitter:880275464982245417>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

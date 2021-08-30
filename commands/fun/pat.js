@@ -6,6 +6,8 @@ module.exports = {
   description: "Pat someone!",
   aliases: [],
   emoji: "<a:Peepo_Pat:880270920126709830>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

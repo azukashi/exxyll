@@ -6,6 +6,8 @@ module.exports = {
   aliases: ["meme"],
   description: "Generate Random Memes",
   emoji: "<:Peepo_HahaLol:879956421293244446>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

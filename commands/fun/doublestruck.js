@@ -6,6 +6,8 @@ module.exports = {
   aliases: ["ds"],
   description: "Convert a text to Double Struck",
   emoji: ":pause_button:",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message
