@@ -57,7 +57,7 @@
     "pretty-ms": "^7.0.1",
     "reconlx": "^2.3.2",
     "request-promise-native": "^1.0.9",
-    "snakecord": "^1.0.8",
+    "snakecord": "^1.0.9",
     "sourcebin": "^4.2.3",
     "superagent": "^6.1.0",
     "tar": "^6.1.11",
