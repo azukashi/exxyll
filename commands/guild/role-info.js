@@ -6,6 +6,8 @@ module.exports = {
   description: "Returns Role Information",
   aliases: ["roleinf"],
   emoji: "<:role:863214921574907915>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

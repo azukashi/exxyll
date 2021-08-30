@@ -7,7 +7,7 @@ module.exports = {
   aliases: [],
   emoji: "<:drakeYea:880266535908819025>",
   userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES", "ATTACH_FILES"],
   /**
    * @param {Client} client
    * @param {Message} message

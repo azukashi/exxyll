@@ -6,7 +6,7 @@ module.exports = {
   aliases: [],
   emoji: "<:pika_pog:880280585061404822>",
   userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES", "ATTACH_FILES"],
   /**
    * @param {Client} client
    * @param {Message} message

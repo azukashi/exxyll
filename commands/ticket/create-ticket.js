@@ -10,6 +10,8 @@ module.exports = {
   name: "ticket",
   description: "Shows you a Ticket Panel",
   emoji: "🎟",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

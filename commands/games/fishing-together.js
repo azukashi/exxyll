@@ -5,6 +5,8 @@ module.exports = {
   description: "Play Fishing Together Game in a Voice Channel",
   aliases: [],
   emoji: "",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES", "CONNECT"],
   /**
    * @param {Client} client
    * @param {Message} message

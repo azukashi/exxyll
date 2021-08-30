@@ -4,6 +4,8 @@ module.exports = {
   name: "invite",
   description: "Invite Exxyll Today!",
   emoji: "<:invite:863999093164736562>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

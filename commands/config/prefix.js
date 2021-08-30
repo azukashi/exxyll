@@ -5,6 +5,8 @@ module.exports = {
   name: "set-prefix",
   description: "Set Custom Prefixes",
   emoji: "➕",
+  userperm: ["MANAGE_GUILD"],
+  botperm: ["MANAGE_GUILD"],
   /**
    * @param {Client} client
    * @param {Message} message

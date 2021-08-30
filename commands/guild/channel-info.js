@@ -5,6 +5,8 @@ module.exports = {
   description: "Returns Information about Channels",
   aliases: ["channel"],
   emoji: "<:channel:863363700463632414>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

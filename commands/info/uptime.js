@@ -5,6 +5,8 @@ module.exports = {
   name: "uptime",
   description: "Returns information about Exxyll's Uptime",
   emoji: "🕘",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

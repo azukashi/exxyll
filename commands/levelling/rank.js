@@ -11,6 +11,8 @@ module.exports = {
   name: "rank",
   description: "See your current level",
   emoji: "📈",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

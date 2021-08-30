@@ -5,6 +5,8 @@ module.exports = {
   name: "djs",
   description: "Search for a Class, Properties at Discord.js Docs",
   emoji: "<:djs:849590909943414806>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

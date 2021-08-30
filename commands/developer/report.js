@@ -4,6 +4,8 @@ module.exports = {
   name: "report",
   description: "Report a bugs or something to the developers!",
   emoji: "❗",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

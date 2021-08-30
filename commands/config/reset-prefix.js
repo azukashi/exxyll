@@ -6,6 +6,8 @@ module.exports = {
   name: "reset-prefix",
   description: "Reset Customized Prefix to Default.",
   emoji: "🗑️",
+  userperm: ["MANAGE_GUILD"],
+  botperm: ["MANAGE_GUILD"],
   /**
    * @param {Client} client
    * @param {Message} message

@@ -5,6 +5,8 @@ module.exports = {
   name: "leaderboard",
   description: "See Levelling Leaderboards",
   emoji: "📊",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

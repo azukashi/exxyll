@@ -4,6 +4,8 @@ module.exports = {
   name: "ownerinfo",
   description: "Returns Information about Exxyll Owner",
   emoji: "<:owner:864432628928217098>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

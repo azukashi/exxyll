@@ -5,6 +5,8 @@ module.exports = {
   description: "Help Commands",
   aliases: ["h"],
   emoji: "❓",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

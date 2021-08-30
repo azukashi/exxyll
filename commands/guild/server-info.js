@@ -5,6 +5,8 @@ module.exports = {
   name: "serverinfo",
   description: "Returns Information about Server",
   emoji: "🗂",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message

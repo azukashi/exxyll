@@ -5,6 +5,8 @@ module.exports = {
   description: "List all emojis",
   aliases: ["emojis"],
   emoji: "<:add_reaction:863214931599818783>",
+  userperm: ["SEND_MESSAGES"],
+  botperm: ["SEND_MESSAGES"],
   /**
    * @param {Client} client
    * @param {Message} message
