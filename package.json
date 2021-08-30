@@ -17,6 +17,9 @@
   ],
   "author": "Gifaldy Azka",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@discordjs/opus": "^0.6.0",
     "@discordjs/voice": "^0.6.0",
