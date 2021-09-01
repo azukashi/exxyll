@@ -33,7 +33,7 @@
     "gifaldyazka": "^1.0.2",
     "glob": "^7.1.7",
     "moment": "^2.29.1",
-    "mongoose": "^6.0.2",
+    "mongoose": "^6.0.3",
     "node-fetch": "^2.6.1",
     "pretty-ms": "^7.0.1",
     "ytsr": "^3.5.2"
