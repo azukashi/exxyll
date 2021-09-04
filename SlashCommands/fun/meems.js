@@ -4,6 +4,8 @@ const fetch = require("node-fetch");
 module.exports = {
   name: "meme",
   description: "Generates random memes from Reddit",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

@@ -4,6 +4,8 @@ module.exports = {
     name: 'sussy',
     description: 'Generates a sussy baka emoji :flushed:',
     aliases: [],
+    userperm: "SEND_MESSAGES",
+    botperm: "SEND_MESSAGES",
     /** 
      * @param {Client} client 
      * @param {CommandInteraction} interaction
