@@ -19,3 +19,4 @@ jobs:
         env:
           HD_TOKEN: ${{secrets.TOKEN}}
           HD_MONGO: ${{secrets.MONGO_URI}}
+          HD_TOPGG_TOKEN: ${{secrets.TOPGG_TOKEN}}
