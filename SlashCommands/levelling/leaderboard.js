@@ -4,6 +4,8 @@ const Levels = require("discord-xp");
 module.exports = {
   name: "leaderboard",
   description: "See Leaderboard Rank",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

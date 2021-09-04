@@ -5,6 +5,8 @@ const canvacord = require("canvacord");
 module.exports = {
   name: "rank",
   description: "See your current ranking at the levelling system",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
