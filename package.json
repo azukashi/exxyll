@@ -1,6 +1,6 @@
 {
   "name": "exxyll-v2",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Exxyll v2 is Rewrite version from Exxyll. Uses discord.js v13.1.0",
   "main": "index.js",
   "scripts": {
