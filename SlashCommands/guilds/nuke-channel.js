@@ -3,6 +3,8 @@ const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "nuke",
   description: "Nuke current channel",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

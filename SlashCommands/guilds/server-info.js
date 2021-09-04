@@ -4,6 +4,8 @@ const moment = require('moment');
 module.exports = {
     name: 'serverinfo',
     description: 'Returns Server Information',
+    userperm: "SEND_MESSAGES",
+    botperm: "SEND_MESSAGES",
     /** 
      * @param {Client} client 
      * @param {CommandInteraction} interaction 

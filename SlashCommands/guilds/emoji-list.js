@@ -4,6 +4,8 @@ module.exports = {
     name: 'emojilist',
     description: 'Displays every emoji of the guild, Where the command is used',
     aliases: [],
+    userperm: "SEND_MESSAGES",
+    botperm: "SEND_MESSAGES",
     /** 
      * @param {Client} client 
      * @param {CommandInteraction} interaction 
