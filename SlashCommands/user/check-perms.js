@@ -11,6 +11,8 @@ module.exports = {
       required: false,
     },
   ],
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
