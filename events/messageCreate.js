@@ -17,8 +17,8 @@ client.on("messageCreate", async (message) => {
 
   if (!command) return;
   await command.run(client, message, args);
-  const userperm = message.member.permissions.has(command.userperm);
-  const botperm = message.guild.me.permissions.has(command.botperm);
+  const userperm = message.member.permissions.has(command.userperm) || "SEND_MESSAGES";
+  const botperm = message.guild.me.permissions.has(command.botperm) || "SEND_MESSAGES";
   if (!userperm) return message.reply({ content: `You need \`${command.userperm || []}\` Permissions` });
   if (!botperm) return message.reply({ content: `I need \`${command.botperm || []}\` Permissions` });
 });
