@@ -4,6 +4,8 @@ const pretty = require("pretty-ms");
 module.exports = {
   name: "uptime",
   description: "Returns information about Exxyll's Uptime",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

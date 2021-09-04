@@ -4,6 +4,8 @@ const https = require("https");
 module.exports = {
   name: "contributors",
   description: "Lists of all exxyll-origin contributors",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

@@ -3,6 +3,8 @@ const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ping",
   description: "This is a testing command",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

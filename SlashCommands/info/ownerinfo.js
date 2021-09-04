@@ -3,6 +3,8 @@ const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ownerinfo",
   description: "Returns Information about Owner",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

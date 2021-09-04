@@ -4,6 +4,8 @@ module.exports = {
   name: "help",
   description: "Show Help List Commands",
   options: [],
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
