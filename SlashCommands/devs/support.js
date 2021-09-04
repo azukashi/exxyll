@@ -3,6 +3,8 @@ const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "support",
   description: "Support & Donate to the Chef at the back-screen of Exxyll!",
+  userperm: "SEND_MESSAGES",
+  botperm: "SEND_MESSAGES",
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
