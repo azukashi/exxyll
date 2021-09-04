@@ -3,6 +3,8 @@ const { CommandInteraction, Client, MessageEmbed, MessageActionRow, MessageButto
 module.exports = {
     name: 'ticket',
     description: 'Create a ticket',
+    userperm: "SEND_MESSAGES",
+    botperm: "SEND_MESSAGES",
     /** 
      * @param {Client} client 
      * @param {CommandInteraction} interaction 
