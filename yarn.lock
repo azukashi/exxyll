@@ -4057,10 +4057,10 @@ readable-stream@^3.1.1, readable-stream@^3.4.0, readable-stream@^3.6.0:
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
 
-reconlx@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/reconlx/-/reconlx-2.3.2.tgz#a264f3b63d3d45127fad69ec3f481f66b94435fd"
-  integrity sha512-lcex7Zdy4HNtA1g5FSP9IxwJdk7ylHUwIcS/1AMO6wv4sNJzkRHSZ05wIpqPueUvqtzz7qvA/WMkfBYNsXNtRQ==
+reconlx@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/reconlx/-/reconlx-2.4.3.tgz#865b236b17f04fad765248b31ebb97d9bb60990a"
+  integrity sha512-Xtd3sNPE668Y+50KVOPHVtpJ/QJk+xhwWwO7zXakWD7vTIO5PGwO2vPhQAM4SHF4JhgCNIoFCapgo7rWKhEKuA==
   dependencies:
     axios "^0.21.1"
     discord.js "^13.0.1"
