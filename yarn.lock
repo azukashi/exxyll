@@ -1326,10 +1326,10 @@ discord-together@^1.1.62:
   dependencies:
     node-fetch "^2.6.1"
 
-discord.js-akinator@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.0.2.tgz#2e01144c139df8f7f498be4050ab8547654f07d4"
-  integrity sha512-otMSmC/mLSLDjmAc4Ii0x7qbDVFfAeSWQ/nynQMvbblvZnJoVcDGatccU0o0KkwzejA1rM54wdf1SLmJf8M6wA==
+discord.js-akinator@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.1.1.tgz#bf6ba2c5655c11c66e6ee4d27523ee8a80fb4e40"
+  integrity sha512-FXL6zArVHZTcXwwuleuDFlyVinZFEYrdeMzEexFJgBBK35HDdCRCnkbFpjFExnBMvO+BB6ocobA2F2BnZMcxxg==
   dependencies:
     "@vitalets/google-translate-api" "^7.0.0"
     aki-api "^5.2.1"
