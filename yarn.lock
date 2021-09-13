@@ -1319,11 +1319,12 @@ discord-rpc@^4.0.1:
   optionalDependencies:
     register-scheme "github:devsnek/node-register-scheme"
 
-discord-together@^1.1.62:
-  version "1.1.62"
-  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.1.62.tgz#b7c3f3b51da299f5c9e37d24e32e960108b15f66"
-  integrity sha512-l84sy0b1NjzAJexTAjUHkkm9pfdzAqg+ZRg0+4cy4cj7vlepsdfdCiHJoUYcT0tsnT/AfklYk7BEnC9jdT31tw==
+discord-together@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.2.0.tgz#e8ee765ce07fd7dcd673c8c5a748b613aec5f5e2"
+  integrity sha512-L1G20599PxkaGv7QQ6KGF1GVCdcAZ0FE6ua0E1CPuoXbYLT+gLLuZKRC9ysw4+ygNKCy9RNn7fonydmJxq00Yw==
   dependencies:
+    discord.js "^13.1.0"
     node-fetch "^2.6.1"
 
 discord.js-akinator@^3.0.2:
