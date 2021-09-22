@@ -1,16 +1,7 @@
-# Sialan, node modules kebawa >:(
-node_modules
-
-# Ignore launch jason
-launch.json
-
-# Ignore DS_Store cuz it's annoying
+/node_modules/
+/.vscode/
 .DS_Store
-
-# Ignore all generated lockfile
+*.lock
+launch.json
 package-lock.json
 yarn.lock
-*.lock
-
-# Ignore vscode settings
-.vscode
