@@ -20,7 +20,6 @@ module.exports = {
       info: "<:wininfo:875298951362932736>",
       levelling: "⏫",
       music: "🎵",
-      ticket: "🎟",
     };
     const directories = [...new Set(client.commands.map((cmd) => cmd.directory))];
 
