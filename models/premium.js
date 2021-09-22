@@ -1,7 +1,7 @@
-const m = require("mongoose");
+const m = require('mongoose');
 
 module.exports = m.model(
-  "premium",
+  'premium',
   new m.Schema({
     User: String,
   })
