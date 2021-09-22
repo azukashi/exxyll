@@ -32,7 +32,7 @@
     "ffmpeg-static": "^4.4.0",
     "glob": "^7.1.7",
     "moment": "^2.29.1",
-    "mongoose": "^6.0.4",
+    "mongoose": "6.0.7",
     "node-fetch": "2.6.1",
     "pretty-ms": "^7.0.1",
     "ytsr": "^3.5.2"
