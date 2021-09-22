@@ -3,4 +3,4 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      cron: '*/20 * * * *'
+      interval: 'daily'
