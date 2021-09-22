@@ -2,11 +2,13 @@
 
 This repository contains all Source Code of Exxyll at Discord.js v13.1.0
 
-# Status
+## Status
 
 In Development (accumulated 12% of Full 100%)
 
-# Run Script
+## Run Script
+
+Scripts that available in [package.json](package.json) file.
 
 | Name        | Script           | Description                     |
 | ----------- | ---------------- | ------------------------------- |
@@ -14,7 +16,7 @@ In Development (accumulated 12% of Full 100%)
 | Development | `yarn run dev`   | Run the bot in Development Mode |
 | Shard       | `yarn run shard` | Run and Shard the Bot (WIP)     |
 
-# Todo
+## Todo
 
 To-do schedule for this project. Check with `[x]` if you're done with the tasks.
 
@@ -23,12 +25,12 @@ Note :
 - [ ] It's Unchecked. The tasks not done yet.
 - [x] It's Checked. The tasks is done.
 
-## Very Important
+### Very Important
 
 - [x] Help Commands in Dropdown Menu Type.
 - [ ] Aliases support (Already done at `handler/index.js` but idk if it works).
 
-## Normal Commands
+### Normal Commands
 
 - [ ] Info Categories
 - [ ] Fun Categories
@@ -46,7 +48,7 @@ Note :
 - [ ] Utility Categories
 - [ ] Welcoming Categories
 
-## Slash Commands
+### Slash Commands
 
 - [ ] Info Categories
 - [x] Fun Categories
@@ -64,6 +66,6 @@ Note :
 - [ ] Utility Categories
 - [ ] Welcoming Categories
 
-# License
+## License
 
 This Project is Under [MIT License](https://github.com/gifaldyazkaa/exxyll-rewrite-v13/blob/master/LICENSE) &copy; Gifaldy Azka
