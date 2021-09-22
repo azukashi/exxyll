@@ -8,10 +8,11 @@ In Development (accumulated 12% of Full 100%)
 
 # Run Script
 
-- `yarn start` Start the bot.
-- `yarn run dev` Start Development with `nodemon`.
-- `yarn run shard` Start the bot with Sharding Client Process.
-- `yarn lint` Start Linting using ESLint (WIP)
+| Name        | Script           | Description                     |
+| ----------- | ---------------- | ------------------------------- |
+| Start       | `yarn start`     | Run the bot                     |
+| Development | `yarn run dev`   | Run the bot in Development Mode |
+| Shard       | `yarn run shard` | Run and Shard the Bot (WIP)     |
 
 # Todo
 
