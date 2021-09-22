@@ -1,6 +1,5 @@
-const { glob } = require("glob");
-const { promisify } = require("util");
-const client = require("../index");
+const { glob } = require('glob');
+const { promisify } = require('util');
 
 const globPromise = promisify(glob);
 
@@ -11,7 +10,7 @@ module.exports = async (client) => {
     `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
   commandFiles.map((value) => {
     const file = require(value);
-    const splitted = value.split("/");
+    const splitted = value.split('/');
     const directory = splitted[splitted.length - 2];
 
     if (file.name) {
@@ -39,14 +38,14 @@ module.exports = async (client) => {
     if (!file?.name) return;
     client.slashCommands.set(file.name, file);
 
-    if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
+    if (['MESSAGE', 'USER'].includes(file.type)) delete file.description;
     arrayOfSlashCommands.push(file);
   });
 
-  client.on("ready", async () => {
+  client.on('ready', async () => {
     // For testing purposes, Set the Slash Commands to Exxyll Development Server only.
     await client.guilds.cache
-      .get("849130218975526922")
+      .get('849130218975526922')
       .commands.set(arrayOfSlashCommands);
 
     // To set the slash to each single guild, Use this.
