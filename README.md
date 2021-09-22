@@ -6,7 +6,7 @@ This repository contains all Source Code of Exxyll at Discord.js v13.1.0
 
 In Development (accumulated 12% of Full 100%)
 
-## Run Script
+## Scripts
 
 Scripts that available in [package.json](package.json) file.
 
@@ -15,6 +15,7 @@ Scripts that available in [package.json](package.json) file.
 | Start       | `yarn start`     | Run the bot                     |
 | Development | `yarn run dev`   | Run the bot in Development Mode |
 | Shard       | `yarn run shard` | Run and Shard the Bot (WIP)     |
+| Linters     | `yarn lint`      | Lint the code using ESLint      |
 
 ## Todo
 
