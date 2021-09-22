@@ -1,4 +1,3 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const client = require('../index');
 
 client.on('interactionCreate', async (interaction) => {
@@ -14,7 +13,8 @@ client.on('interactionCreate', async (interaction) => {
 
     const args = [];
     interaction.options.data.map((x) => {
-      args.push(x.value);
+      if (x.value) args.push(x.value);
+      if (x.name) args.push(x.name);
     });
 
     cmd.run(client, interaction, args);
