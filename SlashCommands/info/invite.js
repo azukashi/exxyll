@@ -19,8 +19,8 @@ module.exports = {
         `[Invite and Authorize](https://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=1077226614&scope=bot) | [Visit Website](https://exxyll.github.io) | [Join Support Server](https://discord.gg/j2MfuWySfD)\n\n[Vote at Top.gg](https://top.gg/bot/848232775798226996)`
       )
       .setFooter(
-        `${message.author.tag}`,
-        message.author.displayAvatarURL({ dynamic: true })
+        `${interaction.user.tag}`,
+        interaction.user.displayAvatarURL({ dynamic: true })
       );
 
     interaction.followUp({ embeds: [embed] });
