@@ -14,7 +14,7 @@ Scripts that available in [package.json](package.json) file.
 | ----------- | ---------------- | ------------------------------- |
 | Start       | `yarn start`     | Run the bot                     |
 | Development | `yarn run dev`   | Run the bot in Development Mode |
-| Shard       | `yarn run shard` | Run and Shard the Bot (WIP)     |
+| Shard       | `yarn run shard` | Run and Shard the Bot           |
 | Linters     | `yarn lint`      | Lint the code using ESLint      |
 
 ## Todo
