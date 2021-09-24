@@ -1,13 +1,13 @@
-const { Client, Message, MessageEmbed } = require("discord.js");
-const fetch = require("node-fetch");
+const { Client, Message, MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports = {
-  name: "memes",
-  aliases: ["meme"],
-  description: "Generate Random Memes",
-  emoji: "<:Peepo_HahaLol:879956421293244446>",
-  userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES"],
+  name: 'memes',
+  aliases: ['meme'],
+  description: 'Generate Random Memes',
+  emoji: '<:Peepo_HahaLol:879956421293244446>',
+  userperm: ['SEND_MESSAGES'],
+  botperm: ['SEND_MESSAGES'],
   /**
    * @param {Client} client
    * @param {Message} message
@@ -19,10 +19,10 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle(meme.title)
       .setURL(meme.url)
-      .setColor("RANDOM")
+      .setColor('RANDOM')
       .setImage(meme.image)
       .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 
-    message.channel.send({ embeds: embed });
+    message.channel.send({ embeds: [embed] });
   },
 };

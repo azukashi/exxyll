@@ -1,12 +1,13 @@
-const Levels = require("discord-xp");
-const { Client, Message, MessageEmbed } = require("discord.js");
+const Levels = require('discord-xp');
+const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "leaderboard",
-  description: "See Levelling Leaderboards",
-  emoji: "📊",
-  userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES"],
+  name: 'leaderboard',
+  description: 'See Levelling Leaderboards',
+  aliases: ['lb', 'levels'],
+  emoji: '📊',
+  userperm: ['SEND_MESSAGES'],
+  botperm: ['SEND_MESSAGES'],
   /**
    * @param {Client} client
    * @param {Message} message
@@ -34,9 +35,9 @@ module.exports = {
     );
 
     const embed = new MessageEmbed()
-      .setTitle("**Leaderboard**")
-      .setColor("#ffc0cb")
-      .setDescription(`\n\n${lb.join("\n\n")}`);
+      .setTitle('**Leaderboard**')
+      .setColor('#ffc0cb')
+      .setDescription(`\n\n${lb.join('\n\n')}`);
 
     message.channel.send({ embeds: [embed] });
   },
