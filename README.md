@@ -21,24 +21,24 @@ Scripts that available in [package.json](package.json) file.
 
 To-do schedule for this project.
 
-| Categories    | Status | Supports      |
-| ------------- | ------ | ------------- |
-| Configuration | ✅     | Normal, Slash |
-| Info          | ✅     | Normal, Slash |
-| Fun           | ✅     | Normal, Slash |
-| Guild         | ✅     | Normal, Slash |
-| Moderation    | WIP    |               |
-| Owner         | WIP    |               |
-| Presence      | WIP    |               |
-| Developer     | ✅     | Slash         |
-| Games         | WIP    | Normal        |
-| Music         | ❌     | (Stopped)     |
-| Premium       | ❌     | (Stopped)     |
-| Levelling     | ✅     | Slash, Normal |
-| Ticket        | ❌     | (Cancelled)   |
-| User          | ✅     | Slash, Normal |
-| Utility       | WIP    |               |
-| Welcoming     | WIP    |               |
+| Categories    | Status | Tests          | Supports      |
+| ------------- | ------ | -------------- | ------------- |
+| Configuration | ✅     | Passing ✅     | Normal, Slash |
+| Info          | ✅     |                | Normal, Slash |
+| Fun           | ✅     | Passing ✅     | Normal, Slash |
+| Guild         | ✅     | Passing ✅     | Normal, Slash |
+| Moderation    | WIP    |                |               |
+| Owner         | WIP    |                |               |
+| Presence      | WIP    |                |               |
+| Developer     | ✅     | Not Passing ❌ | Slash         |
+| Games         | WIP    |                | Normal        |
+| Music         | ❌     |                | (Stopped)     |
+| Premium       | ❌     |                | (Stopped)     |
+| Levelling     | ✅     | Passing ✅     | Slash, Normal |
+| Ticket        | ❌     |                | (Cancelled)   |
+| User          | ✅     | Passing ✅     | Slash, Normal |
+| Utility       | WIP    |                |               |
+| Welcoming     | WIP    |                |               |
 
 ## License
 
