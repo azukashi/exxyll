@@ -1,6 +1,10 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
+const { prefix, mongooseConnectionString } = require('./config.json');
+const prefixSchema = require('./models/prefix');
+const chalk = require('chalk');
+const mongoose = require('mongoose');
 
 const client = new Client({
   intents: [
@@ -18,6 +22,16 @@ const client = new Client({
 });
 module.exports = client;
 
+// Connect to Mongoose
+mongoose
+  .connect(mongooseConnectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(
+    console.log(chalk.greenBright.bold('MongoDB : Connected to the database!'))
+  );
+
 // ==> Global Variables
 client.commands = new Collection();
 client.slashCommands = new Collection();
@@ -26,6 +40,19 @@ client.snipes = new Collection();
 client.categories = fs.readdirSync('./commands/');
 client.discordTogether = new DiscordTogether(client);
 client.config = require('./config.json');
+client.prefix = async function (message) {
+  let custom;
+  const data = await prefixSchema
+    .findOne({ Guild: message.guild.id })
+    .catch((err) => console.log(err));
+
+  if (data) {
+    custom = data.Prefix;
+  } else {
+    custom = prefix;
+  }
+  return custom;
+};
 
 // ==> Initializing the project
 require('./handler')(client);
