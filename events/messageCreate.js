@@ -13,8 +13,8 @@ client.on("messageCreate", async (message) => {
 
   const [cmd, ...args] = message.content.slice(client.config.prefix.length).trim().split(" ");
 
-  const command = client.commands.get(cmd.toLowerCase());
-
+  let command = client.commands.get(cmd.toLowerCase());
+  if(!command) command = client.commands.get(client.aliases.get(cmd));
   if (!command) return;
   await command.run(client, message, args);
 
