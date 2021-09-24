@@ -21,24 +21,24 @@ Scripts that available in [package.json](package.json) file.
 
 To-do schedule for this project.
 
-| Categories    | Status             | Supports      |
-| ------------- | ------------------ | ------------- |
-| Configuration | :white_check_mark: | Normal, Slash |
-| Info          | :white_check_mark: | Normal, Slash |
-| Fun           | :white_check_mark: | Normal, Slash |
-| Guild         | :white_check_mark: | Normal, Slash |
-| Moderation    | WIP                |               |
-| Owner         | WIP                |               |
-| Presence      | WIP                |               |
-| Developer     | :white_check_mark: | Slash         |
-| Games         | WIP                | Normal        |
-| Music         | Halted             |               |
-| Premium       | Halted             |               |
-| Levelling     | :white_check_mark: | Slash, Normal |
-| Ticket        | Cancelled          |               |
-| User          | :white_check_mark: | Slash, Normal |
-| Utility       | WIP                |               |
-| Welcoming     | WIP                |               |
+| Categories    | Status | Supports      |
+| ------------- | ------ | ------------- |
+| Configuration | ✅     | Normal, Slash |
+| Info          | ✅     | Normal, Slash |
+| Fun           | ✅     | Normal, Slash |
+| Guild         | ✅     | Normal, Slash |
+| Moderation    | WIP    |               |
+| Owner         | WIP    |               |
+| Presence      | WIP    |               |
+| Developer     | ✅     | Slash         |
+| Games         | WIP    | Normal        |
+| Music         | ❌     | (Stopped)     |
+| Premium       | ❌     | (Stopped)     |
+| Levelling     | ✅     | Slash, Normal |
+| Ticket        | ❌     | (Cancelled)   |
+| User          | ✅     | Slash, Normal |
+| Utility       | WIP    |               |
+| Welcoming     | WIP    |               |
 
 ## License
 
