@@ -7,8 +7,8 @@ client.on("messageCreate", async (message) => {
   const random = Math.floor(Math.random() * 34) + 1;
   const hasLevelledUp = await Levels.appendXp(message.author.id, message.guild.id, random);
   if (hasLevelledUp) {
-    const user = await Levels.fetch(message.author.id, message.guild.id);
-    message.channel.send(`Congratulation ${message.author}! You've been levelled up to level ${user.level}.`);
+    // const user = await Levels.fetch(message.author.id, message.guild.id);
+    // message.channel.send(`Congratulation ${message.author}! You've been levelled up to level ${user.level}.`);
   }
 
   const [cmd, ...args] = message.content.slice(client.config.prefix.length).trim().split(" ");
