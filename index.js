@@ -41,17 +41,21 @@ client.categories = fs.readdirSync('./commands/');
 client.discordTogether = new DiscordTogether(client);
 client.config = require('./config.json');
 client.prefix = async function (message) {
-  let custom;
-  const data = await prefixSchema
-    .findOne({ Guild: message.guild.id })
-    .catch((err) => console.log(err));
+  try {
+    let custom;
+    const data = await prefixSchema
+      .findOne({ Guild: message.guild.id })
+      .catch((err) => console.log(err));
 
-  if (data) {
-    custom = data.Prefix;
-  } else {
-    custom = prefix;
+    if (data) {
+      custom = data.Prefix;
+    } else {
+      custom = prefix;
+    }
+    return custom;
+  } catch (err) {
+    console.log('');
   }
-  return custom;
 };
 
 // ==> Initializing the project
