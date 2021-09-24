@@ -19,53 +19,25 @@ Scripts that available in [package.json](package.json) file.
 
 ## Todo
 
-To-do schedule for this project. Check with `[x]` if you're done with the tasks.
+To-do schedule for this project.
 
-Note :
-
-- [ ] It's Unchecked. The tasks not done yet.
-- [x] It's Checked. The tasks is done.
-
-### Very Important
-
-- [x] Help Commands in Dropdown Menu Type.
-- [x] Aliases support.
-
-### Normal Commands
-
-- [ ] Info Categories
-- [ ] Fun Categories
-- [ ] Guild Categories
-- [ ] Moderation Categories
-- [ ] Owner Categories
-- [ ] Presence Categories
-- [x] Developer Categories
-- [ ] Games Categories
-- [ ] Music Categories
-- [ ] Premium Categories
-- [x] Levelling Categories
-- [x] Ticket Categories
-- [ ] User Categories
-- [ ] Utility Categories
-- [ ] Welcoming Categories
-
-### Slash Commands
-
-- [ ] Info Categories
-- [x] Fun Categories
-- [x] Guild Categories
-- [ ] Moderation Categories
-- [ ] Owner Categories (looks like it'll not included at slash version).
-- [ ] Presence Categories (Looks like it's impossible to be included at slash too).
-- [x] Developer Categories
-- [ ] Games Categories
-- [ ] Music Categories
-- [ ] Premium Categories
-- [x] Levelling Categories
-- [x] Ticket Categories
-- [x] User Categories
-- [ ] Utility Categories
-- [ ] Welcoming Categories
+| Categories | Status             | Supports      |
+| ---------- | ------------------ | ------------- |
+| Info       | :white_check_mark: | Normal, Slash |
+| Fun        | :white_check_mark: | Normal, Slash |
+| Guild      | :white_check_mark: | Normal, Slash |
+| Moderation | WIP                |               |
+| Owner      | WIP                |               |
+| Presence   | WIP                |               |
+| Developer  | :white_check_mark: | Slash         |
+| Games      | WIP                | Normal        |
+| Music      | Halted             |               |
+| Premium    | Halted             |               |
+| Levelling  | :white_check_mark: | Slash, Normal |
+| Ticket     | Cancelled          |               |
+| User       | :white_check_mark: | Slash, Normal |
+| Utility    | WIP                |               |
+| Welcoming  | WIP                |               |
 
 ## License
 
