@@ -13,8 +13,7 @@ client.on('interactionCreate', async (interaction) => {
 
     const args = [];
     interaction.options.data.map((x) => {
-      if (x.value) args.push(x.value);
-      if (x.name) args.push(x.name);
+      args.push(x.value);
     });
 
     cmd.run(client, interaction, args);
