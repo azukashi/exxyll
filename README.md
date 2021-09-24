@@ -29,7 +29,7 @@ Note :
 ### Very Important
 
 - [x] Help Commands in Dropdown Menu Type.
-- [ ] Aliases support (Already done at `handler/index.js` but idk if it works).
+- [x] Aliases support.
 
 ### Normal Commands
 
