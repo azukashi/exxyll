@@ -35,7 +35,6 @@ To-do schedule for this project.
 | Music         | ❌     |                | (Stopped)     |
 | Premium       | ❌     |                | (Stopped)     |
 | Levelling     | ✅     | Passing ✅     | Slash, Normal |
-| Ticket        | ❌     |                | (Cancelled)   |
 | User          | ✅     | Passing ✅     | Slash, Normal |
 | Utility       | WIP    |                |               |
 | Welcoming     | WIP    |                |               |
