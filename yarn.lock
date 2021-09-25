@@ -234,6 +234,14 @@
   dependencies:
     "@types/node" "*"
 
+"@vitalets/google-translate-api@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@vitalets/google-translate-api/-/google-translate-api-7.0.0.tgz#0aa37d92d475daf4a434ded27e72d80b03686a23"
+  integrity sha512-zuKF+jG0EhFzRU/QAyHgTVzIDhrv5zDUmQWy7umwZryMbG8H0jK4fdMGrgla5AhQGU8ViiDWi/xbxNCKK7KHYA==
+  dependencies:
+    configstore "^5.0.1"
+    got "^9.6.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -275,6 +283,14 @@ ajv@^8.0.1:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
+
+aki-api@^6.0.8:
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/aki-api/-/aki-api-6.0.8.tgz#2e2091ea1ffdc0773ec4585f0441d00c95b16b2e"
+  integrity sha512-fOMHSPfcyT2WFrf2wsQf5GNpwCSJzWA7+YO3DU8j8wOS16I10lmpIxXkdx3rCiWfmhD6kXVdUaEGJ4DKkiPbMA==
+  dependencies:
+    axios "^0.21.1"
+    https-proxy-agent "^5.0.0"
 
 ansi-align@^3.0.0:
   version "3.0.0"
@@ -400,7 +416,7 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-axios@^0.21.4:
+axios@^0.21.1, axios@^0.21.4:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
@@ -865,6 +881,15 @@ discord-xp@^1.1.16:
   integrity sha512-A5g6utg+0fCLEUl6sS5J5mpr8DAXe5KxBFQnJf89KpQ71Itt0Hdv5/seOBCc6p239nuxEfW9n29peMlLCuvlrg==
   dependencies:
     mongoose "^5.11.11"
+
+discord.js-akinator@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.2.1.tgz#96635e4b79c48230974b454a60d78be1dc5a1521"
+  integrity sha512-Vhnqjw9ferc13kX1KSksRbMg66sK9BerVJgRPfgl0+CxZVdRZPzvqqipGdX6YGOT79F3mr9U5v7HECfTdaH9bg==
+  dependencies:
+    "@vitalets/google-translate-api" "^7.0.0"
+    aki-api "^6.0.8"
+    discord.js "^13.1.0"
 
 discord.js@^13.0.0, discord.js@^13.1.0:
   version "13.1.0"
