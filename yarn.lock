@@ -2599,6 +2599,13 @@ sliced@1.0.1:
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
   integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
 
+snakecord@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/snakecord/-/snakecord-1.0.9.tgz#82b531ff0f3677c6c811aec7e72e37276ab45cc7"
+  integrity sha512-FTQsKwyN8AqWslvorNA9rUHSA4BmDYuU++XzO8WwXrqHtpiuNmTE+kAKNvySL1FS0mDMAAzBNGOC5vLuDqwdMA==
+  dependencies:
+    discord.js "^13.1.0"
+
 sparse-bitfield@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz#ff4ae6e68656056ba4b3e792ab3334d38273ca11"
