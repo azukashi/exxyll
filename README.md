@@ -10,12 +10,13 @@ In Development (accumulated 12% of Full 100%)
 
 Scripts that available in [package.json](package.json) file.
 
-| Name        | Script           | Description                     |
-| ----------- | ---------------- | ------------------------------- |
-| Start       | `yarn start`     | Run the bot                     |
-| Development | `yarn run dev`   | Run the bot in Development Mode |
-| Shard       | `yarn run shard` | Run and Shard the Bot           |
-| Linters     | `yarn lint`      | Lint the code using ESLint      |
+| Name        | Script               | Description                               |
+| ----------- | -------------------- | ----------------------------------------- |
+| Start       | `yarn start`         | Run the bot                               |
+| Development | `yarn run dev`       | Run the bot in Development Mode           |
+| Shard       | `yarn run shard`     | Run and Shard the Bot                     |
+| Shard & Dev | `yarn run shard-dev` | Run and Shard the Bot in Development Mode |
+| Linters     | `yarn lint`          | Lint the code using ESLint                |
 
 ## Todo
 
