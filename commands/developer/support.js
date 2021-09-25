@@ -4,7 +4,7 @@ module.exports = {
   name: 'support',
   description: 'Support the Developer by donating them!',
   aliases: ['donate'],
-  emoji: '',
+  emoji: '💳',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**
