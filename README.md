@@ -27,7 +27,7 @@ To-do schedule for this project.
 | Info          | ✅     |                | Normal, Slash |
 | Fun           | ✅     | Passing ✅     | Normal, Slash |
 | Guild         | ✅     | Passing ✅     | Normal, Slash |
-| Moderation    | WIP    |                |               |
+| Moderation    | ✅     | Passing ✅     | Normal, Slash |
 | Owner         | WIP    |                |               |
 | Presence      | WIP    |                |               |
 | Developer     | ✅     | Not Passing ❌ | Slash         |
@@ -39,11 +39,15 @@ To-do schedule for this project.
 | Utility       | WIP    |                |               |
 | Welcoming     | WIP    |                |               |
 
-## Must Fix
+### Must Fix
 
 - [ ] Fix Custom Emoji Load Error
       Because the nitro at our server is dead, So, we just can using 66 emojis from 100 emojis +.
       And this must be fixed for better User-Experience. Thats'it. You must fix it before released publicly.
+
+### Idea
+
+- [ ] Add Cooldown Features to limit Interaction. (Due unknown interaction (as known interaction limitation)).
 
 ## License
 
