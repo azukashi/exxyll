@@ -40,6 +40,12 @@ To-do schedule for this project.
 | Utility       | WIP    |                |               |
 | Welcoming     | WIP    |                |               |
 
+## Must Fix
+
+- [ ] Fix Custom Emoji Load Error
+      Because the nitro at our server is dead, So, we just can using 66 emojis from 100 emojis +.
+      And this must be fixed for better User-Experience. Thats'it. You must fix it before released publicly.
+
 ## License
 
 This Project is Under [MIT License](https://github.com/gifaldyazkaa/exxyll-rewrite-v13/blob/master/LICENSE) &copy; Gifaldy Azka
