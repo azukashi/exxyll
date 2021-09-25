@@ -25,7 +25,7 @@ To-do schedule for this project.
 | Categories    | Status | Tests          | Supports      |
 | ------------- | ------ | -------------- | ------------- |
 | Configuration | ✅     | Passing ✅     | Normal, Slash |
-| Info          | ✅     |                | Normal, Slash |
+| Info          | ✅     | Passing ✅     | Normal, Slash |
 | Fun           | ✅     | Passing ✅     | Normal, Slash |
 | Guild         | ✅     | Passing ✅     | Normal, Slash |
 | Moderation    | ✅     | Passing ✅     | Normal, Slash |
