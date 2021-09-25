@@ -16,6 +16,7 @@ module.exports = {
       description: 'Reason why you want to ban the member?',
     },
   ],
+  userPermissions: ['BAN_MEMBERS'],
   userperm: ['BAN_MEMBERS'],
   botperm: ['BAN_MEMBERS'],
   /**

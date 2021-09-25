@@ -11,6 +11,7 @@ module.exports = {
       required: true,
     },
   ],
+  userPermission: ['MANAGE_CHANNELS'],
   userperm: ['MANAGE_CHANNELS'],
   botperm: ['MANAGE_CHANNELS'],
   /**

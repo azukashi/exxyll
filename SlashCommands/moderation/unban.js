@@ -11,6 +11,7 @@ module.exports = {
       required: true,
     },
   ],
+  userPermission: ['BAN_MEMBERS'],
   userperm: ['BAN_MEMBERS'],
   botperm: ['BAN_MEMBERS'],
   /**

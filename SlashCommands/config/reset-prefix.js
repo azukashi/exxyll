@@ -6,6 +6,7 @@ module.exports = {
   name: 'reset-prefix',
   description: 'Reset current prefix to default prefix',
   options: [],
+  userPermission: ['MANAGE_GUILD'],
   userperm: ['MANAGE_GUILD'],
   botperm: ['MANAGE_GUILD'],
   /**

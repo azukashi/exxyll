@@ -18,6 +18,7 @@ module.exports = {
   ],
   userperm: ['KICK_MEMBERS'],
   botperm: ['KICK_MEMBERS'],
+  userPermissions: ['KICK_MEMBERS'],
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

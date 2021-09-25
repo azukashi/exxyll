@@ -21,6 +21,7 @@ module.exports = {
       ],
     },
   ],
+  userPermission: ['MANAGE_GUILD'],
   userperm: ['MANAGE_GUILD'],
   botperm: ['MANAGE_GUILD'],
   /**
