@@ -22,6 +22,7 @@ module.exports = {
         guild: "<:partnernew:863214932585873438>",
         info: "<:wininfo:875298951362932736>",
         levelling: "⏫",
+        moderation: "⚒️",
         user: "👤",
       };
       const directories = [...new Set(client.commands.map((cmd) => cmd.directory))];
