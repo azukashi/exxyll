@@ -32,9 +32,8 @@ To-do schedule for this project.
 | Owner         | WIP    |                |               |
 | Presence      | WIP    |                |               |
 | Developer     | ✅     | Not Passing ❌ | Slash         |
-| Games         | WIP    |                | Normal        |
+| Games         | ✅     | Passing ✅     | Normal        |
 | Music         | ❌     |                | (Stopped)     |
-| Premium       | ❌     |                | (Stopped)     |
 | Levelling     | ✅     | Passing ✅     | Slash, Normal |
 | User          | ✅     | Passing ✅     | Slash, Normal |
 | Utility       | WIP    |                |               |
