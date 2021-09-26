@@ -1,4 +1,5 @@
 const Levels = require('discord-xp');
-const { mongooseConnectionString } = require('../config.json');
+const dotenv = require('dotenv');
+dotenv.config();
 
-Levels.setURL(mongooseConnectionString);
+Levels.setURL(process.env.MONGODB);

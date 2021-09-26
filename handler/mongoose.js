@@ -1,11 +1,10 @@
-const { mongooseConnectionString } = require('../config.json');
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 
-if (!mongooseConnectionString) return;
+if (!process.env.MONGODB) return;
 
 mongoose
-  .connect(mongooseConnectionString, {
+  .connect(process.env.MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

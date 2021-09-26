@@ -1,10 +1,12 @@
 const fs = require('fs');
+const chalk = require('chalk');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const prefixSchema = require('./models/prefix');
 const { Client, Collection, Intents } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
-const { prefix, mongooseConnectionString } = require('./config.json');
-const prefixSchema = require('./models/prefix');
-const chalk = require('chalk');
-const mongoose = require('mongoose');
+const { prefix } = require('./config.json');
+dotenv.config({ path: `./.env` });
 
 const client = new Client({
   intents: [
@@ -24,7 +26,7 @@ module.exports = client;
 
 // Connect to Mongoose
 mongoose
-  .connect(mongooseConnectionString, {
+  .connect(process.env.MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -64,4 +66,4 @@ require('./handler')(client);
 // ==> Load levelling init
 require('./utils/levelling');
 
-client.login(client.config.token);
+client.login(process.env.TOKEN);

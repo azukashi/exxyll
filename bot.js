@@ -1,11 +1,12 @@
 const { ShardingManager } = require('discord.js');
 const chalk = require('chalk');
-const { token } = require('./config.json');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const manager = new ShardingManager('./index.js', {
   totalShards: 'auto',
   shardList: 'auto',
-  token: token,
+  token: process.env.TOKEN,
 });
 
 manager.on('shardCreate', async (shard) => {
