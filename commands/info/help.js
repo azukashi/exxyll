@@ -26,7 +26,6 @@ module.exports = {
         user: "👤",
       };
       const directories = [...new Set(client.commands.map((cmd) => cmd.directory))];
-  
       const formatString = (str) => `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
   
       const categories = directories.map((dir) => {
