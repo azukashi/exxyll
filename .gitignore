@@ -5,3 +5,4 @@
 launch.json
 package-lock.json
 yarn.lock
+.env
