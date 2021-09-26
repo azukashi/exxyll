@@ -23,6 +23,7 @@ module.exports = {
         levelling: "⏫",
         moderation: "⚒️",
         user: "👤",
+        welcoming: "👋"
       };
       const directories = [...new Set(client.commands.map((cmd) => cmd.directory))];
   
