@@ -1,5 +1,4 @@
 {
-  "token": "ODcwNTU4ODQ0ODYwODk1MjUy.YQOhGg.iFsqwzhoW0efXPTHo5q9EF0hL_k",
   "prefix": "e!",
-  "mongooseConnectionString": "mongodb+srv://exxylldb:exxyll-discord@exxylldb.apsj6.mongodb.net/exxyll-dev"
+  "ownerId": "788260234409672754"
 }
