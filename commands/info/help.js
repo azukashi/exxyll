@@ -24,6 +24,7 @@ module.exports = {
         levelling: "⏫",
         moderation: "⚒️",
         user: "👤",
+        welcoming: "👋"
       };
       const directories = [...new Set(client.commands.map((cmd) => cmd.directory))];
       const formatString = (str) => `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
