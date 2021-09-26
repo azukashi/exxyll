@@ -17,7 +17,7 @@ To-do schedule for this project.
 | Levelling     | ✅     | Passing ✅     | Slash, Normal |
 | User          | ✅     | Passing ✅     | Slash, Normal |
 | Utility       | WIP    |                |               |
-| Welcoming     | WIP    |                |               |
+| Welcoming     | ✅     | Passing ✅     | Slash, Normal |
 
 ### Must Fix
 
