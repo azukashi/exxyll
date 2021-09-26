@@ -8,8 +8,7 @@
     "dev": "nodemon index.js",
     "shard": "node bot.js",
     "shard-dev": "nodemon bot.js",
-    "lint": "eslint",
-    "test": "jest --coverage --passWithNoTests"
+    "lint": "eslint"
   },
   "keywords": [
     "discord-js",
@@ -46,7 +45,6 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "gifaldyazka": "^1.0.2",
-    "jest": "^27.2.2",
     "nodemon": "^2.0.12"
   }
 }
