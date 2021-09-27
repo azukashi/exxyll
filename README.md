@@ -1,10 +1,8 @@
-# Exxyll v2
+<h1 align="center">Exxyll</h1>
 
-This repository contains all Source Code of Exxyll at Discord.js v13.1.0
+Multipurpose Discord Bot. Full created with Discord.js Library at v13.1.0
 
-## Status
-
-In Development (accumulated 82% of Full 100%)
+![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge)
 
 ## Scripts
 
