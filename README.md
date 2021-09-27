@@ -4,7 +4,7 @@ This repository contains all Source Code of Exxyll at Discord.js v13.1.0
 
 ## Status
 
-In Development (accumulated 12% of Full 100%)
+In Development (accumulated 64% of Full 100%)
 
 ## Scripts
 
@@ -17,6 +17,52 @@ Scripts that available in [package.json](package.json) file.
 | Shard       | `yarn run shard`     | Run and Shard the Bot                     |
 | Shard & Dev | `yarn run shard-dev` | Run and Shard the Bot in Development Mode |
 | Linters     | `yarn lint`          | Lint the code using ESLint                |
+
+## Getting Started
+
+### Clone this Repository
+
+```bash
+$ git clone https://github.com/gifaldyazkaa/exxyll-origin.git
+$ cd exxyll-origin
+```
+
+### Install all required packages
+
+```bash
+$ ./install.sh
+```
+
+### Create a Environment Variable
+
+```bash
+$ cp .env.example .env
+```
+
+### Fill all Required Fields at .env and config.json
+
+- For `.env`
+
+```
+TOKEN=your_discord_bot_token
+MONGODB=your_mongodb_connection_string
+TOPGG_TOKEN=your_topgg_token
+```
+
+- For `config.json`
+
+```json
+{
+  "prefix": "your discord bot prefix",
+  "ownerId": "your discord user id"
+}
+```
+
+### Run the bot
+
+Run the bot using available scripts. View the [Available Run Script List](#scripts).
+
+### You should ready to go.
 
 ## To-do
 
