@@ -23,6 +23,8 @@ module.exports = {
         info: "<:wininfo:875298951362932736>",
         levelling: "⏫",
         moderation: "⚒️",
+        owner: "👑",
+        search: "🔍",
         user: "👤",
         utility: "📀",
         welcoming: "👋"
