@@ -15,7 +15,7 @@ To-do schedule for this project.
 | Games         | ✅     | Passing ✅     | Normal        |
 | Music         | ❌     |                | (Stopped)     |
 | Levelling     | ✅     | Passing ✅     | Slash, Normal |
-| Search        | WIP    |                |               |
+| Search        | ✅     | Passing ✅     | Slash, Normal |
 | User          | ✅     | Passing ✅     | Slash, Normal |
 | Utility       | ✅     | Passing ✅     | Slash, Normal |
 | Welcoming     | ✅     | Passing ✅     | Slash, Normal |
@@ -28,4 +28,4 @@ To-do schedule for this project.
 
 ### Idea
 
-- [ ] Add Cooldown Features to limit Interaction. (Due unknown interaction (as known interaction limitation)).
+- [ ] Add Cooldown Features to limit Interaction. (Due unknown interaction (as known as interaction limitation)).
