@@ -4,7 +4,7 @@ This repository contains all Source Code of Exxyll at Discord.js v13.1.0
 
 ## Status
 
-In Development (accumulated 64% of Full 100%)
+In Development (accumulated 82% of Full 100%)
 
 ## Scripts
 
