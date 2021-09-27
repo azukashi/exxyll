@@ -15,8 +15,9 @@ To-do schedule for this project.
 | Games         | ✅     | Passing ✅     | Normal        |
 | Music         | ❌     |                | (Stopped)     |
 | Levelling     | ✅     | Passing ✅     | Slash, Normal |
+| Search        | WIP    |                |               |
 | User          | ✅     | Passing ✅     | Slash, Normal |
-| Utility       | WIP    |                |               |
+| Utility       | ✅     | Passing ✅     | Slash, Normal |
 | Welcoming     | ✅     | Passing ✅     | Slash, Normal |
 
 ### Must Fix
