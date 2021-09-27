@@ -4,7 +4,7 @@ module.exports = {
   name: 'youtube-together',
   description: 'Start YouTube Together Activity in a Voice Channel',
   aliases: ['ytt'],
-  emoji: '',
+  emoji: '👥',
   userperm: ['SEND_MESSAGES', 'CONNECT'],
   botperm: ['SEND_MESSAGES', 'CONNECT'],
   /**

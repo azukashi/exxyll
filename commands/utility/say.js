@@ -4,7 +4,7 @@ module.exports = {
   name: 'say',
   description: 'Echo a text',
   aliases: ['echo'],
-  emoji: '',
+  emoji: '💬',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

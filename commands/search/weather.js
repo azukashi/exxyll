@@ -5,7 +5,7 @@ module.exports = {
   name: 'weather',
   description: 'Search information about current weather in specific country',
   aliases: ['wthr'],
-  emoji: '',
+  emoji: '⛅',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

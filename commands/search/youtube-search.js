@@ -5,7 +5,7 @@ module.exports = {
   name: 'youtube-search',
   description: 'Search a video from YouTube',
   aliases: ['yts', 'ytsrc'],
-  emoji: '',
+  emoji: '🔍',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

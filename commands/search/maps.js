@@ -5,7 +5,7 @@ module.exports = {
   name: 'maps',
   description: 'Returns information about a location',
   aliases: ['gmaps'],
-  emoji: '',
+  emoji: '🗺️',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

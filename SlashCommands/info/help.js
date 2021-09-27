@@ -14,12 +14,12 @@ module.exports = {
   run: async (client, interaction, args) => {
     try {
       const emojis = {
-        config: "<:settings:863951175875559425>",
+        config: "⚙️",
         developer: "<:developer:855302873785040897>",
         fun: "<:teri_funny:876637356986343440>",
         games: "🎮",
         guild: "<:partnernew:863214932585873438>",
-        info: "<:wininfo:875298951362932736>",
+        info: "ℹ️",
         levelling: "⏫",
         moderation: "⚒️",
         owner: "👑",
@@ -52,7 +52,7 @@ module.exports = {
       const embed = new MessageEmbed()
         .setTitle("Exxyll Help Desk")
         .setThumbnail(client.user.displayAvatarURL({ size: 512 }))
-        .setDescription("Please choose a category in the dropdown menu!\n\nFor information about usage, or something about commands, You can [Read the Docs](https://google.com) for more info!")
+        .setDescription("Please choose a category in the dropdown menu!\n\nFor information about usage, or something about commands, You can [Read the Docs](https://github.com/gifaldyazkaa/exxyll-origin/blob/master/docs) for more info!")
         .setColor("BLUE");
   
       const components = (state) => [

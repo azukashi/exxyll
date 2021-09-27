@@ -5,7 +5,7 @@ module.exports = {
   name: 'memes',
   aliases: ['meme'],
   description: 'Generate Random Memes',
-  emoji: '<:Peepo_HahaLol:879956421293244446>',
+  emoji: '🤣',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

@@ -6,7 +6,7 @@ module.exports = {
   name: 'github',
   description: 'Returns GitHub User Information',
   aliases: ['gh'],
-  emoji: '',
+  emoji: '🐈',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

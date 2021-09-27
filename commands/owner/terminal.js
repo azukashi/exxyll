@@ -5,7 +5,7 @@ module.exports = {
   name: 'terminal',
   description: 'Runs a Terminal Command',
   aliases: ['sh', 'bash', 'zsh'],
-  emoji: '<:terminal:864415792320610324>',
+  emoji: '',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**
@@ -25,7 +25,7 @@ module.exports = {
         message.channel.send({
           embeds: [
             new MessageEmbed()
-              .setTitle('<:terminal:864415792320610324> Terminal - GNU Bash')
+              .setTitle('Terminal - GNU Bash')
               .setDescription(`\`\`\`js\n${res.slice(0, 2000)}\`\`\``)
               .setFooter(`GNU Bash - Actioned by ${message.author.tag}`)
               .setColor('#800080'),
@@ -33,8 +33,8 @@ module.exports = {
         });
       });
     } catch (err) {
-      console.log(err);
       message.channel.send({ content: `zsh: command not found ${command}` });
+      console.log(err);
     }
   },
 };

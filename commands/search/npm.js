@@ -6,7 +6,7 @@ module.exports = {
   name: 'npm',
   description: 'Search and Returns information about a npm package',
   aliases: ['npmjs'],
-  emoji: '',
+  emoji: '📦',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

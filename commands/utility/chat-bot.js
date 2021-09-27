@@ -5,7 +5,7 @@ module.exports = {
   name: 'chat',
   description: 'Chat with the bot!',
   aliases: ['cht'],
-  emoji: '',
+  emoji: '💭',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

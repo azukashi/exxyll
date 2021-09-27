@@ -5,7 +5,7 @@ module.exports = {
   name: 'sourcebin',
   description: 'Upload a Javascript code to Sourcebin',
   aliases: ['srcbin', 'sourceb.in'],
-  emoji: '',
+  emoji: '📃',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

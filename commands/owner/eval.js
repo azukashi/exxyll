@@ -14,8 +14,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const allowedUser = ['788260234409672754'];
-    if (message.author.id !== allowedUser[0]) return;
+    if (message.author.id !== '788260234409672754') return;
     const code = args.join(' ');
     if (!code) return message.reply('Please provide some code to evaluated!');
 

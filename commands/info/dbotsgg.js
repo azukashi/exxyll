@@ -5,7 +5,7 @@ module.exports = {
   name: "disbotgg",
   description:
     "Returns Detailed Listed / Waitlisted Bot at [discord.bots.gg](https://discord.bots.gg)",
-  emoji: "<:discordbotsgg:875331402776850482>",
+  emoji: "🤖",
   userperm: ["SEND_MESSAGES"],
   botperm: ["SEND_MESSAGES"],
   /**

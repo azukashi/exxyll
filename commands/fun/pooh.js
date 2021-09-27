@@ -1,20 +1,20 @@
-const { Client, Message, MessageAttachment } = require("discord.js");
-const fetch = require("node-fetch");
+const { Client, Message, MessageAttachment } = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports = {
-  name: "pooh",
-  description: "Generate Pooh Memes",
+  name: 'pooh',
+  description: 'Generate Pooh Memes',
   aliases: [],
-  emoji: "<:Peepo_Happy:880273539985469450>",
-  userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES", "ATTACH_FILES"],
+  emoji: '😀',
+  userperm: ['SEND_MESSAGES'],
+  botperm: ['SEND_MESSAGES', 'ATTACH_FILES'],
   /**
    * @param {Client} client
    * @param {Message} message
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const split = args.join(" ").split(",");
+    const split = args.join(' ').split(',');
     const user = split[0];
     const user2 = split[1];
     if (!user || !user2)

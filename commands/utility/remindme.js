@@ -5,7 +5,7 @@ module.exports = {
   name: 'remind',
   description: 'Reminds you about what you will do in specific times',
   aliases: ['remindme'],
-  emoji: '',
+  emoji: '⌛',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

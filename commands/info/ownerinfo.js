@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ownerinfo",
   description: "Returns Information about Exxyll Owner",
-  emoji: "<:owner:864432628928217098>",
+  emoji: "👑",
   userperm: ["SEND_MESSAGES"],
   botperm: ["SEND_MESSAGES"],
   /**
@@ -14,7 +14,7 @@ module.exports = {
   run: async (client, message, args) => {
     const owner = client.users.cache.get("788260234409672754");
     const embed1 = new MessageEmbed()
-      .setTitle(`<:owner:864432628928217098> Owner Info`)
+      .setTitle(`👑 Owner Info`)
       .setThumbnail(owner.displayAvatarURL({ dynamic: true }))
       .addField(`Name`, `Gifaldy Azka`)
       .addField(`Discord Tag`, `Falcxxdev#0001`)

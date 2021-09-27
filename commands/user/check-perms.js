@@ -1,18 +1,18 @@
-const { Client, Message, MessageEmbed } = require("discord.js");
+const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "checkperms",
-  description: "Check user permission at current guild & channels",
-  aliases: ["userperms"],
-  emoji: "",
-  userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES"],
+  name: 'checkperms',
+  description: 'Check user permission at current guild & channels',
+  aliases: ['userperms'],
+  emoji: '✅',
+  userperm: ['SEND_MESSAGES'],
+  botperm: ['SEND_MESSAGES'],
   /**
    * @param {Client} client
    * @param {Message} message
    * @param {String[]} args
    */
-  run: async (client, message, [member = ""]) => {
+  run: async (client, message, [member = '']) => {
     if (!member.match(/\d{17,19}/)) {
       member = message.author.id;
     }
@@ -25,7 +25,7 @@ module.exports = {
     const sp = member.permissions.serialize();
     const cp = message.channel.permissionsFor(member).serialize();
     const embed = new MessageEmbed()
-      .setColor(member.displayColor || "GREY")
+      .setColor(member.displayColor || 'GREY')
       .setTitle(`${member.displayName}'s Permissions`)
       .setFooter(
         `Check Permissions | Command Request by ${message.author.tag}`,
@@ -33,25 +33,25 @@ module.exports = {
       )
       .setDescription(
         [
-          "\\♨️ - This Server",
-          "\\#️⃣ - The Current Channel",
-          "```properties",
-          "♨️ | #️⃣ | Permission",
-          "========================================",
+          '\\♨️ - This Server',
+          '\\#️⃣ - The Current Channel',
+          '```properties',
+          '♨️ | #️⃣ | Permission',
+          '========================================',
           `${Object.keys(sp)
             .map((perm) =>
               [
-                sp[perm] ? "✅ |" : "❌ |",
-                cp[perm] ? "✅ |" : "❌ |",
+                sp[perm] ? '✅ |' : '❌ |',
+                cp[perm] ? '✅ |' : '❌ |',
                 perm
-                  .split("_")
+                  .split('_')
                   .map((x) => x[0] + x.slice(1).toLowerCase())
-                  .join(" "),
-              ].join(" ")
+                  .join(' '),
+              ].join(' ')
             )
-            .join("\n")}`,
-          "```",
-        ].join("\n")
+            .join('\n')}`,
+          '```',
+        ].join('\n')
       );
     return message.channel.send({ embeds: [embed] });
   },

@@ -5,7 +5,7 @@ module.exports = {
   name: 'emojify',
   description: 'Emojify a text',
   aliases: [],
-  emoji: '',
+  emoji: '🇦',
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**
