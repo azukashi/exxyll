@@ -6,20 +6,19 @@ module.exports = {
   description: 'Translate a Text',
   options: [
     {
-      type: 6,
+      type: 3,
       name: 'text',
       description: 'Text to translated',
       required: true,
     },
     {
-      type: 6,
+      type: 3,
       name: 'locale',
       description:
         'Country code to be translated to (e.g : English = en, Indonesia = id)',
       required: true,
     },
   ],
-  userPermissions: ['SEND_MESSAGES'],
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

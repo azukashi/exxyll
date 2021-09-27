@@ -6,13 +6,12 @@ module.exports = {
   description: 'Emojify a Text',
   options: [
     {
-      type: 6,
+      type: 3,
       name: 'text',
       description: 'Text to convert to emojis',
       required: true,
     },
   ],
-  userPermissions: ['SEND_MESSAGES'],
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**

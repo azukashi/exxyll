@@ -6,19 +6,18 @@ module.exports = {
   description: 'Reminds you at specified time about what you want to do',
   options: [
     {
-      type: 6,
+      type: 3,
       name: 'time',
       description: 'Set the time. Second (s), Minutes (m), Hours (h), Days (d)',
       required: true,
     },
     {
-      type: 6,
+      type: 3,
       name: 'todo',
       description: 'Things that you want to do',
       required: true,
     },
   ],
-  userPermissions: ['SEND_MESSAGES'],
   userperm: ['SEND_MESSAGES'],
   botperm: ['SEND_MESSAGES'],
   /**
