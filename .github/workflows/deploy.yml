@@ -1,0 +1,22 @@
+name: 'Deploy to Heroku'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'exxyll'
+          heroku_email: 'gifaldyazka@gmail.com'
+          buildpack: https://github.com/heroku/heroku-buildpack-nodejs.git
+        env:
+          HD_TOKEN: ${{secrets.TOKEN}}
+          HD_MONGO: ${{secrets.MONGO_URI}}
+          HD_TOPGG_TOKEN: ${{secrets.TOPGG_TOKEN}}
