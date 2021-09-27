@@ -13,8 +13,8 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "exxyll-dsc"
-          heroku_email: "falcxxdev@gmail.com"
+          heroku_app_name: "exxyll"
+          heroku_email: "gifaldyazka@gmail.com"
           buildpack: https://github.com/heroku/heroku-buildpack-nodejs.git
         env:
           HD_TOKEN: ${{secrets.TOKEN}}
