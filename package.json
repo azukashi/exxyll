@@ -23,7 +23,7 @@
     "ascii-table": "^0.0.9",
     "atob": "^2.1.2",
     "axios": "^0.21.1",
-    "bufferutil": "^4.0.3",
+    "bufferutil": "^4.0.4",
     "canvacord": "^5.2.3",
     "canvas": "^2.8.0",
     "child_process": "^1.0.2",
