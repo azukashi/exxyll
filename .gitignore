@@ -1,28 +1,8 @@
-# Ignore node_modules
 node_modules
-
-# Ignore Generated Database File (If using quick.db)
 json.sqlite
-
-# Misc File
-info.json
-mongodbConfig.txt
-Refferency.md
-docs.md
-Info.md
-presenceEmojis.ts
-
-# Ignore npm config
 .npmrc
-
-# Ignore prettier config
+.yarnrc
 .prettierrc.json
-
-# Ignore my local env
 .env
-
-# Ignore vscode stuff
 .vscode
-
-# Ignore launch.json
 launch.json
