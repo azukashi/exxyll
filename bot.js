@@ -6,7 +6,7 @@ dotenv.config();
 const manager = new ShardingManager('./index.js', {
   totalShards: 'auto',
   shardList: 'auto',
-  token: process.env.TOKENDEV,
+  token: process.env.TOKEN,
 });
 
 manager.on('shardCreate', async (shard) => {
