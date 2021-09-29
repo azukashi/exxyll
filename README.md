@@ -52,10 +52,9 @@ $ ./install.sh
 
 ### Create Environment Variables
 
-- Copy .env.example to .env
 
 ```bash
-cp .env.example .env
+$ cp .env.example .env
 ```
 
 ### Fill all Required Fields at .env and config.json
