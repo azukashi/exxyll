@@ -1,5 +1,7 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
+const dotenv = require("dotenv");
+dotenv.config();
 
 module.exports = {
   name: "topgg-post",

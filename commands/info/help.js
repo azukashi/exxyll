@@ -1,12 +1,12 @@
-const { MessageEmbed, Message, Client } = require("discord.js");
-const { readdirSync } = require("fs");
-const prefix = require("../../config.json").prefix;
-let color = "#15E3EB";
+const { MessageEmbed, Message, Client } = require('discord.js');
+const { readdirSync } = require('fs');
+const prefix = require('../../config.json').prefix;
+let color = '#15E3EB';
 
 module.exports = {
-  name: "help",
-  aliases: ["h"],
-  description: "Shows all available bot commands.",
+  name: 'help',
+  aliases: ['h'],
+  description: 'Shows all available bot commands.',
   hidden: true,
   /**
    *
@@ -20,24 +20,24 @@ module.exports = {
       let categories = [];
 
       //categories to ignore
-      let ignored = ["owner", "presence"];
+      let ignored = ['owner', 'presence'];
 
       const emo = {
-        config: "<:settings:863951175875559425>",
-        fun: "🎲",
-        games: "🎮",
-        guild: "<:partnernew:863214932585873438>",
-        info: "📰",
-        moderations: "<:moderation:863780799006507018>",
-        music: "<:youtube:853158600096350209>",
-        premium: "<:boost:862677231696347146>",
-        developers: "<:developer:855302873785040897>",
-        user: "<:members:863214932883800138>",
-        utility: "📀",
-        welcoming: "<:joined:863780800406355968>",
+        config: '⚙️',
+        fun: '🎲',
+        games: '🎮',
+        guild: '<:partnernew:863214932585873438>',
+        info: '📰',
+        moderations: '⚒️',
+        music: '<:youtube:853158600096350209>',
+        premium: '<:boost:862677231696347146>',
+        developers: '<:developer:855302873785040897>',
+        user: '<:members:863214932883800138>',
+        utility: '📀',
+        welcoming: '👋',
       };
 
-      readdirSync("./commands/").forEach((dir) => {
+      readdirSync('./commands/').forEach((dir) => {
         if (ignored.includes(dir.toLowerCase())) return;
         const name = `${emo[dir.toLowerCase()]} ${dir.toUpperCase()}`;
         let cats = new Object();
@@ -53,7 +53,7 @@ module.exports = {
       });
 
       const embed = new MessageEmbed()
-        .setTitle("Help Menu:")
+        .setTitle('Help Menu:')
         .setDescription(
           `\`\`\`yml\nPrefix: ${prefix}\nParameters: <> = required, [] = optional\`\`\`\n[Invite me](https://exxyll.github.io) | [Join Support Server](https://discord.gg/j2MfuWySfD)\n\nTo check out a category, use command \`${prefix}help [category]\`\n\n__**Categories**__`
         )
@@ -77,18 +77,18 @@ module.exports = {
       let cots = [];
       let catts = [];
 
-      readdirSync("./commands/").forEach((dir) => {
+      readdirSync('./commands/').forEach((dir) => {
         if (dir.toLowerCase() !== args[0].toLowerCase()) return;
         const commands = readdirSync(`./commands/${dir}/`).filter((file) =>
-          file.endsWith(".js")
+          file.endsWith('.js')
         );
 
         const cmds = commands.map((command) => {
           let file = require(`../../commands/${dir}/${command}`);
 
-          if (!file.name) return "No command name.";
+          if (!file.name) return 'No command name.';
 
-          let name = file.name.replace(".js", "");
+          let name = file.name.replace('.js', '');
 
           let des = client.commands.get(name).description;
 
@@ -104,8 +104,8 @@ module.exports = {
 
         cmds.map((co) => {
           dota = {
-            name: `${cmds.length === 0 ? "In progress." : co.cname}`,
-            value: co.des ? co.des : "No Description",
+            name: `${cmds.length === 0 ? 'In progress.' : co.cname}`,
+            value: co.des ? co.des : 'No Description',
             inline: true,
           };
           catts.push(dota);
@@ -143,33 +143,33 @@ module.exports = {
           .setTitle(
             `Invalid command! Use \`${prefix}help\` for all of my commands!`
           )
-          .setColor("RED");
+          .setColor('RED');
         return message.channel.send(embed);
       }
 
       const embed = new MessageEmbed()
-        .setTitle("Command Details:")
+        .setTitle('Command Details:')
         .addField(
-          "Command:",
-          command.name ? `\`${command.name}\`` : "No name for this command."
+          'Command:',
+          command.name ? `\`${command.name}\`` : 'No name for this command.'
         )
         .addField(
-          "Aliases:",
+          'Aliases:',
           command.aliases
-            ? `\`${command.aliases.join("` `")}\``
-            : "No aliases for this command."
+            ? `\`${command.aliases.join('` `')}\``
+            : 'No aliases for this command.'
         )
         .addField(
-          "Usage:",
+          'Usage:',
           command.usage
             ? `\`${prefix}${command.name} ${command.usage}\``
             : `\`${prefix}${command.name}\``
         )
         .addField(
-          "Command Description:",
+          'Command Description:',
           command.description
             ? command.description
-            : "No description for this command."
+            : 'No description for this command.'
         )
         .setFooter(
           `Requested by ${message.author.tag}`,
