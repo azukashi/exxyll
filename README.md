@@ -1,62 +1,88 @@
 <h1 align="center">Exxyll</h1>
+
+[![GitHub](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge)](LICENSE) ![GitHub contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![GitHub repo size](https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Viewers Count](https://visitor-badges.glitch.me?username=gifaldyazkaa&repo=exxyll-origin&label=Views&style=for-the-badge&color=%23457BFF&token=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&contentType=svg)
+
 Exxyll is a Multipurpose Discord Bot. Full Created with Discord.js Library at v12.5.3
 
-<hr>
-<div align="center">
-  <img src="https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" />
-  <img src="https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/analysis.yml/badge.svg" alt="Code Analysis Status">
-  <img src="https://img.shields.io/discord/849130218975526922?logo=discord" alt="Discord Chat" />
-  <img src="https://top.gg/api/widget/status/848232775798226996.svg" alt="Exxyll Status" />
-  <br />
-  <a href="https://top.gg/bot/848232775798226996">
-    <img src="https://top.gg/api/widget/848232775798226996.svg" alt="Vote Exxyll at Top.gg" />
-  </a>
-</div>
+## Exxyll Original
 
-# Exxyll Original
+Original Codebase from Exxyll Discord Bot
 
-Original Repositories from Exxyll Discord Bot.
-
-# Links
+## Links
 
 [Invite Exxyll](https://discord.com/oauth2/authorize?client_id=848232775798226996&permissions=1077226614&scope=bot) | [Visit Website](https://exxyll.github.io) | [Exxyll's Top.gg](https://top.gg/bot/848232775798226996) | [Join the Support Server](https://discord.gg/j2MfuWySfD)
 
-# Setup & Install
+## Badges
 
-- Just run `setup.sh` to install all required dependecies. Make sure `Node v14+`, `yarn` is installed at your computer. And get ready for **Installing Blackhole**!
-- And make `.env` file which contains `TOKEN` and `MONGO` field and value. `MONGO` is your MongoDB Connection String
-- Edit `config.json` to your bot prefix, and your Owner ID.
-- You're done.
+![Deploy Status](https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/deploy.yml/badge.svg) ![Code Analysis Status](https://github.com/gifaldyazkaa/exxyll-origin/actions/workflows/analysis.yml/badge.svg) ![Support Server](https://img.shields.io/discord/849130218975526922?logo=discord) ![Exxyll Status](https://top.gg/api/widget/status/848232775798226996.svg) ![Server Counts](https://top.gg/api/widget/servers/848232775798226996.svg)
 
-# Spageti Code?
+## Scripts
 
-Sorry, I can't write better code! Thanks bai!
+| Name        | Script           | Description                     |
+| ----------- | ---------------- | ------------------------------- |
+| Start       | `yarn start`     | Run the bot                     |
+| Development | `yarn run dev`   | Run the bot in Development Mode |
+| Shard       | `yarn run shard` | Run and Shard the Bot           |
+| Linters     | `yarn lint`      | Lint the code using ESLint      |
 
-# Now Exxyll is Improved More
+## Getting Started
 
-Now, I'm working and actively developing at [gifaldyazkaa/exxyll-rewrite-v13](https://github.com/gifaldyazka/exxyll-rewrite-v13). We're working and trying to upgrading to Exxyll v2 that Uses Discord.js v13. So, This Repository may be archived and read only soon.
+### Clone this Repository
 
-# Run the Bot
+```bash
+$ git clone https://github.com/gifaldyazkaa/exxyll-origin.git
+$ cd exxyll-origin
+```
 
-You can start the bot with some commands. Here is it!
+### Install required dependecy
 
-- `yarn start` to start the bot. Run `yarn shard` instead if your bot at 2000+ Servers.
-- `yarn run dev` to start development mode using `nodemon`.
-- `yarn lint` to lint using ESLint.
-- `yarn shard` to sharding the bot. Only run this if your bot at 2000+ Servers.
+- Linux / macOS user, You can do this
 
-# Facing an Errors
+```bash
+$ ./install.sh
+```
 
-If you have some Question, or Facing an Errors. Feel free to [Join Our Support Server!](https://discord.gg/j2MfuWySfD).
+- Windows user, Please install it manually using
 
-# Owner
+```bash
+> yarn install
+```
 
-Gifaldy Azka ([Falcxxdev#0001](https://discord.com/users/788260234409672754))
+> Make sure yarn is installed at your pc. Don't use npm please... or you can use pnpm as alternative.
 
-# Code Refactor by
+### Create Environment Variables
 
-Thanks to BayuDC ([BayuDC#0690](https://discord.com/users/704845945325748354)) to refactoring Exxyll Code more better!
+- Copy .env.example to .env
 
-# License
+```bash
+cp .env.example .env
+```
 
-This Project is Under [MIT License](https://github.com/gifaldyazkaa/exxyll-origin/blob/master/LICENSE) &copy; Gifaldy Azka
+### Fill all Required Fields at .env and config.json
+
+- For `.env`
+
+```
+TOKEN=your_discord_bot_token
+MONGO=your_mongodb_connection_string
+TOPGG_TOKEN=your_topgg_token
+```
+
+- For `config.json`
+
+```json
+{
+  "prefix": "your discord bot prefix",
+  "ownerId": "your discord user id"
+}
+```
+
+### Run the Bot
+
+Run the bot using available scripts. View the [Available Run Script List](#scripts).
+
+### You should ready to go.
+
+## License
+
+This project is Under [MIT License](LICENSE). If you want to use this code, please insert a credits. Thanks!s
