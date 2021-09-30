@@ -2,7 +2,7 @@ const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "ping",
-  description: "This is a testing command",
+  description: "Returns Ping Latency",
   userperm: "SEND_MESSAGES",
   botperm: "SEND_MESSAGES",
   /**
