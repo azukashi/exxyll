@@ -86,7 +86,11 @@ module.exports = async (client) => {
     // });
 
     // To set the slash to each single guild, Use this.
-    await client.application.commands.set(arrayOfSlashCommands);
+    try {
+      await client.application.commands.set(arrayOfSlashCommands);
+    } catch (err) {
+      console.log(err);
+    }
     // .then((cmd) => {
     //   const getRoles = (commandName) => {
     //     const permissions = arrayOfSlashCommands.find(
