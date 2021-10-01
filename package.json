@@ -22,7 +22,7 @@
     "@reconlx/discord.js": "^1.1.101",
     "ascii-table": "^0.0.9",
     "atob": "^2.1.2",
-    "axios": "^0.21.1",
+    "axios": "^0.22.0",
     "bufferutil": "^4.0.3",
     "canvacord": "^5.2.3",
     "canvas": "^2.8.0",
