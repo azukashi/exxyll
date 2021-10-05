@@ -45,8 +45,12 @@ module.exports = async (client) => {
 
   client.on('ready', async () => {
     // For testing purposes, Set the Slash Commands to Exxyll Development Server only.
-    const guild = client.guilds.cache.get('849130218975526922');
-    await guild.commands.set(arrayOfSlashCommands);
+    // const guild = client.guilds.cache.get('849130218975526922');
+    // try {
+    //   await guild.commands.set(arrayOfSlashCommands);
+    // } catch (err) {
+    //   console.log(err)
+    // }
     // .then((cmd) => {
     //   const getRoles = (commandName) => {
     //     const permissions = arrayOfSlashCommands.find(
