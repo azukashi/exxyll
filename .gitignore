@@ -1,8 +1,0 @@
-node_modules
-json.sqlite
-.npmrc
-.yarnrc
-.prettierrc.json
-.env
-.vscode
-launch.json
