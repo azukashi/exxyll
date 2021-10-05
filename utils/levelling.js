@@ -2,4 +2,4 @@ const Levels = require('discord-xp');
 const dotenv = require('dotenv');
 dotenv.config();
 
-Levels.setURL(process.env.MONGODB);
+Levels.setURL(process.env.MONGO);

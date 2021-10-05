@@ -6,7 +6,7 @@ const prefixSchema = require('./models/prefix');
 const { Client, Collection, Intents } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
 const { prefix } = require('./config.json');
-dotenv.config({ path: `./.env` });
+dotenv.config({ path: '/.env' });
 
 const client = new Client({
   intents: [
@@ -26,7 +26,7 @@ module.exports = client;
 
 // Connect to Mongoose
 mongoose
-  .connect(process.env.MONGODB, {
+  .connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

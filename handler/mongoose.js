@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 
-if (!process.env.MONGODB) return;
+if (!process.env.MONGODEV) return;
 
 mongoose
-  .connect(process.env.MONGODB, {
+  .connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
