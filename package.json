@@ -38,7 +38,7 @@
     "ffmpeg-static": "^4.4.0",
     "glob": "^7.1.7",
     "moment": "^2.29.1",
-    "mongoose": "6.0.7",
+    "mongoose": "6.0.9",
     "ms": "^3.0.0-canary.1",
     "node-fetch": "2.6.1",
     "pretty-ms": "^7.0.1",
