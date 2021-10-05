@@ -2,7 +2,7 @@
 
 Multipurpose Discord Bot. Full created with Discord.js Library at v13.1.0
 
-![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge)
+![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Total Lines](https://img.shields.io/tokei/lines/github/gifaldyazkaa/exxyll-origin?style=for-the-badge)
 
 ## Scripts
 
