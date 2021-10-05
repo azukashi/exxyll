@@ -69,7 +69,7 @@ module.exports = {
             .addField("Highest Role", `<@&${member.roles.highest.id}>`)
             .addField(
               "Roles",
-              member.roles.cache.map((r) => `<@&${r.id}>`).join(" ")
+              member.roles.cache.map((r) => `<@&${r.id}>`).join("|")
             )
             .setImage(bannerUrl)
             .setFooter(interaction.user.tag)
@@ -101,7 +101,7 @@ module.exports = {
               .addField("Highest Role", `<@&${member.roles.highest.id}>`)
               .addField(
                 "Roles",
-                member.roles.cache.map((r) => `<@&${r.id}>`).join(" ")
+                member.roles.cache.map((r) => `<@&${r.id}>`).join("|")
               )
               .setFooter(interaction.user.tag)
               .setTimestamp();
@@ -130,7 +130,7 @@ module.exports = {
               .addField("Highest Role", `<@&${member.roles.highest.id}>`)
               .addField(
                 "Roles",
-                member.roles.cache.map((r) => `<@&${r.id}>`).join(" ")
+                member.roles.cache.map((r) => `<@&${r.id}>`).join("|")
               )
               .setFooter(interaction.user.tag)
               .setTimestamp();
