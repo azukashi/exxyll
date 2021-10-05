@@ -1012,10 +1012,10 @@ discord-api-types@^0.22.0:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.22.0.tgz#34dc57fe8e016e5eaac5e393646cd42a7e1ccc2a"
   integrity sha512-l8yD/2zRbZItUQpy7ZxBJwaLX/Bs2TGaCthRppk8Sw24LOIWg12t9JEreezPoYD0SQcC2htNNo27kYEpYW/Srg==
 
-discord-together@^1.1.62:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.2.0.tgz#e8ee765ce07fd7dcd673c8c5a748b613aec5f5e2"
-  integrity sha512-L1G20599PxkaGv7QQ6KGF1GVCdcAZ0FE6ua0E1CPuoXbYLT+gLLuZKRC9ysw4+ygNKCy9RNn7fonydmJxq00Yw==
+discord-together@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/discord-together/-/discord-together-1.3.0.tgz#88a54ff839e441d840eb35ff659ed984df2479a5"
+  integrity sha512-mqz4tHgFZi0wobILhNNyKIZgTU0JkQ7U9L1Ku4hQgnjM4DzWDND0d+ouoN1O5yVJ/sbccV2A8jCtfz/iiiBz5Q==
   dependencies:
     discord.js "^13.1.0"
     node-fetch "^2.6.1"
