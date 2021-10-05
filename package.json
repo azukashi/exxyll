@@ -27,7 +27,7 @@
     "@discordjs/voice": "^0.6.0",
     "@iamtraction/google-translate": "^1.1.2",
     "anilist-node": "^1.9.1",
-    "axios": "^0.21.4",
+    "axios": "^0.22.0",
     "canvacord": "^5.2.3",
     "chalk": "^4.1.2",
     "discord-together": "^1.1.62",
