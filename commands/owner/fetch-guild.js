@@ -13,43 +13,41 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    if(message.author.id !== "788260234409672754") return;
     let clientGuilds = message.client.guilds.cache;
-    let messageObj = Util.splitMessage(
-      clientGuilds.map(
-        (g) =>
-          '`' +
-          g.id +
-          `\` **|** \`` +
-          g.name +
-          `\` **|** \`` +
-          g.members.cache.size +
-          '`'
-      ) || 'None'
-    );
-    if (messageObj.length == 1) {
-      message.channel.send({
-        embeds: [
-          new MessageEmbed()
+    try {
+      let messageObj;
+      messageObj = Util.splitMessage(
+        clientGuilds.map((g) => {
+          `\`${g.id}\` **|** \`${g.name}\` **|** \`${g.members.cache.size}\``;
+        })
+      );
+
+      if (messageObj.length == 1) {
+        const embed = new MessageEmbed()
+          .setTitle(`Showing Guild List`)
+          .setDescription(
+            `Guild ID | Guild Name | Total Members\n${messageObj[0]}`
+          )
+          .setColor('#800080');
+        message.channel.send({
+          embeds: [embed],
+        });
+      } else {
+        for (i = 0; messageObj.length < i; i++) {
+          const embed = new MessageEmbed()
             .setTitle(`Showing Guild List`)
             .setDescription(
-              `Guild ID | Guild Name | Total Members\n${messageObj[0]}`
+              `Guild ID | Guild Name | Total Members\n${messageObj[i]}`
             )
-            .setColor('#800080'),
-        ],
-      });
-    } else {
-      for (i = 0; messageObj.length < i; i++) {
-        message.channel.send({
-          embeds: [
-            new MessageEmbed()
-              .setTitle(`Showing Guild List`)
-              .setDescription(
-                `Guild ID | Guild Name | Total Members\n${messageObj[i]}`
-              )
-              .setColor('#800080'),
-          ],
-        });
+            .setColor('#800080');
+          message.channel.send({
+            embeds: [embed],
+          });
+        }
       }
+    } catch (err) {
+      console.log(err);
     }
   },
 };
