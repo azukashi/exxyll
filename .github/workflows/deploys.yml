@@ -18,5 +18,5 @@ jobs:
           buildpack: https://github.com/heroku/heroku-buildpack-nodejs.git
         env:
           HD_TOKEN: ${{secrets.TOKEN}}
-          HD_MONGODB: ${{secrets.MONGODB}}
+          HD_MONGO: ${{secrets.MONGO}}
           HD_TOPGG_TOKEN: ${{secrets.TOPGG_TOKEN}}
