@@ -47,15 +47,8 @@ $ cp .env.example .env
 TOKEN=your_discord_bot_token
 MONGODB=your_mongodb_connection_string
 TOPGG_TOKEN=your_topgg_token
-```
-
-- For `config.json`
-
-```json
-{
-  "prefix": "your discord bot prefix",
-  "ownerId": "your discord user id"
-}
+OWNERID=your_discord_user_id
+PREFIX=your_discord_bot_prefix
 ```
 
 ### Run the bot
