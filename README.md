@@ -2,7 +2,7 @@
 
 Multipurpose Discord Bot. Full created with Discord.js Library at v13.2.0
 
-![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Total Lines](https://img.shields.io/tokei/lines/github/gifaldyazkaa/exxyll-origin?style=for-the-badge)
+![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Total Lines](https://img.shields.io/tokei/lines/github/gifaldyazkaa/exxyll-origin?style=for-the-badge) [![Support Server](https://img.shields.io/discord/849130218975526922?color=0099ff&logo=discord&logoColor=4e75e8&style=for-the-badge)](https://discord.gg/j2MfuWySfD)
 
 ## Scripts
 
