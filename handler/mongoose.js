@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 
-if (!process.env.MONGODEV) return;
+if (!process.env.MONGO || !process.env.MONGODEV) return;
 
 mongoose
   .connect(process.env.MONGO, {
