@@ -1,6 +1,6 @@
 <h1 align="center">Exxyll</h1>
 
-Multipurpose Discord Bot. Full created with Discord.js Library at v13.1.0
+Multipurpose Discord Bot. Full created with Discord.js Library at v13.2.0
 
 ![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll-origin?style=for-the-badge) ![Total Lines](https://img.shields.io/tokei/lines/github/gifaldyazkaa/exxyll-origin?style=for-the-badge)
 
@@ -68,4 +68,4 @@ Feel free to see at the [docs](docs/todo.md) to see our current to-do for this p
 
 ## License
 
-This Project is Under [MIT License](https://github.com/gifaldyazkaa/exxyll-rewrite-v13/blob/master/LICENSE) &copy; Gifaldy Azka
+This Project is Under [Apache License 2.0](https://github.com/gifaldyazkaa/exxyll-rewrite-v13/blob/master/LICENSE) &copy; Gifaldy Azka
