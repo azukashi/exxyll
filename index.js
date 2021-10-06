@@ -24,7 +24,6 @@ const client = new Client({
 module.exports = client;
 
 // Connect to Mongoose
-if (!process.env.MONGO || !process.env.MONGODEV) return;
 mongoose
   .connect(process.env.MONGO, {
     useNewUrlParser: true,
