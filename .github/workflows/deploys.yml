@@ -20,3 +20,5 @@ jobs:
           HD_TOKEN: ${{secrets.TOKEN}}
           HD_MONGO: ${{secrets.MONGO}}
           HD_TOPGG_TOKEN: ${{secrets.TOPGG_TOKEN}}
+          HD_PREFIX: ${{secrets.PREFIX}}
+          HD_OWNERID: ${{secrets.OWNERID}}
