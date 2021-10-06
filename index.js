@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const prefixSchema = require('./models/prefix');
 const { Client, Collection, Intents } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
-const { prefix } = require('./config.json');
 dotenv.config({ path: '/.env' });
 
 const client = new Client({
@@ -25,6 +24,7 @@ const client = new Client({
 module.exports = client;
 
 // Connect to Mongoose
+if (!process.env.MONGO || !process.env.MONGODEV) return;
 mongoose
   .connect(process.env.MONGO, {
     useNewUrlParser: true,
@@ -41,8 +41,8 @@ client.aliases = new Collection();
 client.snipes = new Collection();
 client.categories = fs.readdirSync('./commands/');
 client.discordTogether = new DiscordTogether(client);
-client.config = require('./config.json');
-client.prefix = async function (message) {
+client.config = process.env;
+client.prefix = async (message) => {
   try {
     let custom;
     const data = await prefixSchema
@@ -52,7 +52,7 @@ client.prefix = async function (message) {
     if (data) {
       custom = data.Prefix;
     } else {
-      custom = prefix;
+      custom = process.env.PREFIX;
     }
     return custom;
   } catch (err) {
