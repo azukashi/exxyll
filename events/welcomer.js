@@ -22,7 +22,7 @@ client.on('guildMemberAdd', async (member) => {
             .setTitle('New Member!')
             .setThumbnail(userAvatar)
             .setDescription(
-              `Hey <@${member.user.id}>, Welcome to **${member.guild.name}**`
+              `Hey <@${member.user.id}>, Welcome to **${member.guild.name}**!`
             )
             .setFooter(`${member.guild.memberCount} members`)
             .setColor('BLUE')
