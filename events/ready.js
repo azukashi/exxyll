@@ -1,6 +1,7 @@
+require('dotenv').config;
 const client = require('../index');
 const chalk = require('chalk');
-const prefix = require('../config.json').prefix;
+const prefix = process.env.PREFIX;
 
 client.on('ready', async () => {
   client.user.setActivity(
