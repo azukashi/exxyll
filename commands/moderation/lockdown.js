@@ -1,5 +1,6 @@
+require('dotenv').config
 const { Client, Message, MessageEmbed } = require('discord.js');
-const { prefix } = require('../../config.json');
+const prefix = process.env.PREFIX;
 
 module.exports = {
   name: 'lockdown',

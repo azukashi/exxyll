@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, Message, MessageEmbed } = require('discord.js');
 const { inspect } = require('util');
 
@@ -14,7 +15,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (message.author.id !== '788260234409672754') return;
+    if (!message.author.id === process.env.OWNERID) return;
     const code = args.join(' ');
     if (!code) return message.reply('Please provide some code to evaluated!');
 

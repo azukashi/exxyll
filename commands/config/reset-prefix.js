@@ -1,6 +1,7 @@
+require('dotenv').config();
 const { Client, Message, MessageEmbed } = require('discord.js');
 const prefixSchema = require('../../models/prefix');
-const prefix = require('../../config.json').prefix;
+const prefix = process.env.PREFIX;
 
 module.exports = {
   name: 'reset-prefix',

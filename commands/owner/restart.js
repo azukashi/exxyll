@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (message.author.id !== '788260234409672754') return;
+    if (!message.author.id === process.env.OWNERID) return;
     await message.channel.send({
       embeds: [
         new MessageEmbed()

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, Message, MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
@@ -14,7 +15,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    if (message.author.id !== '788260234409672754') return;
+    if (!message.author.id !== process.env.OWNERID) return;
     const key = process.env.TOPGG_TOKEN;
     setInterval(() => {
       fetch(`https://top.gg/api/bots/${client.user.id}/stats`, {
