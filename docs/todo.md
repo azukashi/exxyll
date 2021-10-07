@@ -22,7 +22,7 @@ To-do schedule for this project.
 
 - [ ] Fix Custom Emoji Load Error
       Because the nitro at our server is dead, So, we just can using 66 emojis from 100+ emojis.
-      And this must be fixed for better User-Experience. Thats'it. You must fix it before released publicly.
+      And this must be fixed for better User-Experience.
 
 ### Idea
 
