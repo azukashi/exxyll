@@ -4,10 +4,10 @@ Security Policy for [Exxyll Discord Bot](https://top.gg/bot/848232775798226996)
 
 ## Supported Versions
 
-| Version | Supported                            |
-| ------- | ------------------------------------ |
-| 1.0.x   | :white_check_mark: (deprecated soon) |
-| 2.0.x   | :white_check_mark: (unstable)        |
+| Version | Supported                       |
+| ------- | ------------------------------- |
+| 1.0.x   | :white_check_mark: (deprecated) |
+| 2.0.x   | :white_check_mark:              |
 
 ## Reporting a Vulnerability
 
