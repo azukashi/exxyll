@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const prefixSchema = require('./models/prefix');
 const { Client, Collection, Intents } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
-dotenv.config({ path: '/.env' });
+dotenv.config({ path: './.env' });
 
 const client = new Client({
   intents: [
