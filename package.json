@@ -8,7 +8,9 @@
     "dev": "nodemon index.js",
     "shard": "node bot.js",
     "shard-dev": "nodemon bot.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "check-format": "prettier -c"
   },
   "keywords": [
     "discord-js",
