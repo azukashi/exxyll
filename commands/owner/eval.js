@@ -31,7 +31,7 @@ module.exports = {
         embeds: [
           new MessageEmbed()
             .setColor('#00FF00')
-            .setTitle(`<:tickYes:863367013464408084> | 200 : Success`)
+            .setTitle(`✔️ | 200 : Success`)
             .setDescription(`Results\n\`\`\`yml\n${output}\n\`\`\``)
             .setFooter(`Actioned by : ${message.author.tag}`),
         ],
@@ -42,7 +42,7 @@ module.exports = {
         embeds: [
           new MessageEmbed()
             .setTitle(
-              `<:tickNo:863367014092898314> | Evaluated Content too long to displayed`
+              `❌ | Evaluated Content too long to displayed`
             )
             .setDescription(`Error Logs\n\`\`\`yml\n${error}\n\`\`\``)
             .setColor('#FF0000')
