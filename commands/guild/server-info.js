@@ -29,7 +29,7 @@ module.exports = {
         `General Information`,
         `<:partnernew:863214932585873438> Name : ${
           message.guild.name
-        }\n🆔 ID : ${message.guild.id}\n<:owner:864432628928217098> Owner : ${
+        }\n🆔 ID : ${message.guild.id}\n👑 Owner : ${
           (await message.guild.fetchOwner()).user
         }`
       )
@@ -37,7 +37,7 @@ module.exports = {
         `Counts`,
         `<:members:863214932883800138> Members Total : ${message.guild.memberCount.toString()}\n<:role:863214921574907915> Role : ${
           roles.length
-        }\n<:channel:863363700463632414> Channels : ${
+        }\n💬 Channels : ${
           message.guild.channels.cache.filter(
             (ch) => ch.type === "text" || ch.type === "voice"
           ).size
@@ -59,7 +59,7 @@ module.exports = {
           "LLL"
         )} | \`${moment(
           message.guild.createdTimestamp
-        ).fromNow()}\`\n<:maps_logo:864435720507359232> Region : ${
+        ).fromNow()}\`\n🗺️ Region : ${
           message.guild.region
         }\n<a:boostr:864431598567817216> Boost Tier : ${
           message.guild.premiumTier
