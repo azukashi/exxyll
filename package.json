@@ -10,7 +10,7 @@
     "shard-dev": "nodemon bot.js",
     "lint": "eslint",
     "format": "prettier --write .",
-    "check-format": "prettier -c"
+    "check-format": "prettier -c ."
   },
   "keywords": [
     "discord-js",
