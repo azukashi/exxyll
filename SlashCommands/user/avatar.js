@@ -1,18 +1,18 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "avatar",
-  description: "Shows user avatar",
+  name: 'avatar',
+  description: 'Shows user avatar',
   options: [
     {
       type: 6,
-      name: "user",
-      description: "User to show avatar. This is optional.",
+      name: 'user',
+      description: 'User to show avatar. This is optional.',
       required: false,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -23,8 +23,8 @@ module.exports = {
     if (!user) user = interaction.user.id;
     // Convert uid to advanced properties by using Client
     const fixUser = client.users.cache.get(user);
-    const pngFormat = fixUser.displayAvatarURL({ format: "png" });
-    const jpgFormat = fixUser.displayAvatarURL({ format: "jpg" });
+    const pngFormat = fixUser.displayAvatarURL({ format: 'png' });
+    const jpgFormat = fixUser.displayAvatarURL({ format: 'jpg' });
     const webpFormat = fixUser.displayAvatarURL();
     const avatar = fixUser.displayAvatarURL({
       dynamic: true,
@@ -36,7 +36,7 @@ module.exports = {
         `[PNG](${pngFormat}) | [JPG](${jpgFormat}) | [WEBP](${webpFormat})`
       )
       .setImage(avatar)
-      .setColor("BLUE");
+      .setColor('BLUE');
     interaction.followUp({ embeds: [embed] });
   },
 };

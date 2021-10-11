@@ -1,12 +1,12 @@
-const { Client, Message, MessageEmbed } = require("discord.js");
-const moment = require("moment");
+const { Client, Message, MessageEmbed } = require('discord.js');
+const moment = require('moment');
 
 module.exports = {
-  name: "serverinfo",
-  description: "Returns Information about Server",
-  emoji: "🗂",
-  userperm: ["SEND_MESSAGES"],
-  botperm: ["SEND_MESSAGES"],
+  name: 'serverinfo',
+  description: 'Returns Information about Server',
+  emoji: '🗂',
+  userperm: ['SEND_MESSAGES'],
+  botperm: ['SEND_MESSAGES'],
   /**
    * @param {Client} client
    * @param {Message} message
@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     const vanityCode = message.guild.vanityURLCode;
     let vanityInvite = `https://discord.gg/${vanityCode}`;
-    if (vanityCode === null) vanityInvite = "No custom URL";
+    if (vanityCode === null) vanityInvite = 'No custom URL';
     const members = message.guild.members.cache;
     const roles = message.guild.roles.cache
       .filter((r) => r.id !== message.guild.id)
@@ -23,7 +23,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTimestamp()
       .setTitle(message.guild.name)
-      .setColor("RANDOM")
+      .setColor('RANDOM')
       .setThumbnail(message.guild.iconURL({ dynamic: true, size: 512 }))
       .addField(
         `General Information`,
@@ -39,12 +39,12 @@ module.exports = {
           roles.length
         }\n💬 Channels : ${
           message.guild.channels.cache.filter(
-            (ch) => ch.type === "text" || ch.type === "voice"
+            (ch) => ch.type === 'text' || ch.type === 'voice'
           ).size
         } total (Text : ${
-          message.guild.channels.cache.filter((ch) => ch.type === "text").size
+          message.guild.channels.cache.filter((ch) => ch.type === 'text').size
         }, Voice : ${
-          message.guild.channels.cache.filter((ch) => ch.type === "voice").size
+          message.guild.channels.cache.filter((ch) => ch.type === 'voice').size
         })\n<:add_reaction:863214931599818783> Emojis : ${
           message.guild.emojis.cache.size
         } (Regular : ${
@@ -56,7 +56,7 @@ module.exports = {
       .addField(
         `Additional Information`,
         `📅 Created at : ${moment(message.guild.createdTimestamp).format(
-          "LLL"
+          'LLL'
         )} | \`${moment(
           message.guild.createdTimestamp
         ).fromNow()}\`\n🗺️ Region : ${
@@ -64,20 +64,20 @@ module.exports = {
         }\n<a:boostr:864431598567817216> Boost Tier : ${
           message.guild.premiumTier
             ? `Tier ${message.guild.premiumTier}`
-            : "None"
+            : 'None'
         }\n<:boost:862677231696347146> Boost Count : ${
-          message.guild.premiumSubscriptionCount.toString() || "0"
+          message.guild.premiumSubscriptionCount.toString() || '0'
         }\n🔐 Verification Level : ${message.guild.verificationLevel.toString()}\n🔗 Vanity URL : ${vanityInvite}`
       )
       .addField(
         `Roles [${roles.length}]`,
         roles.length < 15
-          ? roles.join(" | ")
+          ? roles.join(' | ')
           : roles.length > 15
-          ? `${roles.slice(0, 15).join(" | ")} | \`+ ${
+          ? `${roles.slice(0, 15).join(' | ')} | \`+ ${
               roles.length - 15
             } roles...\``
-          : "None"
+          : 'None'
       );
     message.channel.send({ embeds: [embed] });
   },

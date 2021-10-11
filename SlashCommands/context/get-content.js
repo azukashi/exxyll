@@ -1,8 +1,8 @@
-const { ContextMenuInteraction, Client, MessageEmbed } = require("discord.js");
+const { ContextMenuInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "getcontent",
-  type: "MESSAGE",
+  name: 'getcontent',
+  type: 'MESSAGE',
   /**
    * @param {Client} client
    * @param {ContextMenuInteraction} interaction

@@ -62,7 +62,10 @@ module.exports = {
               )})`
             )
             .addField('Highest Role', `<@&${member.roles.highest.id}>`)
-            .addField('Roles', member.roles.cache.map((r) => `${r}`).join(' | '))
+            .addField(
+              'Roles',
+              member.roles.cache.map((r) => `${r}`).join(' | ')
+            )
             .setImage(bannerUrl)
             .setFooter(message.author.tag)
             .setTimestamp();

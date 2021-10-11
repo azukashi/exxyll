@@ -1,18 +1,18 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "checkperms",
-  description: "Check user permissions at current guilds & channels",
+  name: 'checkperms',
+  description: 'Check user permissions at current guilds & channels',
   options: [
     {
       type: 6,
-      name: "user",
-      description: "User to show their perms. This is optional.",
+      name: 'user',
+      description: 'User to show their perms. This is optional.',
       required: false,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -27,7 +27,7 @@ module.exports = {
     const sp = member.permissions.serialize();
     const cp = interaction.channel.permissionsFor(member).serialize();
     const embed = new MessageEmbed()
-      .setColor(member.displayColor || "GREY")
+      .setColor(member.displayColor || 'GREY')
       .setTitle(`${member.displayName}'s Permissions`)
       .setFooter(
         `Check Permissions | Command Request by ${interaction.user.tag}`,
@@ -35,25 +35,25 @@ module.exports = {
       )
       .setDescription(
         [
-          "\\♨️ - This Server",
-          "\\#️⃣ - The Current Channel",
-          "```properties",
-          "♨️ | #️⃣ | Permission",
-          "========================================",
+          '\\♨️ - This Server',
+          '\\#️⃣ - The Current Channel',
+          '```properties',
+          '♨️ | #️⃣ | Permission',
+          '========================================',
           `${Object.keys(sp)
             .map((perm) =>
               [
-                sp[perm] ? "✅ |" : "❌ |",
-                cp[perm] ? "✅ |" : "❌ |",
+                sp[perm] ? '✅ |' : '❌ |',
+                cp[perm] ? '✅ |' : '❌ |',
                 perm
-                  .split("_")
+                  .split('_')
                   .map((x) => x[0] + x.slice(1).toLowerCase())
-                  .join(" "),
-              ].join(" ")
+                  .join(' '),
+              ].join(' ')
             )
-            .join("\n")}`,
-          "```",
-        ].join("\n")
+            .join('\n')}`,
+          '```',
+        ].join('\n')
       );
     interaction.followUp({ embeds: [embed] });
   },

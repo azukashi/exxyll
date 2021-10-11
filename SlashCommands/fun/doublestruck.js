@@ -1,19 +1,19 @@
-const { CommandInteraction, Client, WebhookClient } = require("discord.js");
-const fetch = require("node-fetch");
+const { CommandInteraction, Client, WebhookClient } = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports = {
-  name: "doublestruck",
-  description: "Doublestruck a text",
+  name: 'doublestruck',
+  description: 'Doublestruck a text',
   options: [
     {
       type: 3,
-      name: "text",
-      description: "Text to doublestruck",
+      name: 'text',
+      description: 'Text to doublestruck',
       required: true,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction

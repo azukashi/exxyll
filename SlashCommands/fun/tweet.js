@@ -1,19 +1,19 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
-const fetch = require("node-fetch");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports = {
-  name: "tweet",
-  description: "Tweet something!",
+  name: 'tweet',
+  description: 'Tweet something!',
   options: [
     {
       type: 3,
-      name: "text",
-      description: "Text to tweet",
+      name: 'text',
+      description: 'Text to tweet',
       required: true,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -27,9 +27,9 @@ module.exports = {
       .then((res) => res.json())
       .then((data) => {
         let embed = new MessageEmbed()
-          .setTitle("Tweet!")
+          .setTitle('Tweet!')
           .setImage(data.message)
-          .setColor("BLUE")
+          .setColor('BLUE')
           .setTimestamp();
         interaction.followUp({ embeds: [embed] });
       });

@@ -1,20 +1,20 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
-const fetch = require("node-fetch");
-const moment = require("moment");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch');
+const moment = require('moment');
 
 module.exports = {
-  name: "manga",
-  description: "Search details about manga",
+  name: 'manga',
+  description: 'Search details about manga',
   options: [
     {
       type: 3,
-      name: "title",
-      description: "Title of the manga",
+      name: 'title',
+      description: 'Title of the manga',
       required: true,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -44,7 +44,7 @@ module.exports = {
           .addField(`Total Chapters`, `${chapters}`)
           .addField(`Total Volumes`, `${volumes}`)
           .addField(`Ratings (at MyAnimeList)`, `${score}`)
-          .addField(`Released`, `${moment(start_date).format("LLLL")}`)
+          .addField(`Released`, `${moment(start_date).format('LLLL')}`)
           .setColor(`#800080`)
           .setFooter(
             `Requested by : ${interaction.user.tag}`,
@@ -58,7 +58,7 @@ module.exports = {
           .setDescription(
             `<:tickNo:863367014092898314> | That manga isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
           )
-          .setColor("RED");
+          .setColor('RED');
         interaction.followUp({ embeds: [errembed] });
       });
   },

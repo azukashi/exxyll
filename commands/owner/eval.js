@@ -41,9 +41,7 @@ module.exports = {
       message.channel.send({
         embeds: [
           new MessageEmbed()
-            .setTitle(
-              `❌ | Evaluated Content too long to displayed`
-            )
+            .setTitle(`❌ | Evaluated Content too long to displayed`)
             .setDescription(`Error Logs\n\`\`\`yml\n${error}\n\`\`\``)
             .setColor('#FF0000')
             .setFooter(`Actioned by : ${message.author.tag}`),

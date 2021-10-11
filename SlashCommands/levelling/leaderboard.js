@@ -1,11 +1,11 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
-const Levels = require("discord-xp");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
+const Levels = require('discord-xp');
 
 module.exports = {
-  name: "leaderboard",
-  description: "See Leaderboard Rank",
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  name: 'leaderboard',
+  description: 'See Leaderboard Rank',
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -36,9 +36,9 @@ module.exports = {
     );
 
     const embed = new MessageEmbed()
-      .setTitle("**Leaderboard**")
-      .setColor("#ffc0cb")
-      .setDescription(`\n\n${lb.join("\n\n")}`);
+      .setTitle('**Leaderboard**')
+      .setColor('#ffc0cb')
+      .setDescription(`\n\n${lb.join('\n\n')}`);
 
     interaction.followUp({ embeds: [embed] });
   },

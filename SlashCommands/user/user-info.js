@@ -1,20 +1,20 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
-const fetch = require("node-fetch");
-const moment = require("moment");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch');
+const moment = require('moment');
 
 module.exports = {
-  name: "userinfo",
-  description: "Returns User Information",
+  name: 'userinfo',
+  description: 'Returns User Information',
   options: [
     {
       type: 6,
-      name: "user",
-      description: "User to show their information. This is optional.",
+      name: 'user',
+      description: 'User to show their information. This is optional.',
       required: false,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -31,7 +31,7 @@ module.exports = {
       let now = new Date();
       let diff = now.getTime() - date.getTime();
       let days = Math.floor(diff / 86400000);
-      return days + (days == 1 ? " day" : " days") + " ago";
+      return days + (days == 1 ? ' day' : ' days') + ' ago';
     }
     // Fetch & get user banner
     fetch(`https://discord.com/api/users/${fixedUser.id}`, {
@@ -42,7 +42,7 @@ module.exports = {
       .then((res) => res.json())
       .then((body) => {
         if (body.banner) {
-          const extension = body.banner.startsWith("a_") ? ".gif" : ".png";
+          const extension = body.banner.startsWith('a_') ? '.gif' : '.png';
           const bannerUrl =
             `https://cdn.discordapp.com/banners/${fixedUser.id}/${body.banner}${extension}?size=1024` ||
             "User doesn't have a banner!";
@@ -51,25 +51,25 @@ module.exports = {
             .setThumbnail(
               fixedUser.displayAvatarURL({ dynamic: true, size: 512 })
             )
-            .setColor("BLUE")
-            .addField("User Tag", fixedUser.tag)
-            .addField("User ID", fixedUser.id)
+            .setColor('BLUE')
+            .addField('User Tag', fixedUser.tag)
+            .addField('User ID', fixedUser.id)
             .addField(
-              "Created At",
-              `${moment(fixedUser.createdAt).format("LLLL")} (${checkDays(
+              'Created At',
+              `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
                 fixedUser.createdAt
               )})`
             )
             .addField(
-              "Joined At",
-              `${moment(member.joinedAt).format("LLLL")} (${checkDays(
+              'Joined At',
+              `${moment(member.joinedAt).format('LLLL')} (${checkDays(
                 member.joinedAt
               )})`
             )
-            .addField("Highest Role", `<@&${member.roles.highest.id}>`)
+            .addField('Highest Role', `<@&${member.roles.highest.id}>`)
             .addField(
-              "Roles",
-              member.roles.cache.map((r) => `<@&${r.id}>`).join(" | ")
+              'Roles',
+              member.roles.cache.map((r) => `<@&${r.id}>`).join(' | ')
             )
             .setImage(bannerUrl)
             .setFooter(interaction.user.tag)
@@ -84,24 +84,24 @@ module.exports = {
                 fixedUser.displayAvatarURL({ dynamic: true, size: 512 })
               )
               .setColor(bannerColor)
-              .addField("User Tag", fixedUser.tag)
-              .addField("User ID", fixedUser.id)
+              .addField('User Tag', fixedUser.tag)
+              .addField('User ID', fixedUser.id)
               .addField(
-                "Created At",
-                `${moment(fixedUser.createdAt).format("LLLL")} (${checkDays(
+                'Created At',
+                `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
                   fixedUser.createdAt
                 )})`
               )
               .addField(
-                "Joined At",
-                `${moment(member.joinedAt).format("LLLL")} (${checkDays(
+                'Joined At',
+                `${moment(member.joinedAt).format('LLLL')} (${checkDays(
                   member.joinedAt
                 )})`
               )
-              .addField("Highest Role", `<@&${member.roles.highest.id}>`)
+              .addField('Highest Role', `<@&${member.roles.highest.id}>`)
               .addField(
-                "Roles",
-                member.roles.cache.map((r) => `<@&${r.id}>`).join(" | ")
+                'Roles',
+                member.roles.cache.map((r) => `<@&${r.id}>`).join(' | ')
               )
               .setFooter(interaction.user.tag)
               .setTimestamp();
@@ -112,25 +112,25 @@ module.exports = {
               .setThumbnail(
                 fixedUser.displayAvatarURL({ dynamic: true, size: 512 })
               )
-              .setColor("BLUE")
-              .addField("User Tag", fixedUser.tag)
-              .addField("User ID", fixedUser.id)
+              .setColor('BLUE')
+              .addField('User Tag', fixedUser.tag)
+              .addField('User ID', fixedUser.id)
               .addField(
-                "Created At",
-                `${moment(fixedUser.createdAt).format("LLLL")} (${checkDays(
+                'Created At',
+                `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
                   fixedUser.createdAt
                 )})`
               )
               .addField(
-                "Joined At",
-                `${moment(member.joinedAt).format("LLLL")} (${checkDays(
+                'Joined At',
+                `${moment(member.joinedAt).format('LLLL')} (${checkDays(
                   member.joinedAt
                 )})`
               )
-              .addField("Highest Role", `<@&${member.roles.highest.id}>`)
+              .addField('Highest Role', `<@&${member.roles.highest.id}>`)
               .addField(
-                "Roles",
-                member.roles.cache.map((r) => `<@&${r.id}>`).join(" | ")
+                'Roles',
+                member.roles.cache.map((r) => `<@&${r.id}>`).join(' | ')
               )
               .setFooter(interaction.user.tag)
               .setTimestamp();

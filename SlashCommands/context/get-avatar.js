@@ -1,8 +1,8 @@
-const { ContextMenuInteraction, Client, MessageEmbed } = require("discord.js");
+const { ContextMenuInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "getavatar",
-  type: "USER",
+  name: 'getavatar',
+  type: 'USER',
   /**
    * @param {Client} client
    * @param {ContextMenuInteraction} interaction
@@ -16,7 +16,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle(`${interaction.user.username}'s Avatar`)
       .setImage(avatar)
-      .setColor("BLUE")
+      .setColor('BLUE')
       .setTimestamp();
 
     interaction.followUp({ embeds: [embed] });

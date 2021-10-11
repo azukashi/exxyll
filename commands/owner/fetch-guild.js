@@ -21,7 +21,7 @@ module.exports = {
       `\`${g.id}\` **|** \`${g.name}\` **|** \`${g.members.cache.size}\``;
     });
 
-    console.log(messageObj)
+    console.log(messageObj);
 
     if (messageObj.length == 1) {
       const embed = new MessageEmbed()

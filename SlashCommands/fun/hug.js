@@ -1,19 +1,19 @@
-const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
-const fetch = require("node-fetch");
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports = {
-  name: "hug",
-  description: "Hug specified user",
+  name: 'hug',
+  description: 'Hug specified user',
   options: [
     {
       type: 6,
-      name: "user",
-      description: "User who you want to hug",
+      name: 'user',
+      description: 'User who you want to hug',
       required: true,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -28,13 +28,13 @@ module.exports = {
       return interaction.followUp(`No, U can't hug me.`);
     if (user == interaction.user.bot)
       return interaction.followUp(`No, U can't hug bots.`);
-    fetch("https://api.waifu.pics/sfw/hug")
+    fetch('https://api.waifu.pics/sfw/hug')
       .then((res) => res.json())
       .then((body) => {
         const embed = new MessageEmbed()
           .setTitle(`${interaction.user.username} Hugged ${userUsername}`)
           .setImage(body.url)
-          .setColor("#FFC0CB")
+          .setColor('#FFC0CB')
           .setFooter(
             `${interaction.user.tag}`,
             interaction.user.displayAvatarURL({ dynamic: true })
