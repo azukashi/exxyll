@@ -10,13 +10,15 @@ Multipurpose Discord Bot. Full created with Discord.js Library at v13.2.0
 
 Scripts that available in [package.json](package.json) file.
 
-| Name        | Script               | Description                               |
-| ----------- | -------------------- | ----------------------------------------- |
-| Start       | `yarn start`         | Run the bot                               |
-| Development | `yarn run dev`       | Run the bot in Development Mode           |
-| Shard       | `yarn run shard`     | Run and Shard the Bot                     |
-| Shard & Dev | `yarn run shard-dev` | Run and Shard the Bot in Development Mode |
-| Linters     | `yarn lint`          | Lint the code using ESLint                |
+| Name         | Script                  | Description                               |
+| ------------ | ----------------------- | ----------------------------------------- |
+| Start        | `yarn start`            | Run the bot                               |
+| Development  | `yarn run dev`          | Run the bot in Development Mode           |
+| Shard        | `yarn run shard`        | Run and Shard the Bot                     |
+| Shard & Dev  | `yarn run shard-dev`    | Run and Shard the Bot in Development Mode |
+| Linters      | `yarn lint`             | Lint the code using ESLint                |
+| Format Code  | `yarn run format`       | Format code using Prettier                |
+| Check Format | `yarn run check-format` | Check code format with Prettier           |
 
 ## Getting Started
 
