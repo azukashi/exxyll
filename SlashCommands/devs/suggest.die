@@ -3,21 +3,21 @@ const {
   Client,
   MessageEmbed,
   WebhookClient,
-} = require("discord.js");
+} = require('discord.js');
 
 module.exports = {
-  name: "suggest",
-  description: "Suggest a Features or Something to Developers.",
+  name: 'suggest',
+  description: 'Suggest a Features or Something to Developers.',
   options: [
     {
       type: 3,
-      name: "suggestion",
-      description: "Describe your suggestion",
+      name: 'suggestion',
+      description: 'Describe your suggestion',
       required: true,
     },
   ],
-  userperm: "SEND_MESSAGES",
-  botperm: "SEND_MESSAGES",
+  userperm: 'SEND_MESSAGES',
+  botperm: 'SEND_MESSAGES',
   /**
    * @param {Client} client
    * @param {CommandInteraction} interaction
@@ -25,27 +25,49 @@ module.exports = {
    */
   run: async (client, interaction, args) => {
     const [suggestion] = args;
-    const wc = new WebhookClient(
-      "849144486013042719",
-      "rzb2wcGg5sFV8Ky1PpdhkEpBYEV0Bxt0AT5BS65EEr9M6U_a8V63D4amImbDKMpz7heX"
-    );
+    const wc = new WebhookClient({
+      id: '849144486013042719',
+      token:
+        'rzb2wcGg5sFV8Ky1PpdhkEpBYEV0Bxt0AT5BS65EEr9M6U_a8V63D4amImbDKMpz7heX',
+    });
+    const logChannel = client.channels.cache.get('891970597876285451');
     const suggestEmbed = new MessageEmbed()
-      .setTitle(`New Suggestion!`)
-      .setDescription(suggestion)
-      .setColor("#0000FF")
-      .setFooter(`Sent from ${interaction.guild.name}`);
+      .setAuthor(
+        interaction.user.tag,
+        interaction.user.displayAvatarURL({ dynamic: true })
+      )
+      .addField('Suggestion', `${suggestion}`)
+      .addField('Sent From', `${interaction.member.guild.name}`)
+      .setColor('BLUE')
+      .setTimestamp();
     wc.send({
       username: interaction.user.tag,
-      avatarURL: interaction.user.displayAvatarURL({ dynamic: true }),
+      avatarURL: interaction.user.displayAvatarURL({
+        dynamic: true,
+        size: 1024,
+      }),
       embeds: [suggestEmbed],
     });
     const sankyuu = new MessageEmbed()
-      .setTitle(`<:tickYes:863367013464408084> Thanks for your suggestion!`)
+      .setTitle(`:white_check_mark: Thanks for your suggestion!`)
       .setDescription(
         `Hey <@${interaction.user.id}>, Thanks for your suggestion!\nYour suggestion has been sent to : [**Exxyll Development**](https://discord.gg/j2MfuWySfD) at <#849139267471933502>`
       )
-      .setColor("#00FF00")
+      .setColor('#00FF00')
       .setTimestamp();
     interaction.followUp({ embeds: [sankyuu] });
+    const log = new MessageEmbed()
+      .setTitle(`New Suggestion`)
+      .setThumbnail(
+        interaction.user.displayAvatarURL({ dynamic: true, size: 1024 })
+      )
+      .setDescription(
+        `New suggestion from [${interaction.user.tag}](https://discord.com/users/${interaction.user.id})!`
+      )
+      .addField(`User ID`, `${interaction.user.id}`)
+      .addField(`Sent from`, `${interaction.member.guild.name}`)
+      .setColor('#00FF00')
+      .setTimestamp();
+    logChannel.send({ embeds: [log] });
   },
 };
