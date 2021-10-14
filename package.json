@@ -50,7 +50,7 @@
     "ytsr": "^3.5.2"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.0.1",
     "gifaldyazka": "^1.0.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1"
