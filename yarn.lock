@@ -45,17 +45,6 @@
     http-response-object "^3.0.1"
     parse-cache-control "^1.0.1"
 
-"@discordjs/builders@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-0.5.0.tgz#646cbea9cc67f68639e6fb70ed1278b26dacdb14"
-  integrity sha512-HP5y4Rqw68o61Qv4qM5tVmDbWi4mdTFftqIOGRo33SNPpLJ1Ga3KEIR2ibKofkmsoQhEpLmopD1AZDs3cKpHuw==
-  dependencies:
-    "@sindresorhus/is" "^4.0.1"
-    discord-api-types "^0.22.0"
-    ow "^0.27.0"
-    ts-mixer "^6.0.0"
-    tslib "^2.3.0"
-
 "@discordjs/builders@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-0.6.0.tgz#4724d18990a97d84d0250eba5b50991b71a450a5"
@@ -172,11 +161,6 @@
   integrity sha512-c/qwwcHyafOQuVQJj0IlBjf5yYgBI7YPJ77k4fOJYesb41jio65eaJODRUmfYKhTOFBrIZ66kgvGPlNbjuoRdQ==
   dependencies:
     any-observable "^0.3.0"
-
-"@sapphire/async-queue@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@sapphire/async-queue/-/async-queue-1.1.4.tgz#ae431310917a8880961cebe8e59df6ffa40f2957"
-  integrity sha512-fFrlF/uWpGOX5djw5Mu2Hnnrunao75WGey0sP0J3jnhmrJ5TAPzHYOmytD5iN/+pMxS+f+u/gezqHa9tPhRHEA==
 
 "@sapphire/async-queue@^1.1.5":
   version "1.1.5"
@@ -303,7 +287,7 @@
     "@types/node" "*"
     "@types/webidl-conversions" "*"
 
-"@types/ws@^7.4.4", "@types/ws@^7.4.7":
+"@types/ws@^7.4.4":
   version "7.4.7"
   resolved "https://registry.yarnpkg.com/@types/ws/-/ws-7.4.7.tgz#f7c390a36f7a0679aa69de2d501319f4f8d9b702"
   integrity sha512-JQbbmxZTZehdc2iszGKs5oC3NFnjeay7mtAWrdt7qNtAVK0g19muApzAy4bm9byz79xa2ZnO/BOBC2R8RC5Lww==
@@ -1062,16 +1046,16 @@ discord-xp@^1.1.16:
   dependencies:
     mongoose "^5.11.11"
 
-discord.js-akinator@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.2.1.tgz#96635e4b79c48230974b454a60d78be1dc5a1521"
-  integrity sha512-Vhnqjw9ferc13kX1KSksRbMg66sK9BerVJgRPfgl0+CxZVdRZPzvqqipGdX6YGOT79F3mr9U5v7HECfTdaH9bg==
+discord.js-akinator@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.3.0.tgz#91f04d505195c145a1a9d4afa523405a3efcc94c"
+  integrity sha512-UAZ1Oo5OK+qlbNwCuX4GiHWpSJsz47hAMYS85FhfpCk1fvA4Ijoj0TgzU+3X1nSZGkY73IF4RA+fvQm5f0p2sg==
   dependencies:
     "@vitalets/google-translate-api" "^7.0.0"
     aki-api "^6.0.8"
     discord.js "^13.1.0"
 
-discord.js@13.2.0:
+discord.js@13.2.0, discord.js@^13.1.0:
   version "13.2.0"
   resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.2.0.tgz#db2e7f643bbc661d1c63b3ebad0ccc6572c0065b"
   integrity sha512-nyxUvL8wuQG38zx13wUMkpcA8koFszyiXdkSLwwM9opKW2LC2H5gD0cTZxImeJ6GtEnKPWT8xBiE8lLBmbNIhw==
@@ -1084,20 +1068,6 @@ discord.js@13.2.0:
     discord-api-types "^0.23.1"
     node-fetch "^2.6.1"
     ws "^8.2.3"
-
-discord.js@^13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.1.0.tgz#99f6a2a8be88d31906ff0148e9b1cb603ebb2e2e"
-  integrity sha512-gxO4CXKdHpqA+WKG+f5RNnd3srTDj5uFJHgOathksDE90YNq/Qijkd2WlMgTTMS6AJoEnHxI7G9eDQHCuZ+xDA==
-  dependencies:
-    "@discordjs/builders" "^0.5.0"
-    "@discordjs/collection" "^0.2.1"
-    "@discordjs/form-data" "^3.0.1"
-    "@sapphire/async-queue" "^1.1.4"
-    "@types/ws" "^7.4.7"
-    discord-api-types "^0.22.0"
-    node-fetch "^2.6.1"
-    ws "^7.5.1"
 
 doctrine@^3.0.0:
   version "3.0.0"
@@ -3280,7 +3250,7 @@ tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.3.0, tslib@^2.3.1:
+tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
@@ -3524,7 +3494,7 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-ws@^7.4.4, ws@^7.5.1:
+ws@^7.4.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.4.tgz#56bfa20b167427e138a7795de68d134fe92e21f9"
   integrity sha512-zP9z6GXm6zC27YtspwH99T3qTG7bBFv2VIkeHstMLrLlDJuzA7tQ5ls3OJ1hOGGCzTQPniNJoHXIAOS0Jljohg==
