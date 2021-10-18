@@ -17,7 +17,7 @@ module.exports = {
     const text = args.join(' ');
     if (!text) return message.reply('Please specify a text!');
     fetch(
-      `https://nekobot.xyz/api/imagegen?type=tweet&username=${message.author.username}&text=${text}`
+      `https://nekobot.xyz/api/imagegen?type=tweet&username=${message.author.username}&text=${encodeURI(text)}`
     )
       .then((res) => res.json())
       .then((data) => {
