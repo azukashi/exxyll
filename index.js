@@ -1,39 +1,25 @@
 const fs = require('fs');
 const chalk = require('chalk');
-const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const prefixSchema = require('./models/prefix');
-const { Client, Collection, Intents } = require('discord.js');
+const { Client, Collection } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
-dotenv.config({ path: './.env' });
+require('dotenv').config();
 
 const client = new Client({
-  intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_PRESENCES,
-    Intents.FLAGS.GUILD_WEBHOOKS,
-    Intents.FLAGS.DIRECT_MESSAGE_TYPING,
-    Intents.FLAGS.DIRECT_MESSAGES,
-    Intents.FLAGS.GUILD_INVITES,
-    Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-    Intents.FLAGS.GUILD_EMOJIS_AND_STICKERS,
-    Intents.FLAGS.GUILD_INTEGRATIONS,
-    Intents.FLAGS.GUILD_VOICE_STATES,
-  ],
+	intents: 32767,
 });
 module.exports = client;
 
 // Connect to Mongoose
 mongoose
-  .connect(process.env.MONGO, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(
-    console.log(chalk.greenBright.bold('MongoDB : Connected to the database!'))
-  );
+	.connect(process.env.MONGO, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
+	.then(
+		console.log(chalk.greenBright.bold('[Mongoose] Connected to the database!'))
+	);
 
 // ==> Global Variables
 client.commands = new Collection();
@@ -44,21 +30,21 @@ client.categories = fs.readdirSync('./commands/');
 client.discordTogether = new DiscordTogether(client);
 client.config = process.env;
 client.prefix = async (message) => {
-  try {
-    let custom;
-    const data = await prefixSchema
-      .findOne({ Guild: message.guild.id })
-      .catch((err) => console.log(err));
+	try {
+		let custom;
+		const data = await prefixSchema
+			.findOne({ Guild: message.guild.id })
+			.catch((err) => console.log(err));
 
-    if (data) {
-      custom = data.Prefix;
-    } else {
-      custom = process.env.PREFIX;
-    }
-    return custom;
-  } catch (err) {
-    console.log('');
-  }
+		if (data) {
+			custom = data.Prefix;
+		} else {
+			custom = process.env.PREFIX;
+		}
+		return custom;
+	} catch (err) {
+		console.log('');
+	}
 };
 
 // ==> Initializing the project
