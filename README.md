@@ -42,4 +42,4 @@ $ yarn start
 
 ## 📄 License
 
-This Project is Under [Apache License 2.0](./LICENSE);
+This Project is Under [Apache License 2.0](./LICENSE)
