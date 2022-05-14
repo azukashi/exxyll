@@ -7,12 +7,21 @@
 
 ```bash
 $ yarn install
+#
+# yarn install v1.22.18
+# [1/4] 🔍  Resolving packages...
+# [2/4] 🚚  Fetching packages...
+# [3/4] 🔗  Linking dependencies...
+# [4/4] 🔨  Building fresh packages...
+#
+# ✨  Done in 1.28s.
 ```
 
 ### Create environment variable file
 
 ```bash
-$ cp .env.example .env
+$ cp -v .env.example .env
+# '.env.example' -> '.env'
 ```
 
 ## License
