@@ -1,1 +1,1 @@
-Worker: npm run shard
+worker: yarn run shard
