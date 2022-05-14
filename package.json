@@ -12,15 +12,8 @@
     "format": "prettier --write .",
     "check-format": "prettier -c ."
   },
-  "keywords": [
-    "discord-js",
-    "djs",
-    "djs-v13",
-    "exxyll",
-    "discord-bot"
-  ],
-  "author": "Gifaldy Azka",
-  "license": "Apache-2.0",
+  "author": "Gifaldy Azka <me@falcxxdev.ml> (https://falcxxdev.ml)",
+  "license": "MIT",
   "engines": {
     "node": "16.x"
   },
