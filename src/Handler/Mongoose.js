@@ -12,5 +12,9 @@ mongoose
 		useUnifiedTopology: true,
 	})
 	.then(
-		console.log(chalk.greenBright.bold('[Mongoose] Connected to the database!'))
+		console.log(
+			`${chalk.grey('[INFO] ')}${chalk.greenBright.bold(
+				'Connected to the database!'
+			)}`
+		)
 	);
