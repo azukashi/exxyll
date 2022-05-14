@@ -1,9 +1,13 @@
 [![Banner](https://cdn.upload.systems/uploads/AZRDGxJa.png)]()
 [![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge)](LICENSE) [![Contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge)](https://github.com/gifaldyazkaa/exxyll-origin/graphs/contributors)
 
-## Getting Started
+## ➡️ Installing
 
-### Install dependencies
+### 🛠️ Requirements
+
+A node.js >= 16.12.0 setup with [yarn](https://yarnpkg.com) is highly recommended.
+
+### 📦 Install dependencies
 
 ```bash
 $ yarn install
@@ -17,13 +21,25 @@ $ yarn install
 # ✨  Done in 1.28s.
 ```
 
-### Create environment variable file
+### 🔑 Create environment variable file
 
 ```bash
 $ cp -v .env.example .env
 # '.env.example' -> '.env'
 ```
 
-## License
+### 🏃 Run production server
+
+```bash
+$ yarn start
+#
+# yarn run v1.22.17
+# $ node index.js
+#
+# [INFO] Connected to the database!
+# [INFO] Exxyll is Up and Ready to Go!
+```
+
+## 📄 License
 
 This Project is Under [Apache License 2.0](./LICENSE);
