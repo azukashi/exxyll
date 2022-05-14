@@ -1,9 +1,7 @@
-const fs = require('fs');
-const chalk = require('chalk');
-const mongoose = require('mongoose');
-const prefixSchema = require('./models/prefix');
 const { Client, Collection } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
+const fs = require('fs');
+const prefixSchema = require('./src/Models/Prefix');
 require('dotenv').config();
 
 const client = new Client({
@@ -11,22 +9,12 @@ const client = new Client({
 });
 module.exports = client;
 
-// Connect to Mongoose
-mongoose
-	.connect(process.env.MONGO, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
-	.then(
-		console.log(chalk.greenBright.bold('[Mongoose] Connected to the database!'))
-	);
-
-// ==> Global Variables
+// Append variables to client variable
 client.commands = new Collection();
 client.slashCommands = new Collection();
 client.aliases = new Collection();
 client.snipes = new Collection();
-client.categories = fs.readdirSync('./commands/');
+client.categories = fs.readdirSync('./src/Commands');
 client.discordTogether = new DiscordTogether(client);
 client.config = process.env;
 client.prefix = async (message) => {
@@ -42,15 +30,16 @@ client.prefix = async (message) => {
 			custom = process.env.PREFIX;
 		}
 		return custom;
-	} catch (err) {
-		console.log('');
-	}
+	} catch (err) {}
 };
 
-// ==> Initializing the project
-require('./handler')(client);
+// Initialize project
+require('./src/Handler')(client);
 
-// ==> Load levelling init
-require('./utils/levelling');
+// Initialize levelling function
+require('./src/Utility/Levelling');
+
+// Connect to database
+require('./src/Handler/Mongoose');
 
 client.login(process.env.TOKEN);
