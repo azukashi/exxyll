@@ -42,4 +42,4 @@ $ yarn start
 
 ## 📄 License
 
-This Project is Under [Apache License 2.0](./LICENSE)
+[Exxyll](#) is Licensed under [Apache License 2.0](./LICENSE)
