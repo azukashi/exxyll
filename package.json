@@ -11,7 +11,7 @@
 		"shard": "node bot.js"
 	},
 	"dependencies": {
-		"@discordjs/opus": "^0.6.0",
+		"@discordjs/opus": "^0.7.0",
 		"@discordjs/voice": "^0.6.0",
 		"@iamtraction/google-translate": "^1.1.2",
 		"anilist-node": "1.12.0",
