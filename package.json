@@ -27,7 +27,7 @@
 		"glob": "^8.0.0",
 		"moment": "^2.29.1",
 		"mongoose": "6.0.7",
-		"ms": "^3.0.0-canary.1",
+		"ms": "^2.1.3",
 		"node-fetch": "2.6.7",
 		"pretty-ms": "^7.0.1",
 		"snakecord": "^1.0.9",
