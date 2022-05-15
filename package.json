@@ -36,7 +36,7 @@
 		"ytsr": "^3.5.2"
 	},
 	"devDependencies": {
-		"nodemon": "2.0.13",
+		"nodemon": "2.0.16",
 		"prettier": "2.4.1"
 	},
 	"engines": {
