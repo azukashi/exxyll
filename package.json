@@ -8,7 +8,7 @@
 	"scripts": {
 		"start": "node index.js",
 		"dev": "nodemon index.js",
-		"shard": "node bot.js"
+		"shard": "node src/Scripts/shard.js"
 	},
 	"engines": {
 		"node": "16.x",
