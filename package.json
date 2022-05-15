@@ -36,8 +36,8 @@
 		"ytsr": "^3.5.2"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.12",
-		"prettier": "^2.4.1"
+		"nodemon": "2.0.13",
+		"prettier": "2.4.1"
 	},
 	"engines": {
 		"node": "16.x",
