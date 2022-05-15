@@ -3,7 +3,7 @@ const moment = require('moment');
 const chalk = require('chalk');
 require('dotenv').config();
 
-const manager = new ShardingManager('./index.js', {
+const manager = new ShardingManager('../../index.js', {
 	totalShards: 'auto',
 	shardList: 'auto',
 	token: process.env.TOKEN,
