@@ -261,6 +261,13 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
+abort-controller@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
+  integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
+  dependencies:
+    event-target-shim "^5.0.0"
+
 agent-base@6:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"
@@ -286,12 +293,13 @@ aki-api@^6.0.8:
     axios "^0.21.1"
     https-proxy-agent "^5.0.0"
 
-anilist-node@1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/anilist-node/-/anilist-node-1.10.0.tgz#a6778e591d44cf269dd14b65543735db86a3182d"
-  integrity sha512-naSMvJvH5l/AkiF2S4n0J6nK3pGwiciOwAYcCnOgBsXJLg8uLeHfUG0WPsgajKWu6GLMe0InyLuli2l/hprV4g==
+anilist-node@1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/anilist-node/-/anilist-node-1.12.0.tgz#82e5d262749d6c355afd87c55ed5af45883c3b8a"
+  integrity sha512-u8MuWC0TO89AhjmVrrRF1OLR58uI8jjG34ulTKM3x9bRyVnDs6yVuEdGINeYpbXeA4iFcL+eYM+Kqakcxiw07Q==
   dependencies:
-    node-fetch "^2.6.1"
+    abort-controller "^3.0.0"
+    node-fetch "^2.6.7"
 
 ansi-align@^3.0.0:
   version "3.0.0"
@@ -890,6 +898,11 @@ escape-goat@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/escape-goat/-/escape-goat-2.1.1.tgz#1b2dc77003676c457ec760b2dc68edb648188675"
   integrity sha512-8/uIhbG12Csjy2JEW7D9pHbreaVaS/OpN3ycnyvElTdwM5n6GY6W6e2IPemfvGZeUMqZ9A/3GqIZMgKnBhAw/Q==
+
+event-target-shim@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
+  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
 extend@~3.0.2:
   version "3.0.2"
@@ -1601,7 +1614,7 @@ node-addon-api@^4.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-4.2.0.tgz#117cbb5a959dff0992e1c586ae0393573e4d2a87"
   integrity sha512-eazsqzwG2lskuzBqCGPi7Ac2UgOoMz8JVOXVhTvvPDYhthvNpefx8jWD8Np7Gv+2Sz0FlPWZk0nJV0z598Wn8Q==
 
-node-fetch@2.6.7:
+node-fetch@2.6.7, node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
