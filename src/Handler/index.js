@@ -1,5 +1,6 @@
 const { glob } = require('glob');
 const { promisify } = require('util');
+const chalk = require('chalk');
 
 const globPromise = promisify(glob);
 
@@ -22,7 +23,10 @@ module.exports = async (client) => {
 		if (file.aliases && Array.isArray(file.aliases)) {
 			file.aliases.forEach((alias) => client.aliases.set(alias, file.name));
 		}
-		// console.log(formatString(file.name), `Loaded`);
+		console.log(
+			chalk.grey.bold('[DEBUG]'),
+			chalk.white(`Loaded module ${formatString(file.name)}`)
+		);
 	});
 
 	// Events

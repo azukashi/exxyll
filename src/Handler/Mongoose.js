@@ -13,7 +13,7 @@ mongoose
 	})
 	.then(
 		console.log(
-			`${chalk.grey('[INFO] ')}${chalk.greenBright.bold(
+			`${chalk.grey.bold('[INFO]  ')}${chalk.green.bold(
 				'Connected to the database!'
 			)}`
 		)
