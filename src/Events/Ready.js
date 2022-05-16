@@ -13,8 +13,8 @@ client.on('ready', async () => {
 	);
 
 	console.log(
-		`${chalk.grey('[INFO] ')}${chalk.blueBright.bold(
-			client.user.username
-		)}${chalk.white.bold(' is Up and Ready to Go!')}`
+		`${chalk.grey.bold('[INFO]  ')}${chalk.blueBright.bold(
+			client.user.tag
+		)} ${chalk.white('is')} ${chalk.green.bold('Online')}`
 	);
 });
