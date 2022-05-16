@@ -24,8 +24,8 @@ $ yarn install
 ### 🔑 Create environment variable file
 
 ```bash
-$ cp -v .env.example .env
-# '.env.example' -> '.env'
+$ ./env_setup.sh
+# Fill requested information & you are ready to go
 ```
 
 ### 🏃 Run production server
