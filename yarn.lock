@@ -341,10 +341,10 @@ aki-api@^6.0.8:
     axios "^0.21.1"
     https-proxy-agent "^5.0.0"
 
-anilist-node@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/anilist-node/-/anilist-node-1.12.0.tgz#82e5d262749d6c355afd87c55ed5af45883c3b8a"
-  integrity sha512-u8MuWC0TO89AhjmVrrRF1OLR58uI8jjG34ulTKM3x9bRyVnDs6yVuEdGINeYpbXeA4iFcL+eYM+Kqakcxiw07Q==
+anilist-node@1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/anilist-node/-/anilist-node-1.12.1.tgz#02299721360b0770571178c71c92c6306b712017"
+  integrity sha512-z5bKzkw9EirSdZcqNTT705+MIU8wt1HsaOgqNIlk8J7UDzhK1Ect0eIXzD7pHKo4u/Hl5ENUU3ZVOMxh5bOnMQ==
   dependencies:
     abort-controller "^3.0.0"
     node-fetch "^2.6.7"
