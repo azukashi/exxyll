@@ -879,10 +879,10 @@ discord-xp@1.1.16:
   dependencies:
     mongoose "^5.11.11"
 
-discord.js-akinator@3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.4.3.tgz#9331d60fe5bad92a24b6492133c5b8d564355182"
-  integrity sha512-zgBFOT4t0NEsSFOXbVqiCInBfQ5JE5oQFb6czzTCs+c1SkA/8SYhNYU9JWqXMu5bYfH1YJyJIo5XINMt3XcP3w==
+discord.js-akinator@3.4.4:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/discord.js-akinator/-/discord.js-akinator-3.4.4.tgz#8ead03d0e02e7e00d776f053f389822104b4026b"
+  integrity sha512-8rW3zH3eE5/EJtOJ2duDpjNPs8knIz5VcKCP7hBI8BGzJMAYs0BF8EerAMzggMsaGcd7gEbG2dWOqslKgl3aMg==
   dependencies:
     "@vitalets/google-translate-api" "^7.0.0"
     aki-api "^6.0.8"
