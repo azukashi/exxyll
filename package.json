@@ -8,7 +8,9 @@
 	"scripts": {
 		"start": "node index.js",
 		"dev": "nodemon index.js",
-		"shard": "node src/Scripts/shard.js"
+		"shard": "node src/Scripts/shard.js",
+		"lint": "prettier -c .",
+		"format": "prettier -w ."
 	},
 	"engines": {
 		"node": "16.x",
