@@ -1,6 +1,6 @@
 {
 	"name": "exxyll",
-	"version": "2.0.0",
+	"version": "2.1.3",
 	"description": "Multipurpose Discord Bot with commands for Fun, Games, Moderation, Utility, and more!",
 	"author": "Gifaldy Azka <me@falcxxdev.ml> (https://falcxxdev.ml)",
 	"main": "index.js",
@@ -15,8 +15,6 @@
 		"yarn": "1.x"
 	},
 	"dependencies": {
-		"@discordjs/opus": "0.7.0",
-		"@discordjs/voice": "0.10.0",
 		"@iamtraction/google-translate": "1.1.2",
 		"anilist-node": "1.12.1",
 		"axios": "0.27.2",
@@ -27,7 +25,6 @@
 		"discord.js": "13.2.0",
 		"discord.js-akinator": "3.4.4",
 		"dotenv": "16.0.1",
-		"ffmpeg-static": "5.0.0",
 		"glob": "8.0.3",
 		"moment": "2.29.3",
 		"mongoose": "6.3.5",
