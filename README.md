@@ -12,7 +12,7 @@ A node.js >= 16.12.0 setup with [yarn](https://yarnpkg.com) is highly recommende
 ```bash
 $ yarn install
 #
-# yarn install v1.22.18
+# yarn install v1.22.xx
 # [1/4] 🔍  Resolving packages...
 # [2/4] 🚚  Fetching packages...
 # [3/4] 🔗  Linking dependencies...
@@ -33,7 +33,7 @@ $ ./env_setup.sh
 ```bash
 $ yarn start
 #
-# yarn run v1.22.17
+# yarn run v1.22.xx
 # $ node index.js
 #
 # [INFO] Connected to the database!
