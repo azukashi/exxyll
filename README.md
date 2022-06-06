@@ -1,5 +1,5 @@
 [![Banner](https://cdn.upload.systems/uploads/AZRDGxJa.png)]()
-[![License](https://img.shields.io/github/license/gifaldyazkaa/exxyll-origin?style=for-the-badge)](LICENSE) [![Contributors](https://img.shields.io/github/contributors/gifaldyazkaa/exxyll-origin?style=for-the-badge)](https://github.com/gifaldyazkaa/exxyll-origin/graphs/contributors)
+[![CI Status](https://img.shields.io/github/workflow/status/gifaldyazkaa/exxyll/%5BPrettier%5D%20Lint?label=ci&logo=github-actions&style=for-the-badge)](./.github/workflows/Format-checking.yml) [![Repo Size](https://img.shields.io/github/repo-size/gifaldyazkaa/exxyll?logo=github&style=for-the-badge)](https://github.com/gifaldyazkaa/exxyll-origin/graphs/contributors)
 
 ## ➡️ Installing
 
