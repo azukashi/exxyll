@@ -1,9 +1,9 @@
 {
-	"extends": ["config:base"],
-	"baseBranches": ["master"],
-	"labels": ["📦 Dependencies"],
-	"branchPrefix": "deps/",
-	"dependencyDashboard": false,
-	"fetchReleaseNotes": true,
-	"reviewersFromCodeOwners": true
+    "extends": ["config:base"],
+    "baseBranches": ["master"],
+    "labels": ["📦 Dependencies"],
+    "branchPrefix": "deps/",
+    "dependencyDashboard": false,
+    "fetchReleaseNotes": true,
+    "reviewersFromCodeOwners": true
 }

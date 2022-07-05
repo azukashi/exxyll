@@ -5,7 +5,7 @@ const prefixSchema = require('./src/Models/Prefix');
 require('dotenv').config();
 
 const client = new Client({
-	intents: 32767,
+    intents: 32767,
 });
 module.exports = client;
 
@@ -17,20 +17,18 @@ client.snipes = new Collection();
 client.categories = fs.readdirSync('./src/Commands');
 client.discordTogether = new DiscordTogether(client);
 client.config = process.env;
-client.prefix = async (message) => {
-	try {
-		let custom;
-		const data = await prefixSchema
-			.findOne({ Guild: message.guild.id })
-			.catch((err) => console.log(err));
+client.prefix = async message => {
+    try {
+        let custom;
+        const data = await prefixSchema.findOne({ Guild: message.guild.id }).catch(err => console.log(err));
 
-		if (data) {
-			custom = data.Prefix;
-		} else {
-			custom = process.env.PREFIX;
-		}
-		return custom;
-	} catch (err) {}
+        if (data) {
+            custom = data.Prefix;
+        } else {
+            custom = process.env.PREFIX;
+        }
+        return custom;
+    } catch (err) {}
 };
 
 // Initialize project
