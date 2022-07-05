@@ -16,7 +16,7 @@ $ pnpm install
 ### 🔑 Create environment variable file
 
 ```bash
-$ ./env_setup.sh
+$ pnpm run setup-env
 # Fill requested information & you are ready to go
 ```
 
