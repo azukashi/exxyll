@@ -8,7 +8,8 @@
         "dev": "nodemon index.js",
         "shard": "node src/Scripts/shard.js",
         "lint": "prettier -c .",
-        "format": "prettier -w ."
+        "format": "prettier -w .",
+        "setup-env": "./src/Scripts/env_setup.sh"
     },
     "engines": {
         "node": "16.x"
