@@ -5,20 +5,12 @@
 
 ### 🛠️ Requirements
 
-A node.js >= 16.12.0 setup with [yarn](https://yarnpkg.com) is highly recommended.
+A [node.js](https://nodejs.org) >= 16.12.0 setup with [pnpm](https://pnpm.io) is highly recommended.
 
 ### 📦 Install dependencies
 
 ```bash
-$ yarn install
-#
-# yarn install v1.22.xx
-# [1/4] 🔍  Resolving packages...
-# [2/4] 🚚  Fetching packages...
-# [3/4] 🔗  Linking dependencies...
-# [4/4] 🔨  Building fresh packages...
-#
-# ✨  Done in 1.28s.
+$ pnpm install
 ```
 
 ### 🔑 Create environment variable file
@@ -31,10 +23,7 @@ $ ./env_setup.sh
 ### 🏃 Run production server
 
 ```bash
-$ yarn start
-#
-# yarn run v1.22.xx
-# $ node index.js
+$ pnpm start
 #
 # [INFO] Connected to the database!
 # [INFO] Exxyll is Up and Ready to Go!
@@ -42,4 +31,4 @@ $ yarn start
 
 ## 📄 License
 
-[Exxyll](#) is licensed under [MIT License](./LICENSE)
+[Exxyll](#) is Licensed under [MIT License](./LICENSE).
