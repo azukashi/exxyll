@@ -2,9 +2,7 @@
 	"name": "exxyll",
 	"version": "2.3.0",
 	"description": "Multipurpose Discord Bot with commands for Fun, Games, Moderation, Utility, and more!",
-	"author": "Gifaldy Azka <me@falcxxdev.ml> (https://falcxxdev.ml)",
 	"main": "index.js",
-	"license": "MIT",
 	"scripts": {
 		"start": "node index.js",
 		"dev": "nodemon index.js",
@@ -13,9 +11,10 @@
 		"format": "prettier -w ."
 	},
 	"engines": {
-		"node": "16.x",
-		"yarn": "1.x"
+		"node": "16.x"
 	},
+	"author": "Gifaldy Azka <me@falcxxdev.ml>",
+	"license": "MIT",
 	"dependencies": {
 		"@iamtraction/google-translate": "1.1.2",
 		"anilist-node": "1.12.1",
