@@ -6,9 +6,9 @@ specifiers:
   axios: 0.27.2
   canvacord: 5.4.6
   chalk: 4.1.2
-  discord-together: 1.3.3
+  discord-together: 1.3.31
   discord-xp: 1.1.16
-  discord.js: 13.10.2
+  discord.js: 13.10.3
   discord.js-akinator: 4.0.1
   dotenv: 16.0.1
   glob: 8.0.3
@@ -30,9 +30,9 @@ dependencies:
   axios: 0.27.2
   canvacord: 5.4.6
   chalk: 4.1.2
-  discord-together: 1.3.3
+  discord-together: 1.3.31
   discord-xp: 1.1.16
-  discord.js: 13.10.2
+  discord.js: 13.10.3
   discord.js-akinator: 4.0.1
   dotenv: 16.0.1
   glob: 8.0.3
@@ -734,10 +734,10 @@ packages:
     resolution: {integrity: sha512-bz/NDyG0KBo/tY14vSkrwQ/n3HKPf87a0WFW/1M9+tXYK+vp5Z5EksawfCWo2zkAc6o7CClc0eff1Pjrqznlwg==}
     dev: false
 
-  /discord-together/1.3.3:
-    resolution: {integrity: sha512-K2oKZllYJ8jCCtPzgjn4DtOHho5A3mrXd/ZRmIU4bERFy4TVhT9Zwo+I0JWthGohn2suTDF5GQofn9p27FXKDg==}
+  /discord-together/1.3.31:
+    resolution: {integrity: sha512-BOHLmSkMw376qTvmDdKfgPQ83CYV9UR1YNRPVX9Cq57fu0PDCl9eGx/NfilThzJx7DdojRiliVyp17PlfKlR3w==}
     dependencies:
-      discord.js: 13.10.2
+      discord.js: 14.2.0
       node-fetch: 2.6.7
     transitivePeerDependencies:
       - bufferutil
@@ -772,8 +772,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /discord.js/13.10.2:
-    resolution: {integrity: sha512-zPhPaUvJRCqmsqMBmQ8gJ8k/O0rcuLj8tn/mOaJEiDPkpb5aFULHarOfqND6jRuLrKXd2to/bc0mjXTOgRW1MA==}
+  /discord.js/13.10.3:
+    resolution: {integrity: sha512-cIARuxfpQDeqA9Zw3fz4IL20xAhtMsjwJIf7/K82R3n2xROG9/fAx+7qjX8ysp9BfflYqMu2ZskyWq1EAmL5BA==}
     engines: {node: '>=16.6.0', npm: '>=7.0.0'}
     dependencies:
       '@discordjs/builders': 0.16.0
@@ -1726,7 +1726,7 @@ packages:
     resolution: {integrity: sha512-FTQsKwyN8AqWslvorNA9rUHSA4BmDYuU++XzO8WwXrqHtpiuNmTE+kAKNvySL1FS0mDMAAzBNGOC5vLuDqwdMA==}
     engines: {node: '>=16'}
     dependencies:
-      discord.js: 13.10.2
+      discord.js: 13.10.3
     transitivePeerDependencies:
       - bufferutil
       - encoding
