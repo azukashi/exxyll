@@ -34,7 +34,7 @@
         "node-fetch": "2.6.7",
         "pretty-ms": "7.0.1",
         "snakecord": "1.0.9",
-        "sourcebin": "4.3.6",
+        "sourcebin": "5.0.0",
         "weather-js": "2.0.0",
         "ytsr": "3.8.0"
     },

@@ -20,7 +20,7 @@ specifiers:
   prettier: 2.7.1
   pretty-ms: 7.0.1
   snakecord: 1.0.9
-  sourcebin: 4.3.6
+  sourcebin: 5.0.0
   weather-js: 2.0.0
   ytsr: 3.8.0
 
@@ -42,7 +42,7 @@ dependencies:
   node-fetch: 2.6.7
   pretty-ms: 7.0.1
   snakecord: 1.0.9
-  sourcebin: 4.3.6
+  sourcebin: 5.0.0
   weather-js: 2.0.0
   ytsr: 3.8.0
 
@@ -1741,11 +1741,13 @@ packages:
       smart-buffer: 4.2.0
     dev: false
 
-  /sourcebin/4.3.6:
-    resolution: {integrity: sha512-CmpeHdcpYNtew+s8DCkiyjQuhP4QMXHY99HQ1evzj6cjxtxNBgPCoobFOGMFFc3Hk6mJ8EB/nZ5e9W2OBqiCjA==}
+  /sourcebin/5.0.0:
+    resolution: {integrity: sha512-UWlYVRTa2RN0iSlmYnzhOkfVstv7hs245OWOVqHCaJ3Cy6fBAX4HcZ5a7KRe0CooVv0GAjJZ1nqJly0CN9yjnA==}
     dependencies:
       '@sourcebin/linguist': 0.0.3
-      got: 11.8.5
+      axios: 0.27.2
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /sparse-bitfield/3.0.3:
