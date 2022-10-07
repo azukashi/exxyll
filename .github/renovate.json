@@ -1,10 +1,10 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": ["config:base"],
-    "assigneesFromCodeOwners": true,
+    "assignees": ["gifaldyazkaa"],
+    "reviewers": ["gifaldyazkaa"],
     "dependencyDashboard": false,
     "fetchReleaseNotes": true,
-    "reviewersFromCodeOwners": true,
     "packageRules": [
         {
             "matchPackagePatterns": ["*"],
