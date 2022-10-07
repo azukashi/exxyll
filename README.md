@@ -17,7 +17,7 @@ $ pnpm install
 
 ```bash
 $ pnpm run setup-env
-# Fill requested information & you are ready to go
+# Fill requested informations & you are ready to go
 ```
 
 ### 🏃 Run production server
