@@ -18,7 +18,7 @@ module.exports = {
             .setDescription(
                 'Support or Donate the Developers to help keeping this project alive!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)'
             )
-            .setFooter(message.author.tag)
+            .setFooter({ text: message.author.tag })
             .setColor('BLUE')
             .setTimestamp();
 
