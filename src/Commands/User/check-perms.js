@@ -25,10 +25,10 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor(member.displayColor || 'GREY')
             .setTitle(`${member.displayName}'s Permissions`)
-            .setFooter(
-                `Check Permissions | Command Request by ${message.author.tag}`,
-                message.author.displayAvatarURL({ dynamic: true })
-            )
+            .setFooter({
+                text: `Check permissions | Command request by ${message.author.tag}`,
+                iconURL: message.author.displayAvatarURL({ dynamic: true }),
+            })
             .setDescription(
                 [
                     '\\♨️ - This Server',

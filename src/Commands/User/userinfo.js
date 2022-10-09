@@ -41,20 +41,22 @@ module.exports = {
                         .setTitle(`${user.username}'s User Information`)
                         .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
                         .setColor('BLUE')
-                        .addField('User Tag', user.tag)
-                        .addField('User ID', user.id)
-                        .addField(
-                            'Created At',
-                            `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`
+                        .addFields(
+                            { name: 'User tag', value: user.tag },
+                            { name: 'User ID', value: user.id },
+                            {
+                                name: 'Creation date',
+                                value: `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`,
+                            },
+                            {
+                                name: 'Date joined',
+                                value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
+                            },
+                            { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
+                            { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
                         )
-                        .addField(
-                            'Joined At',
-                            `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`
-                        )
-                        .addField('Highest Role', `<@&${member.roles.highest.id}>`)
-                        .addField('Roles', member.roles.cache.map(r => `${r}`).join(' | '))
                         .setImage(bannerUrl)
-                        .setFooter(message.author.tag)
+                        .setFooter({ text: message.author.tag })
                         .setTimestamp();
                     message.channel.send({ embeds: [embed] });
                 } else {
@@ -64,19 +66,21 @@ module.exports = {
                             .setTitle(`${user.username}'s User Information`)
                             .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
                             .setColor(bannerColor)
-                            .addField('User Tag', user.tag)
-                            .addField('User ID', user.id)
-                            .addField(
-                                'Created At',
-                                `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`
+                            .addFields(
+                                { name: 'User tag', value: user.tag },
+                                { name: 'User ID', value: user.id },
+                                {
+                                    name: 'Creation date',
+                                    value: `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`,
+                                },
+                                {
+                                    name: 'Date joined',
+                                    value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
+                                },
+                                { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
+                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
                             )
-                            .addField(
-                                'Joined At',
-                                `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`
-                            )
-                            .addField('Highest Role', `<@&${member.roles.highest.id}>`)
-                            .addField('Roles', member.roles.cache.map(r => `${r}`).join(' | '))
-                            .setFooter(message.author.tag)
+                            .setFooter({ text: message.author.tag })
                             .setTimestamp();
                         message.channel.send({ embeds: [embed] });
                     } else {
@@ -84,19 +88,21 @@ module.exports = {
                             .setTitle(`${user.username}'s User Information`)
                             .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
                             .setColor('BLUE')
-                            .addField('User Tag', user.tag)
-                            .addField('User ID', user.id)
-                            .addField(
-                                'Created At',
-                                `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`
+                            .addFields(
+                                { name: 'User tag', value: user.tag },
+                                { name: 'User ID', value: user.id },
+                                {
+                                    name: 'Creation date',
+                                    value: `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`,
+                                },
+                                {
+                                    name: 'Date joined',
+                                    value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
+                                },
+                                { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
+                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
                             )
-                            .addField(
-                                'Joined At',
-                                `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`
-                            )
-                            .addField('Highest Role', `<@&${member.roles.highest.id}>`)
-                            .addField('Roles', member.roles.cache.map(r => `${r}`).join(' | '))
-                            .setFooter(message.author.tag)
+                            .setFooter({ text: message.author.tag })
                             .setTimestamp();
                         message.channel.send({ embeds: [embed] });
                     }
