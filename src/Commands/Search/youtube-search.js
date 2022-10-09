@@ -17,7 +17,7 @@ module.exports = {
         const query = args.join(' ');
         if (!query)
             return message.reply({
-                content: 'Provide a search for me to search YouTube!',
+                content: 'Provide a search query to search!',
             });
 
         const res = await ytsr(query).catch(e => message.channel.send({ content: `No results found for ${query}` }));
@@ -26,17 +26,16 @@ module.exports = {
             .setTitle(video.title)
             .setURL(video.url)
             .setImage(video.bestThumbnail.url)
-            .setDescription(video.description ? !video.description : 'No Description')
-            .addField(
-                `Song Information`,
-                `**Creator**: [${video.author.name}](${video.author.url}) ${
+            .setThumbnail(video.author.bestAvatar.url)
+            .setDescription(video.description ? !video.description : 'No description provided.')
+            .addFields({
+                name: 'Song information',
+                value: `**Creator**: [${video.author.name}](${video.author.url}) ${
                     video.author.verified ? ':white_check_mark: (Verified)' : '\u200b'
-                }
-    **Length**: ${video.duration} minute(s)
-    **Uploaded**: ${video.uploadedAt}
-    **Views**: ${video.views.toLocaleString()}`
-            )
-            .setThumbnail(video.author.bestAvatar.url);
+                }\n**Length**: ${video.duration} minute(s)\n**Uploaded**: ${
+                    video.uploadedAt
+                }\n**Views**: ${video.views.toLocaleString()}`,
+            });
         message.channel.send({ embeds: [embed] });
     },
 };

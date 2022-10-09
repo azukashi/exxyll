@@ -21,16 +21,20 @@ module.exports = {
         );
         if (!body) return message.channel.send({ content: 'Page not found :x:' });
         if (body.title && body.title === 'Not found.')
-            return message.channel.send({ content: 'Error! Page Not Found... :x:' });
+            return message.channel.send({ content: 'Error! Page not found... :x:' });
 
         const embed = new MessageEmbed()
             .setTitle(`🌐 ${body.title}`)
-            .addField('More Info:', `**[Click Here](${body.content_urls.desktop.page})**`, true)
+            .addFields({
+                name: 'More info',
+                value: `**[Click Here](${body.content_urls.desktop.page})**`,
+                inline: true,
+            })
             .setDescription(`** ${body.extract} **`)
-            .setFooter(
-                `Wikipedia Search | Command Request by ${message.author.tag}`,
-                message.author.displayAvatarURL({ dynamic: true })
-            )
+            .setFooter({
+                text: `Wikipedia search | Command request by ${message.author.tag}`,
+                iconURL: message.author.displayAvatarURL({ dynamic: true }),
+            })
             .setColor('BLUE');
 
         if (body.thumbnail) embed.setThumbnail(body.thumbnail.source);

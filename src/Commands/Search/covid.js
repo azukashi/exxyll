@@ -34,9 +34,11 @@ module.exports = {
 
                     const embed = new MessageEmbed()
                         .setTitle(`Worldwide COVID-19 Stats 🌎`)
-                        .addField('Confirmed Cases', confirmed)
-                        .addField('Recovered', recovered)
-                        .addField('Deaths', deaths)
+                        .addFields(
+                            { name: 'Confirmed cases', value: confirmed },
+                            { name: 'Recovered', value: recovered },
+                            { name: 'Deaths', value: deaths }
+                        )
                         .setThumbnail(
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/478px-SARS-CoV-2_without_background.png'
                         )
@@ -58,9 +60,11 @@ module.exports = {
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/478px-SARS-CoV-2_without_background.png'
                         )
                         .setColor('RED')
-                        .addField('Confirmed Cases', confirmed)
-                        .addField('Recovered', recovered)
-                        .addField('Deaths', deaths);
+                        .addFields(
+                            { name: 'Confirmed cases', value: confirmed },
+                            { name: 'Recovered', value: recovered },
+                            { name: 'Deaths', value: deaths }
+                        );
 
                     message.channel.send({ embeds: [embed] });
                 })

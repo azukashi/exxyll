@@ -20,14 +20,14 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         new MessageEmbed()
-                            .setTitle('Error Usage')
+                            .setTitle('Error usage')
                             .setDescription(`Usage: ${client.prefix}weather <place>`),
                     ],
                 });
 
             if (result === undefined || result.length === 0)
                 return message.channel.send({
-                    embeds: [new MessageEmbed().setTitle('Error 404').setDescription(`Couldn't Find This Country`)],
+                    embeds: [new MessageEmbed().setTitle('404').setDescription(`Could not find this country`)],
                 });
 
             const current = result[0].current;
@@ -37,17 +37,19 @@ module.exports = {
                 message.guild.me.displayHexColor === '#000000' ? '#ffffff' : message.guild.me.displayHexColor;
 
             const weatherinfo = new MessageEmbed()
+                .setTitle(`Weather information for ${current.observationpoint}`)
                 .setDescription(`**${current.skytext}**`)
-                .setAuthor(`Weather Information for ${current.observationpoint}`)
                 .setThumbnail(current.imageUrl)
                 .setColor(roleColor)
-                .addField('Timezone', `UTC${location.timezone}`, true)
-                .addField('Degree Type', 'Celsius', true)
-                .addField('Temperature', `${current.temperature}°`, true)
-                .addField('Wind', current.winddisplay, true)
-                .addField('Feels like', `${current.feelslike}°`, true)
-                .addField('Humidity', `${current.humidity}%`, true)
-                .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true }));
+                .addFields(
+                    { name: 'Timezone', value: `UTC${location.timezone}`, inline: true },
+                    { name: 'Degree Type', value: 'Celsius', inline: true },
+                    { name: 'Temperature', value: `${current.temperature}°`, inline: true },
+                    { name: 'Wind', value: current.winddisplay, inline: true },
+                    { name: 'Feels like', value: `${current.feelslike}°`, inline: true },
+                    { name: 'Humidity', value: `${current.humidity}%`, inline: true }
+                )
+                .setFooter({ text: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true }) });
 
             message.channel.send({ embeds: [weatherinfo] });
         });
