@@ -3,7 +3,7 @@ const Schema = require('../../Models/WelcomeChannel');
 
 module.exports = {
     name: 'set-welcome',
-    description: 'Set Welcoming System Channel',
+    description: 'Set welcoming system channel',
     aliases: ['set-welcoming'],
     emoji: '➕',
     userperm: ['MANAGE_GUILD'],
@@ -28,7 +28,7 @@ module.exports = {
                 }).save();
             }
             message.reply({
-                content: `${channel} has been set as the welcome channel!`,
+                content: `${channel} has been set as welcome channel!`,
             });
         });
     },
