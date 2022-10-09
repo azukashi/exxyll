@@ -23,10 +23,13 @@ module.exports = {
             .then(res => res.json())
             .then(body => {
                 const embed = new MessageEmbed()
-                    .setTitle(`${message.author.username} Hugged ${user.username}`)
+                    .setTitle(`${message.author.username} hugged ${user.username}`)
                     .setImage(body.url)
                     .setColor('#FFC0CB')
-                    .setFooter(`${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setFooter({
+                        text: `${message.author.tag}`,
+                        iconURL: message.author.displayAvatarURL({ dynamic: true }),
+                    })
                     .setTimestamp();
 
                 message.channel.send({ embeds: [embed] });

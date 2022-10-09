@@ -20,7 +20,7 @@ module.exports = {
             'Without a doubt',
             'Yes definitely',
             'You may rely on it',
-            'As I see it, yes',
+            'As i see it, yes',
             'Most likely',
             'For sure',
             'Outlook good',
@@ -42,8 +42,10 @@ module.exports = {
             .setColor('BLUE')
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
             .setTitle('🎱 8ball')
-            .addField(`${message.author.username}'s Question`, question)
-            .addField(`8ball says`, responses[response])
+            .addFields(
+                { name: `${message.author.username}'s Question`, value: question },
+                { name: '8ball says', value: responses[response] }
+            )
             .setTimestamp();
 
         message.channel.send({ embeds: [embed] });

@@ -26,7 +26,10 @@ module.exports = {
                     .setTitle(`${message.author.username} Kissed ${user.username}`)
                     .setImage(body.url)
                     .setColor('#FFC0CB')
-                    .setFooter(`${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
+                    .setFooter({
+                        text: `${message.author.tag}`,
+                        iconURL: message.author.displayAvatarURL({ dynamic: true }),
+                    })
                     .setTimestamp();
 
                 message.channel.send({ embeds: [embed] });

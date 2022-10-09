@@ -35,24 +35,24 @@ module.exports = {
                     .setURL(mal_url)
                     .setThumbnail(imgae)
                     .setDescription(synopsis)
-                    .addField('Type', type)
-                    .addField('Total Episode', `${episode}`)
-                    .addField('Ratings (at MyAnimeList)', `${score}`)
-                    .addField('Released at', `${moment(start_date).format('LLLL')}`)
-                    .addField('Rate', rate)
+                    .addFields(
+                        { name: 'Type', value: type },
+                        { name: 'Total episode', value: `${episode}` },
+                        { name: 'Ratings (on MAL)', value: `${score}` },
+                        { name: 'Release date', value: `${moment(start_date).format('LLLL')}` },
+                        { name: 'Rate', value: rate }
+                    )
                     .setColor('#800080')
-                    .setFooter(
-                        `Requested by : ${message.author.tag}`,
-                        message.author.displayAvatarURL({ dynamic: true })
-                    );
+                    .setFooter({
+                        text: `Requested by : ${message.author.tag}`,
+                        iconURL: message.author.displayAvatarURL({ dynamic: true }),
+                    });
 
                 message.channel.send({ embeds: [embed] });
             })
             .catch(err => {
                 const embedd = new MessageEmbed()
-                    .setDescription(
-                        `<:tickNo:863367014092898314> | That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
-                    )
+                    .setDescription(`:x: | Not Found!\n\n\`\`\`js\n${err}\n\`\`\``)
                     .setColor('RED');
                 message.channel.send({ embeds: [embedd] });
                 console.log(err);
