@@ -4,7 +4,7 @@ const { inspect } = require('util');
 
 module.exports = {
     name: 'eval',
-    description: 'Evaluate some code',
+    description: 'Evaluate given code',
     aliases: ['evaluate'],
     emoji: '',
     userperm: ['SEND_MESSAGES'],
@@ -17,7 +17,7 @@ module.exports = {
     run: async (client, message, args) => {
         if (!message.author.id === process.env.OWNERID) return;
         const code = args.join(' ');
-        if (!code) return message.reply('Please provide some code to evaluated!');
+        if (!code) return message.reply('Please provide some code to evaluate!');
 
         try {
             const result = await eval(code);
@@ -32,19 +32,19 @@ module.exports = {
                     new MessageEmbed()
                         .setColor('#00FF00')
                         .setTitle(`✔️ | 200 : Success`)
-                        .setDescription(`Results\n\`\`\`yml\n${output}\n\`\`\``)
-                        .setFooter(`Actioned by : ${message.author.tag}`),
+                        .setDescription(`Result\n\`\`\`yml\n${output}\n\`\`\``)
+                        .setFooter({ text: `Evaluated by : ${message.author.tag}` }),
                 ],
             });
-        } catch (error) {
-            console.log(error);
+        } catch (err) {
+            console.log(err);
             message.channel.send({
                 embeds: [
                     new MessageEmbed()
-                        .setTitle(`❌ | Evaluated Content too long to displayed`)
+                        .setTitle(`❌ | Evaluated content too long to displayed`)
                         .setDescription(`Error Logs\n\`\`\`yml\n${error}\n\`\`\``)
                         .setColor('#FF0000')
-                        .setFooter(`Actioned by : ${message.author.tag}`),
+                        .setFooter({ text: `Evaluated by : ${message.author.tag}` }),
                 ],
             });
         }

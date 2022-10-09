@@ -18,13 +18,13 @@ module.exports = {
         await message.channel.send({
             embeds: [
                 new MessageEmbed()
-                    .setTitle('✅ Successfully Restarted!')
+                    .setTitle('✅ Successfully rebooted!')
                     .setThumbnail(client.user.displayAvatarURL({ size: 512 }))
                     .setDescription(
-                        `The Client Sucessfully Crashed with exit code 1.\n\nLoaded Commands : ${client.commands.size}\n\nNow, Just wait the Process Restarted by the Hosting Provider. Or, If i'm going offline, You can restart manually by Visiting Hosting Dashboard!`
+                        `The client is scucessfully crashed with exit code 1.\n\nLoaded commands : ${client.commands.size}\n\nJust wait the process restarted automatically. Or, if i am going offline, you can restart manually by visit hosting dashboard!`
                     )
                     .setColor('GREEN')
-                    .setFooter(`Restarted by ${message.author.username}`)
+                    .setFooter({ text: `Restarted by ${message.author.username}` })
                     .setTimestamp(),
             ],
         });

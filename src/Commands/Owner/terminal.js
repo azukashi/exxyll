@@ -4,7 +4,7 @@ const child = require('child_process');
 
 module.exports = {
     name: 'terminal',
-    description: 'Runs a Terminal Command',
+    description: 'Execute a terminal command',
     aliases: ['sh', 'bash', 'zsh'],
     emoji: '',
     userperm: ['SEND_MESSAGES'],
@@ -28,7 +28,7 @@ module.exports = {
                         new MessageEmbed()
                             .setTitle('Terminal - GNU Bash')
                             .setDescription(`\`\`\`js\n${res.slice(0, 2000)}\`\`\``)
-                            .setFooter(`GNU Bash - Actioned by ${message.author.tag}`)
+                            .setFooter({ text: `GNU Bash - Actioned by ${message.author.tag}` })
                             .setColor('#800080'),
                     ],
                 });
