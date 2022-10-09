@@ -19,40 +19,22 @@ module.exports = {
      */
     run: async (client, message, args) => {
         // Capitalize Func
-        function capitalizeFirst(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
+        const capitalize = str => {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        };
         const core = os.cpus()[0];
+        // prettier-ignore
         const embed = new MessageEmbed()
             .setTitle(`Exxyll Stats`)
             .setURL(client.web)
             .setThumbnail(client.user.displayAvatarURL({ size: 512, format: 'png' }))
             .setColor(message.guild.me.displayHexColor || client.color)
-            .addField(
-                '<a:bot:863216970554933269> General',
-                `**❯ Client :** ${client.user.tag} (${client.user.id})\n**❯ Commands Total :** ${
-                    client.commands.size
-                }\n**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers\n**❯ Users :** ${client.guilds.cache
-                    .reduce((a, b) => a + b.memberCount, 0)
-                    .toLocaleString()} Users\n**❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels\n**❯ Creation Date :** ${utc(
-                    client.user.createdTimestamp
-                ).format('Do MMMM YYYY HH:mm:ss')}\n**❯ Node.js :** ${
-                    process.version
-                }\n**❯ Version :** v${version}\n**❯ Discord.js :** v${djsversion}\n**❯ Bot Uptime :** ${pretty(
-                    client.uptime
-                )}`
+            .addFields(
+                { name: ':robot: General', value: `**❯ Client:** ${client.user.tag} (${client.user.id})\n**❯ Commands:** ${client.commands.size}\n**❯ Server:** ${client.guilds.cache.size.toLocaleString()} Servers\n**❯ Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} users\n**❯ Channels:** ${client.channels.cache.size.toLocaleString()} channels\n**❯ Creation date:** ${utc(client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}\n**❯ Node.js:** ${process.version}\n**❯ Version:** v${version}\n**❯ Discord.js:** v${djsversion}\n**❯ Uptime:** ${pretty(client.uptime)}` },
+                { name: ':computer: System', value: `*❯ Platform:** ${capitalize(process.platform)}\n**❯ System uptime :** ${ms(os.uptime() * 1000, {long: true})}\n**❯ CPU:**\n\u3000 Cores: ${os.cpus().length}\n\u3000 Model: ${core.model}\n\u3000 Speed: ${core.speed} MHz` },
+                { name: ':signal_strength: Network', value: `**❯ Latency:** ${client.ws.ping} ms` }
             )
-            .addField(
-                '<:ubuntu:853158810654343208> System',
-                `**❯ OS Platform :** ${capitalizeFirst(process.platform)}\n**❯ OS Uptime :** ${ms(os.uptime() * 1000, {
-                    long: true,
-                })}\n**❯ CPU :**\n\u3000 Cores : ${os.cpus().length}\n\u3000 Model : ${core.model}\n\u3000 Speed : ${
-                    core.speed
-                } MHz`
-            )
-            .addField('<:stagechannel:863214920548089866> Network', `**❯ Latency :** ${client.ws.ping} ms`)
             .setTimestamp();
-
         message.channel.send({ embeds: [embed] });
     },
 };
