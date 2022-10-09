@@ -26,15 +26,17 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle(`Successfully banned ${member.user.username} from this server!`)
             .setThumbnail(memberPfp)
-            .addField('Banned User', `${member}`)
-            .addField('Moderator', `<@${message.author.id}>`)
-            .addField('Reason', `${reason}`)
+            .addFields(
+                { name: 'Banned user', value: member },
+                { name: 'Moderator', value: `<@${message.author.id}>` },
+                { name: 'Reason', value: reason }
+            )
             .setColor('RED')
             .setTimestamp();
 
         await member.ban({ reason }).catch(err =>
             message.channel.send({
-                content: `An error has occured while trying to ban!\nError message :\n\`\`\`yml\n${err}\n\`\`\``,
+                content: `An error has been occured while trying to ban!\nError message :\n\`\`\`yml\n${err}\n\`\`\``,
             })
         );
         message.channel.send({ embeds: [embed] });

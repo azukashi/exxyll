@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'slowmode',
-    description: 'Slowmode a channel. Where the command is executed',
+    description: 'Set slowmode for this channel.',
     aliases: ['set-slowmode'],
     emoji: '⏳',
     userperm: ['MANAGE_CHANNELS', 'SEND_MESSAGES'],
@@ -14,7 +14,7 @@ module.exports = {
      */
     run: async (client, message, args) => {
         const amount = parseInt(args[0]);
-        if (isNaN(amount)) return message.reply({ content: ":x:It doesn't seem to be valid value" });
+        if (isNaN(amount)) return message.reply({ content: ':x: It does not seem to be valid value' });
         if (args[0] === amount + 's') {
             message.channel.setRateLimitPerUser(amount);
             if (amount > 1) {
