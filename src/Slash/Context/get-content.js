@@ -1,7 +1,7 @@
 const { ContextMenuInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: 'getcontent',
+    name: 'echo',
     type: 'MESSAGE',
     /**
      * @param {Client} client
@@ -11,7 +11,7 @@ module.exports = {
     run: async (client, interaction, args) => {
         const msg = await interaction.channel.messages.fetch(interaction.targetId);
         interaction.followUp({
-            content: `**${interaction.user.tag}** : ${msg.content}`,
+            content: `**${interaction.user.tag}**: ${msg.content}`,
         });
     },
 };
