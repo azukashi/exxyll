@@ -12,11 +12,11 @@ module.exports = {
      */
     run: async (client, interaction, args) => {
         const embed = new MessageEmbed()
-            .setTitle('Support the Developers!')
+            .setTitle('Support the developer!')
             .setDescription(
-                'Support or Donate the Developers to help keeping this project alive!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)'
+                'Support or donate the developer to help keeping this project alive!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)'
             )
-            .setFooter(interaction.user.tag)
+            .setFooter({ text: interaction.user.tag })
             .setColor('BLUE')
             .setTimestamp();
 
