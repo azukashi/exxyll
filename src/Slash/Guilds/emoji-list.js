@@ -31,16 +31,17 @@ module.exports = {
                     Emojis += Emoji(emoji.id);
                 }
             });
-            let emn = new MessageEmbed();
-            emn.setTitle(`<:add_reaction:863214931599818783> Showing Emojis of ${interaction.guild.name}`);
-            emn.setThumbnail(interaction.guild.iconURL({ dynamic: true, format: 'png', size: 512 }));
-            emn.setDescription(
-                `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`
-            );
-            emn.setColor('BLUE').setFooter(
-                `Emoji Lists | Command Request by ${interaction.user.tag}`,
-                interaction.user.displayAvatarURL({ dynamic: true })
-            );
+            const emn = new MessageEmbed()
+                .setTitle(`:smiley: Showing emojis of ${interaction.guild.name}`)
+                .setThumbnail(interaction.guild.iconURL({ dynamic: true, format: 'png', size: 512 }))
+                .setDescription(
+                    `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`
+                )
+                .setColor('BLUE')
+                .setFooter({
+                    text: `Emoji list | Command request by ${interaction.user.tag}`,
+                    iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+                });
             interaction.followUp({ embeds: [emn] });
         } catch (err) {
             interaction.followUp('Oops! Looks like something went wrong, Please try again Later.');

@@ -18,9 +18,8 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setTitle('This channel has been nuked!')
-                .setImage('https://tenor.com/view/explosion-mushroom-cloud-atomic-bomb-bomb-boom-gif-4464831')
                 .setColor('RED')
-                .setFooter(`Action performed by ${interaction.user.tag}`);
+                .setFooter({ text: `Action performed by ${interaction.user.tag}` });
 
             ch.send({ embeds: [embed] }).then(m => m.delete({ timeout: 7000 }));
         });

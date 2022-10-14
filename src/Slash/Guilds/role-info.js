@@ -35,17 +35,19 @@ module.exports = {
             .setTitle(`<:role:863214921574907915> Role Information for ${mentionedRole.name}`)
             .setColor('#800080')
             .setThumbnail(guildIcon)
-            .addField('Role ID', `${mentionedRole.id}`)
-            .addField('Role Position', `${mentionedRole.rawPosition}`)
-            .addField('Role Color', `${mentionedRole.hexColor}`)
-            .addField('Users', `${mentionedRole.members.size}`)
-            .addField('Mentionable', `${mentionedRole.mentionable ? 'Yes' : 'No'}`)
-            .addField('Hoist', `${mentionedRole.hoist ? 'True' : 'False'}`)
-            .addField(
-                'Creation Date',
-                `${moment(mentionedRole.createdAt).format('LLLL')} (${checkDays(mentionedRole.createdAt)})`
+            .addFields(
+                { name: 'Role ID', value: mentionedRole.id },
+                { name: 'Role position', value: mentionedRole.rawPosition },
+                { name: 'Role color', value: mentionedRole.hexColor },
+                { name: 'Users', value: mentionedRole.members.size },
+                { name: 'Tag-able', value: mentionedRole.mentionable ? 'Yes' : 'No' },
+                { name: 'Hoist', value: mentionedRole.hoist ? 'True' : 'False' },
+                {
+                    name: 'Creation date',
+                    value: `${moment(mentionedRole.createdAt).format('LLLL')} (${checkDays(mentionedRole.createdAt)}`,
+                }
             )
-            .setFooter(interaction.user.tag)
+            .setFooter({ text: interaction.user.tag })
             .setTimestamp();
 
         interaction.followUp({ embeds: [embed] });
