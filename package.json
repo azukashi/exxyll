@@ -17,7 +17,7 @@
     "author": "Gifaldy Azka <me@falcxxdev.ml>",
     "license": "MIT",
     "dependencies": {
-        "@iamtraction/google-translate": "1.1.2",
+        "@iamtraction/google-translate": "2.0.0",
         "anilist-node": "1.12.1",
         "axios": "0.27.2",
         "canvacord": "5.4.8",
