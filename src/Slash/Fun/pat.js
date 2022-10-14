@@ -29,7 +29,10 @@ module.exports = {
                     .setTitle(`${interaction.user.username} Patting ${userUsername}`)
                     .setImage(body.url)
                     .setColor('#FFC0CB')
-                    .setFooter(`${interaction.user.tag}`, interaction.user.displayAvatarURL({ dynamic: true }))
+                    .setFooter({
+                        text: `${interaction.user.tag}`,
+                        iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+                    })
                     .setTimestamp();
 
                 interaction.followUp({ embeds: [embed] });

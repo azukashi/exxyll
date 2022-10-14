@@ -29,8 +29,8 @@ module.exports = {
         const [text_1] = args;
         const [text_2] = args;
         const res = await fetch(`https://frenchnoodles.xyz/api/endpoints/drake/?text1=${text_1}&text2=${text_2}`, {});
-        let Image = await res.buffer();
-        const drakememe = new MessageAttachment(Image);
-        interaction.followUp({ files: [drakememe] });
+        let buffer = await res.buffer();
+        const drakememe = new MessageAttachment(buffer);
+        interaction.followUp({ files: [buffer] });
     },
 };
