@@ -3,7 +3,7 @@ const Schema = require('../../Models/WelcomeChannel');
 
 module.exports = {
     name: 'disable-welcome',
-    description: 'Disable and Remove Welcoming Feature',
+    description: 'Disable & revoke welcoming feature',
     options: [],
     userPermissions: ['MANAGE_GUILD'],
     userperm: ['MANAGE_GUILD'],
@@ -16,7 +16,7 @@ module.exports = {
     run: async (client, interaction, args) => {
         await Schema.findOneAndDelete({ Guild: interaction.guild.id });
         interaction.followUp({
-            content: `Sucessfully removed and disable welcoming feature!`,
+            content: `Sucessfully removed and disabled welcoming feature!`,
         });
     },
 };
