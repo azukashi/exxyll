@@ -30,12 +30,16 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setTitle(`🌐 ${body.title}`)
-            .addField('More Info:', `**[Click Here](${body.content_urls.desktop.page})**`, true)
             .setDescription(`** ${body.extract} **`)
-            .setFooter(
-                `Wikipedia Search | Command Request by ${interaction.user.tag}`,
-                interaction.user.displayAvatarURL({ dynamic: true })
-            )
+            .addFields({
+                name: 'More info',
+                value: `**[Click Here](${body.content_urls.desktop.page})**`,
+                inline: true,
+            })
+            .setFooter({
+                text: `Wikipedia search | Command request by ${interaction.user.tag}`,
+                iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+            })
             .setColor('BLUE');
 
         if (body.thumbnail) embed.setThumbnail(body.thumbnail.source);

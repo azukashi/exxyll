@@ -36,17 +36,21 @@ module.exports = {
                 interaction.guild.me.displayHexColor === '#000000' ? '#ffffff' : interaction.guild.me.displayHexColor;
 
             const weatherinfo = new MessageEmbed()
-                .setDescription(`**${current.skytext}**`)
-                .setAuthor(`Weather Information for ${current.observationpoint}`)
+                .setTitle(`Weather information for ${current.observationpoint}`)
                 .setThumbnail(current.imageUrl)
                 .setColor(roleColor)
-                .addField('Timezone', `UTC${locations.timezone}`, true)
-                .addField('Degree Type', 'Celsius', true)
-                .addField('Temperature', `${current.temperature}°`, true)
-                .addField('Wind', current.winddisplay, true)
-                .addField('Feels like', `${current.feelslike}°`, true)
-                .addField('Humidity', `${current.humidity}%`, true)
-                .setFooter(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true }));
+                .addFields(
+                    { name: 'Timezone', value: `UTC${location.timezone}`, inline: true },
+                    { name: 'Degree Type', value: 'Celsius', inline: true },
+                    { name: 'Temperature', value: `${current.temperature}°`, inline: true },
+                    { name: 'Wind', value: current.winddisplay, inline: true },
+                    { name: 'Feels like', value: `${current.feelslike}°`, inline: true },
+                    { name: 'Humidity', value: `${current.humidity}%`, inline: true }
+                )
+                .setFooter({
+                    text: interaction.user.tag,
+                    iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+                });
 
             interaction.followUp({ embeds: [weatherinfo] });
         });

@@ -32,7 +32,7 @@ module.exports = {
             return interaction.followUp({ files: [att] });
         } catch (err) {
             return interaction.followUp({
-                content: `Oh no, an error occurred: \`${err.message}\`. Try again later!`,
+                content: `An error occurred: \`${err.message}\`. Try again later.`,
                 ephemeral: true,
             });
         }

@@ -35,9 +35,11 @@ module.exports = {
                     .setTitle(answer.word)
                     .setURL(answer.permalink)
                     .setColor('RANDOM')
-                    .addField('DEFINITION', trim(answer.definition))
-                    .addField('EXAMPLE', trim(answer.example))
-                    .addField('RATINGS', `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎`),
+                    .addFields(
+                        { name: 'DEFINITION', value: trim(answer.definition) },
+                        { name: 'EXAMPLE', value: trim(answer.example) },
+                        { name: 'RATINGS', value: `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎` }
+                    ),
             ],
         });
     },
