@@ -29,7 +29,7 @@ module.exports = {
         const [time, todo] = args;
         if (todo.length > 200)
             return interaction.followUp({
-                content: 'Max Reminder Length Is 500 Characters',
+                content: 'Maximum reminder length is 500 characters',
                 ephemeral: true,
             });
 
@@ -38,8 +38,7 @@ module.exports = {
             .setTitle('Reminder Set!')
             .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
             .setDescription(`Successfully set <@${interaction.user.id}> a reminder!`)
-            .addField('⌛ Reminded In ⌛', `\`${time}\``)
-            .addField('👥 Reminder 👥', `${todo}`)
+            .addFields({ name: '⌛ Reminded in', value: `\`${time}\`` }, { name: '👥 Reminder', value: `${todo}` })
             .setTimestamp();
 
         interaction.followUp({ embeds: [setreminderembed] });
@@ -55,7 +54,7 @@ module.exports = {
                 .setTitle('Reminder Alert!')
                 .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
                 .setDescription(`Hey, <@${interaction.user.id}>! Your reminder is timeout!`)
-                .addField('⌛ Reminder ⌛', `\`${todo}\``)
+                .addFields({ name: '⌛ Reminder ⌛', value: `\`${todo}\`` })
                 .setTimestamp();
 
             interaction.followUp({ embeds: [alertembed] });

@@ -3,7 +3,7 @@ const translate = require('@iamtraction/google-translate');
 
 module.exports = {
     name: 'translate',
-    description: 'Translate a Text',
+    description: 'Translate a text',
     options: [
         {
             type: 3,
@@ -31,12 +31,14 @@ module.exports = {
             const translated = await translate(text, { to: locale });
 
             const embed = new MessageEmbed()
-                .setAuthor(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: false }))
-                .addField('Query', text, true)
-                .addField('Result', translated.text, true)
-                .addField('Translated to', locale, true)
+                .setTitle('Translation result')
+                .addFields(
+                    { name: 'Query', value: text, inline: true },
+                    { name: 'Result', value: translated.text, inline: true },
+                    { name: 'Translated to', value: locale, inline: true }
+                )
                 .setColor('BLUE')
-                .setFooter(interaction.user.tag)
+                .setFooter({ text: interaction.user.tag })
                 .setTimestamp();
             interaction.followUp({ embeds: [embed] });
         } catch (err) {
