@@ -38,14 +38,14 @@ module.exports = {
             perms.push('SEND_MESSAGES');
             console.log(perms);
             await role.edit({ permissions: perms });
-            interaction.followUp({ content: 'Server is unlocked now.' });
+            interaction.followUp({ content: 'Server is now unlocked.' });
         } else {
             const newPerms = perms.filter(perm => perm !== 'SEND_MESSAGES');
             console.log(newPerms);
 
             await role.edit({ permissions: newPerms });
             interaction.followUp({
-                content: 'Server is Now Locked Down for `@everyone` Role.',
+                content: 'Server is now locked down for `@everyone` role.',
             });
         }
     },

@@ -13,7 +13,7 @@ module.exports = {
         {
             type: 3,
             name: 'reason',
-            description: 'Reason why you want to kick the member?',
+            description: 'Reason why you want to kick this member',
         },
     ],
     userperm: ['KICK_MEMBERS'],
@@ -34,14 +34,16 @@ module.exports = {
                 ephemeral: true,
             });
 
-        const reason_fixed = reason || 'No Reason Provided';
+        const reasonFixed = reason || 'No reason provided';
         const memberPfp = client.users.cache.get(memberFixed.id).displayAvatarURL({ size: 512, dynamic: true });
         const embed = new MessageEmbed()
             .setTitle(`Successfully kicked ${memberFixed.user.username} from this server!`)
             .setThumbnail(memberPfp)
-            .addField('Kicked User', `${memberFixed}`)
-            .addField('Moderator', `<@${interaction.user.id}>`)
-            .addField('Reason', `${reason_fixed}`)
+            .addFields(
+                { name: 'Kicked user', value: memberFixed },
+                { name: 'Moderator', value: `<@${interaction.user.id}>` },
+                { name: 'Reason', value: reasonFixed }
+            )
             .setColor('RED')
             .setTimestamp();
 
