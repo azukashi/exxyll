@@ -45,15 +45,15 @@ module.exports = {
             });
 
             list.then(contributors => {
-                let listContri = '**Contributors of __exxyll__ repository**\n\n';
+                let contributorRes = '**Contributors on __exxyll__ repository**\n\n';
                 contributors
                     .filter(contributor => !contributor.login.includes('[bot]') || contributor.type === 'User')
                     .map(
                         contributor =>
-                            (listContri += ` **${contributor.login}** with \`${contributor.contributions}\` contributions.\n`)
+                            (contributorRes += ` **${contributor.login}** with \`${contributor.contributions}\` contributions.\n`)
                     );
 
-                message.channel.send({ content: listContri });
+                message.channel.send({ content: contributorRes });
             });
         } catch (err) {
             return message.channel.send({ content: err });
