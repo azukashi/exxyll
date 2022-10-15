@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@iamtraction/google-translate': 1.1.2
+  '@iamtraction/google-translate': 2.0.0
   anilist-node: 1.13.0
   axios: 0.27.2
   canvacord: 5.4.8
@@ -25,7 +25,7 @@ specifiers:
   ytsr: 3.8.0
 
 dependencies:
-  '@iamtraction/google-translate': 1.1.2
+  '@iamtraction/google-translate': 2.0.0
   anilist-node: 1.13.0
   axios: 0.27.2
   canvacord: 5.4.8
@@ -106,11 +106,11 @@ packages:
     engines: {node: '>=16.9.0'}
     dev: false
 
-  /@iamtraction/google-translate/1.1.2:
-    resolution: {integrity: sha512-z30o1rz2b7JTTqmy/MSQjwfz59++qrBpTXGHWQrqxPW1mTW5pLEMM2FymxCyJcg6alogKgSLT2RVrjuvuNCxVA==}
-    engines: {node: '>=8.0.0'}
+  /@iamtraction/google-translate/2.0.0:
+    resolution: {integrity: sha512-NdGO7FOVZR5X8mhhBmpDWurAGbPSc5RTTszPC7cBElu7pDafz4dzQA6Me3TaPcOLb2YW2YNk+vuZRV04XGG8Iw==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      got: 11.8.5
+      undici: 5.11.0
     dev: false
 
   /@napi-rs/canvas-android-arm64/0.1.30:
