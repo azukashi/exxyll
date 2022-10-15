@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'unban',
-    description: 'Unban a user from Server by their User ID',
+    description: 'Unban a user from server by their User ID',
     aliases: ['unbonk'],
     emoji: '🔧',
     userperm: ['BAN_MEMBERS', 'SEND_MESSAGES'],
