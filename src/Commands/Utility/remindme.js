@@ -29,13 +29,11 @@ module.exports = {
             .setTitle('Reminder Set!')
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(`Successfully set <@${message.author.id}> a reminder!`)
-            .addField('⌛ Reminded In ⌛', `\`${time}\``)
-            .addField('👥 Reminder 👥', `${reminder}`)
+            .addFields({ name: '⌛ Reminded in', value: `\`${time}\`` }, { name: '👥 Reminder', value: `${reminder}` })
             .setTimestamp();
 
         message.channel.send({ embeds: [setreminderembed] });
 
-        // Pake arrow function () => {} biar keren :v
         setTimeout(async () => {
             message.reply({ content: `<@${message.author.id}> Reminder Timeout!` });
 
@@ -44,7 +42,7 @@ module.exports = {
                 .setTitle('Reminder Alert!')
                 .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(`Hey, <@${message.author.id}>! Your reminder is timeout!`)
-                .addField('⌛ Reminder ⌛', `\`${reminder}\``)
+                .addFields({ name: '⌛ Reminder ⌛', value: `\`${reminder}\`` })
                 .setTimestamp();
 
             message.channel.send({ embeds: [alertembed] });

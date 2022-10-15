@@ -30,13 +30,15 @@ module.exports = {
                     .setTitle(`${body.name}`)
                     .setURL(body.url)
                     .setThumbnail(body.avatar)
-                    .addField(`Bio`, `${body.bio || 'No Bio'}`)
-                    .addField(`Location`, `${body.location || 'No Location'}`)
-                    .addField(`Email`, `${body.email || 'None'}`)
-                    .addField(`Website`, `${body.blog || 'No Website'}`)
-                    .addField(`Created at`, `${moment(body.created_at).format('LLLL')}`)
-                    .addField(`Followers`, `${body.followers}`)
-                    .addField(`Following`, `${body.following}`)
+                    .addFields(
+                        { name: `Bio`, value: `${body.bio || 'None'}` },
+                        { name: `Location`, value: `${body.location || 'None'}` },
+                        { name: `Email`, value: `${body.email || 'None'}` },
+                        { name: `Website`, value: `${body.blog || 'None'}` },
+                        { name: `Creation date`, value: `${moment(body.created_at).format('LLLL')}` },
+                        { name: `Followers`, value: `${body.followers}` },
+                        { name: `Following`, value: `${body.following}` }
+                    )
                     .setColor('BLUE')
                     .setTimestamp();
 

@@ -2,12 +2,12 @@ const { Client, CommandInteraction, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'clear',
-    description: 'Clear and Delete Messages',
+    description: 'Clear and delete messages',
     options: [
         {
             type: 4,
             name: 'amount',
-            description: "How many messages you'd like to clear? (2 - 100)",
+            description: "How many messages you'd like to clear? (2 ~ 100)",
             required: true,
         },
     ],
@@ -32,9 +32,7 @@ module.exports = {
             await interaction.channel.bulkDelete(amount).then(async m => {
                 let embed = new MessageEmbed()
                     .setColor('0x#00ffff')
-                    .setDescription(
-                        `<a:verified_green:863233286690832404>  Cleared **${m.size}**/**${amount}** messages!`
-                    );
+                    .setDescription(`:white_check_mark: cleared **${m.size}**/**${amount}** messages!`);
 
                 interaction.followUp({ embeds: [embed] }).then(msg => {
                     msg.delete({ setTimeout: 4000 });

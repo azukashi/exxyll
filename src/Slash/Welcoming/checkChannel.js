@@ -3,7 +3,7 @@ const Schema = require('../../Models/WelcomeChannel');
 
 module.exports = {
     name: 'check-welcome',
-    description: 'Check where is Welcoming System is Enabled',
+    description: 'Check where is welcoming system is enabled',
     options: [],
     userPermissions: ['MANAGE_GUILD'],
     userperm: ['MANAGE_GUILD'],
@@ -23,7 +23,7 @@ module.exports = {
             const channel = client.channels.cache.get(data.Channel);
 
             interaction.followUp({
-                content: `Welcoming Channel Has Been Set To => ${channel}. \n\nThis bot will automatically sends a Welcoming message to ${channel} when someone joins to this server!`,
+                content: `Welcoming channel has been set to => ${channel}. \n\nThis bot will automatically sends a welcoming message to ${channel} when someone joins to this server!`,
             });
         });
     },

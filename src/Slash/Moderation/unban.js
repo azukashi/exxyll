@@ -23,9 +23,9 @@ module.exports = {
         const [id] = args;
         const bannedMembers = await interaction.guild.bans.fetch();
         if (!bannedMembers.find(user => user.user.id === id))
-            return interaction.followUp({ content: 'User is not Banned!' });
+            return interaction.followUp({ content: 'User is not banned!' });
 
         interaction.guild.members.unban(id);
-        interaction.followUp({ content: 'Unbanned User!' });
+        interaction.followUp({ content: 'Successfully unlisted user from banned members.' });
     },
 };

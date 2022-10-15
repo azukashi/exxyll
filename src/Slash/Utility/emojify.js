@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
     name: 'emojify',
-    description: 'Emojify a Text',
+    description: 'Emojify a text',
     options: [
         {
             type: 3,

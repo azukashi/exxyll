@@ -40,16 +40,18 @@ module.exports = {
                     .setURL(mal_url)
                     .setThumbnail(imgae)
                     .setDescription(synopsis)
-                    .addField('Type', type)
-                    .addField('Total Episode', `${episode}`)
-                    .addField('Ratings (at MyAnimeList)', `${score}`)
-                    .addField('Released at', `${moment(start_date).format('LLLL')}`)
-                    .addField('Rate', rate)
+                    .addFields(
+                        { name: 'Type', value: type },
+                        { name: 'Total episode', value: `${episode}` },
+                        { name: 'Ratings (on MAL)', value: `${score}` },
+                        { name: 'Release date', value: `${moment(start_date).format('LLLL')}` },
+                        { name: 'Rate', value: rate }
+                    )
                     .setColor('#800080')
-                    .setFooter(
-                        `Requested by : ${interaction.user.tag}`,
-                        interaction.user.displayAvatarURL({ dynamic: true })
-                    );
+                    .setFooter({
+                        text: `Requested by : ${interaction.user.tag}`,
+                        iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+                    });
 
                 interaction.followUp({ embeds: [embed] });
             })

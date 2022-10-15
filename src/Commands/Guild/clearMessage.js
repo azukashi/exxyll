@@ -27,9 +27,7 @@ module.exports = {
             await message.channel.bulkDelete(amount).then(async m => {
                 let embed = new MessageEmbed()
                     .setColor('0x#00ffff')
-                    .setDescription(
-                        `<a:verified_green:863233286690832404>  Cleared **${m.size}**/**${amount}** messages!`
-                    );
+                    .setDescription(`:white_check_mark:  Cleared **${m.size}**/**${amount}** messages!`);
 
                 message.channel.send({ embeds: [embed] }).then(msg => msg.delete({ timeout: 4000 }));
             });

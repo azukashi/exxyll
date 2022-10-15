@@ -16,17 +16,17 @@ module.exports = {
         const embed1 = new MessageEmbed()
             .setTitle(`👑 Owner Info`)
             .setThumbnail(owner.displayAvatarURL({ dynamic: true }))
-            .addField(`Name`, `Gifaldy Azka`)
-            .addField(`Discord Tag`, `Falcxxdev#0001`)
-            .addField(`Working on`, `Bot Development, Website Development, Feature Development`)
-            .addField(`Location`, `Bandung, Indonesia`)
-            .addField(
-                `Social Media`,
-                `[Website](https://gifaldyazka.is-a.dev) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxr)`
+            .addFields(
+                { name: 'Name', value: owner.username },
+                { name: 'Discord tag', value: owner.tag },
+                { name: 'Working on', value: 'Bot development, Maintenance, Code Reviewers' },
+                {
+                    name: 'Socials',
+                    value: '[Website](https://www.falcxxdev.ml) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxdev)',
+                },
+                { name: 'Support', value: '[Buy me a coffee](https://buymeacoffee.com/gifaldyazkaa)' }
             )
-            .addField(`Buy me a Coffee`, `[Buy me a Coffee Here](https://buymeacoffee.com/gifaldyazkaa)`)
-            .setColor('PURPLE');
-
+            .setColor(owner.hexAccentColor);
         message.channel.send({ embeds: [embed1] });
     },
 };

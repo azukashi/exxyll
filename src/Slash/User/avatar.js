@@ -7,7 +7,7 @@ module.exports = {
         {
             type: 6,
             name: 'user',
-            description: 'User to show avatar. This is optional.',
+            description: 'Target user to show. (optional)',
             required: false,
         },
     ],

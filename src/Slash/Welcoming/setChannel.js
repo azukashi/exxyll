@@ -3,7 +3,7 @@ const Schema = require('../../Models/WelcomeChannel');
 
 module.exports = {
     name: 'set-welcoming',
-    description: 'Set and Enable Welcoming System',
+    description: 'Enable and set welcoming system',
     options: [
         {
             type: 7,
@@ -25,7 +25,7 @@ module.exports = {
         const checkChannel = client.channels.cache.get(channel);
         if (!checkChannel.type == 'GUILD_TEXT')
             return interaction.followUp({
-                content: `Invalid channel. Please select a Text Channel!`,
+                content: `Invalid channel. Please select a text channel!`,
                 ephemeral: true,
             });
         Schema.findOne({ Guild: interaction.guild.id }, async (err, data) => {
@@ -39,7 +39,7 @@ module.exports = {
                 }).save();
             }
             interaction.followUp({
-                content: `<#${channel}> has been set as the welcome channel!`,
+                content: `<#${channel}> has been set as welcome channel!`,
             });
         });
     },

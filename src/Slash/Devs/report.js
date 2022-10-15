@@ -24,10 +24,12 @@ module.exports = {
         const embedBugnya = new MessageEmbed()
             .setTitle(`New Bugs Reported!`)
             .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
-            .addField(`Bug Details`, details)
-            .addField(
-                `Reported by`,
-                `${interaction.user.tag} from **${interaction.guild.name}** (${interaction.user.id})`
+            .addFields(
+                { name: 'Bug Details', value: query },
+                {
+                    name: 'Reported by',
+                    value: `${interaction.user.tag} from **${interaction.guild.name}** (${interaction.user.id})`,
+                }
             )
             .setColor('#FF0000')
             .setTimestamp();

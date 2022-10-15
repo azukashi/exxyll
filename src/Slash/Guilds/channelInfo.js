@@ -2,7 +2,7 @@ const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'channelinfo',
-    description: 'Returns Information aboout Channels',
+    description: 'Returns information about a channel',
     options: [
         {
             type: 7,
@@ -46,16 +46,18 @@ module.exports = {
         let inline = true;
         try {
             let e = new MessageEmbed()
-                .setTitle(`<:channel:863363700463632414> Channel Information`)
+                .setTitle(`💬 Channel Information`)
                 .setThumbnail(interaction.guild.iconURL({ dynamic: false }))
                 .setDescription(`Information About ${fixedChannel}`)
-                .addField('Created At:', `${checkDays(fixedChannel.createdAt)}`, inline)
-                .addField('Channel ID:', `${fixedChannel.id}`, inline)
-                .addField('Channel Type:', `${channelType}`, inline)
-                .setFooter(
-                    `Channel Information | Command Request by ${interaction.user.tag}`,
-                    interaction.user.displayAvatarURL({ dynamic: true })
+                .addFields(
+                    { name: 'Creation date', value: `${checkDays(fixedChannel.createdAt)}`, inline: true },
+                    { name: 'Channel ID', value: `${fixedChannel.id}`, inline: true },
+                    { name: 'Channel type', value: `${channelType}`, inline: true }
                 )
+                .setFooter({
+                    text: `Channel Information | Command Request by ${interaction.user.tag}`,
+                    iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+                })
                 .setColor('BLUE');
             interaction.followUp({ embeds: [e] });
         } catch (error) {

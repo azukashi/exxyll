@@ -26,9 +26,11 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle(`Successfully kicked ${member.user.username} from this server!`)
             .setThumbnail(memberPfp)
-            .addField('Kicked User', `${member}`)
-            .addField('Moderator', `<@${message.author.id}>`)
-            .addField('Reason', `${reason}`)
+            .addFields(
+                { name: 'Kicked user', value: member },
+                { name: 'Moderator', value: `<@${message.author.id}>` },
+                { name: 'Reason', value: reason }
+            )
             .setColor('RED')
             .setTimestamp();
 

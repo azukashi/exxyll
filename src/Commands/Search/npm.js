@@ -4,7 +4,7 @@ const moment = require('moment');
 
 module.exports = {
     name: 'npm',
-    description: 'Search and Returns information about a npm package',
+    description: 'Search and returns information about an npm package',
     aliases: ['npmjs'],
     emoji: '📦',
     userperm: ['SEND_MESSAGES'],
@@ -31,21 +31,27 @@ module.exports = {
             .setTitle(body.name)
             .setURL(`https://www.npmjs.com/package/${body.name}`)
             .setDescription(body.description || 'No description.')
-            .addField('❯ Version', body['dist-tags'].latest, true)
-            .addField('❯ License', body.license || 'None', true)
-            .addField('❯ Author', body.author ? body.author.name : '???', true)
-            .addField('❯ Creation Date', moment.utc(body.time.created).format('YYYY/MM/DD hh:mm:ss'), true)
-            .addField(
-                '❯ Modification Date',
-                body.time.modified ? moment.utc(body.time.modified).format('YYYY/MM/DD hh:mm:ss') : 'None',
-                true
-            )
-            .addField(
-                '❯ Repository',
-                body.repository ? `[View Here](${body.repository.url.split('+')[1]})` : 'None',
-                true
-            )
-            .addField('❯ Maintainers', body.maintainers.map(user => user.name).join(', '));
+            .addFields(
+                { name: '❯ Version', value: body['dist-tags'].latest, inline: true },
+                { name: '❯ License', value: body.license || 'None', inline: true },
+                { name: '❯ Author', value: body.author ? body.author.name : '???', inline: true },
+                {
+                    name: '❯ Creation Date',
+                    value: moment.utc(body.time.created).format('YYYY/MM/DD hh:mm:ss'),
+                    inline: true,
+                },
+                {
+                    name: '❯ Modification Date',
+                    value: body.time.modified ? moment.utc(body.time.modified).format('YYYY/MM/DD hh:mm:ss') : 'None',
+                    inline: true,
+                },
+                {
+                    name: '❯ Repository',
+                    value: body.repository ? `[View Here](${body.repository.url.split('+')[1]})` : 'None',
+                    inline: true,
+                },
+                { name: '❯ Maintainers', value: body.maintainers.map(user => user.name).join(', ') }
+            );
         message.channel.send({ embeds: [embed] });
 
         async function awaitMessages(message) {
@@ -56,9 +62,9 @@ module.exports = {
             };
 
             const serchembed = new MessageEmbed()
-                .setTitle('<:npm:853250839808180234> Search at npmjs')
+                .setTitle(':package: Search at npmjs')
                 .setDescription(
-                    'What npm Package Are You Looking For? Just Type Then I Will Search! You Have **30s** ⌛ \nType `cancel` to cancel the command.'
+                    'What npm package are you looking for? Just type then i will search! You have **30s** ⌛ \nType `cancel` to cancel the command.'
                 )
                 .setThumbnail('https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png')
                 .setColor('GREEN');
@@ -74,7 +80,7 @@ module.exports = {
                 })
                 .catch(() => {
                     message.channel.send({
-                        content: "You didn't Respond. Command Canceled.",
+                        content: "You didn't respond. Command aborted.",
                     });
                 });
 

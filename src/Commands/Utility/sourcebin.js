@@ -15,7 +15,7 @@ module.exports = {
      */
     run: async (client, message, args) => {
         const content = args.join(' ');
-        if (!content) return message.reply({ content: 'Please give a code to uploaded!' });
+        if (!content) return message.reply({ content: 'Please give a code to upload!' });
 
         create(
             [

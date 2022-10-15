@@ -1,31 +1,39 @@
-const { Client, Message, MessageEmbed } = require('discord.js');
-const moment = require('moment');
+const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
+const moment = require('moment');
 
 module.exports = {
     name: 'userinfo',
     description: 'Returns user information',
-    aliases: ['user-info', 'userinf', 'profile'],
-    emoji: '👤',
-    userperm: ['SEND_MESSAGES'],
-    botperm: ['SEND_MESSAGES'],
+    options: [
+        {
+            type: 6,
+            name: 'user',
+            description: 'User to show their information. (optional)',
+            required: false,
+        },
+    ],
+    userperm: 'SEND_MESSAGES',
+    botperm: 'SEND_MESSAGES',
     /**
      * @param {Client} client
-     * @param {Message} message
+     * @param {CommandInteraction} interaction
      * @param {String[]} args
      */
-    run: async (client, message, args) => {
-        const checkDays = date => {
+    run: async (client, interaction, args) => {
+        let [user] = args;
+        if (!user) user = interaction.user.id;
+        const fixedUser = client.users.cache.get(user);
+        const member = interaction.guild.members.cache.get(fixedUser.id) || interaction.member;
+        // Getdays func
+        function checkDays(date) {
             let now = new Date();
             let diff = now.getTime() - date.getTime();
             let days = Math.floor(diff / 86400000);
             return days + (days == 1 ? ' day' : ' days') + ' ago';
-        };
-        let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
-        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
-
+        }
         // Fetch & get user banner
-        fetch(`https://discord.com/api/users/${user.id}`, {
+        fetch(`https://discord.com/api/users/${fixedUser.id}`, {
             headers: {
                 Authorization: `Bot ${client.token}`,
             },
@@ -35,18 +43,20 @@ module.exports = {
                 if (body.banner) {
                     const extension = body.banner.startsWith('a_') ? '.gif' : '.png';
                     const bannerUrl =
-                        `https://cdn.discordapp.com/banners/${user.id}/${body.banner}${extension}?size=1024` ||
+                        `https://cdn.discordapp.com/banners/${fixedUser.id}/${body.banner}${extension}?size=1024` ||
                         "User doesn't have a banner!";
                     let embed = new MessageEmbed()
-                        .setTitle(`${user.username}'s User Information`)
-                        .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+                        .setTitle(`${fixedUser.username}'s User Information`)
+                        .setThumbnail(fixedUser.displayAvatarURL({ dynamic: true, size: 512 }))
                         .setColor('BLUE')
                         .addFields(
-                            { name: 'User tag', value: user.tag },
-                            { name: 'User ID', value: user.id },
+                            { name: 'User tag', value: fixedUser.tag },
+                            { name: 'User ID', value: fixedUser.id },
                             {
                                 name: 'Creation date',
-                                value: `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`,
+                                value: `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
+                                    fixedUser.createdAt
+                                )})`,
                             },
                             {
                                 name: 'Date joined',
@@ -56,22 +66,24 @@ module.exports = {
                             { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
                         )
                         .setImage(bannerUrl)
-                        .setFooter({ text: message.author.tag })
+                        .setFooter({ text: interaction.user.tag })
                         .setTimestamp();
-                    message.channel.send({ embeds: [embed] });
+                    interaction.followUp({ embeds: [embed] });
                 } else {
                     if (body.accent_color) {
                         const bannerColor = body.accent_color;
                         let embed = new MessageEmbed()
-                            .setTitle(`${user.username}'s User Information`)
-                            .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+                            .setTitle(`${fixedUser.username}'s User Information`)
+                            .setThumbnail(fixedUser.displayAvatarURL({ dynamic: true, size: 512 }))
                             .setColor(bannerColor)
                             .addFields(
-                                { name: 'User tag', value: user.tag },
-                                { name: 'User ID', value: user.id },
+                                { name: 'User tag', value: fixedUser.tag },
+                                { name: 'User ID', value: fixedUser.id },
                                 {
                                     name: 'Creation date',
-                                    value: `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`,
+                                    value: `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
+                                        fixedUser.createdAt
+                                    )})`,
                                 },
                                 {
                                     name: 'Date joined',
@@ -80,20 +92,22 @@ module.exports = {
                                 { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
                                 { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
                             )
-                            .setFooter({ text: message.author.tag })
+                            .setFooter({ text: interaction.user.tag })
                             .setTimestamp();
-                        message.channel.send({ embeds: [embed] });
+                        interaction.followUp({ embeds: [embed] });
                     } else {
                         let embed = new MessageEmbed()
-                            .setTitle(`${user.username}'s User Information`)
-                            .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
+                            .setTitle(`${fixedUser.username}'s User Information`)
+                            .setThumbnail(fixedUser.displayAvatarURL({ dynamic: true, size: 512 }))
                             .setColor('BLUE')
                             .addFields(
-                                { name: 'User tag', value: user.tag },
-                                { name: 'User ID', value: user.id },
+                                { name: 'User tag', value: fixedUser.tag },
+                                { name: 'User ID', value: fixedUser.id },
                                 {
                                     name: 'Creation date',
-                                    value: `${moment(user.createdAt).format('LLLL')} (${checkDays(user.createdAt)})`,
+                                    value: `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
+                                        fixedUser.createdAt
+                                    )})`,
                                 },
                                 {
                                     name: 'Date joined',
@@ -102,9 +116,9 @@ module.exports = {
                                 { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
                                 { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
                             )
-                            .setFooter({ text: message.author.tag })
+                            .setFooter({ text: interaction.user.tag })
                             .setTimestamp();
-                        message.channel.send({ embeds: [embed] });
+                        interaction.followUp({ embeds: [embed] });
                     }
                 }
             });

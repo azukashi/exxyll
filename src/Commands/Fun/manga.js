@@ -35,16 +35,18 @@ module.exports = {
                     .setURL(mal_url)
                     .setThumbnail(imgae)
                     .setDescription(synopsis)
-                    .addField(`Type`, type)
-                    .addField(`Total Chapters`, `${chapters}`)
-                    .addField(`Total Volumes`, `${volumes}`)
-                    .addField(`Ratings (at MyAnimeList)`, `${score}`)
-                    .addField(`Released`, `${moment(start_date).format('LLLL')}`)
+                    .addFields(
+                        { name: 'Type', value: type },
+                        { name: 'Total chapters', value: `${chapters}` },
+                        { name: 'Total volumes', value: `${volumes}` },
+                        { name: 'Ratings (on MAL)', value: `${score}` },
+                        { name: 'Release date', value: `${moment(start_date).format('LLLL')}` }
+                    )
                     .setColor(`#800080`)
-                    .setFooter(
-                        `Requested by : ${message.author.tag}`,
-                        message.author.displayAvatarURL({ dynamic: true })
-                    );
+                    .setFooter({
+                        text: `Requested by ${message.author.tag}`,
+                        iconURL: message.author.displayAvatarURL({ dynamic: true }),
+                    });
 
                 message.channel.send({ embeds: [embed] });
             })

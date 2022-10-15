@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed, WebhookClient } = require('discord.js');
 
 module.exports = {
     name: 'suggest',
-    description: 'Suggest a Features or Something to Developers.',
+    description: 'Suggest a features or something to dev.',
     emoji: '❔',
     userperm: ['SEND_MESSAGES'],
     botperm: ['SEND_MESSAGES'],
@@ -21,8 +21,10 @@ module.exports = {
         if (!query) return message.reply({ content: `Please specify a suggestion!` });
         const suggestEmbed = new MessageEmbed()
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
-            .addField('Suggestion', `${query}`)
-            .addField('Sent From', `${message.member.guild.name}`)
+            .addFields(
+                { name: 'Suggestion', value: `${query}` },
+                { name: 'Sent from', value: `${message.member.guild.name}` }
+            )
             .setColor('BLUE')
             .setTimestamp();
         wc.send({
@@ -45,8 +47,10 @@ module.exports = {
             .setDescription(
                 `New suggestion from [${message.author.tag}](https://discord.com/users/${message.author.id})!`
             )
-            .addField(`User ID`, `${message.author.id}`)
-            .addField(`Sent from`, `${message.member.guild.name}`)
+            .addFields(
+                { name: 'User ID', value: `${message.author.id}` },
+                { name: 'Sent from', value: `${message.member.guild.name}` }
+            )
             .setColor('#00FF00')
             .setTimestamp();
         logChannel.send({ embeds: [log] });

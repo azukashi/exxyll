@@ -27,7 +27,7 @@ module.exports = {
             return message.channel.send({ files: [att] });
         } catch (err) {
             return message.reply({
-                content: `Oh no, an error occurred: \`${err.message}\`. Try again later!`,
+                content: `An error occurred: \`${err.message}\`. Try again later!`,
             });
         }
     },

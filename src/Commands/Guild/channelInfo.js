@@ -43,13 +43,15 @@ module.exports = {
                 .setTitle(`💬 Channel Information`)
                 .setThumbnail(message.guild.iconURL({ dynamic: false }))
                 .setDescription(`Information About ${channel}`)
-                .addField('Created At:', `${checkDays(channel.createdAt)}`, inline)
-                .addField('Channel ID:', `${channel.id}`, inline)
-                .addField('Channel Type:', `${channelType}`, inline)
-                .setFooter(
-                    `Channel Information | Command Request by ${message.author.tag}`,
-                    message.author.displayAvatarURL({ dynamic: true })
+                .addFields(
+                    { name: 'Creation date', value: `${checkDays(channel.createdAt)}`, inline: true },
+                    { name: 'Channel ID', value: `${channel.id}`, inline: true },
+                    { name: 'Channel type', value: `${channelType}`, inline: true }
                 )
+                .setFooter({
+                    text: `Channel Information | Command Request by ${message.author.tag}`,
+                    iconURL: message.author.displayAvatarURL({ dynamic: true }),
+                })
                 .setColor('BLUE');
             message.channel.send({ embeds: [e] });
         } catch (error) {

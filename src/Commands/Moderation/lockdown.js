@@ -18,21 +18,23 @@ module.exports = {
         const role = message.guild.roles.everyone;
         const hello = new MessageEmbed()
             .setTitle(`Lockdown Server`)
-            .setDescription('Want to lock this server? You can lockdown this server by passing this options!')
+            .setDescription('Lockdown your server to avoid spamming, flooding, etc. for `@everyone` role')
             .setThumbnail(message.guild.iconURL({ dynamic: true, size: 512 }))
-            .addField(
-                `Available Options`,
-                `\`true\` - Set Lockdown for this server\n\`false\` - Unlock this server from Lockdown Mode`
+            .addFields(
+                {
+                    name: 'Available options',
+                    value: `\`true\` - Set lockdown for this server\n\`false\` - Unset/unlock lockdown`,
+                },
+                { name: 'Usage', value: `\`${prefix}lockdown true\` or \`${prefix}lockdown false\`` }
             )
-            .addField('Usage', `\`${prefix}lockdown true\` or \`${prefix}lockdown false\``)
-            .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
+            .setFooter({ text: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
             .setColor('RED')
             .setTimestamp();
         if (!args.length) return message.channel.send({ embeds: [hello] });
         const query = args[0].toLowerCase();
         if (!['true', 'false'].includes(query))
             return message.reply({
-                content: "The option you have stated isn't valid.",
+                content: 'Option is not valid!',
             });
         const perms = role.permissions.toArray();
 
@@ -40,14 +42,14 @@ module.exports = {
             perms.push('SEND_MESSAGES');
             console.log(perms);
             await role.edit({ permissions: perms });
-            message.channel.send({ content: 'Server is unlocked now.' });
+            message.channel.send({ content: 'Server is now unlocked.' });
         } else {
             const newPerms = perms.filter(perm => perm !== 'SEND_MESSAGES');
             console.log(newPerms);
 
             await role.edit({ permissions: newPerms });
             message.channel.send({
-                content: 'Server is Now Locked Down for `@everyone` Role.',
+                content: 'Server is now locked down for `@everyone` role.',
             });
         }
     },

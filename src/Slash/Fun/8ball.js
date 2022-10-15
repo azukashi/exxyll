@@ -48,8 +48,16 @@ module.exports = {
             .setColor('BLUE')
             .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
             .setTitle('🎱 8ball')
-            .addField(`${interaction.user.username}'s Question`, question)
-            .addField(`8ball says`, responses[response])
+            .addFields(
+                {
+                    name: `${interaction.user.username}'s question`,
+                    value: question,
+                },
+                {
+                    name: '8ball says',
+                    value: responses[response],
+                }
+            )
             .setTimestamp();
 
         interaction.followUp({ embeds: [embed] });

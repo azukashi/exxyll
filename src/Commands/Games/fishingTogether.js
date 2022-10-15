@@ -15,7 +15,7 @@ module.exports = {
     run: async (client, message, args) => {
         const voicechannel = message.member.voice.channelId;
         const notInVc = new MessageEmbed()
-            .setDescription('<:tickNo:863367014092898314> | You need to be in a voice channel to run this command!')
+            .setDescription(':x: | You need to be in a voice channel to run this command!')
             .setColor('RED');
         if (!voicechannel) return message.channel.send({ embeds: [notInVc] });
         client.discordTogether.createTogetherCode(voicechannel, 'fishing').then(async invite => {

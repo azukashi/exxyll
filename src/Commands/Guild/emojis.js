@@ -32,19 +32,20 @@ module.exports = {
                     Emojis += Emoji(emoji.id);
                 }
             });
-            let emn = new MessageEmbed();
-            emn.setTitle(`<:add_reaction:863214931599818783> Showing Emojis of ${message.guild.name}`);
-            emn.setThumbnail(message.guild.iconURL({ dynamic: true, format: 'png', size: 512 }));
-            emn.setDescription(
-                `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`
-            );
-            emn.setColor('BLUE').setFooter(
-                `Emoji Lists | Command Request by ${message.author.tag}`,
-                message.author.displayAvatarURL({ dynamic: true })
-            );
+            let emn = new MessageEmbed()
+                .setTitle(`:smiley: Showing emojis of ${message.guild.name}`)
+                .setThumbnail(message.guild.iconURL({ dynamic: true, format: 'png', size: 512 }))
+                .setDescription(
+                    `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`
+                )
+                .setColor('BLUE')
+                .setFooter({
+                    text: `Emoji list | Command request by ${message.author.tag}`,
+                    value: message.author.displayAvatarURL({ dynamic: true }),
+                });
             message.channel.send({ embeds: [emn] });
         } catch (err) {
-            message.channel.send('Oops! Looks like something went wrong, Please try again Later.');
+            message.channel.send({ content: 'Oops! Looks like something went wrong, Please try again Later.' });
             console.log(err);
         }
     },

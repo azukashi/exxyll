@@ -2,12 +2,12 @@ const { Client, CommandInteraction, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'slowmode',
-    description: 'Slowmode a channel. Where the command is executed',
+    description: 'Set slowmode for this channel.',
     options: [
         {
             type: 3,
             name: 'duration',
-            description: 'How long the slowmode duration you want?',
+            description: 'Slowmode duration',
             required: true,
         },
     ],
@@ -24,7 +24,7 @@ module.exports = {
         const amount = parseInt(duration);
         if (isNaN(amount))
             return interaction.followUp({
-                content: ":x:It doesn't seem to be valid value",
+                content: ':x: It does not seem to be valid value',
                 ephemeral: true,
             });
         if (duration === amount + 's') {
@@ -71,7 +71,7 @@ module.exports = {
             }
         } else {
             interaction.followUp({
-                content: 'You can only set seconds(s), minutes(min) and Hours(h)',
+                content: 'You can only set seconds(s), minutes(min) and hours(h)',
             });
         }
     },
