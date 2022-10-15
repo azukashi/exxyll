@@ -2,7 +2,7 @@ const { CommandInteraction, Client, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'channelinfo',
-    description: 'Returns Information aboout Channels',
+    description: 'Returns information about a channel',
     options: [
         {
             type: 7,
@@ -46,7 +46,7 @@ module.exports = {
         let inline = true;
         try {
             let e = new MessageEmbed()
-                .setTitle(`<:channel:863363700463632414> Channel Information`)
+                .setTitle(`💬 Channel Information`)
                 .setThumbnail(interaction.guild.iconURL({ dynamic: false }))
                 .setDescription(`Information About ${fixedChannel}`)
                 .addFields(

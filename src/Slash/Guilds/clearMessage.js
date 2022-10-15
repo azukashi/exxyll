@@ -7,7 +7,7 @@ module.exports = {
         {
             type: 4,
             name: 'amount',
-            description: "How many messages you'd like to clear? (2 - 100)",
+            description: "How many messages you'd like to clear? (2 ~ 100)",
             required: true,
         },
     ],
