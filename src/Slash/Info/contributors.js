@@ -18,7 +18,7 @@ module.exports = {
                     .get(
                         {
                             hostname: 'api.github.com',
-                            path: '/repos/gifaldyazkaa/exxyll-origin/contributors',
+                            path: '/repos/gifaldyazkaa/exxyll/contributors',
                             headers: {
                                 'User-Agent': 'gifaldyazkaa',
                                 Accept: 'application/vnd.github.v3+json',
@@ -46,16 +46,16 @@ module.exports = {
             });
 
             list.then(contributors => {
-                let listContri = '**A List of People Contributing to __exxyll-origin__ Repository**\n\n';
+                let contributorRes = '**Contributors on __exxyll__ repository**\n\n';
 
                 contributors
                     .filter(contributor => !contributor.login.includes('[bot]') || contributor.type === 'User')
                     .map(
                         contributor =>
-                            (listContri += ` **${contributor.login}** with \`${contributor.contributions}\` Contributions.\n`)
+                            (contributorRes += ` **${contributor.login}** with \`${contributor.contributions}\` Contributions.\n`)
                     );
 
-                interaction.followUp({ content: listContri });
+                interaction.followUp({ content: contributorRes });
             });
         } catch (err) {
             return interaction.followUp({ content: err, ephemeral: true });

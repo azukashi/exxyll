@@ -15,10 +15,10 @@ module.exports = {
         try {
             const emojis = {
                 config: '⚙️',
-                developer: '<:developer:855302873785040897>',
-                fun: '<:teri_funny:876637356986343440>',
+                developer: '🔧',
+                fun: '😅',
                 games: '🎮',
-                guild: '<:partnernew:863214932585873438>',
+                guild: '📫',
                 info: 'ℹ️',
                 levelling: '⏫',
                 moderation: '⚒️',
