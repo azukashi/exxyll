@@ -10,7 +10,7 @@ client.on('messageCreate', async message => {
             )
                 .then(res => res.json())
                 .then(body => {
-                    message.reply(body.response);
+                    message.reply({ content: body.response });
                 });
         }
     }
