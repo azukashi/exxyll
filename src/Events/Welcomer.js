@@ -12,17 +12,17 @@ client.on('guildMemberAdd', async member => {
         //   .iconURL({ dynamic: true });
         const userAvatar = member.user.displayAvatarURL({
             dynamic: true,
-            size: 512,
+            size: 1024,
         });
 
         try {
             channel.send({
                 embeds: [
                     new MessageEmbed()
-                        .setTitle('New Member!')
+                        .setTitle('New member!')
                         .setThumbnail(userAvatar)
-                        .setDescription(`Hey <@${member.user.id}>, Welcome to **${member.guild.name}**!`)
-                        .setFooter(`${member.guild.memberCount} members`)
+                        .setDescription(`Hello <@${member.user.id}>, welcome to **${member.guild.name}**!`)
+                        .setFooter({ text: `${member.guild.memberCount} members` })
                         .setColor('BLUE')
                         .setTimestamp(),
                 ],
