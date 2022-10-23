@@ -1,7 +1,7 @@
-const mongo = require('mongoose');
-const Schema = new mongo.Schema({
+const mongoose = require('mongoose');
+const Schema = new mongoose.Schema({
     Guild: String,
     Channel: String,
 });
 
-module.exports = mongo.model('welcome-channel', Schema);
+module.exports = mongoose.model('welcome-channel', Schema);
