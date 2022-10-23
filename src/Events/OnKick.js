@@ -12,12 +12,14 @@ client.on('guildDelete', async guild => {
             const embed = new MessageEmbed()
                 .setTitle('Kicked from 1 Guild')
                 .setThumbnail(guild.iconURL({ dynamic: true, size: 512 }))
-                .addField(`Guild Name`, `${guild.name}`)
-                .addField(`Guild Owner`, `${(await guild.fetchOwner()).user}`)
-                .addField(`Guild Members`, `${guild.members.cache.size}`)
-                .addField(`Created at`, `${moment(guild.createdAt).format('LLL')}`)
+                .addFields([
+                    { name: 'Guild name', value: guild.name },
+                    { name: 'Guild owner', value: (await guild.fetchOwner()).user },
+                    { name: 'Guild members', value: guild.members.cache.size },
+                    { name: 'Creation date', value: moment(guild.createdAt).format('LLL') },
+                ])
                 .setColor(`#FF0000`)
-                .setFooter(`Log Message`)
+                .setFooter({ text: 'Log Message' })
                 .setTimestamp();
 
             logChannel.send({ embeds: [embed] });
