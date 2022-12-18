@@ -12,7 +12,7 @@
         "setup-env": "./src/Scripts/env_setup.sh"
     },
     "engines": {
-        "node": "16.x"
+        "node": "18.x"
     },
     "author": "Gifaldy Azka <me@falcxxdev.ml>",
     "license": "MIT",
