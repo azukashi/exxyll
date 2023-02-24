@@ -8,12 +8,12 @@ specifiers:
   chalk: 4.1.2
   discord-together: 1.3.31
   discord-xp: 1.1.16
-  discord.js: 13.12.0
+  discord.js: 13.13.1
   discord.js-akinator: 4.0.4
   dotenv: 16.0.3
   glob: 8.1.0
   moment: 2.29.4
-  mongoose: 6.9.2
+  mongoose: 6.10.0
   ms: 2.1.3
   node-fetch: 2.6.9
   nodemon: 2.0.20
@@ -32,12 +32,12 @@ dependencies:
   chalk: 4.1.2
   discord-together: 1.3.31
   discord-xp: 1.1.16
-  discord.js: 13.12.0
+  discord.js: 13.13.1
   discord.js-akinator: 4.0.4
   dotenv: 16.0.3
   glob: 8.1.0
   moment: 2.29.4
-  mongoose: 6.9.2
+  mongoose: 6.10.0
   ms: 2.1.3
   node-fetch: 2.6.9
   pretty-ms: 7.0.1
@@ -1544,8 +1544,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /discord.js/13.12.0:
-    resolution: {integrity: sha512-K5qhREsYcTHkEqt7+7LcSoXTeQYZpI+SQRs9ei/FhbhUpirmjqFtN99P8W2mrKUyhhy7WXWm7rnna0AooKtIpw==}
+  /discord.js/13.13.1:
+    resolution: {integrity: sha512-4QdeSIGOIeZ25cTOxaPdVqIXz8tN56DetXFAwEkDHX5sDqbsXm9gMaNhfaOwMap3d5mgdC7I78g70I82x5i5lw==}
     engines: {node: '>=16.6.0', npm: '>=7.0.0'}
     dependencies:
       '@discordjs/builders': 0.16.0
@@ -2088,8 +2088,8 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongodb/4.13.0:
-    resolution: {integrity: sha512-+taZ/bV8d1pYuHL4U+gSwkhmDrwkWbH1l4aah4YpmpscMwgFBkufIKxgP/G7m87/NUuQzc2Z75ZTI7ZOyqZLbw==}
+  /mongodb/4.14.0:
+    resolution: {integrity: sha512-coGKkWXIBczZPr284tYKFLg+KbGPPLlSbdgfKAb6QqCFt5bo5VFZ50O3FFzsw4rnkqjwT6D8Qcoo9nshYKM7Mg==}
     engines: {node: '>=12.9.0'}
     dependencies:
       bson: 4.7.0
@@ -2138,13 +2138,13 @@ packages:
       - supports-color
     dev: false
 
-  /mongoose/6.9.2:
-    resolution: {integrity: sha512-Yb9rWJhYm+7Yf839QuKx2dXcclbA0GAMxtdDiaedHsOQU+y28cD/8gKYp1wTwwyAjKesqaGfLG4ez7D9lKpwBw==}
+  /mongoose/6.10.0:
+    resolution: {integrity: sha512-0zrKDEnmNscYyAyN94smo2LlJ63gaezKHpHM+KQ+6EiAgAnah5Kt3hQSYzOTQX/63YNdT1oJXiLlB5LqTdcjUw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.7.0
       kareem: 2.5.1
-      mongodb: 4.13.0
+      mongodb: 4.14.0
       mpath: 0.9.0
       mquery: 4.0.3
       ms: 2.1.3
@@ -2522,7 +2522,7 @@ packages:
     resolution: {integrity: sha512-FTQsKwyN8AqWslvorNA9rUHSA4BmDYuU++XzO8WwXrqHtpiuNmTE+kAKNvySL1FS0mDMAAzBNGOC5vLuDqwdMA==}
     engines: {node: '>=16'}
     dependencies:
-      discord.js: 13.12.0
+      discord.js: 13.13.1
     transitivePeerDependencies:
       - bufferutil
       - encoding
