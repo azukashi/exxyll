@@ -27,7 +27,7 @@
         "discord.js": "13.13.1",
         "discord.js-akinator": "4.0.4",
         "dotenv": "16.0.3",
-        "glob": "8.1.0",
+        "glob": "9.0.2",
         "moment": "2.29.4",
         "mongoose": "6.10.0",
         "ms": "2.1.3",
