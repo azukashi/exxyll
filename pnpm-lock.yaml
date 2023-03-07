@@ -13,10 +13,10 @@ specifiers:
   dotenv: 16.0.3
   glob: 8.1.0
   moment: 2.29.4
-  mongoose: 6.10.0
+  mongoose: 6.10.2
   ms: 2.1.3
   node-fetch: 2.6.9
-  nodemon: 2.0.20
+  nodemon: 2.0.21
   prettier: 2.8.4
   pretty-ms: 7.0.1
   snakecord: 1.0.9
@@ -37,7 +37,7 @@ dependencies:
   dotenv: 16.0.3
   glob: 8.1.0
   moment: 2.29.4
-  mongoose: 6.10.0
+  mongoose: 6.10.2
   ms: 2.1.3
   node-fetch: 2.6.9
   pretty-ms: 7.0.1
@@ -47,7 +47,7 @@ dependencies:
   ytsr: 3.8.0
 
 devDependencies:
-  nodemon: 2.0.20
+  nodemon: 2.0.21
   prettier: 2.8.4
 
 packages:
@@ -2138,8 +2138,8 @@ packages:
       - supports-color
     dev: false
 
-  /mongoose/6.10.0:
-    resolution: {integrity: sha512-0zrKDEnmNscYyAyN94smo2LlJ63gaezKHpHM+KQ+6EiAgAnah5Kt3hQSYzOTQX/63YNdT1oJXiLlB5LqTdcjUw==}
+  /mongoose/6.10.2:
+    resolution: {integrity: sha512-9/AbheG2PiVVBWLx3S6LgCIEQNdMppjdnp/WH9nLGjFzjJeb9LiHNPEtsOGOm8qXmuICHMdbn5iUFAsLWWvpEw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.7.0
@@ -2221,8 +2221,8 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /nodemon/2.0.20:
-    resolution: {integrity: sha512-Km2mWHKKY5GzRg6i1j5OxOHQtuvVsgskLfigG25yTtbyfRGn/GNvIbRyOf1PSCKJ2aT/58TiuUsuOU5UToVViw==}
+  /nodemon/2.0.21:
+    resolution: {integrity: sha512-djN/n2549DUtY33S7o1djRCd7dEm0kBnj9c7S9XVXqRUbuggN1MZH/Nqa+5RFQr63Fbefq37nFXAE9VU86yL1A==}
     engines: {node: '>=8.10.0'}
     hasBin: true
     dependencies:
