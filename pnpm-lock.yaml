@@ -5,8 +5,8 @@ dependencies:
     specifier: 2.0.1
     version: 2.0.1
   anilist-node:
-    specifier: 1.13.1
-    version: 1.13.1
+    specifier: 1.13.2
+    version: 1.13.2
   axios:
     specifier: 0.27.2
     version: 0.27.2
@@ -1156,8 +1156,8 @@ packages:
       - supports-color
     dev: false
 
-  /anilist-node@1.13.1:
-    resolution: {integrity: sha512-lq8p0GJH5QsWXhJZ9qJM41wF/bOl52WVPLInxjTbEIS0oQZ9+tdogZEQ7yBRgK+8nas8aJIYtsAfDKayfQy7vA==}
+  /anilist-node@1.13.2:
+    resolution: {integrity: sha512-6Dq9/tlT41OqkTH0G3N4icPXGX9+qGkmaapRjEtTIomdntMoVAwzAW8z0XfjARGy2RX0rRN5BLUdUxTRXpSp6Q==}
     dependencies:
       abort-controller: 3.0.0
       node-fetch: 2.6.9
