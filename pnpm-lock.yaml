@@ -11,8 +11,8 @@ dependencies:
     specifier: 0.27.2
     version: 0.27.2
   canvacord:
-    specifier: 5.4.8
-    version: 5.4.8
+    specifier: 5.4.9
+    version: 5.4.9
   chalk:
     specifier: 4.1.2
     version: 4.1.2
@@ -166,7 +166,7 @@ packages:
       '@aws-sdk/util-user-agent-node': 3.201.0
       '@aws-sdk/util-utf8-browser': 3.188.0
       '@aws-sdk/util-utf8-node': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -208,7 +208,7 @@ packages:
       '@aws-sdk/util-user-agent-node': 3.201.0
       '@aws-sdk/util-utf8-browser': 3.188.0
       '@aws-sdk/util-utf8-node': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -254,7 +254,7 @@ packages:
       '@aws-sdk/util-utf8-browser': 3.188.0
       '@aws-sdk/util-utf8-node': 3.201.0
       fast-xml-parser: 4.0.11
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -279,7 +279,7 @@ packages:
       '@aws-sdk/client-cognito-identity': 3.201.0
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -291,7 +291,7 @@ packages:
     dependencies:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
     optional: true
 
@@ -303,7 +303,7 @@ packages:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/types': 3.201.0
       '@aws-sdk/url-parser': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
     optional: true
 
@@ -318,7 +318,7 @@ packages:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/shared-ini-file-loader': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -337,7 +337,7 @@ packages:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/shared-ini-file-loader': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -350,7 +350,7 @@ packages:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/shared-ini-file-loader': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
     optional: true
 
@@ -362,7 +362,7 @@ packages:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/shared-ini-file-loader': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -374,7 +374,7 @@ packages:
     dependencies:
       '@aws-sdk/property-provider': 3.201.0
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
     optional: true
 
@@ -588,7 +588,7 @@ packages:
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
     optional: true
 
@@ -631,7 +631,7 @@ packages:
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-sdk/types': 3.201.0
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
     optional: true
 
@@ -1085,7 +1085,7 @@ packages:
     resolution: {integrity: sha512-4GEUDLofUdb4F21cNnwEkcS4srTlGpz9O8Mg+X+J+A3MAgFe25490r8EdfwszS07EE0m1l8Hp6oJ9xLsAwyxIQ==}
     engines: {node: '>=14', npm: '>=6'}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: false
 
   /@sourcebin/linguist@0.0.3:
@@ -1399,8 +1399,8 @@ packages:
       responselike: 2.0.0
     dev: false
 
-  /canvacord@5.4.8:
-    resolution: {integrity: sha512-hxZ821JzQNCw/WkadVamFZDHvgzmTe9hfla1rG6c0cZoLwAAaSoQ3PPjpaTFbfkiYLeJugdlYnzm5sCJDsT5bA==}
+  /canvacord@5.4.9:
+    resolution: {integrity: sha512-UK6CATSzh5Jp+4LZ6kLBjof4YLT2fDF8JZ7JKeEsyRB5loqVJZrnmGE9xD9Q476AOotiAdawDeGq18GkjxBI+w==}
     hasBin: true
     requiresBuild: true
     dependencies:
