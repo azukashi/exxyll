@@ -6,6 +6,8 @@ if (!process.env.MONGO) {
     process.exit(1);
 }
 
+mongoose.set('strictQuery', true);
+mongoose.set('strict', true);
 mongoose
     .connect(process.env.MONGO, {
         useNewUrlParser: true,
