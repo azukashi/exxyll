@@ -15,8 +15,8 @@ dependencies:
     specifier: 0.27.2
     version: 0.27.2
   canvacord:
-    specifier: 5.4.9
-    version: 5.4.9
+    specifier: 5.4.10
+    version: 5.4.10
   chalk:
     specifier: 4.1.2
     version: 4.1.2
@@ -27,11 +27,11 @@ dependencies:
     specifier: 1.1.16
     version: 1.1.16
   discord.js:
-    specifier: 13.15.1
-    version: 13.15.1
+    specifier: 13.16.0
+    version: 13.16.0
   dotenv:
-    specifier: 16.0.3
-    version: 16.0.3
+    specifier: 16.3.1
+    version: 16.3.1
   glob:
     specifier: 8.1.0
     version: 8.1.0
@@ -39,14 +39,14 @@ dependencies:
     specifier: 2.29.4
     version: 2.29.4
   mongoose:
-    specifier: 6.11.1
-    version: 6.11.1
+    specifier: 6.11.3
+    version: 6.11.3
   ms:
     specifier: 2.1.3
     version: 2.1.3
   node-fetch:
-    specifier: 2.6.11
-    version: 2.6.11
+    specifier: 2.6.12
+    version: 2.6.12
   pretty-ms:
     specifier: 7.0.1
     version: 7.0.1
@@ -1201,7 +1201,7 @@ packages:
     resolution: {integrity: sha512-XIORmFPVUknmrjOS1cjyMzpQpyl0zVF8sdQ3kdI+BAvJx5fPVN7v0OKm0zF4mWNwYqQEIK4w60XCGSdKlTKOsA==}
     dependencies:
       abort-controller: 3.0.0
-      node-fetch: 2.6.11
+      node-fetch: 2.6.12
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -1351,8 +1351,8 @@ packages:
       responselike: 2.0.1
     dev: false
 
-  /canvacord@5.4.9:
-    resolution: {integrity: sha512-UK6CATSzh5Jp+4LZ6kLBjof4YLT2fDF8JZ7JKeEsyRB5loqVJZrnmGE9xD9Q476AOotiAdawDeGq18GkjxBI+w==}
+  /canvacord@5.4.10:
+    resolution: {integrity: sha512-uH4kIRsk0KVT6RBAgCO5ThQF7uJIWaA4L7tE/UNPVXRfj4+OjvXwIU94iOyBG3Bdj53un+QwQSUVDcr27QGUPA==}
     hasBin: true
     requiresBuild: true
     dependencies:
@@ -1514,7 +1514,7 @@ packages:
     resolution: {integrity: sha512-BOHLmSkMw376qTvmDdKfgPQ83CYV9UR1YNRPVX9Cq57fu0PDCl9eGx/NfilThzJx7DdojRiliVyp17PlfKlR3w==}
     dependencies:
       discord.js: 14.11.0
-      node-fetch: 2.6.11
+      node-fetch: 2.6.12
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -1535,8 +1535,8 @@ packages:
       - supports-color
     dev: false
 
-  /discord.js@13.15.1:
-    resolution: {integrity: sha512-oZPG74FFK5Nd0QOMPU4YXm6RmKTG//WEIcgclKLmIIdOVFdQUSP0UBEK95J8431YZusiB7ZAjak9RjGIe1/0bQ==}
+  /discord.js@13.16.0:
+    resolution: {integrity: sha512-bOoCs1Ilojd/UshZVxmEcpxVmHcYOv2fPVZOVq3aFV8xrKLJfaF9mxlvGZ1D1z9aIqf2NkptDr+QndeNuQBTxQ==}
     engines: {node: '>=16.6.0', npm: '>=7.0.0'}
     dependencies:
       '@discordjs/builders': 0.16.0
@@ -1546,7 +1546,7 @@ packages:
       '@types/ws': 8.5.4
       discord-api-types: 0.33.5
       form-data: 4.0.0
-      node-fetch: 2.6.11
+      node-fetch: 2.6.12
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -1577,8 +1577,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /dotenv@16.0.3:
-    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
     engines: {node: '>=12'}
     dev: false
 
@@ -2047,8 +2047,8 @@ packages:
       - supports-color
     dev: false
 
-  /mongoose@6.11.1:
-    resolution: {integrity: sha512-AvQ8C5ZGF6GcsQhoRg/i7pbNZpb96qLGU5ICBllckp7qMOxcfUF1nA6JstZw841BqRcE6myZ/mx9CluEESaw5Q==}
+  /mongoose@6.11.3:
+    resolution: {integrity: sha512-M1Y5PjttgV51YDa30u7GVMVypQSlNZF/jUhlzTBAmaz5C9FvOr8eih/VLhhO7xtTSlcVTFQS1dqlQNMbtfUowQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.7.2
@@ -2106,8 +2106,8 @@ packages:
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  /node-fetch@2.6.11:
-    resolution: {integrity: sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==}
+  /node-fetch@2.6.12:
+    resolution: {integrity: sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
       encoding: ^0.1.0
@@ -2396,7 +2396,7 @@ packages:
     engines: {node: '>=16'}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     dependencies:
-      discord.js: 13.15.1
+      discord.js: 13.16.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
