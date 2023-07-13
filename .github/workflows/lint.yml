@@ -1,4 +1,4 @@
-name: '[Prettier] Lint'
+name: 'Lint'
 on:
     push:
         branches:
@@ -18,13 +18,13 @@ jobs:
             - name: Install Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version: '16.x'
+                  node-version: '18.x'
 
             - uses: pnpm/action-setup@v2.2.4
               name: Install pnpm
               id: pnpm-install
               with:
-                  version: 7
+                  version: 8
                   run_install: false
 
             - name: Get pnpm store directory
@@ -40,8 +40,5 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-pnpm-store-
 
-            - name: Install dependencies
-              run: pnpm install
-
             - name: Check Format
-              run: pnpm run lint
+              run: pnpm dlx prettier -c .
