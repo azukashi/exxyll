@@ -40,5 +40,8 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-pnpm-store-
 
+            - name: Directory check
+              run: pwd && ls -a
+
             - name: Check Format
-              run: pnpm dlx prettier -c .
+              run: pnpm dlx prettier --config ./.prettierrc.yml -c .
