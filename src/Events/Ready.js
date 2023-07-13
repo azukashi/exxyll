@@ -10,7 +10,7 @@ client.on('ready', async () => {
 
     console.log(
         `${chalk.grey.bold('[INFO]  ')}${chalk.blueBright.bold(client.user.tag)} ${chalk.white(
-            'is'
-        )} ${chalk.green.bold('Online')}`
+            'is',
+        )} ${chalk.green.bold('Online')}`,
     );
 });

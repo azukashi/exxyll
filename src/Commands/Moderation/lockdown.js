@@ -25,7 +25,7 @@ module.exports = {
                     name: 'Available options',
                     value: `\`true\` - Set lockdown for this server\n\`false\` - Unset/unlock lockdown`,
                 },
-                { name: 'Usage', value: `\`${prefix}lockdown true\` or \`${prefix}lockdown false\`` }
+                { name: 'Usage', value: `\`${prefix}lockdown true\` or \`${prefix}lockdown false\`` },
             )
             .setFooter({ text: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
             .setColor('RED')

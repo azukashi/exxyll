@@ -56,7 +56,7 @@ module.exports = {
                 {
                     name: '8ball says',
                     value: responses[response],
-                }
+                },
             )
             .setTimestamp();
 

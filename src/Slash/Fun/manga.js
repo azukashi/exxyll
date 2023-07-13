@@ -45,7 +45,7 @@ module.exports = {
                         { name: 'Total chapters', value: `${chapters}` },
                         { name: 'Total volumes', value: `${volumes}` },
                         { name: 'Ratings (on MAL)', value: `${score}` },
-                        { name: 'Release date', value: `${moment(start_date).format('LLLL')}` }
+                        { name: 'Release date', value: `${moment(start_date).format('LLLL')}` },
                     )
                     .setFooter({
                         text: `Requested by : ${interaction.user.tag}`,
@@ -57,7 +57,7 @@ module.exports = {
             .catch(err => {
                 const errembed = new MessageEmbed()
                     .setDescription(
-                        `<:tickNo:863367014092898314> | That manga isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
+                        `<:tickNo:863367014092898314> | That manga isn't found!\n\n\`\`\`js\n${err}\n\`\`\``,
                     )
                     .setColor('RED');
                 interaction.followUp({ embeds: [errembed] });

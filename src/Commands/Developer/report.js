@@ -22,7 +22,7 @@ module.exports = {
                 {
                     name: 'Reported by',
                     value: `${message.author.tag} from **${message.member.guild.name}** (${message.author.id})`,
-                }
+                },
             )
             .setColor('#FF0000')
             .setTimestamp();
@@ -36,7 +36,7 @@ module.exports = {
         const thanksEmbed = new MessageEmbed()
             .setTitle('Thanks for reporting this incident!')
             .setDescription(
-                `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now is reviewed by our staff.`
+                `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now is reviewed by our staff.`,
             )
             .setColor('#FF0000')
             .setTimestamp();

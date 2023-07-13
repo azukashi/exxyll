@@ -48,11 +48,11 @@ module.exports = {
                                     .split('_')
                                     .map(x => x[0] + x.slice(1).toLowerCase())
                                     .join(' '),
-                            ].join(' ')
+                            ].join(' '),
                         )
                         .join('\n')}`,
                     '```',
-                ].join('\n')
+                ].join('\n'),
             );
         interaction.followUp({ embeds: [embed] });
     },

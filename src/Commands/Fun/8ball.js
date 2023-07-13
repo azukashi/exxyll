@@ -44,7 +44,7 @@ module.exports = {
             .setTitle('🎱 8ball')
             .addFields(
                 { name: `${message.author.username}'s Question`, value: question },
-                { name: '8ball says', value: responses[response] }
+                { name: '8ball says', value: responses[response] },
             )
             .setTimestamp();
 

@@ -29,7 +29,7 @@ module.exports = {
                 {
                     name: 'Reported by',
                     value: `${interaction.user.tag} from **${interaction.guild.name}** (${interaction.user.id})`,
-                }
+                },
             )
             .setColor('#FF0000')
             .setTimestamp();
@@ -39,7 +39,7 @@ module.exports = {
         const makasihOm = new MessageEmbed()
             .setTitle('Thanks for reporting this incident!')
             .setDescription(
-                `<@${interaction.user.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now is reviewed by our staff.`
+                `<@${interaction.user.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now is reviewed by our staff.`,
             )
             .setColor('#FF0000')
             .setTimestamp();

@@ -42,7 +42,7 @@ module.exports = {
             .addFields(
                 { name: 'Banned user', value: memberFixed },
                 { name: 'Moderator', value: `<@${interaction.user.id}>` },
-                { name: 'Reason', value: reasonFixed }
+                { name: 'Reason', value: reasonFixed },
             )
             .setTimestamp();
 
@@ -50,7 +50,7 @@ module.exports = {
             interaction.followUp({
                 content: `An error has occured while trying to ban!\nError message :\n\`\`\`yml\n${err}\n\`\`\``,
                 ephemeral: true,
-            })
+            }),
         );
         interaction.followUp({ embeds: [embed] });
     },

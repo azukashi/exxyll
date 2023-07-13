@@ -40,7 +40,7 @@ module.exports = {
                         { name: 'Total episode', value: `${episode}` },
                         { name: 'Ratings (on MAL)', value: `${score}` },
                         { name: 'Release date', value: `${moment(start_date).format('LLLL')}` },
-                        { name: 'Rate', value: rate }
+                        { name: 'Rate', value: rate },
                     )
                     .setColor('#800080')
                     .setFooter({

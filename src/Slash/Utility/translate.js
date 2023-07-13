@@ -35,7 +35,7 @@ module.exports = {
                 .addFields(
                     { name: 'Query', value: text, inline: true },
                     { name: 'Result', value: translated.text, inline: true },
-                    { name: 'Translated to', value: locale, inline: true }
+                    { name: 'Translated to', value: locale, inline: true },
                 )
                 .setColor('BLUE')
                 .setFooter({ text: interaction.user.tag })

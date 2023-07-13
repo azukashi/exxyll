@@ -36,7 +36,7 @@ module.exports = {
                         { name: `Website`, value: `${body.blog || 'None'}` },
                         { name: `Creation date`, value: `${moment(body.created_at).format('LLLL')}` },
                         { name: `Followers`, value: `${body.followers}` },
-                        { name: `Following`, value: `${body.following}` }
+                        { name: `Following`, value: `${body.following}` },
                     )
                     .setColor('BLUE')
                     .setTimestamp();

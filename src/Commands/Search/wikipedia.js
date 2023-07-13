@@ -17,7 +17,7 @@ module.exports = {
         const query = args.join(' ');
         if (!query) return message.reply({ content: 'Please specify a query to search!' });
         const body = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`).then(
-            res => res.json().catch(() => {})
+            res => res.json().catch(() => {}),
         );
         if (!body) return message.channel.send({ content: 'Page not found :x:' });
         if (body.title && body.title === 'Not found.')

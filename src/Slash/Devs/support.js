@@ -14,7 +14,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle('Support the developer!')
             .setDescription(
-                'Support or donate the developer to help keeping this project alive!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)'
+                'Support or donate the developer to help keeping this project alive!\n\n[Buy me a Coffee](https://ko-fi.com/gifaldyazkaa)',
             )
             .setFooter({ text: interaction.user.tag })
             .setColor('BLUE')

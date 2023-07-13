@@ -21,7 +21,7 @@ module.exports = {
                     .setTitle('✅ Successfully rebooted!')
                     .setThumbnail(client.user.displayAvatarURL({ size: 512 }))
                     .setDescription(
-                        `The client is scucessfully crashed with exit code 1.\n\nLoaded commands : ${client.commands.size}\n\nJust wait the process restarted automatically. Or, if i am going offline, you can restart manually by visit hosting dashboard!`
+                        `The client is scucessfully crashed with exit code 1.\n\nLoaded commands : ${client.commands.size}\n\nJust wait the process restarted automatically. Or, if i am going offline, you can restart manually by visit hosting dashboard!`,
                     )
                     .setColor('GREEN')
                     .setFooter({ text: `Restarted by ${message.author.username}` })

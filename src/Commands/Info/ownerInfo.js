@@ -24,7 +24,7 @@ module.exports = {
                     name: 'Socials',
                     value: '[Website](https://www.falcxxdev.ml) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxdev)',
                 },
-                { name: 'Support', value: '[Buy me a coffee](https://buymeacoffee.com/gifaldyazkaa)' }
+                { name: 'Support', value: '[Buy me a coffee](https://buymeacoffee.com/gifaldyazkaa)' },
             )
             .setColor(owner.hexAccentColor);
         message.channel.send({ embeds: [embed1] });

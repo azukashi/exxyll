@@ -27,7 +27,7 @@ module.exports = {
             e =>
                 `**${e.position}**. ${e.username}#${e.discriminator}\n**Level**: ${
                     e.level
-                }\n**XP**: ${e.xp.toLocaleString()}`
+                }\n**XP**: ${e.xp.toLocaleString()}`,
         );
 
         const embed = new MessageEmbed()

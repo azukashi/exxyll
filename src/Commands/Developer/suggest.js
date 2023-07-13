@@ -23,7 +23,7 @@ module.exports = {
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .addFields(
                 { name: 'Suggestion', value: `${query}` },
-                { name: 'Sent from', value: `${message.member.guild.name}` }
+                { name: 'Sent from', value: `${message.member.guild.name}` },
             )
             .setColor('BLUE')
             .setTimestamp();
@@ -36,7 +36,7 @@ module.exports = {
         const sankyuu = new MessageEmbed()
             .setTitle(`:white_check_mark: Thanks for your suggestion!`)
             .setDescription(
-                `Hey <@${message.author.id}>, Thanks for your suggestion!\nYour suggestion has been sent to : [**Exxyll Development**](https://discord.gg/j2MfuWySfD) at <#849139267471933502>`
+                `Hey <@${message.author.id}>, Thanks for your suggestion!\nYour suggestion has been sent to : [**Exxyll Development**](https://discord.gg/j2MfuWySfD) at <#849139267471933502>`,
             )
             .setColor('#00FF00')
             .setTimestamp();
@@ -45,11 +45,11 @@ module.exports = {
             .setTitle(`New Suggestion`)
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 1024 }))
             .setDescription(
-                `New suggestion from [${message.author.tag}](https://discord.com/users/${message.author.id})!`
+                `New suggestion from [${message.author.tag}](https://discord.com/users/${message.author.id})!`,
             )
             .addFields(
                 { name: 'User ID', value: `${message.author.id}` },
-                { name: 'Sent from', value: `${message.member.guild.name}` }
+                { name: 'Sent from', value: `${message.member.guild.name}` },
             )
             .setColor('#00FF00')
             .setTimestamp();

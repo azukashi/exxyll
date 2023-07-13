@@ -38,7 +38,7 @@ module.exports = {
                     .addFields(
                         { name: 'DEFINITION', value: trim(answer.definition) },
                         { name: 'EXAMPLE', value: trim(answer.example) },
-                        { name: 'RATINGS', value: `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎` }
+                        { name: 'RATINGS', value: `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎` },
                     ),
             ],
         });

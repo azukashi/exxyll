@@ -11,7 +11,7 @@ const manager = new ShardingManager('./index.js', {
 
 manager.on('shardCreate', async shard => {
     console.log(
-        chalk.grey.bold('[INFO]  ') + chalk.blue.bold(`${moment(new Date()).format('llll')} Spawned ${shard.id}`)
+        chalk.grey.bold('[INFO]  ') + chalk.blue.bold(`${moment(new Date()).format('llll')} Spawned ${shard.id}`),
     );
 });
 

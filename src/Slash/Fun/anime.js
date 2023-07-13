@@ -45,7 +45,7 @@ module.exports = {
                         { name: 'Total episode', value: `${episode}` },
                         { name: 'Ratings (on MAL)', value: `${score}` },
                         { name: 'Release date', value: `${moment(start_date).format('LLLL')}` },
-                        { name: 'Rate', value: rate }
+                        { name: 'Rate', value: rate },
                     )
                     .setColor('#800080')
                     .setFooter({
@@ -58,7 +58,7 @@ module.exports = {
             .catch(err => {
                 const embedd = new MessageEmbed()
                     .setDescription(
-                        `<:tickNo:863367014092898314> | That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
+                        `<:tickNo:863367014092898314> | That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``,
                     )
                     .setColor('RED');
                 interaction.followUp({ embeds: [embedd] });

@@ -53,7 +53,7 @@ module.exports = {
                                 value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
                             },
                             { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
-                            { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
+                            { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') },
                         )
                         .setImage(bannerUrl)
                         .setFooter({ text: message.author.tag })
@@ -78,7 +78,7 @@ module.exports = {
                                     value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
                                 },
                                 { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
-                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
+                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') },
                             )
                             .setFooter({ text: message.author.tag })
                             .setTimestamp();
@@ -100,7 +100,7 @@ module.exports = {
                                     value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
                                 },
                                 { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
-                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
+                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') },
                             )
                             .setFooter({ text: message.author.tag })
                             .setTimestamp();

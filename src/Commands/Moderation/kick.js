@@ -29,7 +29,7 @@ module.exports = {
             .addFields(
                 { name: 'Kicked user', value: member },
                 { name: 'Moderator', value: `<@${message.author.id}>` },
-                { name: 'Reason', value: reason }
+                { name: 'Reason', value: reason },
             )
             .setColor('RED')
             .setTimestamp();
@@ -37,7 +37,7 @@ module.exports = {
         await member.kick({ reason }).catch(err =>
             message.channel.send({
                 content: `An error has occured while trying to kick!\nError message :\n\`\`\`yml\n${err}\n\`\`\``,
-            })
+            }),
         );
         message.channel.send({ embeds: [embed] });
     },

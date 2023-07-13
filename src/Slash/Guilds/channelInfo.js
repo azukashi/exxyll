@@ -52,7 +52,7 @@ module.exports = {
                 .addFields(
                     { name: 'Creation date', value: `${checkDays(fixedChannel.createdAt)}`, inline: true },
                     { name: 'Channel ID', value: `${fixedChannel.id}`, inline: true },
-                    { name: 'Channel type', value: `${channelType}`, inline: true }
+                    { name: 'Channel type', value: `${channelType}`, inline: true },
                 )
                 .setFooter({
                     text: `Channel Information | Command Request by ${interaction.user.tag}`,

@@ -40,7 +40,7 @@ module.exports = {
                                 { name: 'Similiarity', value: body.result[0].similiarity },
                                 { name: 'Episodes', value: data.episodes },
                                 { name: 'Type', value: data.format },
-                                { name: 'Status', value: data.status }
+                                { name: 'Status', value: data.status },
                             )
                             .setThumbnail(data.coverImage.large)
                             .setImage(body.result[0].image)
@@ -54,7 +54,7 @@ module.exports = {
                     const embed = new MessageEmbed()
                         .setTitle(':x: Not found!')
                         .setDescription(
-                            `Something went wrong. Maybe the result is not found.\n\`\`\`yml\n${err}\n\`\`\``
+                            `Something went wrong. Maybe the result is not found.\n\`\`\`yml\n${err}\n\`\`\``,
                         )
                         .setColor('#FF0000')
                         .setTimestamp();

@@ -36,7 +36,7 @@ module.exports = {
                 .setTitle(`:smiley: Showing emojis of ${message.guild.name}`)
                 .setThumbnail(message.guild.iconURL({ dynamic: true, format: 'png', size: 512 }))
                 .setDescription(
-                    `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`
+                    `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`,
                 )
                 .setColor('BLUE')
                 .setFooter({

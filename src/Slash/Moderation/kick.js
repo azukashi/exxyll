@@ -42,7 +42,7 @@ module.exports = {
             .addFields(
                 { name: 'Kicked user', value: memberFixed },
                 { name: 'Moderator', value: `<@${interaction.user.id}>` },
-                { name: 'Reason', value: reasonFixed }
+                { name: 'Reason', value: reasonFixed },
             )
             .setColor('RED')
             .setTimestamp();
@@ -51,7 +51,7 @@ module.exports = {
             interaction.followUp({
                 content: `An error has occured while trying to kick!\nError message :\n\`\`\`yml\n${err}\n\`\`\``,
                 ephemeral: true,
-            })
+            }),
         );
         interaction.followUp({ embeds: [embed] });
     },

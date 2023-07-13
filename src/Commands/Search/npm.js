@@ -19,7 +19,7 @@ module.exports = {
         if (!query) query = await awaitMessages(message);
         if (!query) return;
         const res = await fetch(`https://registry.npmjs.com/${encodeURIComponent(query)}`).catch(err =>
-            console.log(err)
+            console.log(err),
         );
         if (res.status === 404)
             return message.channel.send({
@@ -50,7 +50,7 @@ module.exports = {
                     value: body.repository ? `[View Here](${body.repository.url.split('+')[1]})` : 'None',
                     inline: true,
                 },
-                { name: '❯ Maintainers', value: body.maintainers.map(user => user.name).join(', ') }
+                { name: '❯ Maintainers', value: body.maintainers.map(user => user.name).join(', ') },
             );
         message.channel.send({ embeds: [embed] });
 
@@ -64,7 +64,7 @@ module.exports = {
             const serchembed = new MessageEmbed()
                 .setTitle(':package: Search at npmjs')
                 .setDescription(
-                    'What npm package are you looking for? Just type then i will search! You have **30s** ⌛ \nType `cancel` to cancel the command.'
+                    'What npm package are you looking for? Just type then i will search! You have **30s** ⌛ \nType `cancel` to cancel the command.',
                 )
                 .setThumbnail('https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png')
                 .setColor('GREEN');

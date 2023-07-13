@@ -55,7 +55,7 @@ module.exports = {
                             {
                                 name: 'Creation date',
                                 value: `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
-                                    fixedUser.createdAt
+                                    fixedUser.createdAt,
                                 )})`,
                             },
                             {
@@ -63,7 +63,7 @@ module.exports = {
                                 value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
                             },
                             { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
-                            { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
+                            { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') },
                         )
                         .setImage(bannerUrl)
                         .setFooter({ text: interaction.user.tag })
@@ -82,7 +82,7 @@ module.exports = {
                                 {
                                     name: 'Creation date',
                                     value: `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
-                                        fixedUser.createdAt
+                                        fixedUser.createdAt,
                                     )})`,
                                 },
                                 {
@@ -90,7 +90,7 @@ module.exports = {
                                     value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
                                 },
                                 { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
-                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
+                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') },
                             )
                             .setFooter({ text: interaction.user.tag })
                             .setTimestamp();
@@ -106,7 +106,7 @@ module.exports = {
                                 {
                                     name: 'Creation date',
                                     value: `${moment(fixedUser.createdAt).format('LLLL')} (${checkDays(
-                                        fixedUser.createdAt
+                                        fixedUser.createdAt,
                                     )})`,
                                 },
                                 {
@@ -114,7 +114,7 @@ module.exports = {
                                     value: `${moment(member.joinedAt).format('LLLL')} (${checkDays(member.joinedAt)})`,
                                 },
                                 { name: 'Highest role', value: `<@&${member.roles.highest.id}>` },
-                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') }
+                                { name: 'Roles', value: member.roles.cache.map(r => `${r}`).join(' | ') },
                             )
                             .setFooter({ text: interaction.user.tag })
                             .setTimestamp();

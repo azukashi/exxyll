@@ -40,7 +40,7 @@ module.exports = {
                             });
 
                             response.on('error', error => reject(error));
-                        }
+                        },
                     )
                     .on('error', error => reject(error));
             });
@@ -52,7 +52,7 @@ module.exports = {
                     .filter(contributor => !contributor.login.includes('[bot]') || contributor.type === 'User')
                     .map(
                         contributor =>
-                            (contributorRes += ` **${contributor.login}** with \`${contributor.contributions}\` Contributions.\n`)
+                            (contributorRes += ` **${contributor.login}** with \`${contributor.contributions}\` Contributions.\n`),
                     );
 
                 interaction.followUp({ content: contributorRes });

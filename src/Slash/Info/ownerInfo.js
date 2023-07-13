@@ -21,7 +21,7 @@ module.exports = {
             .addField(`Location`, `Bandung, Indonesia`)
             .addField(
                 `Social Media`,
-                `[Website](https://gifaldyazka.is-a.dev) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxr)`
+                `[Website](https://gifaldyazka.is-a.dev) | [GitHub](https://github.com/gifaldyazkaa) | [Twitter](https://twitter.com/falcxxr)`,
             )
             .addField(`Buy me a Coffee`, `[Buy me a Coffee Here](https://buymeacoffee.com/gifaldyazkaa)`)
             .setColor('PURPLE');

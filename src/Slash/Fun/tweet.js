@@ -22,7 +22,7 @@ module.exports = {
     run: async (client, interaction, args) => {
         const [text] = args;
         fetch(
-            `https://nekobot.xyz/api/imagegen?type=tweet&username=${interaction.user.username}&text=${encodeURI(text)}`
+            `https://nekobot.xyz/api/imagegen?type=tweet&username=${interaction.user.username}&text=${encodeURI(text)}`,
         )
             .then(res => res.json())
             .then(data => {

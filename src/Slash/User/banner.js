@@ -44,7 +44,7 @@ module.exports = {
                     if (body.accent_color) {
                         const embed = new MessageEmbed()
                             .setDescription(
-                                `${userFixed.username} doesn't have a banner. But they do have a accent color!`
+                                `${userFixed.username} doesn't have a banner. But they do have a accent color!`,
                             )
                             .setColor(body.accent_color);
 

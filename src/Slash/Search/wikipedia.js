@@ -22,7 +22,7 @@ module.exports = {
     run: async (client, interaction, args) => {
         const [query] = args;
         const body = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`).then(
-            res => res.json().catch(() => {})
+            res => res.json().catch(() => {}),
         );
         if (!body) return interaction.followUp({ content: 'Page not found :x:' });
         if (body.title && body.title === 'Not found.')

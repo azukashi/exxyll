@@ -45,7 +45,7 @@ module.exports = {
                 {
                     name: 'Creation date',
                     value: `${moment(mentionedRole.createdAt).format('LLLL')} (${checkDays(mentionedRole.createdAt)}`,
-                }
+                },
             )
             .setFooter({ text: interaction.user.tag })
             .setTimestamp();
