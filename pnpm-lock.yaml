@@ -39,14 +39,14 @@ dependencies:
     specifier: 2.29.4
     version: 2.29.4
   mongoose:
-    specifier: 6.11.4
-    version: 6.11.4
+    specifier: 6.12.0
+    version: 6.12.0
   ms:
     specifier: 2.1.3
     version: 2.1.3
   node-fetch:
-    specifier: 2.6.12
-    version: 2.6.12
+    specifier: 2.7.0
+    version: 2.7.0
   pretty-ms:
     specifier: 7.0.1
     version: 7.0.1
@@ -60,8 +60,8 @@ dependencies:
     specifier: 2.0.0
     version: 2.0.0
   ytsr:
-    specifier: 3.8.2
-    version: 3.8.2
+    specifier: 3.8.4
+    version: 3.8.4
 
 devDependencies:
   nodemon:
@@ -1029,6 +1029,14 @@ packages:
       undici: 5.22.1
     dev: false
 
+  /@mongodb-js/saslprep@1.1.0:
+    resolution: {integrity: sha512-Xfijy7HvfzzqiOAhAepF4SGN5e9leLkMvg/OPOF97XemjfVCYN/oWa75wnkc6mltMSTwY+XlbhWgUOJmkFspSw==}
+    requiresBuild: true
+    dependencies:
+      sparse-bitfield: 3.0.3
+    dev: false
+    optional: true
+
   /@napi-rs/canvas-android-arm64@0.1.40:
     resolution: {integrity: sha512-98WNQWr6nRThV9ot4tI1Aevo020Qg3WP3NVH0Ko+7Ba6Rh7xd5XDCYgxlATFL0IlBSRm7z6BbgT820tPJh+MYQ==}
     engines: {node: '>= 10'}
@@ -1265,7 +1273,7 @@ packages:
     resolution: {integrity: sha512-XIORmFPVUknmrjOS1cjyMzpQpyl0zVF8sdQ3kdI+BAvJx5fPVN7v0OKm0zF4mWNwYqQEIK4w60XCGSdKlTKOsA==}
     dependencies:
       abort-controller: 3.0.0
-      node-fetch: 2.6.12
+      node-fetch: 2.7.0
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -1579,7 +1587,7 @@ packages:
     resolution: {integrity: sha512-BOHLmSkMw376qTvmDdKfgPQ83CYV9UR1YNRPVX9Cq57fu0PDCl9eGx/NfilThzJx7DdojRiliVyp17PlfKlR3w==}
     dependencies:
       discord.js: 14.11.0
-      node-fetch: 2.6.12
+      node-fetch: 2.7.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -1611,7 +1619,7 @@ packages:
       '@types/ws': 8.5.4
       discord-api-types: 0.33.5
       form-data: 4.0.0
-      node-fetch: 2.6.12
+      node-fetch: 2.7.0
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -2071,8 +2079,8 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongodb@4.16.0:
-    resolution: {integrity: sha512-0EB113Fsucaq1wsY0dOhi1fmZOwFtLOtteQkiqOXGklvWMnSH3g2QS53f0KTP+/6qOkuoXE2JksubSZNmxeI+g==}
+  /mongodb@4.17.1:
+    resolution: {integrity: sha512-MBuyYiPUPRTqfH2dV0ya4dcr2E5N52ocBuZ8Sgg/M030nGF78v855B3Z27mZJnp8PxjnUquEnAtjOsphgMZOlQ==}
     engines: {node: '>=12.9.0'}
     dependencies:
       bson: 4.7.2
@@ -2080,7 +2088,7 @@ packages:
       socks: 2.7.1
     optionalDependencies:
       '@aws-sdk/credential-providers': 3.329.0
-      saslprep: 1.0.3
+      '@mongodb-js/saslprep': 1.1.0
     transitivePeerDependencies:
       - aws-crt
     dev: false
@@ -2121,13 +2129,13 @@ packages:
       - supports-color
     dev: false
 
-  /mongoose@6.11.4:
-    resolution: {integrity: sha512-q9NaW9/BBYZofx80SqlR7uoSR09CS3g02y+KMj1lNLUxcFFsPshupY3WWisNFauYG9gyuDF4L/RgyIK3obSghg==}
+  /mongoose@6.12.0:
+    resolution: {integrity: sha512-sd/q83C6TBRPBrrD2A/POSbA/exbCFM2WOuY7Lf2JuIJFlHFG39zYSDTTAEiYlzIfahNOLmXPxBGFxdAch41Mw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.7.2
       kareem: 2.5.1
-      mongodb: 4.16.0
+      mongodb: 4.17.1
       mpath: 0.9.0
       mquery: 4.0.3
       ms: 2.1.3
@@ -2180,8 +2188,8 @@ packages:
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  /node-fetch@2.6.12:
-    resolution: {integrity: sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==}
+  /node-fetch@2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
       encoding: ^0.1.0
@@ -2192,8 +2200,8 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /node-fetch@2.6.7:
-    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+  /node-fetch@2.7.0:
+    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
       encoding: ^0.1.0
@@ -2732,8 +2740,8 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  /ytsr@3.8.2:
-    resolution: {integrity: sha512-J+t+a1Ic6jL0Hd0zGX8eFn3uEKtXTf6naa96KO0q7H00GKBfCG8aXW55NAMnaBeUi9Hni6u1xKnf8xZF2F0E/A==}
+  /ytsr@3.8.4:
+    resolution: {integrity: sha512-rrJo59vDDf98mz/Cuw7Y2YiuTwSm3cs4XsXrP6yjYDXYup/aE0lRxY6XMKR3mGOHKwgLouZqFq8QRllVVVN88w==}
     engines: {node: '>=8'}
     dependencies:
       miniget: 4.2.2
