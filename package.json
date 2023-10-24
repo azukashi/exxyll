@@ -11,7 +11,7 @@
         "setup-env": "./src/Scripts/env_setup.sh"
     },
     "engines": {
-        "node": "18.x"
+        "node": "20.x"
     },
     "author": "Falcxxdev <me@falcxxdev.cyou>",
     "license": "MIT",
