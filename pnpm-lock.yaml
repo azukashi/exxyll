@@ -39,8 +39,8 @@ dependencies:
     specifier: 2.29.4
     version: 2.29.4
   mongoose:
-    specifier: 6.12.0
-    version: 6.12.0
+    specifier: 6.12.2
+    version: 6.12.2
   ms:
     specifier: 2.1.3
     version: 2.1.3
@@ -2129,8 +2129,8 @@ packages:
       - supports-color
     dev: false
 
-  /mongoose@6.12.0:
-    resolution: {integrity: sha512-sd/q83C6TBRPBrrD2A/POSbA/exbCFM2WOuY7Lf2JuIJFlHFG39zYSDTTAEiYlzIfahNOLmXPxBGFxdAch41Mw==}
+  /mongoose@6.12.2:
+    resolution: {integrity: sha512-3XXhSAB4PcJBd0sfqyi+LdVb3brVoIFh5kB/gpnrKcD54tmWdEI4Y8xjiiBx773U9IV3Mv4GxFVCy9/lvXMMyg==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.7.2
