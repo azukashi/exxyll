@@ -10,7 +10,7 @@ A [node.js](https://nodejs.org) >= 16.12.0 setup with [pnpm](https://pnpm.io) is
 ### 📦 Install dependencies
 
 ```bash
-$ pnpm install
+$ npm i pnpm
 ```
 
 ### 🔑 Create environment variable file
