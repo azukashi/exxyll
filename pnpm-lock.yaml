@@ -48,8 +48,8 @@ dependencies:
     specifier: 2.7.0
     version: 2.7.0
   pretty-ms:
-    specifier: 7.0.1
-    version: 7.0.1
+    specifier: 9.1.0
+    version: 9.1.0
   snakecord:
     specifier: 1.0.9
     version: 1.0.9
@@ -2261,9 +2261,9 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /parse-ms@2.1.0:
-    resolution: {integrity: sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==}
-    engines: {node: '>=6'}
+  /parse-ms@4.0.0:
+    resolution: {integrity: sha512-TXfryirbmq34y8QBwgqCVLi+8oA3oWx2eAnSn62ITyEhEYaWRlVZ2DvMM9eZbMs/RfxPu/PK/aBLyGj4IrqMHw==}
+    engines: {node: '>=18'}
     dev: false
 
   /peek-readable@5.0.0:
@@ -2280,11 +2280,11 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pretty-ms@7.0.1:
-    resolution: {integrity: sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q==}
-    engines: {node: '>=10'}
+  /pretty-ms@9.1.0:
+    resolution: {integrity: sha512-o1piW0n3tgKIKCwk2vpM/vOV13zjJzvP37Ioze54YlTHE06m4tjEbzg9WsKkvTuyYln2DHjo5pY4qrZGI0otpw==}
+    engines: {node: '>=18'}
     dependencies:
-      parse-ms: 2.1.0
+      parse-ms: 4.0.0
     dev: false
 
   /process-nextick-args@2.0.1:
