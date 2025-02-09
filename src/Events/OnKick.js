@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 const client = require('../../index');
 const prefixSchema = require('../Models/Prefix');
-const logChannel = client.channels.cache.get('891970597876285451');
+const logChannel = client.channels.cache.get('1337959995542863903');
 
 client.on('guildDelete', async guild => {
     prefixSchema.findOne({ Guild: guild.id }, async (err, data) => {
