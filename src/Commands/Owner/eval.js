@@ -31,7 +31,7 @@ module.exports = {
                 embeds: [
                     new MessageEmbed()
                         .setColor('#00FF00')
-                        .setTitle(`✔️ | 200 : Success`)
+                        .setTitle(`✅ | 200 : Success`)
                         .setDescription(`Result\n\`\`\`yml\n${output}\n\`\`\``)
                         .setFooter({ text: `Evaluated by : ${message.author.tag}` }),
                 ],
