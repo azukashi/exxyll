@@ -12,7 +12,7 @@
         "setup-env": "./src/Scripts/env_setup.sh"
     },
     "engines": {
-        "node": "20.x"
+        "node": "22.x"
     },
     "author": "Falcxxdev <me@falcxxdev.cyou>",
     "license": "MIT",
