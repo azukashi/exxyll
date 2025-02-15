@@ -12,8 +12,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       anilist-node:
-        specifier: 1.14.0
-        version: 1.14.0
+        specifier: 1.14.1
+        version: 1.14.1
       axios:
         specifier: 1.6.2
         version: 1.6.2
@@ -33,14 +33,14 @@ importers:
         specifier: 13.17.1
         version: 13.17.1
       dotenv:
-        specifier: 16.3.1
-        version: 16.3.1
+        specifier: 16.4.7
+        version: 16.4.7
       glob:
         specifier: 8.1.0
         version: 8.1.0
       moment:
-        specifier: 2.29.4
-        version: 2.29.4
+        specifier: 2.30.1
+        version: 2.30.1
       mongoose:
         specifier: 6.12.3
         version: 6.12.3
@@ -67,8 +67,8 @@ importers:
         version: 3.8.4
     devDependencies:
       nodemon:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 3.1.9
+        version: 3.1.9
 
 packages:
 
@@ -502,8 +502,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  anilist-node@1.14.0:
-    resolution: {integrity: sha512-XIORmFPVUknmrjOS1cjyMzpQpyl0zVF8sdQ3kdI+BAvJx5fPVN7v0OKm0zF4mWNwYqQEIK4w60XCGSdKlTKOsA==}
+  anilist-node@1.14.1:
+    resolution: {integrity: sha512-lWwiof5LFYtr32UcLmmDiihjOdx+V2qQ8KGhQ+5Ccuir5voUC1FiL0rxHV9cgTsJzx3AWK9Fjxtgya0eiOiX8w==}
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
@@ -689,8 +689,8 @@ packages:
     resolution: {integrity: sha512-CkueWYFQ28U38YPR8HgsBR/QT35oPpMbEsTNM30Fs8loBIhnA4s70AwQEoy6JvLcpWWJO7GY0y2BUzZmuBMepQ==}
     engines: {node: '>=16.9.0'}
 
-  dotenv@16.3.1:
-    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
     engines: {node: '>=12'}
 
   ecc-jsbn@0.1.2:
@@ -774,6 +774,7 @@ packages:
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   got@11.8.6:
     resolution: {integrity: sha512-6tfZ91bOr7bOXnK7PRDCGBLa1H4U080YHNaAQ2KsMGlLEzRbk44nsZF2E1IeRc3vtJHPVbKCYgdFbaGO2ljd8g==}
@@ -815,6 +816,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -923,8 +925,8 @@ packages:
   moment-duration-format@2.3.2:
     resolution: {integrity: sha512-cBMXjSW+fjOb4tyaVHuaVE/A5TqkukDWiOfxxAjY+PEqmmBQlLwn+8OzwPiG3brouXKY5Un4pBjAeB6UToXHaQ==}
 
-  moment@2.29.4:
-    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
+  moment@2.30.1:
+    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
 
   mongodb-connection-string-url@2.6.0:
     resolution: {integrity: sha512-WvTZlI9ab0QYtTYnuMLgobULWhokRjtC7db9LtcVfJ+Hsnyr5eo6ZtNAt3Ly24XZScGMelOcGtm7lSn0332tPQ==}
@@ -1013,8 +1015,8 @@ packages:
       encoding:
         optional: true
 
-  nodemon@3.0.2:
-    resolution: {integrity: sha512-9qIN2LNTrEzpOPBaWHTm4Asy1LxXLSickZStAQ4IZe7zsoIpD/A7LWxhZV3t4Zu352uBcqVnRsDXSMR2Sc3lTA==}
+  nodemon@3.1.9:
+    resolution: {integrity: sha512-hdr1oIb2p6ZSxu3PB2JWWYS7ZQ0qvaZsc3hK8DR8f02kRzc8rjYmxAIvdz+aYC+8F2IjNaB7HMcSDg8nQpJxyg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1320,6 +1322,7 @@ packages:
   ytsr@3.8.4:
     resolution: {integrity: sha512-rrJo59vDDf98mz/Cuw7Y2YiuTwSm3cs4XsXrP6yjYDXYup/aE0lRxY6XMKR3mGOHKwgLouZqFq8QRllVVVN88w==}
     engines: {node: '>=8'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
 snapshots:
 
@@ -2125,7 +2128,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  anilist-node@1.14.0:
+  anilist-node@1.14.1:
     dependencies:
       abort-controller: 3.0.0
       node-fetch: 2.7.0
@@ -2226,7 +2229,7 @@ snapshots:
       '@napi-rs/canvas': 0.1.40
       '@skyra/gifenc': 1.0.1
       chalk: 5.2.0
-      moment: 2.29.4
+      moment: 2.30.1
       moment-duration-format: 2.3.2
       node-fetch: 2.6.7
     transitivePeerDependencies:
@@ -2360,7 +2363,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  dotenv@16.3.1: {}
+  dotenv@16.4.7: {}
 
   ecc-jsbn@0.1.2:
     dependencies:
@@ -2572,7 +2575,7 @@ snapshots:
 
   moment-duration-format@2.3.2: {}
 
-  moment@2.29.4: {}
+  moment@2.30.1: {}
 
   mongodb-connection-string-url@2.6.0:
     dependencies:
@@ -2676,7 +2679,7 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
-  nodemon@3.0.2:
+  nodemon@3.1.9:
     dependencies:
       chokidar: 3.5.3
       debug: 4.3.4(supports-color@5.5.0)
