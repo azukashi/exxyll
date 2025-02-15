@@ -4,6 +4,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
+        "server": "pm2 start index.js --exp-backoff-restart-delay=100 -i 0",
         "dev": "nodemon index.js",
         "shard": "node src/Scripts/shard.js",
         "lint": "prettier -c .",
