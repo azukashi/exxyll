@@ -16,7 +16,7 @@ importers:
         version: 1.14.0
       axios:
         specifier: 1.6.2
-        version: 1.6.2
+        version: 1.6.2(debug@4.3.4(supports-color@5.5.0))
       canvacord:
         specifier: 5.4.10
         version: 5.4.10
@@ -28,7 +28,7 @@ importers:
         version: 1.3.31
       discord-xp:
         specifier: 1.1.16
-        version: 1.1.16
+        version: 1.1.16(aws4@1.12.0)(supports-color@5.5.0)
       discord.js:
         specifier: 13.17.1
         version: 13.17.1
@@ -42,8 +42,8 @@ importers:
         specifier: 2.29.4
         version: 2.29.4
       mongoose:
-        specifier: 6.12.3
-        version: 6.12.3
+        specifier: 6.13.10
+        version: 6.13.10(supports-color@5.5.0)
       ms:
         specifier: 2.1.3
         version: 2.1.3
@@ -680,6 +680,7 @@ packages:
 
   discord-xp@1.1.16:
     resolution: {integrity: sha512-A5g6utg+0fCLEUl6sS5J5mpr8DAXe5KxBFQnJf89KpQ71Itt0Hdv5/seOBCc6p239nuxEfW9n29peMlLCuvlrg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   discord.js@13.17.1:
     resolution: {integrity: sha512-h13kUf+7ZaP5ZWggzooCxFutvJJvugcAO54oTEIdVr3zQWi0Sf/61S1kETtuY9nVAyYebXR/Ey4C+oWbsgEkew==}
@@ -953,8 +954,8 @@ packages:
       snappy:
         optional: true
 
-  mongodb@4.17.1:
-    resolution: {integrity: sha512-MBuyYiPUPRTqfH2dV0ya4dcr2E5N52ocBuZ8Sgg/M030nGF78v855B3Z27mZJnp8PxjnUquEnAtjOsphgMZOlQ==}
+  mongodb@4.17.2:
+    resolution: {integrity: sha512-mLV7SEiov2LHleRJPMPrK2PMyhXFZt2UQLC4VD4pnth3jMjYKHhtqfwwkkvS/NXuo/Fp3vbhaNcXrIDaLRb9Tg==}
     engines: {node: '>=12.9.0'}
 
   mongoose-legacy-pluralize@1.0.2:
@@ -966,8 +967,8 @@ packages:
     resolution: {integrity: sha512-kzlwQgrWaQflFSdENNGN4+FQEm/yOMgR1T1okIp5fARGQ8YKdjO+0U9Ikzsv5OVSFIkE0ATyJj2XxawYbf2bpA==}
     engines: {node: '>=4.0.0'}
 
-  mongoose@6.12.3:
-    resolution: {integrity: sha512-MNJymaaXali7w7rHBxVUoQ3HzHHMk/7I/+yeeoSa4rUzdjZwIWQznBNvVgc0A8ghuJwsuIkb5LyLV6gSjGjWyQ==}
+  mongoose@6.13.10:
+    resolution: {integrity: sha512-5Xya7crlTwBrl3Gp1XCZMSnKI1WTLYzKkRdKaBiD51AprGtLQtgNoFO7v/qG0O5PixjfxzLuN3f3MChDOOFQOQ==}
     engines: {node: '>=12.0.0'}
 
   mpath@0.8.4:
@@ -1268,6 +1269,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   verror@1.10.0:
@@ -2153,9 +2155,9 @@ snapshots:
 
   aws4@1.12.0: {}
 
-  axios@1.6.2:
+  axios@1.6.2(debug@4.3.4(supports-color@5.5.0)):
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.2(debug@4.3.4(supports-color@5.5.0))
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -2277,9 +2279,11 @@ snapshots:
     dependencies:
       assert-plus: 1.0.0
 
-  debug@3.1.0:
+  debug@3.1.0(supports-color@5.5.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.3.4(supports-color@5.5.0):
     dependencies:
@@ -2312,9 +2316,9 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  discord-xp@1.1.16:
+  discord-xp@1.1.16(aws4@1.12.0)(supports-color@5.5.0):
     dependencies:
-      mongoose: 5.13.17
+      mongoose: 5.13.17(aws4@1.12.0)(supports-color@5.5.0)
     transitivePeerDependencies:
       - aws4
       - bson-ext
@@ -2396,7 +2400,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  follow-redirects@1.15.2: {}
+  follow-redirects@1.15.2(debug@4.3.4(supports-color@5.5.0)):
+    optionalDependencies:
+      debug: 4.3.4(supports-color@5.5.0)
 
   forever-agent@0.6.1: {}
 
@@ -2579,7 +2585,7 @@ snapshots:
       '@types/whatwg-url': 8.2.2
       whatwg-url: 11.0.0
 
-  mongodb@3.7.3:
+  mongodb@3.7.3(aws4@1.12.0):
     dependencies:
       bl: 2.2.1
       bson: 1.1.6
@@ -2587,9 +2593,10 @@ snapshots:
       optional-require: 1.1.8
       safe-buffer: 5.2.1
     optionalDependencies:
+      aws4: 1.12.0
       saslprep: 1.0.3
 
-  mongodb@4.17.1:
+  mongodb@4.17.2:
     dependencies:
       bson: 4.7.2
       mongodb-connection-string-url: 2.6.0
@@ -2600,20 +2607,20 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  mongoose-legacy-pluralize@1.0.2(mongoose@5.13.17):
+  mongoose-legacy-pluralize@1.0.2(mongoose@5.13.17(aws4@1.12.0)(supports-color@5.5.0)):
     dependencies:
-      mongoose: 5.13.17
+      mongoose: 5.13.17(aws4@1.12.0)(supports-color@5.5.0)
 
-  mongoose@5.13.17:
+  mongoose@5.13.17(aws4@1.12.0)(supports-color@5.5.0):
     dependencies:
       '@types/bson': 4.0.5
       '@types/mongodb': 3.6.20
       bson: 1.1.6
       kareem: 2.3.2
-      mongodb: 3.7.3
-      mongoose-legacy-pluralize: 1.0.2(mongoose@5.13.17)
+      mongodb: 3.7.3(aws4@1.12.0)
+      mongoose-legacy-pluralize: 1.0.2(mongoose@5.13.17(aws4@1.12.0)(supports-color@5.5.0))
       mpath: 0.8.4
-      mquery: 3.2.5
+      mquery: 3.2.5(supports-color@5.5.0)
       ms: 2.1.2
       optional-require: 1.0.3
       regexp-clone: 1.0.0
@@ -2629,13 +2636,13 @@ snapshots:
       - snappy
       - supports-color
 
-  mongoose@6.12.3:
+  mongoose@6.13.10(supports-color@5.5.0):
     dependencies:
       bson: 4.7.2
       kareem: 2.5.1
-      mongodb: 4.17.1
+      mongodb: 4.17.2
       mpath: 0.9.0
-      mquery: 4.0.3
+      mquery: 4.0.3(supports-color@5.5.0)
       ms: 2.1.3
       sift: 16.0.1
     transitivePeerDependencies:
@@ -2646,17 +2653,17 @@ snapshots:
 
   mpath@0.9.0: {}
 
-  mquery@3.2.5:
+  mquery@3.2.5(supports-color@5.5.0):
     dependencies:
       bluebird: 3.5.1
-      debug: 3.1.0
+      debug: 3.1.0(supports-color@5.5.0)
       regexp-clone: 1.0.0
       safe-buffer: 5.1.2
       sliced: 1.0.1
     transitivePeerDependencies:
       - supports-color
 
-  mquery@4.0.3:
+  mquery@4.0.3(supports-color@5.5.0):
     dependencies:
       debug: 4.3.4(supports-color@5.5.0)
     transitivePeerDependencies:
