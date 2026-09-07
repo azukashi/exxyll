@@ -12,11 +12,11 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       anilist-node:
-        specifier: 1.14.0
-        version: 1.14.0
+        specifier: 1.14.1
+        version: 1.14.1
       axios:
         specifier: 1.6.2
-        version: 1.6.2
+        version: 1.6.2(debug@4.3.4(supports-color@5.5.0))
       canvacord:
         specifier: 5.4.10
         version: 5.4.10
@@ -24,26 +24,26 @@ importers:
         specifier: 4.1.2
         version: 4.1.2
       discord-together:
-        specifier: 1.3.31
-        version: 1.3.31
+        specifier: 1.4.2
+        version: 1.4.2
       discord-xp:
         specifier: 1.1.16
-        version: 1.1.16
+        version: 1.1.16(aws4@1.12.0)(supports-color@5.5.0)
       discord.js:
         specifier: 13.17.1
         version: 13.17.1
       dotenv:
-        specifier: 16.3.1
-        version: 16.3.1
+        specifier: 16.6.1
+        version: 16.6.1
       glob:
         specifier: 8.1.0
         version: 8.1.0
       moment:
-        specifier: 2.29.4
-        version: 2.29.4
+        specifier: 2.30.1
+        version: 2.30.1
       mongoose:
         specifier: 6.12.3
-        version: 6.12.3
+        version: 6.12.3(supports-color@5.5.0)
       ms:
         specifier: 2.1.3
         version: 2.1.3
@@ -67,8 +67,8 @@ importers:
         version: 3.8.4
     devDependencies:
       nodemon:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 3.1.14
+        version: 3.1.14
 
 packages:
 
@@ -502,8 +502,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  anilist-node@1.14.0:
-    resolution: {integrity: sha512-XIORmFPVUknmrjOS1cjyMzpQpyl0zVF8sdQ3kdI+BAvJx5fPVN7v0OKm0zF4mWNwYqQEIK4w60XCGSdKlTKOsA==}
+  anilist-node@1.14.1:
+    resolution: {integrity: sha512-lWwiof5LFYtr32UcLmmDiihjOdx+V2qQ8KGhQ+5Ccuir5voUC1FiL0rxHV9cgTsJzx3AWK9Fjxtgya0eiOiX8w==}
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
@@ -535,6 +535,10 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  balanced-match@4.0.4:
+    resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
+    engines: {node: 18 || 20 || >=22}
+
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
@@ -554,11 +558,12 @@ packages:
   bowser@2.11.0:
     resolution: {integrity: sha512-AlcaJBi/pqqJBIQ8U9Mcpc9i8Aqxn88Skv5d+xBX006BY5u8N3mGLHa5Lgppa7L/HfwgwLgZ6NYs+Ag6uUmJRA==}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
-
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+
+  brace-expansion@5.0.9:
+    resolution: {integrity: sha512-ScQ4IuvIEF1TMlP7Zt+vjJ//9zlPb2SDcxWxM3bk8s6t6GGdJ7KO1dCcTidOPJKePW30LE/2cT7wCyPho9/Wxg==}
+    engines: {node: 20 || >=22}
 
   braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
@@ -620,9 +625,6 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
-  concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
-
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
 
@@ -675,11 +677,12 @@ packages:
   discord-api-types@0.37.42:
     resolution: {integrity: sha512-1Huaj9cQ1W7/uryS8MZs/tZemnoKB94thM1cE40lep3rpU3q7WHqkdjN/veX0prTkYlPhcyLd/DeF/pBO8X8oQ==}
 
-  discord-together@1.3.31:
-    resolution: {integrity: sha512-BOHLmSkMw376qTvmDdKfgPQ83CYV9UR1YNRPVX9Cq57fu0PDCl9eGx/NfilThzJx7DdojRiliVyp17PlfKlR3w==}
+  discord-together@1.4.2:
+    resolution: {integrity: sha512-vboRkU5KBDutHQYs/OLfk5r3y3sDbaP2/DTMw1oPUvB7eL7lLBknix7wfrgk1Do1nAQWTKj4nhY5yv5GHPLslg==}
 
   discord-xp@1.1.16:
     resolution: {integrity: sha512-A5g6utg+0fCLEUl6sS5J5mpr8DAXe5KxBFQnJf89KpQ71Itt0Hdv5/seOBCc6p239nuxEfW9n29peMlLCuvlrg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   discord.js@13.17.1:
     resolution: {integrity: sha512-h13kUf+7ZaP5ZWggzooCxFutvJJvugcAO54oTEIdVr3zQWi0Sf/61S1kETtuY9nVAyYebXR/Ey4C+oWbsgEkew==}
@@ -688,9 +691,10 @@ packages:
   discord.js@14.11.0:
     resolution: {integrity: sha512-CkueWYFQ28U38YPR8HgsBR/QT35oPpMbEsTNM30Fs8loBIhnA4s70AwQEoy6JvLcpWWJO7GY0y2BUzZmuBMepQ==}
     engines: {node: '>=16.9.0'}
+    deprecated: This version is deprecated. Please use a newer version
 
-  dotenv@16.3.1:
-    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
     engines: {node: '>=12'}
 
   ecc-jsbn@0.1.2:
@@ -913,8 +917,9 @@ packages:
     resolution: {integrity: sha512-a7voNL1N5lDMxvTMExOkg+Fq89jM2vY8pAi9ZEWzZtfNmdfP6RXkvUtFnCAXoCv2T9k1v/fUJVaAEuepGcvLYA==}
     engines: {node: '>=12'}
 
-  minimatch@3.1.2:
-    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
+  minimatch@10.2.6:
+    resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
+    engines: {node: 18 || 20 || >=22}
 
   minimatch@5.1.6:
     resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
@@ -923,8 +928,8 @@ packages:
   moment-duration-format@2.3.2:
     resolution: {integrity: sha512-cBMXjSW+fjOb4tyaVHuaVE/A5TqkukDWiOfxxAjY+PEqmmBQlLwn+8OzwPiG3brouXKY5Un4pBjAeB6UToXHaQ==}
 
-  moment@2.29.4:
-    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
+  moment@2.30.1:
+    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
 
   mongodb-connection-string-url@2.6.0:
     resolution: {integrity: sha512-WvTZlI9ab0QYtTYnuMLgobULWhokRjtC7db9LtcVfJ+Hsnyr5eo6ZtNAt3Ly24XZScGMelOcGtm7lSn0332tPQ==}
@@ -1013,8 +1018,8 @@ packages:
       encoding:
         optional: true
 
-  nodemon@3.0.2:
-    resolution: {integrity: sha512-9qIN2LNTrEzpOPBaWHTm4Asy1LxXLSickZStAQ4IZe7zsoIpD/A7LWxhZV3t4Zu352uBcqVnRsDXSMR2Sc3lTA==}
+  nodemon@3.1.14:
+    resolution: {integrity: sha512-jakjZi93UtB3jHMWsXL68FXSAosbLfY0In5gtKq3niLSkrWznrVBzXFNOEMJUfc9+Ke7SHWoAZsiMkNP3vq6Jw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2125,7 +2130,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  anilist-node@1.14.0:
+  anilist-node@1.14.1:
     dependencies:
       abort-controller: 3.0.0
       node-fetch: 2.7.0
@@ -2153,15 +2158,17 @@ snapshots:
 
   aws4@1.12.0: {}
 
-  axios@1.6.2:
+  axios@1.6.2(debug@4.3.4(supports-color@5.5.0)):
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.2(debug@4.3.4(supports-color@5.5.0))
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
 
   balanced-match@1.0.2: {}
+
+  balanced-match@4.0.4: {}
 
   base64-js@1.5.1: {}
 
@@ -2181,14 +2188,13 @@ snapshots:
   bowser@2.11.0:
     optional: true
 
-  brace-expansion@1.1.11:
-    dependencies:
-      balanced-match: 1.0.2
-      concat-map: 0.0.1
-
   brace-expansion@2.0.1:
     dependencies:
       balanced-match: 1.0.2
+
+  brace-expansion@5.0.9:
+    dependencies:
+      balanced-match: 4.0.4
 
   braces@3.0.2:
     dependencies:
@@ -2226,7 +2232,7 @@ snapshots:
       '@napi-rs/canvas': 0.1.40
       '@skyra/gifenc': 1.0.1
       chalk: 5.2.0
-      moment: 2.29.4
+      moment: 2.30.1
       moment-duration-format: 2.3.2
       node-fetch: 2.6.7
     transitivePeerDependencies:
@@ -2267,8 +2273,6 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
-  concat-map@0.0.1: {}
-
   core-util-is@1.0.2: {}
 
   core-util-is@1.0.3: {}
@@ -2277,9 +2281,11 @@ snapshots:
     dependencies:
       assert-plus: 1.0.0
 
-  debug@3.1.0:
+  debug@3.1.0(supports-color@5.5.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.3.4(supports-color@5.5.0):
     dependencies:
@@ -2303,18 +2309,16 @@ snapshots:
 
   discord-api-types@0.37.42: {}
 
-  discord-together@1.3.31:
+  discord-together@1.4.2:
     dependencies:
       discord.js: 14.11.0
-      node-fetch: 2.7.0
     transitivePeerDependencies:
       - bufferutil
-      - encoding
       - utf-8-validate
 
-  discord-xp@1.1.16:
+  discord-xp@1.1.16(aws4@1.12.0)(supports-color@5.5.0):
     dependencies:
-      mongoose: 5.13.17
+      mongoose: 5.13.17(aws4@1.12.0)(supports-color@5.5.0)
     transitivePeerDependencies:
       - aws4
       - bson-ext
@@ -2360,7 +2364,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  dotenv@16.3.1: {}
+  dotenv@16.6.1: {}
 
   ecc-jsbn@0.1.2:
     dependencies:
@@ -2396,7 +2400,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  follow-redirects@1.15.2: {}
+  follow-redirects@1.15.2(debug@4.3.4(supports-color@5.5.0)):
+    optionalDependencies:
+      debug: 4.3.4(supports-color@5.5.0)
 
   forever-agent@0.6.1: {}
 
@@ -2562,9 +2568,9 @@ snapshots:
 
   miniget@4.2.2: {}
 
-  minimatch@3.1.2:
+  minimatch@10.2.6:
     dependencies:
-      brace-expansion: 1.1.11
+      brace-expansion: 5.0.9
 
   minimatch@5.1.6:
     dependencies:
@@ -2572,14 +2578,14 @@ snapshots:
 
   moment-duration-format@2.3.2: {}
 
-  moment@2.29.4: {}
+  moment@2.30.1: {}
 
   mongodb-connection-string-url@2.6.0:
     dependencies:
       '@types/whatwg-url': 8.2.2
       whatwg-url: 11.0.0
 
-  mongodb@3.7.3:
+  mongodb@3.7.3(aws4@1.12.0):
     dependencies:
       bl: 2.2.1
       bson: 1.1.6
@@ -2587,6 +2593,7 @@ snapshots:
       optional-require: 1.1.8
       safe-buffer: 5.2.1
     optionalDependencies:
+      aws4: 1.12.0
       saslprep: 1.0.3
 
   mongodb@4.17.1:
@@ -2600,20 +2607,20 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  mongoose-legacy-pluralize@1.0.2(mongoose@5.13.17):
+  mongoose-legacy-pluralize@1.0.2(mongoose@5.13.17(aws4@1.12.0)(supports-color@5.5.0)):
     dependencies:
-      mongoose: 5.13.17
+      mongoose: 5.13.17(aws4@1.12.0)(supports-color@5.5.0)
 
-  mongoose@5.13.17:
+  mongoose@5.13.17(aws4@1.12.0)(supports-color@5.5.0):
     dependencies:
       '@types/bson': 4.0.5
       '@types/mongodb': 3.6.20
       bson: 1.1.6
       kareem: 2.3.2
-      mongodb: 3.7.3
-      mongoose-legacy-pluralize: 1.0.2(mongoose@5.13.17)
+      mongodb: 3.7.3(aws4@1.12.0)
+      mongoose-legacy-pluralize: 1.0.2(mongoose@5.13.17(aws4@1.12.0)(supports-color@5.5.0))
       mpath: 0.8.4
-      mquery: 3.2.5
+      mquery: 3.2.5(supports-color@5.5.0)
       ms: 2.1.2
       optional-require: 1.0.3
       regexp-clone: 1.0.0
@@ -2629,13 +2636,13 @@ snapshots:
       - snappy
       - supports-color
 
-  mongoose@6.12.3:
+  mongoose@6.12.3(supports-color@5.5.0):
     dependencies:
       bson: 4.7.2
       kareem: 2.5.1
       mongodb: 4.17.1
       mpath: 0.9.0
-      mquery: 4.0.3
+      mquery: 4.0.3(supports-color@5.5.0)
       ms: 2.1.3
       sift: 16.0.1
     transitivePeerDependencies:
@@ -2646,17 +2653,17 @@ snapshots:
 
   mpath@0.9.0: {}
 
-  mquery@3.2.5:
+  mquery@3.2.5(supports-color@5.5.0):
     dependencies:
       bluebird: 3.5.1
-      debug: 3.1.0
+      debug: 3.1.0(supports-color@5.5.0)
       regexp-clone: 1.0.0
       safe-buffer: 5.1.2
       sliced: 1.0.1
     transitivePeerDependencies:
       - supports-color
 
-  mquery@4.0.3:
+  mquery@4.0.3(supports-color@5.5.0):
     dependencies:
       debug: 4.3.4(supports-color@5.5.0)
     transitivePeerDependencies:
@@ -2676,12 +2683,12 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
-  nodemon@3.0.2:
+  nodemon@3.1.14:
     dependencies:
       chokidar: 3.5.3
       debug: 4.3.4(supports-color@5.5.0)
       ignore-by-default: 1.0.1
-      minimatch: 3.1.2
+      minimatch: 10.2.6
       pstree.remy: 1.1.8
       semver: 7.5.4
       simple-update-notifier: 2.0.0
