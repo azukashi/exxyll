@@ -17,7 +17,7 @@
     "author": "Falcxxdev <me@falcxxdev.cyou>",
     "license": "MIT",
     "dependencies": {
-        "@iamtraction/google-translate": "2.0.1",
+        "@iamtraction/google-translate": "3.0.0",
         "anilist-node": "1.14.0",
         "axios": "1.6.2",
         "canvacord": "5.4.10",
